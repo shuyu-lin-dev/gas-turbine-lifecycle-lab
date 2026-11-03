@@ -16,7 +16,7 @@
 | 完成 | 任务 ID | 交付结果 | 依赖 | 初始状态 | 验收条款 | 测试提交 / 证据 / 基线 |
 |---|---|---|---|---|---|---|
 | [x] | M0-00 | 本机、主仓库、dsh 接入与规格冻结 | 无 | LOCKED | M0-00-A01～M0-00-A07 | S=`3980867902a9c102f18894e9acf65b8c72051b19`；C=`b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61`；E=`398b923f01eb97bcf7c22e9e31f344662c2365c5`；[正式报告](evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md)；基线 `baseline/M0-00-b4ae8e35d782` 已远程核实 |
-| [ ] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | READY | FE-BASE-A01～FE-BASE-A05 | [冻结记录](evidence/FE-BASE/criteria.md)，当前尚未执行正式验收 |
+| [ ] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | IN_PROGRESS | FE-BASE-A01～FE-BASE-A05 | S=`7704387252b293bee1ec671b440164a12287ca16`；[冻结记录](evidence/FE-BASE/criteria.md)；[复现入口](docs/FE_BASE.md) |
 | [ ] | M0-01 | Vue 与 Python 前后端独立运行 | FE-BASE | PLANNED | M0-01-A01～M0-01-A05 | 未执行 |
 | [ ] | FE-INTEGRATE | Vue 业务壳与同源 viewer 桥接 | M0-01 | PLANNED | FE-INTEGRATE-A01～FE-INTEGRATE-A06 | 未执行 |
 | [ ] | M0-02 | 事件契约、幂等持久化和范围查询 | FE-INTEGRATE | PLANNED | M0-02-A01～M0-02-A07 | 未执行 |

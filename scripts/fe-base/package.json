@@ -1,0 +1,10 @@
+{
+  "name": "gt-lifecycle-fe-base-verification",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "FE-BASE 真实浏览器验收工具",
+  "dependencies": {
+    "playwright": "1.56.1"
+  }
+}
