@@ -44,7 +44,7 @@ docker compose -p gtl-lab build
 docker compose -p gtl-lab up -d web api
 ```
 
-web构建上下文为主仓库根目录，明确使用 [frontend/Dockerfile](../frontend/Dockerfile)；最终Nginx只包含组合静态产物，不包含Node依赖。默认页面在本机8280端口，独立API在8281端口。`/viewer/`及其全部静态资源由web提供，缺失资源返回404。`/api/`保持原同源HTTP代理。web与api没有启动依赖，可独立启停，Python继续只提供API。容器由已配置Docker Desktop WSL2 Linux引擎运行。停止本项目服务使用`docker compose -p gtl-lab down`。
+web构建上下文为主仓库根目录，明确使用 [frontend/Dockerfile](../frontend/Dockerfile)；最终Nginx只包含组合静态产物，不包含Node依赖。默认页面在本机8280端口，独立API在8281端口。`/viewer`使用308相对Location转到`/viewer/`，保留访问的公开origin与query。`/viewer/`及其全部静态资源由web提供，缺失资源返回404。`/api/`保持原同源HTTP代理。web与api没有启动依赖，可独立启停，Python继续只提供API。容器由已配置Docker Desktop WSL2 Linux引擎运行。停止本项目服务使用`docker compose -p gtl-lab down`。
 
 ## 部件与状态
 

@@ -13,6 +13,7 @@ server {
     }
 
     location = /viewer {
+        absolute_redirect off;
         return 308 /viewer/$is_args$args;
     }
 

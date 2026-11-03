@@ -1,10 +1,13 @@
 import argparse
+from contextlib import closing
 from datetime import datetime, timezone
 import hashlib
+import http.client
 import json
 import os
 from pathlib import Path
 import subprocess
+import urllib.parse
 import urllib.request
 
 from verify_m0_01 import Run, HTTP, ORIGIN
@@ -108,13 +111,25 @@ def main():
         compose('up', '-d', 'web', 'api')
         run.wait('http://127.0.0.1:8280')
         run.wait('http://127.0.0.1:8281/api/v1/health')
+        redirects = {}
+        for path, query in [('/viewer', ''), ('/viewer?redirect_probe=1', 'redirect_probe=1')]:
+            with closing(http.client.HTTPConnection('127.0.0.1', 8280, timeout=5)) as connection:
+                connection.request('GET', path)
+                response = connection.getresponse()
+                location = response.getheader('Location')
+                redirects[path] = {'status': response.status, 'headers': dict(response.getheaders()),
+                                   'body': response.read().decode(), 'location': location}
+            run.save('viewer-redirects.json', redirects)
+            assert redirects[path]['status'] == 308 and location
+            target = urllib.parse.urlsplit(urllib.parse.urljoin('http://127.0.0.1:8280' + path, location))
+            assert (target.scheme, target.netloc, target.path, target.query) == ('http', '127.0.0.1:8280', '/viewer/', query)
         routes = {}
         for name, path, code in [('viewer-slash', '/viewer/', 200), ('viewer-redirect', '/viewer', 200),
                                  ('viewer-index', '/viewer/index.html', 200), ('missing-viewer-resource', '/viewer/assets/missing.js', 404),
                                  ('missing-root-resource', '/assets/missing.js', 404)]:
             routes[name] = run.http('http://127.0.0.1:8280' + path, code)
         assert all('id="scene"' in routes[name]['body'] for name in ['viewer-slash', 'viewer-redirect', 'viewer-index'])
-        run.save('deployment-routes.json', routes)
+        run.save('viewer-deployment-routes.json', routes)
         for script, name in [('bridge.mjs', 'deployment-bridge'), ('bridge-initialization.mjs', 'deployment-initialization'),
                              ('bridge-display-state.mjs', 'deployment-display-state')]:
             run.command(['node', root / 'frontend/tests' / script, 'http://127.0.0.1:8280', output / f'{name}.json'], timeout=1200)
