@@ -31,6 +31,12 @@
     }
     return result;
   };
+  const useProgram = prototype.useProgram;
+  prototype.useProgram = function(program) {
+    const result = useProgram.call(this, program);
+    state(this).activeProgram = program;
+    return result;
+  };
   for (const method of ['drawElements', 'drawArrays', 'drawElementsInstanced', 'drawArraysInstanced']) {
     const original = prototype[method];
     prototype[method] = function(...args) {
@@ -39,6 +45,8 @@
         const data = state(this);
         data.draws++;
         data.currentFrameDraws++;
+        const id = programs.get(data.activeProgram);
+        if (data.programs[id]) data.programs[id].lastDraw = data.draws;
       }
       return result;
     };
@@ -63,8 +71,14 @@
       const expectedDepth = selector === '#scene' ? 0.20016680567139283 : 0.04000444493832648;
       return value.viewMatrix && p && Math.abs(p[11] + 1) < 1e-6
         && Math.abs(p[14] + expectedDepth) < 1e-5;
-    });
+    }).sort((a, b) => (b[1].lastDraw ?? 0) - (a[1].lastDraw ?? 0));
     return {draws: data.draws, frameDraws: data.frameDraws.slice(),
       programs: data.programs, main: candidates.map(([id, value]) => ({id, matrix: value.viewMatrix}))};
+  };
+  window.__feBaseResetFrames = selector => {
+    const data = states.get(document.querySelector(selector));
+    if (!data) throw new Error('缺少真实 GPU 观察数据');
+    data.frameDraws = [];
+    data.currentFrameDraws = 0;
   };
 })();
