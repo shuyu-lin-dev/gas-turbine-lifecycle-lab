@@ -1,0 +1,43 @@
+{
+  "purpose": "桥接夹具；仅验证消息与教学模型，不表示已接入运行数据",
+  "context_a": { "device_id": "fixture-device-a", "run_id": "fixture-run-a", "context_revision": 0 },
+  "context_b": { "device_id": "fixture-device-b", "run_id": "fixture-run-b", "context_revision": 1 },
+  "snapshot_a": {
+    "selected_component_id": null,
+    "event_time": "2026-11-03T00:00:00.000Z",
+    "received_at": "2026-11-03T00:00:01.000Z",
+    "measurement_quality": "valid",
+    "components": [
+      { "component_id": "compressor", "status": "normal", "measurements": [] },
+      { "component_id": "combustor", "status": "attention", "measurements": [] },
+      { "component_id": "turbine", "status": "normal", "measurements": [] },
+      { "component_id": "bearing_front", "status": "unknown", "measurements": [] },
+      { "component_id": "exhaust", "status": "alarm", "measurements": [{ "tag_id": "fixture-temperature", "value": 560, "unit": "°C" }] }
+    ]
+  },
+  "snapshot_b": {
+    "selected_component_id": null,
+    "event_time": null,
+    "received_at": null,
+    "measurement_quality": "no_data",
+    "components": [
+      { "component_id": "compressor", "status": "unknown", "measurements": [] },
+      { "component_id": "combustor", "status": "unknown", "measurements": [] },
+      { "component_id": "turbine", "status": "unknown", "measurements": [] },
+      { "component_id": "bearing_front", "status": "unknown", "measurements": [] },
+      { "component_id": "exhaust", "status": "unknown", "measurements": [] }
+    ]
+  },
+  "selection": ["compressor", "combustor", "turbine", "bearing_front", "exhaust", "aux_pump"],
+  "expected": {
+    "snapshot_a_quality": "valid",
+    "snapshot_b_quality": "no_data",
+    "exhaust_value": 560,
+    "unavailable_component": "aux_pump",
+    "context_switch_revision": 1,
+    "normal_selection_revision": 0,
+    "mount_cycles": 5,
+    "status_colors": { "normal": "#a7b5c6", "attention": "#f0bd67", "alarm": "#ff9292", "unknown": "#64748b" },
+    "emissive_intensity": 0.45
+  }
+}

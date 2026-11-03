@@ -2,15 +2,15 @@
 
 版本：2.2；日期：2026-11-03（Asia/Shanghai）。本文件保存用户已经确定的开发要求。
 
-## 当前 M0-01 派工
+## 当前 FE-INTEGRATE 派工
 
-Issue #5 已明确授权真实 M0-01「Vue 与 Python 前后端独立运行」：调查、验收冻结、实现、实际测试、必要修正、提交、推送和 PR 交付。当前 worker 只执行 M0-01，后续任务单独派发。
+Issue #7 已明确授权真实 FE-INTEGRATE「Vue 业务壳与同源 viewer 桥接」：调查、验收冻结、实现、实际测试、必要修正、提交、推送和 PR 交付。当前 worker 只执行 FE-INTEGRATE，后续任务单独派发。
 
-FE-BASE 已由 PR #4 合并至 `b8ad3150cf4480f8e205926541aeeccb072f7f80`，本工作分支包含其完整成果。K 外部回执为 Issue #3 评论 `6607816699`；最终核查及实际集成回执为评论 `6607856530`、`6608042226`。既有 M0-00、FE-BASE 冻结和证据保持。
+M0-01 已 LOCKED，并由 PR #6 实际合并至 `d4624599072312f86c65c12e77407b25e3005a3b`，本分支完整包含其成果。K 为 `779035fbdb7117770e0df23b537b943ac704cf94`，外部回执为 Issue #5 评论 `6611895677`，最终核查及实际集成回执为评论 `6612184100`。既有冻结、证据和基线保持。
 
-协调聊天 `01a1a186-0661-7540-b368-f70449bdae16` 组织全新上下文独立 Standards/Spec 审查与实际复验。开发 worker 提交准确 C、真实验收和 draft PR，保持准确候选等待对应审查回执；通过后完成 E、远程基线、K 和正式 PR，最终 head 新增差异也须独立审查。协调聊天负责最终核查、合并和实际集成。开发 worker 不执行 approve、merge 或 auto-merge，不调用 gh-owner。
+协调聊天 `01a1a22f-d503-7cf0-bad4-ad8dd9d707a8` 组织全新上下文独立 Standards/Spec 审查与实际复验。开发 worker 提交准确 C、真实验收和 draft PR，保持准确候选等待对应审查回执；通过后完成 E、远程基线、K 和正式 PR，最终 head 新增差异也须独立审查。协调聊天负责最终核查、合并和实际集成。开发 worker 不执行 approve、merge 或 auto-merge，不调用 gh-owner。
 
-当前完整冻结记录见 [M0-01 冻结记录](evidence/M0-01/criteria.md)。
+当前完整冻结记录见 [FE-INTEGRATE 冻结记录](evidence/FE-INTEGRATE/criteria.md)。
 
 ## 本轮接入边界与规则优先级
 
