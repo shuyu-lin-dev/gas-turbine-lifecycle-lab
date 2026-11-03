@@ -35,9 +35,9 @@ class Run:
     def save(self, name, value):
         (self.output / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
 
-    def command(self, argv, cwd=None, env=None, timeout=600):
+    def command(self, argv, cwd=None, env=None, timeout=600, expected=0):
         record = {'argv': [str(value) for value in argv], 'cwd': str(cwd or self.root),
-                  'at': datetime.now(timezone.utc).isoformat(), 'exit_code': None}
+                  'at': datetime.now(timezone.utc).isoformat(), 'exit_code': None, 'expected_exit_code': expected}
         self.commands.append(record)
         self.save('commands.json', self.commands)
         try:
@@ -45,7 +45,7 @@ class Run:
                                     capture_output=True, timeout=timeout)
             record.update(exit_code=result.returncode, stdout=result.stdout.decode(), stderr=result.stderr.decode(),
                           stdout_sha256=digest(result.stdout), stderr_sha256=digest(result.stderr))
-            assert result.returncode == 0, f'命令失败: {argv}; {record["stderr"]}'
+            assert result.returncode == expected, f'命令失败: {argv}; {record["stderr"]}'
             return result.stdout.decode().strip()
         finally:
             self.save('commands.json', self.commands)
@@ -129,6 +129,11 @@ class Run:
         wheels = list((back / 'dist').glob('*.whl'))
         assert len(wheels) == 1
         self.command([self.uv, 'pip', 'install', '--python', python, '--no-deps', wheels[0]])
+        for origin in ['http://*', 'https://*.example.com']:
+            self.command([python, '-c', 'import gt_lifecycle_api.app'],
+                         env={'API_CORS_ORIGINS': json.dumps([origin])}, expected=1)
+        self.command([python, '-c', 'import gt_lifecycle_api.app'],
+                     env={'API_CORS_ORIGINS': '["http://127.0.0.1:5173"]'})
         api_a = self.api('api-a', 8201, python)
         api_b = self.api('api-b', 8202, python)
         web = self.web('web-direct-a', 'http://127.0.0.1:8201/api/v1')
@@ -155,6 +160,11 @@ class Run:
         self.browser('built-preview', 'http://127.0.0.1:4175', 'http://127.0.0.1:4175/api/v1/health')
         self.stop(preview)
         self.stop(api_a)
+        web = self.web('web-lifecycle', '/api/v1')
+        self.command(['npm', 'run', 'test:lifecycle', '--', 'http://127.0.0.1:5173',
+                      'http://127.0.0.1:5173/api/v1/health', 'api-a',
+                      self.output / 'same-page-lifecycle.json', python, '8201'], cwd=front, timeout=120)
+        self.stop(web)
         self.stop(api_b)
 
     def containers(self):

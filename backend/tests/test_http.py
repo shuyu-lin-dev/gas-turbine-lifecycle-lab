@@ -48,6 +48,11 @@ def test_health_returns_frozen_service_version_and_instance(api):
 def test_cors_allows_declared_origin_and_rejects_other_origin(api):
     allowed = httpx.get(api + '/api/v1/health', headers={'Origin': 'http://127.0.0.1:5173'}, trust_env=False)
     assert allowed.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
+    preflight = httpx.options(api + '/api/v1/health', headers={
+        'Origin': 'http://127.0.0.1:5173', 'Access-Control-Request-Method': 'GET'}, trust_env=False)
+    assert preflight.status_code == 200
+    assert preflight.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
+    assert preflight.headers['access-control-allow-methods'] == 'GET'
     denied = httpx.options(api + '/api/v1/health', headers={
         'Origin': 'http://untrusted.invalid', 'Access-Control-Request-Method': 'GET'}, trust_env=False)
     assert denied.status_code == 400
@@ -57,6 +62,8 @@ def test_cors_allows_declared_origin_and_rejects_other_origin(api):
 @pytest.mark.parametrize('name,value', [
     ('API_INSTANCE_ID', 'bad instance'),
     ('API_CORS_ORIGINS', '["*"]'),
+    ('API_CORS_ORIGINS', '["http://*"]'),
+    ('API_CORS_ORIGINS', '["https://*.example.com"]'),
     ('API_CORS_ORIGINS', '["file:///invalid"]'),
     ('API_CORS_ORIGINS', '"http://127.0.0.1:5173"'),
 ])

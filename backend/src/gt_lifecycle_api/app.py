@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import AnyHttpUrl, BaseModel, TypeAdapter
 
 
 class Health(BaseModel):
@@ -30,7 +30,10 @@ for origin in origins:
     parsed = urlsplit(origin)
     if (parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username
             or parsed.password or parsed.path or parsed.query or parsed.fragment
-            or any(character.isspace() for character in origin)):
+            or '*' in origin or any(character.isspace() for character in origin)):
+        raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
+    validated = TypeAdapter(AnyHttpUrl).validate_python(origin)
+    if validated.host and '*' in validated.host:
         raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
     if parsed.port is not None and not 1 <= parsed.port <= 65535:
         raise ValueError('API_CORS_ORIGINS端口需要处于1～65535')
