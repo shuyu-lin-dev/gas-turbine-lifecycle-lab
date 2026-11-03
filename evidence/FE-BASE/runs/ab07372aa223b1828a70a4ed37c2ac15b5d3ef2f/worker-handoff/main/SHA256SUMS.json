@@ -1,0 +1,20 @@
+{
+  "candidate-browser.json": "0168e80c98601d8d90e50ebf847111e869bea48dc9d4ec8d73c9d84d21b2e479",
+  "candidate-camera-regression.json": "4942a261448aed27911e765f8aa858f9f7d9cb0427142df2b8d21818353ac721",
+  "candidate-dependencies.json": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+  "candidate-licenses.json": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+  "candidate-missing-resource.json": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+  "candidate-server.json": "16d0ff3f0594619de216c9620ddfebad8421bd5b0853d0ea7c2dea505f3fada8",
+  "candidate-server.log": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+  "commands.json": "c88f84e91ff78d11caba1e88705bdbdc0123d6c15f02771f1a383013842967d2",
+  "configuration-regression.json": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+  "github.json": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+  "original-dependencies.json": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+  "original-licenses.json": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+  "original.tar": "8a516f635b1d200746d37701c314de18b1af08582907cf5de57bfc739d507a82",
+  "regression.json": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+  "results.json": "ebbc224da3c7fb82f8b63b8a98e5c97bcdc34215c1fa6e6b1b4ee73e708b6b2f",
+  "source.json": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+  "upstream.patch": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+  "version.json": "239f2f583c6f88b53f8cb82745a12839a128763c46f164be9a9e2ab4458334fc"
+}

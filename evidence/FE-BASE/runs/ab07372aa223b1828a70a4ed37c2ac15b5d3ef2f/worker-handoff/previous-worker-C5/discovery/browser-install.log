@@ -1,0 +1,12 @@
+⚠ Linux detected. If browser fails to launch, run:
+  agent-browser install --with-deps
+
+Installing Chrome...
+  Downloading Chrome 156.0.8078.80 for linux64
+  https://storage.googleapis.com/chrome-for-testing-public/156.0.8078.80/linux64/chrome-linux64.zip
+  10/192 MB (5%)  19/192 MB (10%)  29/192 MB (15%)  38/192 MB (20%)  48/192 MB (25%)  58/192 MB (30%)  67/192 MB (35%)  77/192 MB (40%)  86/192 MB (45%)  96/192 MB (50%)  106/192 MB (55%)  115/192 MB (60%)  125/192 MB (65%)  134/192 MB (70%)  144/192 MB (75%)  154/192 MB (80%)  163/192 MB (85%)  173/192 MB (90%)  182/192 MB (95%)  192/192 MB (100%)
+✓ Chrome 156.0.8078.80 installed successfully
+  Location: /home/lsy/.agent-browser/browsers/chrome-156.0.8078.80
+
+Note: If you see "shared library" errors when running, use:
+  agent-browser install --with-deps

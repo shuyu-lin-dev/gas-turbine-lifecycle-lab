@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "node",
+    "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer/node_modules/vite/bin/vite.js",
+    "preview",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "4173",
+    "--strictPort"
+  ],
+  "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer",
+  "port": 4173,
+  "started_at": "2026-11-03T09:39:24.656190+00:00",
+  "pid": 429817,
+  "exit_code": 143,
+  "stopped_at": "2026-11-03T09:55:01.583186+00:00"
+}

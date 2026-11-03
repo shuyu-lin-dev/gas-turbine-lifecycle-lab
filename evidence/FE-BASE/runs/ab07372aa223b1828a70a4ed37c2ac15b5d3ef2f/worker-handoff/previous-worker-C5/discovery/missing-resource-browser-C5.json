@@ -1,0 +1,49 @@
+{
+  "baseUrl": "http://127.0.0.1:4175/absent-fe-base",
+  "startedAt": "2026-11-03T09:57:59.108Z",
+  "operations": [],
+  "network": [
+    {
+      "url": "http://127.0.0.1:4175/absent-fe-base/?lang=en&quality=balanced&experience=console&speed=0",
+      "status": 404,
+      "type": "document"
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+    }
+  ],
+  "errors": [
+    {
+      "type": "document",
+      "url": "http://127.0.0.1:4175/absent-fe-base/?lang=en&quality=balanced&experience=console&speed=0",
+      "status": 404
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+    }
+  ],
+  "environment": {
+    "version": "156.0.8078.80",
+    "executablePath": "/home/lsy/.agent-browser/browsers/chrome-156.0.8078.80/chrome",
+    "args": [
+      "--no-sandbox",
+      "--use-angle=swiftshader",
+      "--enable-unsafe-swiftshader"
+    ],
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1
+  },
+  "state": "FAIL",
+  "failure": {
+    "name": "Error",
+    "message": "{\"type\":\"document\",\"url\":\"http://127.0.0.1:4175/absent-fe-base/?lang=en&quality=balanced&experience=console&speed=0\",\"status\":404}",
+    "stack": "Error: {\"type\":\"document\",\"url\":\"http://127.0.0.1:4175/absent-fe-base/?lang=en&quality=balanced&experience=console&speed=0\",\"status\":404}\n    at fail (file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/browser.mjs:27:74)\n    at Page.<anonymous> (file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/browser.mjs:38:29)\n    at Page._callHandler (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:66:29)\n    at Page.emit (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:56:12)\n    at BrowserContext._onResponse (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/browserContext.js:172:12)\n    at Proxy.<anonymous> (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/browserContext.js:123:63)\n    at Proxy._callHandler (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:66:29)\n    at Proxy.emit (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:56:12)\n    at Connection.dispatch (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/connection.js:175:21)\n    at Immediate.<anonymous> (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/inProcessFactory.js:48:85)"
+  }
+}

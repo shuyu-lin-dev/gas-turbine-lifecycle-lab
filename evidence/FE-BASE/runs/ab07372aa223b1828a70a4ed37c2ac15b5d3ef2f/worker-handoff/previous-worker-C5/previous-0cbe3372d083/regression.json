@@ -1,0 +1,13 @@
+{
+  "preserved_paths": [
+    "LICENSE",
+    "assets",
+    "evidence/M0-00",
+    "scripts/verify_m0_00.py",
+    "scripts/check_m0_00_failures.py",
+    "scripts/requirements-m0-00.txt",
+    "ACCEPTANCE.md"
+  ],
+  "m0_00_evidence_count": 39,
+  "state": "PASS"
+}

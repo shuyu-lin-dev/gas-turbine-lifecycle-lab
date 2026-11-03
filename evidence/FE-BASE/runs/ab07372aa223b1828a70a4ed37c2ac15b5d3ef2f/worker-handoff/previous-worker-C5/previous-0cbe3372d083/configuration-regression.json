@@ -1,0 +1,38 @@
+{
+  "blocks": {
+    "policy": {
+      "revision": 1,
+      "value_sha256": "19e96a0fb8076bca87b8e359a7ff116f0a0321e705b91c5828b96ab9f90355c5"
+    },
+    "eval": {
+      "revision": 0,
+      "value_sha256": "079d2f4f77afcdad7338e6cf917e309d0960df07e634d69c2e2825e791e32ceb"
+    },
+    "executor": {
+      "revision": 2,
+      "value_sha256": "82949afd9f4736495929db1dd07ecaad8168bc6d040337b64e0ae958ce468891"
+    }
+  },
+  "sources": {
+    "feishu": {
+      "revision": 1,
+      "value_sha256": "104469f55d3a214fdf10f0378f735595d237a53318a085121848880381869bbe"
+    },
+    "github": {
+      "revision": 2,
+      "value_sha256": "bf755da54adb8eb4e9dc22a9807329fd817bb7f905a25bdb867b893cc008334d"
+    }
+  },
+  "prompt_revision": 4,
+  "runtime": {
+    "state": "ready",
+    "detail": "Orchestrator is ready",
+    "at": "2026-11-03T05:15:19.674Z"
+  },
+  "load": {
+    "running": 1,
+    "queued": 0,
+    "maxWorkers": 1
+  },
+  "preserved_file_count": 6
+}

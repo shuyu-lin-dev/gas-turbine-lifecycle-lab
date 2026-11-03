@@ -1,0 +1,15 @@
+{
+  "candidate-browser.json": "e9a9553e3327acacba05c94503e9c762481293f93252e005d76eb39dc8c0c900",
+  "candidate-camera-regression.json": "c739ea8237e38457c9c904f2d6ba3b99089de9485829772aa42a0cbca47bf344",
+  "candidate-dependencies.json": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+  "candidate-licenses.json": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+  "candidate-missing-resource.json": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+  "candidate-server.json": "eaff40310518695c9383b0b31150a2083a8fa4d41025582c705c6796c282e433",
+  "candidate-server.log": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+  "commands.json": "092e7a72d2fac213edcca47c468c2d50afa0bf23286bfe25b9d335a0cce378ab",
+  "regression.json": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+  "results.json": "a6e5e10f6842a767510a5add0c76d03fd71e31e807bbdfd4e20ebbd683f908f0",
+  "source.json": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+  "upstream.patch": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+  "version.json": "88dabf586856c7254861e46660c2300d586c0b304d90f0315f642fd730366705"
+}

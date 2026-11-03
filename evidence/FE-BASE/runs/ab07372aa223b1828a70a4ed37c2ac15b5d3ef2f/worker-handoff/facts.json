@@ -1,0 +1,68 @@
+{
+  "criteria_commit": "7704387252b293bee1ec671b440164a12287ca16",
+  "tested_code_sha": "ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f",
+  "base": "86e521184a4d5bbd42dfe93a48999fa714c233f2",
+  "required": {
+    "FE-BASE-A01": "PASS",
+    "FE-BASE-A02": "PASS",
+    "FE-BASE-A03": "PASS",
+    "FE-BASE-A04": "PASS",
+    "FE-BASE-A05": "PASS"
+  },
+  "main_command_count": 32,
+  "clean_command_count": 26,
+  "main_operations": 32,
+  "clean_operations": 32,
+  "main_requests": 20,
+  "clean_requests": 20,
+  "main_camera_regression": "PASS",
+  "clean_camera_regression": "PASS",
+  "main_cameras": [
+    {
+      "selector": "#scene",
+      "stationaryDelta": 0,
+      "rotationDelta": 0.22505533695220947,
+      "zoomInDelta": 3.465521633008258,
+      "zoomOutDelta": 3.419356727868795
+    },
+    {
+      "selector": ".parts-lab canvas",
+      "stationaryDelta": 0,
+      "rotationDelta": 0.6635561883449554,
+      "zoomInDelta": 10.675755544370428,
+      "zoomOutDelta": 10.51463985942252
+    }
+  ],
+  "clean_cameras": [
+    {
+      "selector": "#scene",
+      "stationaryDelta": 0,
+      "rotationDelta": 0.22617989778518677,
+      "zoomInDelta": 3.4626284087407164,
+      "zoomOutDelta": 3.4211361552443194
+    },
+    {
+      "selector": ".parts-lab canvas",
+      "stationaryDelta": 0,
+      "rotationDelta": 0.6635561883449554,
+      "zoomInDelta": 10.675755544370428,
+      "zoomOutDelta": 10.51463985942252
+    }
+  ],
+  "original_independent_C5": {
+    "state": "FAIL",
+    "sha256": {
+      "candidate-browser.json": "11d2dec8c4dca3249dfad07268b5b95ecd9f19478c2525217e2ac2362067b808",
+      "commands.json": "0537331563b666e0a3b0fb758f3311c77a5a983fbab1a1baeee563dc2db26991"
+    }
+  },
+  "regression_red": "FAIL",
+  "regression_green": "PASS",
+  "check_runs": 0,
+  "statuses": 0,
+  "coordinator_session": "01a1a186-0661-7540-b368-f70449bdae16",
+  "coordinator_independent_review": "PENDING",
+  "E": null,
+  "baseline_tag": null,
+  "K": null
+}
