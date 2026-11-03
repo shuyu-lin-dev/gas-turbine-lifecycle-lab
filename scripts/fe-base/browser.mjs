@@ -141,7 +141,7 @@ try {
       await page.locator('[data-command="extract"]').click();
       assert.equal(await page.locator('#part-extraction').inputValue(), '100');
       assert.equal((await page.locator('.lab-assembly-tools output').textContent()).trim(), '100%');
-      assert.match((await page.locator('.lab-quality output').textContent()).trim(), /^\d+ × \d+ px$/);
+      assert.match((await page.locator('.parts-lab .lab-quality output').textContent()).trim(), /^\d+ × \d+ px$/);
       await page.waitForFunction(before => {
         const el = document.querySelector('.lab-pull');
         return Math.hypot(parseFloat(el.style.left) - before.left, parseFloat(el.style.top) - before.top) > 1;
@@ -171,7 +171,7 @@ try {
     await page.locator('.lab-pull').press('ArrowDown');
     assert.equal(await range.inputValue(), '0');
     assert.equal((await page.locator('.lab-assembly-tools output').textContent()).trim(), '0%');
-    assert.match((await page.locator('.lab-quality output').textContent()).trim(), /^\d+ × \d+ px$/);
+    assert.match((await page.locator('.parts-lab .lab-quality output').textContent()).trim(), /^\d+ × \d+ px$/);
     record('extraction-range-and-handle', {nativeRange: [100, 0], handleKeyboard: [10, 0]});
     await interact('.parts-lab canvas');
     await page.locator('[data-command="blade"]').click();
