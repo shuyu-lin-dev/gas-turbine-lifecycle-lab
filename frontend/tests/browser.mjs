@@ -15,10 +15,10 @@ try {
   page.on('pageerror', error => record.errors.push(String(error)))
   page.on('console', message => record.console.push({ type: message.type(), text: message.text() }))
   page.on('request', request => {
-    if (request.url() === healthUrl) record.requests.push({ url: request.url(), method: request.method() })
+    if (new URL(request.url()).pathname.endsWith('/health')) record.requests.push({ url: request.url(), method: request.method() })
   })
   page.on('requestfailed', request => {
-    if (request.url() === healthUrl) record.requestFailures.push({ url: request.url(), failure: request.failure() })
+    if (new URL(request.url()).pathname.endsWith('/health')) record.requestFailures.push({ url: request.url(), failure: request.failure() })
   })
   page.on('response', response => {
     if (response.url() === healthUrl) {

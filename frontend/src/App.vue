@@ -17,12 +17,13 @@ const error = ref('')
 const requestUrl = ref('')
 
 function endpoint(): string {
-  if (!apiBaseUrl || apiBaseUrl.trim() !== apiBaseUrl) {
-    throw new Error('API地址配置为空或包含多余空白，请检查VITE_API_BASE_URL。')
+  if (!apiBaseUrl || /[\u0000-\u0020\u007f\\]/.test(apiBaseUrl)) {
+    throw new Error('API地址为空或包含非法字符，请检查VITE_API_BASE_URL。')
   }
   const url = new URL(apiBaseUrl, window.location.origin)
   if ((!apiBaseUrl.startsWith('/') && !/^https?:\/\//.test(apiBaseUrl))
-      || apiBaseUrl.startsWith('//') || !['http:', 'https:'].includes(url.protocol)
+      || apiBaseUrl.startsWith('//') || (apiBaseUrl.startsWith('/') && url.origin !== window.location.origin)
+      || !['http:', 'https:'].includes(url.protocol)
       || url.username || url.password || url.search || url.hash) {
     throw new Error('API地址需要同源路径或完整的HTTP/HTTPS地址。')
   }

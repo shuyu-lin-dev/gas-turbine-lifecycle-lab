@@ -88,7 +88,7 @@ class Run:
                 assert process.poll() is None, '进程提前退出'
             try:
                 return self.http(url)
-            except (urllib.error.URLError, TimeoutError, AssertionError):
+            except (urllib.error.URLError, ConnectionError, TimeoutError, AssertionError):
                 if time.monotonic() >= deadline:
                     raise
                 time.sleep(.1)
@@ -145,7 +145,8 @@ class Run:
         api_a = self.api('api-a', 8201, python)
         self.browser('api-recovered', 'http://127.0.0.1:5173', 'http://127.0.0.1:5173/api/v1/health')
         self.stop(web)
-        for index, value in enumerate(['file:///invalid', 'http://user:password@127.0.0.1:8201/api/v1', '']):
+        for index, value in enumerate(['file:///invalid', 'http://user:password@127.0.0.1:8201/api/v1', '',
+                                       r'/\127.0.0.1:8202/api/v1', '/api/\nv1']):
             web = self.web(f'web-invalid-{index}', value)
             self.browser(f'invalid-address-{index}', 'http://127.0.0.1:5173', 'http://127.0.0.1:8201/api/v1/health', mode='config')
             self.stop(web)
