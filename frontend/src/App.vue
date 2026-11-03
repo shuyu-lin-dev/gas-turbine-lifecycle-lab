@@ -24,7 +24,8 @@ function endpoint(): string {
   if ((!apiBaseUrl.startsWith('/') && !/^https?:\/\//.test(apiBaseUrl))
       || apiBaseUrl.startsWith('//') || (apiBaseUrl.startsWith('/') && url.origin !== window.location.origin)
       || !['http:', 'https:'].includes(url.protocol)
-      || url.username || url.password || url.search || url.hash) {
+      || url.username || url.password || url.search || url.hash
+      || url.href !== url.origin + url.pathname) {
     throw new Error('API地址需要同源路径或完整的HTTP/HTTPS地址。')
   }
   return url.href.replace(/\/$/, '') + '/health'

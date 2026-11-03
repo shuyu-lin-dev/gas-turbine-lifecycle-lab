@@ -150,7 +150,9 @@ class Run:
         self.browser('api-recovered', 'http://127.0.0.1:5173', 'http://127.0.0.1:5173/api/v1/health')
         self.stop(web)
         for index, value in enumerate(['file:///invalid', 'http://user:password@127.0.0.1:8201/api/v1', '',
-                                       r'/\127.0.0.1:8202/api/v1', '/api/\nv1']):
+                                       r'/\127.0.0.1:8202/api/v1', '/api/\nv1',
+                                       'http://127.0.0.1:8201/api/v1?', 'http://127.0.0.1:8201/api/v1#',
+                                       '/api/v1?', '/api/v1#']):
             web = self.web(f'web-invalid-{index}', value)
             self.browser(f'invalid-address-{index}', 'http://127.0.0.1:5173', 'http://127.0.0.1:8201/api/v1/health', mode='config')
             self.stop(web)

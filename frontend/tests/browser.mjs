@@ -15,13 +15,13 @@ try {
   page.on('pageerror', error => record.errors.push(String(error)))
   page.on('console', message => record.console.push({ type: message.type(), text: message.text() }))
   page.on('request', request => {
-    if (new URL(request.url()).pathname.endsWith('/health')) record.requests.push({ url: request.url(), method: request.method() })
+    if (request.resourceType() === 'fetch' || new URL(request.url()).pathname.endsWith('/health')) record.requests.push({ url: request.url(), method: request.method() })
   })
   page.on('requestfailed', request => {
     if (new URL(request.url()).pathname.endsWith('/health')) record.requestFailures.push({ url: request.url(), failure: request.failure() })
   })
   page.on('response', response => {
-    if (response.url() === healthUrl) {
+    if (response.url() === healthUrl || (mode === 'config' && response.request().resourceType() === 'fetch')) {
       const entry = { url: response.url(), method: response.request().method(), status: response.status(), headers: response.headers() }
       if (mode === 'healthy') {
         pending.push(response.text().then(body => record.responses.push({ ...entry, body })))
