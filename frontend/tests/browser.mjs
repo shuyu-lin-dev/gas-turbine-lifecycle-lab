@@ -8,7 +8,7 @@ assert(['healthy', 'failed', 'timeout', 'config'].includes(mode))
 assert(process.env.M0_01_CHROME, '需要明确实际Chrome路径')
 const expected = JSON.parse(await readFile(new URL(`../../evidence/M0-01/health-${instance}.json`, import.meta.url)))
 const browser = await chromium.launch({ executablePath: process.env.M0_01_CHROME, args: ['--no-sandbox'] })
-const record = { url, healthUrl, instance, mode, requests: [], responses: [], errors: [], console: [], steps: [] }
+const record = { url, healthUrl, instance, mode, requests: [], requestFailures: [], responses: [], errors: [], console: [], steps: [] }
 const pending = []
 try {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } })
@@ -17,12 +17,17 @@ try {
   page.on('request', request => {
     if (request.url() === healthUrl) record.requests.push({ url: request.url(), method: request.method() })
   })
+  page.on('requestfailed', request => {
+    if (request.url() === healthUrl) record.requestFailures.push({ url: request.url(), failure: request.failure() })
+  })
   page.on('response', response => {
     if (response.url() === healthUrl) {
-      pending.push(response.text().then(body => record.responses.push({
-        url: response.url(), method: response.request().method(), status: response.status(), body,
-        headers: response.headers(),
-      })))
+      const entry = { url: response.url(), method: response.request().method(), status: response.status(), headers: response.headers() }
+      if (mode === 'healthy') {
+        pending.push(response.text().then(body => record.responses.push({ ...entry, body })))
+      } else {
+        record.responses.push(entry)
+      }
     }
   })
   const document = await page.goto(url)
