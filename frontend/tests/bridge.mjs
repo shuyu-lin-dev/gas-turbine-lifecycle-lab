@@ -270,9 +270,11 @@ try {
         run_id: document.querySelector('#bridge-context').dataset.run, context_revision: Number(document.querySelector('#bridge-context').dataset.revision) } }))
     const staleMessage = { schema_version: '1', type: 'component-selected', viewer_instance_id: new URL(oldHref).searchParams.get('viewer_instance_id'),
       ...oldStats.context, payload: { component_id: 'compressor', request_id: `old-frame-cycle-${cycle}`, trigger: 'user', result: 'selected' } }
-    await frame.evaluate(message => {
-      parent.postMessage(message, location.origin)
-      parent.document.querySelector('.workspace-nav button').click()
+    await page.evaluate(message => {
+      const document = window.document.querySelector('iframe[title="燃气轮机教学模型"]').contentDocument
+      const script = document.createElement('script')
+      script.textContent = `parent.postMessage(${JSON.stringify(message)}, location.origin); parent.document.querySelector('.workspace-nav button').click()`
+      document.body.append(script)
     }, staleMessage)
     await page.waitForFunction(() => document.querySelectorAll('iframe[title="燃气轮机教学模型"]').length === 0)
     assert.equal(oldFrame.isDetached(), true)
