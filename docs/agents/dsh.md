@@ -2,11 +2,11 @@
 
 本文件由 v2 接入说明适配为正式仓库入口。执行边界与交付纪律以 [AGENTS.md](../../AGENTS.md) 为准；任务/依赖/状态只查 [TASKS.md](../../TASKS.md)，硬验收只查 [ACCEPTANCE.md](../../ACCEPTANCE.md)。[workflow.md](workflow.md) 保存 Matt skills 与 S→C→E→K 适配。
 
-## 当前 M0-00 执行
+## 当前 FE-BASE 执行
 
-Issue #1 已于 2026-11-03T07:19:04Z 派发真实 M0-00。Ticket 为 `910aedd83224919debc9bc9021d86450`，worker session 为 `worker-910aedd83224919debc9bc9021d86450`，实际工作树为 `/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224`。本项范围与验收见 [冻结记录](../../evidence/M0-00/criteria.md)。
+Issue #3 已于 2026-11-03T08:45:29Z 派发真实 FE-BASE。Ticket 为 `914d2ac32b5d2f130d718138164c8bab`，worker session 为 `worker-914d2ac32b5d2f130d718138164c8bab`，工作树为 `/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d`。本项范围与验收见 [冻结记录](../../evidence/FE-BASE/criteria.md)。
 
-Issue #1 评论 `6597814032`（shuyu-lin-dev，2026-11-03T07:20:33Z）明确指定协调会话负责最终合并。必要验收、独立审查、S/C/E/K、远程标签和最终 head 核查全部通过后，协调会话执行合并并核查实际集成；开发 worker 只执行 M0-00、交付准确候选和 PR，后续任务单独派发。保留保护与必要检查，不执行 approve 或 auto-merge，不调用 gh-owner。
+M0-00 已通过 PR #2 合并至 `86e521184a4d5bbd42dfe93a48999fa714c233f2`；K 外部回执为 Issue #1 评论 `6599010057`，实际集成回执为评论 `6599090173`。本工作分支实际包含其成果。当前 worker 完成 FE-BASE 准确候选、真实验收及 draft PR 后，等待协调会话独立 Standards/Spec 审查与复验；对应候选通过后继续 E、远程基线和 K，再由协调会话最终核查、合并及确认集成。后续任务单独派发，开发 worker 不执行 approve、merge 或 auto-merge，不调用 gh-owner。
 
 以下准备观察、配置保存正文与 preparation 证据保留其历史含义，实际执行以当前派工和冻结记录为准。
 
@@ -98,6 +98,6 @@ Matt 测试、审查与交付适配：
 
 后续由 allowed 的 shuyu-lin-dev 在唯一目标仓库的新 Issue 或新评论中提及实际 agent lucy-assistant 派工；这里只说明方法，本轮不发布消息。仅编辑旧正文增加 @ 不能视为触发成功。Issue/Ticket 关联仓库任务 ID、当前允许范围和适用 skills，实际新 Ticket、工作树、分支、提交、推送、远程 SHA 与 PR 由真实 worker 留证。飞书只沿用已有连接与当次授权的来源对话，不额外发测试消息。
 
-真实 Ticket 按明确授权范围推进，当前只执行 M0-00；后续任务单独派发，每项分别完成 S→C→E→K，maxWorkers=1。主 checkout 的未提交文档不能作为可继承基线，前置成果必须进入实际工作分支。标签存在、Issue 关闭或 PR 已创建均不能替代合并和回归；当前授权由协调会话执行最终合并与实际集成核查。
+真实 Ticket 按明确授权范围推进，当前只执行 FE-BASE；后续任务单独派发，每项分别完成 S→C→E→K，maxWorkers=1。主 checkout 的未提交文档不能作为可继承基线，前置成果必须进入实际工作分支。标签存在、Issue 关闭或 PR 已创建均不能替代合并和回归；当前授权由协调会话执行最终合并与实际集成核查。
 
 FE-BASE/FE-INTEGRATE 在 M0 执行；RAG-BASE/RAG-INTEGRATE 在 M1 执行。仅在对应任务完整取得固定上游并 subtree 导入，保留完整源树、版本、许可证和补丁关系，不启用上游 skills。Vue 同源 /viewer iframe 和真实 RAG 入口 `python -m src.mcp_server.server` 的细则见 [DEV_SPEC.md](../../DEV_SPEC.md) 与 [UPSTREAM_REUSE.md](../UPSTREAM_REUSE.md)。assets/models/source 只是模型导出所需子集；既有 GLB 不能代替完整 viewer、浏览器或业务验收。部署按阶段增加必要角色，API 与前端独立，M0 不运行 RAG。完整 M0～M4 与硬验收全部保留。

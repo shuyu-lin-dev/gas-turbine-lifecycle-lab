@@ -1,6 +1,6 @@
 # Worker 工作流与 Matt skills
 
-本文件适配实际安装的 Matt skills，服从 [根规则](../../AGENTS.md)、[唯一任务清单](../../TASKS.md) 和 [硬验收](../../ACCEPTANCE.md)。当前 M0-00 已由 Issue #1 正式派发；开发 worker 完成准确候选和必要实测后，在该 Issue 提交审查回执，由协调会话组织独立审查。依据评论 6597814032，必要验收、独立审查、S/C/E/K、远程标签及最终 head 核查全部通过后，由协调会话执行合并并核查实际集成。当前开发 worker 只执行 M0-00，后续任务单独派发；历史 preparation 记录保留原样。
+本文件适配实际安装的 Matt skills，服从 [根规则](../../AGENTS.md)、[唯一任务清单](../../TASKS.md) 和 [硬验收](../../ACCEPTANCE.md)。当前 Issue #3 已派发 FE-BASE；前置 M0-00 已通过 PR #2 实际集成。开发 worker 完成准确候选和必要实测后，提交 draft PR 并在 Issue #3 回执，由协调会话组织独立 Standards/Spec 审查和实际复验。对应候选通过后继续 E、远程基线和 K，再由协调会话最终核查、合并与确认实际集成。当前开发 worker 只执行 FE-BASE，后续任务单独派发；历史 preparation 记录保留原样。
 
 ## 实际版本与加载
 
