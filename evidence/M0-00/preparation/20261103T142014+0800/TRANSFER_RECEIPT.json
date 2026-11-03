@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-11-03T14:57:35.917397+08:00",
+  "preparation_id": "20261103T142014+0800",
+  "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+  "base_sha": "dad14da1561ac609a5d14076629d1698c53b3627",
+  "new_project_commits": 0,
+  "payload_sha256": "07b1295ac3381974bc857d4106120b1f77932f601346058a6ff7c8a818fea03d",
+  "payload_bytes": 2907360,
+  "manifest_entries": 71,
+  "operations": {
+    "ADD": 70,
+    "MODIFY": 1,
+    "DELETE": 0
+  },
+  "stage": "final",
+  "receipt_transport": "receipt.json sidecar; explicit ADD",
+  "source_package_exit_status": "MOVED_TO_ARCHIVE",
+  "tracked_original_package_deletions": [],
+  "unrelated_preexisting_user_changes": [],
+  "real_ticket_or_worker_validation": "NOT_RUN"
+}

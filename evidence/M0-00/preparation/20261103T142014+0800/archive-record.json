@@ -1,0 +1,222 @@
+{
+  "at": "2026-11-03T14:23:37.711435+08:00",
+  "original_package": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/dsh_handoff_v2",
+  "archive": "/home/lsy/workspace/lab/_handoff-archives/gas-turbine-lifecycle-lab/20261103T142014+0800",
+  "file_count": 25,
+  "inventory": [
+    {
+      "path": "DSH_HANDOFF.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 13635,
+      "sha256": "8363ac61d8abd5adf0e6ecadd62cd7ed0cf80b2f875b567f1302a3be489d0de2"
+    },
+    {
+      "path": "README.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 2045,
+      "sha256": "98d6f0e3a435f77cbe07ab7e3ad85f4a8498cb88064019ef66e39b642e0d06a9"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 2466,
+      "sha256": "b3f0d1c288f07d6fa9c678c0af434a1849efeaf3dedf322862e07296c87f366a"
+    },
+    {
+      "path": "project",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/ACCEPTANCE.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 44056,
+      "sha256": "6593f43c6605311bec2375f0455b2e42940052a200ecc38f37da1bc93d382bb1"
+    },
+    {
+      "path": "project/AGENTS.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 10683,
+      "sha256": "196b71130d4d3c3a77430887862412d264701f34155501a36a72f41ca5a2ec2a"
+    },
+    {
+      "path": "project/DEV_SPEC.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 32301,
+      "sha256": "2a96a71b293ef2e3edb10a7926f89cccdb7e2b567386fade238056c0f0b84ea6"
+    },
+    {
+      "path": "project/TASKS.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 7780,
+      "sha256": "484c5945664a9996f02e687b778d510aa460b73da0b3bf8644d349088734f38a"
+    },
+    {
+      "path": "project/assets",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/assets/models",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/assets/models/LICENSE.txt",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1068,
+      "sha256": "e3ae860e9f2dd7688a37d305d64e524f324cd0fa4fa499363d4eb3e7599320c5"
+    },
+    {
+      "path": "project/assets/models/README.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 2338,
+      "sha256": "9c82dd18192c9612a28eb845e298817dacb1a43dc82feeac56e694936b0a15d4"
+    },
+    {
+      "path": "project/assets/models/THREE-LICENSE.txt",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "project/assets/models/component-map.json",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1600,
+      "sha256": "4ad0b5ef9394bb252aee976dfcf6f420aa12a4bbb6370c852926bc7f23ce94c8"
+    },
+    {
+      "path": "project/assets/models/industrial-gas-turbine-educational.glb",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 13479328,
+      "sha256": "f650a3b2c080ea76bb5daa9e0f4c7f37f0f5bf7774f2d323e42ef432a00fa316"
+    },
+    {
+      "path": "project/assets/models/industrial-model-inspection.json",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 6864,
+      "sha256": "21f843fa9b1ac78d243c438ce479a836eb0022fce45b24f65d7f881fa30a7f88"
+    },
+    {
+      "path": "project/assets/models/source",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/assets/models/source/LICENSE",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1068,
+      "sha256": "e3ae860e9f2dd7688a37d305d64e524f324cd0fa4fa499363d4eb3e7599320c5"
+    },
+    {
+      "path": "project/assets/models/source/README.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 4958,
+      "sha256": "81f26212e2dc3300c35e2c7b5ed50a5645a44735836be464dcec92357394dae2"
+    },
+    {
+      "path": "project/assets/models/source/THIRD_PARTY_NOTICES.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1385,
+      "sha256": "da50fb2711ec5ac78de4918a6162c9a614e1cb4f4a59d6b9a34cbb64dd24d321"
+    },
+    {
+      "path": "project/assets/models/source/export_glb.mjs",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1794,
+      "sha256": "0cf617b4139a6f13f472f01961f66604c2ab7d752f710cc33a9dece096ca1d27"
+    },
+    {
+      "path": "project/assets/models/source/package-lock.json",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 38549,
+      "sha256": "b2be10e2180b7b59d7d792d863a91a9daaf1b4286badc91c5fc50034263ba2f5"
+    },
+    {
+      "path": "project/assets/models/source/package.json",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1505,
+      "sha256": "3afdb8a78e894f19ccff44df9303ad4b5bcd9e4748d8fb376adb7259b8e26593"
+    },
+    {
+      "path": "project/assets/models/source/src",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/assets/models/source/src/inlet-support.ts",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 3278,
+      "sha256": "685ddd4fa59e16dc30636ba61f8e279b39b0d8f1e43c5a8c53a850081c92c16e"
+    },
+    {
+      "path": "project/assets/models/source/src/sectioned-case.ts",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 7094,
+      "sha256": "ff6300f4b278abfdcd2a338cb376549ab87bde714b7047d025c21acec0827f58"
+    },
+    {
+      "path": "project/assets/models/source/src/turbine.ts",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 59735,
+      "sha256": "61fc88e4ce4d38effa256db3b4d8588a06b7813c3ea221b5404d56d5b17e221b"
+    },
+    {
+      "path": "project/assets/models/source/verify_glb.mjs",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 716,
+      "sha256": "32c095fc559612c01c78fc00d17db7eff3069a5b1f5c8ee68814c1622c0f517b"
+    },
+    {
+      "path": "project/docs",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/docs/UPSTREAM_REUSE.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 22892,
+      "sha256": "e4baf397a32c420fb1bfd1c64b05035321b15f80c6342d5233989115091fb613"
+    },
+    {
+      "path": "project/evidence",
+      "mode": "0o755",
+      "type": "directory"
+    },
+    {
+      "path": "project/evidence/REPORT.template.md",
+      "mode": "0o644",
+      "type": "file",
+      "bytes": 1825,
+      "sha256": "48b24a72377b7d756a40ffe877b62c4ceddf6f96be7f4e848a704706c9daafc8"
+    }
+  ],
+  "copy_verified": true,
+  "restore_verified": true,
+  "tar_sha256": "15d65cdc1c1dcc27b7ac7340c69f8d3588aec36cb2a1e460fadc74f939181bc0",
+  "original_not_removed": true
+}

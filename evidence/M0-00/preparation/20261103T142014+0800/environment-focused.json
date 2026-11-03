@@ -1,0 +1,105 @@
+[
+  {
+    "at": "2026-11-03T14:30:15.877124+08:00",
+    "command": [
+      "readlink",
+      "-f",
+      "/var/run/docker.sock"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": "/run/docker.sock\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:15.880935+08:00",
+    "command": [
+      "ls",
+      "-l",
+      "/var/run/docker.sock"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": "srw-rw---- 1 root docker 0 Nov  2 22:09 /var/run/docker.sock\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:15.883793+08:00",
+    "command": [
+      "docker",
+      "info",
+      "--format",
+      "OperatingSystem={{.OperatingSystem}} OSType={{.OSType}} Name={{.Name}} Kernel={{.KernelVersion}} Server={{.ServerVersion}} CPUs={{.NCPU}} MemoryBytes={{.MemTotal}}"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": "OperatingSystem=Docker Desktop OSType=linux Name=docker-desktop Kernel=6.18.33.1-microsoft-standard-WSL2 Server=29.5.3 CPUs=12 MemoryBytes=14655565824\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:16.937628+08:00",
+    "command": [
+      "git",
+      "lfs",
+      "version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "fatal: 'lfs' appears to be a git command, but we were not\nable to execute it. Maybe git-lfs is broken?\n"
+  },
+  {
+    "at": "2026-11-03T14:30:17.062203+08:00",
+    "command": [
+      "python3",
+      "-c",
+      "import importlib.util;print({n:bool(importlib.util.find_spec(n)) for n in [\"venv\",\"ensurepip\",\"pip\"]})"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": "{'venv': True, 'ensurepip': False, 'pip': False}\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:17.077748+08:00",
+    "command": [
+      "git",
+      "-C",
+      "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": "6337fc823ce20251c8de8085948165c81aaa701e\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:17.102002+08:00",
+    "command": [
+      "git",
+      "-C",
+      "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype",
+      "status",
+      "--short"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": " M scripts/dsh-superagent\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:17.379184+08:00",
+    "command": [
+      "gh",
+      "api",
+      "user",
+      "--jq",
+      "{login,id}"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "exit_code": 0,
+    "stdout": "{\"id\":162398512,\"login\":\"lucy-assistant\"}\n",
+    "stderr": ""
+  }
+]

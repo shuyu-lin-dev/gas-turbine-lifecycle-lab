@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "git",
+    "push",
+    "origin",
+    "agent/bootstrap-spec-freeze-910aedd83224"
+  ],
+  "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+  "exit_code": 0,
+  "combined_output": "To https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n   106bc25..b4ae8e3  agent/bootstrap-spec-freeze-910aedd83224 -> agent/bootstrap-spec-freeze-910aedd83224\n",
+  "combined_output_sha256": "9bc741e6c20a810d7f7305b845be49ff9effbcdbe21f4c8e2865d5e5db3d4aa0",
+  "source": ".scratch-runtime/push-C3.log"
+}

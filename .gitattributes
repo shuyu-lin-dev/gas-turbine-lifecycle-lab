@@ -1,0 +1,2 @@
+# 历史 unified diff 的上下文空行保留一个空格。
+evidence/M0-00/preparation/20261103T142014+0800/migration-*.diff whitespace=-blank-at-eol,-blank-at-eof

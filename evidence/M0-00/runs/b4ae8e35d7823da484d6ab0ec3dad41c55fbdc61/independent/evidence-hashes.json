@@ -1,0 +1,14 @@
+{
+  "github.json": "41fc922a8606c2bdea32bdc5ecae1e1c3e173e3b8dd8d03879fc7621cbe51126",
+  "configuration.json": "ea2dfdd5596b0077b6ac9cd01d222a2e6349389117dde399ff942da4997b47e4",
+  "git.json": "6d2f5d02ad84c75380e83af191dcf681dfe412eeb275613b61182534e3eee3fd",
+  "regression.json": "b1ea7ff72717fa13c4aca741d3007af85f1a664e57dd1997ca6c80c4dcae9b08",
+  "remote.json": "e0df34183e094972e483a4e88ed7936183bc4ac0058471a353dc1cc6f81cca47",
+  "version-check.json": "22466b6f0129cd7ebe6d7f4984f577fb5317b03638c8fa6ce7c5ce767e343d3a",
+  "docker.json": "617169f0404d36623a12f315e7ce08614e78dbe67eac52b3e922152e33b41ae3",
+  "profile.json": "08e44f56e691f6cc44a854b34fe4804fa347ee8605fdb6ded522377b33dcc69e",
+  "commands.json": "8bd15bad3fead75260ee9884e8e3a8dcd6a3256ecc56c1b5c36ba439a22959ca",
+  "preservation.json": "69b0d7ad8523dbc5b86d0f2490a970ba9e9eb396cc633a191662cf2d6a464689",
+  "prompts.json": "e4db8013e840f68b635a2fe5d074e97efccebf05d0387d55317fedbbb958efc9",
+  "runtime.json": "783b7f3e43f2f7d290fbaec71983216507d4c40e8b88b5f4b649f24239850cad"
+}

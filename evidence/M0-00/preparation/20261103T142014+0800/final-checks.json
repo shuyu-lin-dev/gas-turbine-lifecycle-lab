@@ -1,0 +1,226 @@
+{
+  "recorded_at": "2026-11-03T14:55:58.759167+08:00",
+  "commands": [
+    {
+      "at": "2026-11-03T14:55:58.711665+08:00",
+      "command": [
+        "git",
+        "rev-parse",
+        "--show-toplevel",
+        "--git-common-dir",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab\n.git\ndad14da1561ac609a5d14076629d1698c53b3627\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.714490+08:00",
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v2",
+        "--branch",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "# branch.oid dad14da1561ac609a5d14076629d1698c53b3627\n# branch.head main\n# branch.upstream origin/main\n# branch.ab +0 -0\n1 .M N... 100644 100644 100644 37dd61a785c610d6cd57349f5a237c0175d59971 37dd61a785c610d6cd57349f5a237c0175d59971 README.md\n? .gitignore\n? ACCEPTANCE.md\n? AGENTS.md\n? DEV_SPEC.md\n? GLOSSARY.md\n? TASKS.md\n? assets/models/LICENSE.txt\n? assets/models/README.md\n? assets/models/THREE-LICENSE.txt\n? assets/models/component-map.json\n? assets/models/industrial-gas-turbine-educational.glb\n? assets/models/industrial-model-inspection.json\n? assets/models/source/LICENSE\n? assets/models/source/README.md\n? assets/models/source/THIRD_PARTY_NOTICES.md\n? assets/models/source/export_glb.mjs\n? assets/models/source/package-lock.json\n? assets/models/source/package.json\n? assets/models/source/src/inlet-support.ts\n? assets/models/source/src/sectioned-case.ts\n? assets/models/source/src/turbine.ts\n? assets/models/source/verify_glb.mjs\n? docs/UPSTREAM_REUSE.md\n? docs/agents/domain.md\n? docs/agents/dsh.md\n? docs/agents/issue-tracker.md\n? docs/agents/triage-labels.md\n? docs/agents/workflow.md\n? evidence/M0-00/preparation/20261103T142014+0800/HANDOFF_EXIT.json\n? evidence/M0-00/preparation/20261103T142014+0800/README.md\n? evidence/M0-00/preparation/20261103T142014+0800/TRANSFER.md\n? evidence/M0-00/preparation/20261103T142014+0800/TRANSFER_RECEIPT.json\n? evidence/M0-00/preparation/20261103T142014+0800/archive-record.json\n? evidence/M0-00/preparation/20261103T142014+0800/commands.json\n? evidence/M0-00/preparation/20261103T142014+0800/configuration-diff.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-prompts-after.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-prompts-before.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-save-events.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-settings-after.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-settings-before.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-state-after.json\n? evidence/M0-00/preparation/20261103T142014+0800/dsh-state-before.json\n? evidence/M0-00/preparation/20261103T142014+0800/environment-focused.json\n? evidence/M0-00/preparation/20261103T142014+0800/identities.json\n? evidence/M0-00/preparation/20261103T142014+0800/initial-workspace-inventory.json\n? evidence/M0-00/preparation/20261103T142014+0800/installed-components.json\n? evidence/M0-00/preparation/20261103T142014+0800/migration-DSH_HANDOFF.md.diff\n? evidence/M0-00/preparation/20261103T142014+0800/migration-README.md.diff\n? evidence/M0-00/preparation/20261103T142014+0800/migration-map.json\n? evidence/M0-00/preparation/20261103T142014+0800/migration-project_AGENTS.md.diff\n? evidence/M0-00/preparation/20261103T142014+0800/migration-project_DEV_SPEC.md.diff\n? evidence/M0-00/preparation/20261103T142014+0800/migration-project_docs_UPSTREAM_REUSE.md.diff\n? evidence/M0-00/preparation/20261103T142014+0800/original-SHA256SUMS.txt\n? evidence/M0-00/preparation/20261103T142014+0800/original-sha256-check.json\n? evidence/M0-00/preparation/20261103T142014+0800/prepare.sh\n? evidence/M0-00/preparation/20261103T142014+0800/preserved-host-configuration.json\n? evidence/M0-00/preparation/20261103T142014+0800/remote-final-verification.json\n? evidence/M0-00/preparation/20261103T142014+0800/skill-invocation-audit.json\n? evidence/M0-00/preparation/20261103T142014+0800/source-status-before.json\n? evidence/M0-00/preparation/20261103T142014+0800/task-acceptance-mapping.json\n? evidence/M0-00/preparation/20261103T142014+0800/team-additions.json\n? evidence/M0-00/preparation/20261103T142014+0800/tickets-open-after.json\n? evidence/M0-00/preparation/20261103T142014+0800/tickets-open-before.json\n? evidence/M0-00/preparation/20261103T142014+0800/validation-archive.json\n? evidence/M0-00/preparation/20261103T142014+0800/validation.json\n? evidence/M0-00/preparation/20261103T142014+0800/worker-skills-manifest.json\n? evidence/M0-00/preparation/20261103T142014+0800/wsl-decoded.json\n? evidence/REPORT.template.md\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.716150+08:00",
+      "command": [
+        "git",
+        "remote",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "origin\thttps://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git (fetch)\norigin\thttps://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git (push)\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.717659+08:00",
+      "command": [
+        "git",
+        "worktree",
+        "list",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "worktree /home/lsy/workspace/lab/gas-turbine-lifecycle-lab\nHEAD dad14da1561ac609a5d14076629d1698c53b3627\nbranch refs/heads/main\n\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.719607+08:00",
+      "command": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "HEAD...origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t0\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.721269+08:00",
+      "command": [
+        "git",
+        "merge-base",
+        "HEAD",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "dad14da1561ac609a5d14076629d1698c53b3627\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.723308+08:00",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.724923+08:00",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.726395+08:00",
+      "command": [
+        "git",
+        "for-each-ref",
+        "--format=%(refname) %(objectname)"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/heads/main dad14da1561ac609a5d14076629d1698c53b3627\nrefs/remotes/origin/HEAD dad14da1561ac609a5d14076629d1698c53b3627\nrefs/remotes/origin/main dad14da1561ac609a5d14076629d1698c53b3627\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.728029+08:00",
+      "command": [
+        "git",
+        "var",
+        "GIT_AUTHOR_IDENT"
+      ],
+      "exit_code": 0,
+      "stdout": "lucy-assistant <162398512+lucy-assistant@users.noreply.github.com> 1793688958 +0800\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.729591+08:00",
+      "command": [
+        "git",
+        "var",
+        "GIT_COMMITTER_IDENT"
+      ],
+      "exit_code": 0,
+      "stdout": "lucy-assistant <162398512+lucy-assistant@users.noreply.github.com> 1793688958 +0800\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.730583+08:00",
+      "command": [
+        "sh",
+        "-n",
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/evidence/M0-00/preparation/20261103T142014+0800/prepare.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-03T14:55:58.751095+08:00",
+      "method": "GET",
+      "endpoint": "state",
+      "http_status": 200
+    },
+    {
+      "at": "2026-11-03T14:55:58.754528+08:00",
+      "method": "GET",
+      "endpoint": "settings",
+      "http_status": 200
+    },
+    {
+      "at": "2026-11-03T14:55:58.757733+08:00",
+      "method": "GET",
+      "endpoint": "prompts",
+      "http_status": 200
+    },
+    {
+      "at": "2026-11-03T14:55:58.758936+08:00",
+      "method": "GET",
+      "endpoint": "tickets?state=open&limit=20",
+      "http_status": 200
+    }
+  ],
+  "remote_verification": {
+    "observed_at": "2026-11-03T14:54:50+08:00",
+    "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+    "default_branch": "main",
+    "confirmed_ref": "refs/heads/main",
+    "confirmed_sha": "dad14da1561ac609a5d14076629d1698c53b3627",
+    "type": "commit",
+    "tool": "mcp__codex_apps__github_fetch",
+    "request_url": "https://api.github.com/repos/shuyu-lin-dev/gas-turbine-lifecycle-lab/git/ref/heads/main",
+    "connection_actor": "shuyu-lin-dev",
+    "tool_is_error": false,
+    "worker_cli_identity_evidence": "commands.json and identities.json",
+    "actual_worker_push": "NOT_RUN",
+    "host_network_observations": [
+      {
+        "at": "2026-11-03T14:50:46.323492+08:00",
+        "command": [
+          "gh",
+          "repo",
+          "view",
+          "--json",
+          "nameWithOwner,viewerPermission,defaultBranchRef"
+        ],
+        "account_context": "configured worker shim / lucy-assistant",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Post \"https://api.github.com/graphql\": EOF\n"
+      },
+      {
+        "at": "2026-11-03T14:52:53.572471+08:00",
+        "command": [
+          "git",
+          "ls-remote",
+          "--symref",
+          "origin"
+        ],
+        "account_context": "configured worker Git environment",
+        "exit_code": 128,
+        "stdout": "",
+        "stderr": "fatal: unable to access 'https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.\n"
+      }
+    ]
+  },
+  "dsh": {
+    "profile": "superagent",
+    "source_github_revision": 2,
+    "policy_revision": 1,
+    "executor_revision": 2,
+    "prompts_revision": 4,
+    "router_last_used_revision": 4,
+    "maxWorkers": 1,
+    "running": 0,
+    "queued": 0,
+    "open_tickets": 0,
+    "prepare_sha256": "3688da872189a8c2d773a6bc68ca0ff039d21d586e477b41e75eb02edd885ae4"
+  }
+}

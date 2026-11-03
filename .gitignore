@@ -1,0 +1,51 @@
+# Dependency installations; preserve manifests and lock files.
+node_modules/
+.venv/
+venv/
+
+# Build and language/tool caches.
+dist/
+dist-labs/
+build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.vite/
+.coverage
+coverage/
+htmlcov/
+*.tsbuildinfo
+
+# Runtime state belongs in declared runtime directories, not source/evidence.
+/runtime/
+/.runtime/
+/data/runtime/
+/data/chroma/
+/data/bm25/
+/data/checkpoints/
+/logs/
+
+# Local inference weights/cache; public GLB assets remain visible.
+/models/weights/
+/data/model-cache/
+*.gguf
+*.safetensors
+
+# Credentials and local overrides; keep public example files.
+.env
+.env.*
+!.env.example
+!.env.*.example
+.secrets/
+*.key
+*.pem
+
+# Named local scratch paths; do not blanket-ignore evidence, assets or data.
+/.scratch-runtime/
+/.local-preparation/
+
+# One-time local transport capsule; its receipt and audit stay visible beside it.
+/evidence/M0-00/preparation/20261103T142014+0800/transfer/

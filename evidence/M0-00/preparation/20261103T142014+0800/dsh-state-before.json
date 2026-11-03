@@ -1,0 +1,94 @@
+{
+  "setup": {
+    "machine": {
+      "stateDir": "/home/lsy/.dsh/state/gas-turbine-lifecycle-lab",
+      "promptMaxChars": 100000,
+      "admissionContextMaxPages": 10,
+      "admissionContextTimeoutMs": 15000
+    },
+    "problem": null,
+    "feishuProblem": null,
+    "accounts": {
+      "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+      "agent": "lucy-assistant",
+      "feishu": {
+        "appId": "[identifier-sha256:c0bc4f437f4c]",
+        "brand": "feishu",
+        "botId": "[identifier-sha256:a6a902aa33fc]",
+        "name": "superagent"
+      }
+    }
+  },
+  "load": {
+    "running": 0,
+    "queued": 0,
+    "maxWorkers": 3
+  },
+  "masterId": "orchestrator-391b11e342f86cd09212857f354f3b57",
+  "paused": false,
+  "health": {
+    "runtime": {
+      "state": "ready",
+      "detail": "Orchestrator is ready",
+      "at": "2026-11-03T05:15:19.674Z"
+    },
+    "relay": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T05:15:14.394Z"
+    },
+    "notice": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T05:21:37.589Z"
+    },
+    "launch": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T05:15:14.394Z"
+    },
+    "delivery": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T05:15:14.394Z"
+    },
+    "assessment": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T06:20:35.758Z"
+    },
+    "reply": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T05:15:14.394Z"
+    },
+    "evals": {
+      "state": "ready",
+      "detail": "No unavailable Eval in the last hour"
+    },
+    "models": {
+      "state": "ready",
+      "detail": "No managed Session is waiting on a model budget retry"
+    },
+    "github": {
+      "state": "ready",
+      "detail": "0 notifications; next poll ≥ 60s",
+      "at": "2026-11-03T06:18:47.660Z"
+    },
+    "feishu": {
+      "state": "ready",
+      "detail": "Listening for bot events",
+      "at": "2026-11-03T05:15:21.885Z"
+    },
+    "history": {
+      "state": "ready",
+      "detail": "Configured groups and known direct chats recovered",
+      "at": "2026-11-03T06:20:31.312Z"
+    },
+    "sync:feishu": {
+      "state": "ready",
+      "detail": "1 allowed",
+      "at": "2026-11-03T06:07:19.688Z"
+    }
+  }
+}

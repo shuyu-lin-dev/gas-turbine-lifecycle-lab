@@ -1,0 +1,17 @@
+{
+  "branch": "agent/bootstrap-spec-freeze-910aedd83224",
+  "remote_sha": "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+  "pr": {
+    "author": {
+      "id": "U_kgDOCa4BMA",
+      "is_bot": false,
+      "login": "lucy-assistant",
+      "name": "lucy-assistant"
+    },
+    "baseRefName": "main",
+    "headRefName": "agent/bootstrap-spec-freeze-910aedd83224",
+    "headRefOid": "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+    "number": 2,
+    "url": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/pull/2"
+  }
+}

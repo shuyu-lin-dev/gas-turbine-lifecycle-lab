@@ -1,0 +1,24 @@
+{
+  "task_id": "M0-00",
+  "verified_at": "2026-11-03T08:23:24.400662+00:00",
+  "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+  "remote_branch": "agent/bootstrap-spec-freeze-910aedd83224",
+  "criteria_commit_S": "3980867902a9c102f18894e9acf65b8c72051b19",
+  "tested_code_sha_C": "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+  "evidence_commit_E": "398b923f01eb97bcf7c22e9e31f344662c2365c5",
+  "remote_branch_sha": "398b923f01eb97bcf7c22e9e31f344662c2365c5",
+  "baseline_tag": "baseline/M0-00-b4ae8e35d782",
+  "remote_tag_target": "398b923f01eb97bcf7c22e9e31f344662c2365c5",
+  "remote_commit_tree": "48ab072808c247ee04c73625491c46231ef04ac4",
+  "remote_report_sha256": "b510d8717e5b0aa1340a88ef61a7fcc1ea295bfd5dc8f3cefb48c13de2564390",
+  "evidence_manifest_sha256": "fed3f234403a599e97ad28052d52b1275f186b22ebd9608e25d1d46fbeed77b5",
+  "commands_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "push_E_exit_code": 0,
+  "push_E_output_sha256": "a6c7cb3d36a14ae9a43b2a951563ed1d493b4e5f3d35e9190ae0d60c0dd1a362"
+}

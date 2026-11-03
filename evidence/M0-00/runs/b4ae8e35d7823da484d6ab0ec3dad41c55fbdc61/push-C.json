@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "git",
+    "push",
+    "-u",
+    "origin",
+    "agent/bootstrap-spec-freeze-910aedd83224"
+  ],
+  "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+  "exit_code": 0,
+  "combined_output": "remote: \nremote: Create a pull request for 'agent/bootstrap-spec-freeze-910aedd83224' on GitHub by visiting:        \nremote:      https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/pull/new/agent/bootstrap-spec-freeze-910aedd83224        \nremote: \nTo https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n * [new branch]      agent/bootstrap-spec-freeze-910aedd83224 -> agent/bootstrap-spec-freeze-910aedd83224\nbranch 'agent/bootstrap-spec-freeze-910aedd83224' set up to track 'origin/agent/bootstrap-spec-freeze-910aedd83224'.\n",
+  "combined_output_sha256": "15dadc5c767939ba194bc9d40bc223da8f7e61a8f7c74f19e37d9f2b4ea743ec",
+  "source": ".scratch-runtime/push-C.log"
+}

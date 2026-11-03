@@ -1,0 +1,22 @@
+{
+  "login": "lucy-assistant",
+  "repository": {
+    "defaultBranchRef": {
+      "name": "main"
+    },
+    "nameWithOwner": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+    "viewerPermission": "WRITE"
+  },
+  "metadata": {
+    "full_name": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "default_branch": "main",
+    "visibility": "public"
+  }
+}

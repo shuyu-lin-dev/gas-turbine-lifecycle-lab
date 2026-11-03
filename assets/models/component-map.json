@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "model": "industrial-gas-turbine-educational.glb",
+  "source_commit": "efc5d2ecd12055f880a41b47215791c22d3656d4",
+  "schema_note": "These are proposed business component IDs; prefixes/names refer to the verified GLB. Bind equipment measurements to these IDs in application metadata, not by assuming the model is a manufacturer digital twin.",
+  "components": [
+    {
+      "component_id": "compressor",
+      "label_zh": "压气机",
+      "node_prefixes": [
+        "compressor-rotor-",
+        "compressor-stator-"
+      ],
+      "node_names": [
+        "compressor-upper-casing",
+        "compressor-retained-lower-casting"
+      ]
+    },
+    {
+      "component_id": "combustor",
+      "label_zh": "燃烧室",
+      "node_names": [
+        "combustion",
+        "combustion-upper-casing"
+      ]
+    },
+    {
+      "component_id": "turbine",
+      "label_zh": "透平",
+      "node_prefixes": [
+        "turbine-rotor-",
+        "turbine-stator-",
+        "turbine-stage-rim-"
+      ],
+      "node_names": [
+        "turbine-upper-casing"
+      ]
+    },
+    {
+      "component_id": "bearing_front",
+      "label_zh": "前轴承",
+      "node_names": [
+        "front-bearing-journal",
+        "sectioned-front-bearing-housing",
+        "continuous-lower-bearing-carrier",
+        "removable-upper-bearing-carrier"
+      ]
+    },
+    {
+      "component_id": "exhaust",
+      "label_zh": "排气段",
+      "node_names": [
+        "exhaust"
+      ]
+    }
+  ],
+  "hide_for_cutaway": [
+    "compressor-upper-casing",
+    "combustion-upper-casing",
+    "turbine-upper-casing"
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "feishu",
+    "title": {
+      "zh": "飞书",
+      "en": "Feishu"
+    },
+    "installed": true,
+    "enabled": true,
+    "state": "ready",
+    "health": [
+      {
+        "name": "feishu",
+        "state": "ready",
+        "detail": "Listening for bot events",
+        "at": "2026-11-03T05:15:21.885Z"
+      },
+      {
+        "name": "history",
+        "state": "ready",
+        "detail": "Configured groups and known direct chats recovered",
+        "at": "2026-11-03T06:30:13.867Z"
+      }
+    ],
+    "stats": {
+      "received": 3,
+      "filtered": 0,
+      "lastAt": "2026-11-03T06:21:19.821Z"
+    },
+    "filtered": [],
+    "dropped": []
+  },
+  {
+    "id": "github",
+    "title": {
+      "zh": "GitHub",
+      "en": "GitHub"
+    },
+    "installed": true,
+    "enabled": true,
+    "state": "ready",
+    "health": [
+      {
+        "name": "github",
+        "state": "ready",
+        "detail": "0 notifications; next poll ≥ 60s",
+        "at": "2026-11-03T06:28:52.332Z"
+      }
+    ],
+    "stats": {
+      "received": 0,
+      "filtered": 0,
+      "lastAt": ""
+    },
+    "filtered": [],
+    "dropped": []
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-11-03T14:50:36.731009+08:00",
+  "moved_validation_directories": [
+    {
+      "from": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/.local-preparation/archive-restore-ssh8mxgi",
+      "to": "/home/lsy/workspace/lab/_handoff-archives/gas-turbine-lifecycle-lab/20261103T142014+0800/verification/archive-restore-ssh8mxgi",
+      "content_preserved": true
+    },
+    {
+      "from": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/.local-preparation/offline-export-7vf0a3fc",
+      "to": "/home/lsy/workspace/lab/_handoff-archives/gas-turbine-lifecycle-lab/20261103T142014+0800/verification/offline-export-7vf0a3fc",
+      "content_preserved": true
+    }
+  ]
+}

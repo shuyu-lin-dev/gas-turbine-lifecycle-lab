@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-11-03T14:49:11.680937+08:00",
+  "status": "MOVED_TO_ARCHIVE",
+  "original_path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/dsh_handoff_v2",
+  "relocated_original": "/home/lsy/workspace/lab/_handoff-archives/gas-turbine-lifecycle-lab/20261103T142014+0800/relocated/dsh_handoff_v2",
+  "original_backup": "/home/lsy/workspace/lab/_handoff-archives/gas-turbine-lifecycle-lab/20261103T142014+0800/original/dsh_handoff_v2",
+  "recoverable_tar": "/home/lsy/workspace/lab/_handoff-archives/gas-turbine-lifecycle-lab/20261103T142014+0800/dsh_handoff_v2.tar.gz",
+  "tracked_in_existing_baseline": false,
+  "tracked_deletions": [],
+  "original_file_count": 25,
+  "extra_user_files": [],
+  "all_content_and_modes_preserved": true,
+  "tar_restore_verified": true,
+  "source_sha256_check": {
+    "command": [
+      "sha256sum",
+      "--check",
+      "SHA256SUMS.txt"
+    ],
+    "exit_code": 0,
+    "stdout": "DSH_HANDOFF.md: OK\nREADME.md: OK\nproject/ACCEPTANCE.md: OK\nproject/AGENTS.md: OK\nproject/DEV_SPEC.md: OK\nproject/TASKS.md: OK\nproject/assets/models/LICENSE.txt: OK\nproject/assets/models/README.md: OK\nproject/assets/models/THREE-LICENSE.txt: OK\nproject/assets/models/component-map.json: OK\nproject/assets/models/industrial-gas-turbine-educational.glb: OK\nproject/assets/models/industrial-model-inspection.json: OK\nproject/assets/models/source/LICENSE: OK\nproject/assets/models/source/README.md: OK\nproject/assets/models/source/THIRD_PARTY_NOTICES.md: OK\nproject/assets/models/source/export_glb.mjs: OK\nproject/assets/models/source/package-lock.json: OK\nproject/assets/models/source/package.json: OK\nproject/assets/models/source/src/inlet-support.ts: OK\nproject/assets/models/source/src/sectioned-case.ts: OK\nproject/assets/models/source/src/turbine.ts: OK\nproject/assets/models/source/verify_glb.mjs: OK\nproject/docs/UPSTREAM_REUSE.md: OK\nproject/evidence/REPORT.template.md: OK\n"
+  },
+  "pre_exit_transfer_check": {
+    "exit_code": 0,
+    "stdout": "payload.tar.gz: OK\nmanifest.json: OK\nreceipt.json: OK\napply.py: OK\nverification.json: OK\n",
+    "payload_sha256": "4392d9aeb0965af4cde0ab9081193cb0484e11d0d7a75454b122a66ddfec2934",
+    "manifest_entries": 67
+  },
+  "active_entries_self_contained": true,
+  "real_ticket_created": false,
+  "new_project_commits": 0
+}

@@ -1,0 +1,230 @@
+{
+  "dsh_version": "0.2.1-rc.3",
+  "profile": "superagent",
+  "plugin": {
+    "name": "dsh-superagent",
+    "version": "0.1.0",
+    "install_root": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype",
+    "git_head": "6337fc823ce20251c8de8085948165c81aaa701e",
+    "existing_uncommitted": [
+      "scripts/dsh-superagent"
+    ]
+  },
+  "files": [
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/package.json",
+      "sha256": "e374e6043acc28862df0712e67c106dd531d7936c5848d2610c6fe12dfa73c0a",
+      "bytes": 4818
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/client.js",
+      "sha256": "4050e9309b91139adbbe185798a454c5ae7e92276f381f4c0c5aa67d642840a1",
+      "bytes": 359281
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/feishu-rAGM9U9b.js",
+      "sha256": "8d685cbd16fc6e76df43d3b736a053a4cd2b41f25d9c67aaf1cb371e66ca0554",
+      "bytes": 48324
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/feishu-watch.js",
+      "sha256": "129e508cbdbe4d8b3168bd255429d8654c86f36e62ff85ebe3a72f8ef7e5a7a8",
+      "bytes": 602
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/github-pull-gSbjzypm.js",
+      "sha256": "525445212288e6f9a8c7daee1c5e6f88e8f1af3b74a4665fdf9f9e57f211101a",
+      "bytes": 25424
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/github-watch.js",
+      "sha256": "6eab100d61eed5ea83ff2bbc00a5a0aff2da93a0fa8a162ef090047c19d79e3c",
+      "bytes": 33912
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/index.js",
+      "sha256": "98595370ab801ea54babc4a5df10394dc76cc41837d7c16e618c6ce31a2481c5",
+      "bytes": 450257
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/lib/poll-Dh7J1cdM.js",
+      "sha256": "87f8cf688b2284aa6cc5d5caff18a3ac9d931fda9545bf73e41a5d079a41bcf1",
+      "bytes": 38482
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/api.ts",
+      "sha256": "7061322b16bce0296d8a9b3eef11451b2027cf9e49dd14c5f4a89d8c906b8e29",
+      "bytes": 3596
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/assessment.ts",
+      "sha256": "3a426960ad503b1518c49254b6a1c093a921bee8cab2fb20d20077e8555799da",
+      "bytes": 21063
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/cache.ts",
+      "sha256": "149e6c6436c1831cb12b4d66073e081bbf51607e254a746484fa49fc52da8bee",
+      "bytes": 1123
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/cards.ts",
+      "sha256": "f0022615512b85c79372ac2d7825ecdde446b30fdab6f84bc3f3c2408a3cfb0e",
+      "bytes": 7528
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/context.ts",
+      "sha256": "3ce30f3923e0f88dabc6c060304e429197891d0fbeca6abc25154de6f59fd2af",
+      "bytes": 2318
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/delivery.ts",
+      "sha256": "572d6e16aebe4bdaeeb7bb68f6e1b40ed3fc13a029ee1603c96b852e2666b70c",
+      "bytes": 4661
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/effects.ts",
+      "sha256": "29837470e0dfc3fd7c6c1a4211b28b26404c9367d78d9629fbc7545d3143b8c2",
+      "bytes": 10154
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/execution-environment.ts",
+      "sha256": "9ba478bd368835e09965c00cbb5308e1eecb8e6d071d7f2bf8acac4ef96b9883",
+      "bytes": 3981
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/http.ts",
+      "sha256": "3c614d32250e616210fcf1bf8e843ef6c5a58b5bc6c641291f8b38c1af632c3a",
+      "bytes": 16401
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/links.ts",
+      "sha256": "5d034393127d8650bdb5cead40d7a7a9f441a561e8002503b94a3a28759ce731",
+      "bytes": 4622
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/migration.ts",
+      "sha256": "7f8ddcbfb3e89270eda48d8c6f211e34c7f949d617a3bdd75b6cc88639f92b5f",
+      "bytes": 46838
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/notices.ts",
+      "sha256": "27663bbc8db8862c8719f589ed542676bbc890675a7d79ed91d0e84e2d50d84f",
+      "bytes": 9159
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/outbox.ts",
+      "sha256": "ae3e0abca699e6212f35512a58d9ee47f1b739d51283ab6eedbd794d5a655e68",
+      "bytes": 3366
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/passes.ts",
+      "sha256": "98ce972d6d9b72d8e0f8de3f44f009259624fb48c11fd9a3c7113c4a108893b6",
+      "bytes": 3170
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/prompts.ts",
+      "sha256": "5e3e674dad4af71cc36905966a1f3049de3739fffdb9272f1d255446df271e90",
+      "bytes": 19685
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/resources.ts",
+      "sha256": "bcfe4e96f8f5c1c407f5b73221ba8af6aaeb913a081393f028594e179b0dc0ec",
+      "bytes": 22267
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/retry-health.ts",
+      "sha256": "c439b4e4248b143cc82b1e0d2ce02ace4cd1807da4e906a42287617c84379479",
+      "bytes": 5830
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/role-models.ts",
+      "sha256": "63bd90001eb643a1e3393eb73886ab35cf4a746cf0c209c41a6f49b58b0a805a",
+      "bytes": 2607
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/runtime.ts",
+      "sha256": "ec4cafec07e4b597acb177ba76b1be12a75ddc8f058c5be75c3ab66d2f23d4cd",
+      "bytes": 17585
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/sessions.ts",
+      "sha256": "1e7d9db06c0c30393f04c49d62b2f465cba30da50b84aa5d07430322884d50f8",
+      "bytes": 24521
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/settings-history.ts",
+      "sha256": "4faab272436f0a51f0085d2f26498cbfe3e1bdf079a8e280e1a95065579fb2e0",
+      "bytes": 8122
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/settings.ts",
+      "sha256": "968a41c11a42a3cd4573cc54eebf0cffcafef247555fec615734f22791bcc8f4",
+      "bytes": 17909
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/setup.ts",
+      "sha256": "f2b5db96ee24fcda7a967b4e2fb65be4e62d331b049ff42bb01cf39fba2a9146",
+      "bytes": 5850
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/skill-files.ts",
+      "sha256": "16e358b3dfcd2c43e63831f3a374ce0e38b3bb453c433533e124ca7e48cbea61",
+      "bytes": 1756
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/source-context.ts",
+      "sha256": "f2716e24b3aac1850ccf889a3635eaa3e1fbe7940b6d68c476fd29754fa41c32",
+      "bytes": 3598
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/store-read.ts",
+      "sha256": "365a32dcc13564cb946ccc26cc694acd7d0056ca2832e03f72571d2d369dacb3",
+      "bytes": 8347
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/store.ts",
+      "sha256": "f32c324f15428c21088432f16bd9a047bd6f33f49183f784d9c237133966a17a",
+      "bytes": 21358
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/app/versions.ts",
+      "sha256": "1abba86a073d3a085668dfcaa414ab095606b39f630e2e4fb7eeabb199955934",
+      "bytes": 1934
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/infra/environment.ts",
+      "sha256": "dd35d207611238df460eb1144af484c0bc9d8f679223ed64cfff59c90d3d62e0",
+      "bytes": 11307
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/sources/github.ts",
+      "sha256": "e2c25991288a93305fd14673ed93aa076c461be19097e9033bc8cdbc3ddcb59d",
+      "bytes": 35286
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/src/limits.ts",
+      "sha256": "8bb5dcbddb3a02d17ac9e6a378c253f07fc5fa0cbd6bdbcf3a91976c745092b7",
+      "bytes": 426
+    },
+    {
+      "path": "/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/scripts/dsh-superagent",
+      "sha256": "0ca4b2b6c0ff03fd3cc3aee161b84f1ef980085ebf1132b32f2b2470eb81fd53",
+      "bytes": 12654
+    },
+    {
+      "path": "/home/lsy/.local/lib/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai/dsh-tool-skill/lib/index.js",
+      "sha256": "3d0aecda4e4b10ffc0404f0e1b99e31d0271018031f553c2d600e4c8e9db0ba2",
+      "bytes": 36627
+    },
+    {
+      "path": "/home/lsy/.local/lib/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai/dsh-skill-filesystem/lib/index.js",
+      "sha256": "783214a95cc531c82567925ed0afabfdee5c091a56c4b1c1e1bce523b948ee02",
+      "bytes": 29788
+    },
+    {
+      "path": "/home/lsy/.local/lib/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai/dsh-skill/lib/index.js",
+      "sha256": "4b88621be4e7ff09b05c175fc6dcb67e77a22e5c5570e3aa603338b2937ea791",
+      "bytes": 23721
+    }
+  ]
+}

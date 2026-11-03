@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "scripts/verify_m0_00.py",
+    "--criteria",
+    "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+    "--candidate",
+    "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+    "--output",
+    "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/.scratch-runtime/invalid-criteria-b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/scripts/verify_m0_00.py\", line 265, in <module>\n    main()\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/scripts/verify_m0_00.py\", line 121, in main\n    assert args.criteria == '3980867902a9c102f18894e9acf65b8c72051b19', '使用已提交的 M0-00 冻结 S'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 使用已提交的 M0-00 冻结 S\n"
+}
