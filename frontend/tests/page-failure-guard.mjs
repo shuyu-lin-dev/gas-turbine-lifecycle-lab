@@ -7,6 +7,7 @@ export function pageFailureGuard(record) {
     rejectFailure(error)
   }
   return {
+    fail,
     watch(page) {
       if (watched.has(page)) return
       watched.add(page)

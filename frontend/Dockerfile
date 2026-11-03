@@ -16,4 +16,5 @@ ENV API_UPSTREAM=http://api:8000 \
     NGINX_ENVSUBST_FILTER=^API_UPSTREAM$
 COPY frontend/nginx.conf.template /etc/nginx/templates/default.conf.template
 COPY --from=build /app/frontend/dist /usr/share/nginx/html
+RUN chmod -R a+rX /usr/share/nginx/html
 EXPOSE 8080

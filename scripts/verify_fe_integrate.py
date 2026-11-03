@@ -102,6 +102,7 @@ def main():
         for script, name in [('bridge.mjs', 'development-bridge'), ('bridge-initialization.mjs', 'development-initialization'),
                              ('bridge-display-state.mjs', 'development-display-state')]:
             run.command(['node', root / 'frontend/tests' / script, 'http://127.0.0.1:5173', output / f'{name}.json'], timeout=1200)
+        run.command(['node', root / 'frontend/tests/viewer-resources.mjs', 'http://127.0.0.1:5173/viewer', output / 'development-viewer-resources.json'], timeout=1200)
         run.command(['node', 'scripts/fe-base/browser.mjs', 'http://127.0.0.1:5173/viewer', output / 'development-upstream.json'], timeout=1200)
         run.stop(web)
         run.stop(viewer)
@@ -133,6 +134,7 @@ def main():
         for script, name in [('bridge.mjs', 'deployment-bridge'), ('bridge-initialization.mjs', 'deployment-initialization'),
                              ('bridge-display-state.mjs', 'deployment-display-state')]:
             run.command(['node', root / 'frontend/tests' / script, 'http://127.0.0.1:8280', output / f'{name}.json'], timeout=1200)
+        run.command(['node', root / 'frontend/tests/viewer-resources.mjs', 'http://127.0.0.1:8280/viewer', output / 'deployment-viewer-resources.json'], timeout=1200)
         run.command(['node', 'scripts/fe-base/browser.mjs', 'http://127.0.0.1:8280/viewer', output / 'deployment-upstream.json'], timeout=1200)
         git('diff', '--check', BASE, args.candidate)
         assert git('status', '--porcelain') == ''
