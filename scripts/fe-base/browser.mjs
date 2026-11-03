@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { writeFileSync } from 'node:fs';
 import { chromium } from 'playwright';
+import { cameraChangedAfterInput } from './camera-observation.mjs';
 
 const [baseUrl, output] = process.argv.slice(2);
 assert(baseUrl && output, '需要 URL 和输出路径');
@@ -46,44 +47,68 @@ try {
     }, {selector, previous});
     return observe(selector);
   };
-  const matrix = async selector => {
-    const value = await observe(selector);
-    assert(value.main.length > 0, '必须取得实际透视镜头 GPU viewMatrix');
-    return value.main[0].matrix;
-  };
   const distance = value => Math.hypot(...value.slice(12, 15));
   const rotationDelta = (a, b) => Math.max(...[0, 1, 2, 4, 5, 6, 8, 9, 10].map(index => Math.abs(a[index] - b[index])));
   async function interact(selector) {
-    const before = await matrix(selector);
-    await rendered(selector, (await observe(selector)).draws);
-    const still = await matrix(selector);
-    assert(rotationDelta(before, still) <= 1e-5, '无输入时镜头应保持静止');
-    const box = await page.locator(selector).boundingBox();
-    const input = {x: box.x + box.width * .55, y: box.y + box.height * .52, dx: 160, dy: 80};
-    assert(await page.locator(selector).evaluate((canvas, point) => document.elementFromPoint(point.x, point.y) === canvas, input));
-    await page.mouse.move(input.x, input.y);
-    await page.mouse.down();
-    await page.mouse.move(input.x + input.dx, input.y + input.dy, {steps: 12});
-    await page.mouse.up();
-    await page.waitForFunction(({selector, before}) => {
-      const m = window.__feBaseObserve(selector)?.main[0]?.matrix;
-      return m && [0, 1, 2, 4, 5, 6, 8, 9, 10].some(i => Math.abs(m[i] - before[i]) > 1e-5);
-    }, {selector, before});
-    const rotated = await matrix(selector);
-    await page.mouse.move(input.x, input.y);
-    await page.mouse.wheel(0, -600);
-    await page.waitForFunction(({selector, previous}) => {
-      const m = window.__feBaseObserve(selector)?.main[0]?.matrix;
-      return m && Math.hypot(...m.slice(12, 15)) < previous - .01;
-    }, {selector, previous: distance(rotated)});
-    const zoomed = await matrix(selector);
-    await page.mouse.wheel(0, 600);
-    await page.waitForFunction(({selector, previous}) => {
-      const m = window.__feBaseObserve(selector)?.main[0]?.matrix;
-      return m && Math.hypot(...m.slice(12, 15)) > previous + .01;
-    }, {selector, previous: distance(zoomed)});
-    record('camera-' + selector, {input, before, still, stationaryDelta: rotationDelta(before, still), rotated,
-      rotationDelta: rotationDelta(before, rotated), zoomed, restored: await matrix(selector)});
+    const operation = {name: 'camera-' + selector, selector, state: 'RUNNING', checkpoints: []};
+    report.operations.push(operation); save();
+    const checkpoint = async phase => {
+      operation.phase = phase;
+      const observation = await observe(selector);
+      operation.checkpoints.push({phase, at: new Date().toISOString(), observation});
+      save();
+      assert(observation?.main.length > 0, '必须取得实际透视镜头 GPU viewMatrix');
+      return observation;
+    };
+    try {
+      const initial = await checkpoint('before');
+      const before = operation.before = initial.main[0].matrix;
+      await rendered(selector, initial.draws);
+      const stationary = await checkpoint('stationary');
+      const still = operation.still = stationary.main[0].matrix;
+      operation.stationaryDelta = rotationDelta(before, still); save();
+      assert(operation.stationaryDelta <= 1e-5, '无输入时镜头应保持静止');
+      const box = await page.locator(selector).boundingBox();
+      const input = operation.input = {x: box.x + box.width * .55, y: box.y + box.height * .52, dx: 160, dy: 80};
+      operation.phase = 'drag-dispatch'; save();
+      assert(await page.locator(selector).evaluate((canvas, point) => document.elementFromPoint(point.x, point.y) === canvas, input));
+      await page.mouse.move(input.x, input.y);
+      await page.mouse.down();
+      await page.mouse.move(input.x + input.dx, input.y + input.dy, {steps: 12});
+      await page.mouse.up();
+      operation.phase = 'rotation-observe'; save();
+      await page.waitForFunction(cameraChangedAfterInput,
+        {selector, reference: before, operation: 'rotate', afterInput: stationary.inputSequence});
+      const rotated = operation.rotated = (await checkpoint('rotated')).main[0].matrix;
+      operation.rotationDelta = rotationDelta(before, rotated); save();
+      await page.mouse.move(input.x, input.y);
+      assert(await page.locator(selector).evaluate((canvas, point) => document.elementFromPoint(point.x, point.y) === canvas, input));
+      const inward = await checkpoint('zoom-in-before');
+      operation.phase = 'zoom-in-dispatch'; save();
+      await page.mouse.wheel(0, -600);
+      operation.phase = 'zoom-in-observe'; save();
+      await page.waitForFunction(cameraChangedAfterInput,
+        {selector, reference: inward.main[0].matrix, operation: 'zoom-in', afterInput: inward.inputSequence});
+      const zoomed = operation.zoomed = (await checkpoint('zoomed')).main[0].matrix;
+      operation.zoomInDelta = distance(inward.main[0].matrix) - distance(zoomed); save();
+      assert(operation.zoomInDelta > .01);
+      assert(await page.locator(selector).evaluate((canvas, point) => document.elementFromPoint(point.x, point.y) === canvas, input));
+      const outward = await checkpoint('zoom-out-before');
+      operation.phase = 'zoom-out-dispatch'; save();
+      await page.mouse.wheel(0, 600);
+      operation.phase = 'zoom-out-observe'; save();
+      await page.waitForFunction(cameraChangedAfterInput,
+        {selector, reference: outward.main[0].matrix, operation: 'zoom-out', afterInput: outward.inputSequence});
+      operation.restored = (await checkpoint('restored')).main[0].matrix;
+      operation.zoomOutDelta = distance(operation.restored) - distance(outward.main[0].matrix);
+      assert(operation.zoomOutDelta > .01);
+      operation.state = 'PASS'; save();
+    } catch (error) {
+      operation.state = 'FAIL';
+      operation.failure = {phase: operation.phase, name: error.name, message: error.message}; save();
+      operation.failureObservation = await observe(selector); save();
+      throw error;
+    }
   }
   async function verify() {
     const response = await page.goto(baseUrl + '/?lang=en&quality=balanced&experience=console&speed=0');

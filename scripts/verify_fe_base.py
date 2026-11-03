@@ -96,6 +96,8 @@ class Run:
                         if time.monotonic() >= deadline:
                             raise
                         time.sleep(.1)
+                self.run(['node', 'scripts/fe-base/camera-regression.mjs', f'http://127.0.0.1:{port}',
+                          str(self.output / (name + '-camera-regression.json'))], timeout=600)
                 self.run(['node', 'scripts/fe-base/browser.mjs', f'http://127.0.0.1:{port}',
                           str(self.output / (name + '-browser.json'))], timeout=1200)
                 try:

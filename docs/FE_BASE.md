@@ -48,6 +48,14 @@ python3 scripts/verify_fe_base.py --criteria 7704387252b293bee1ec671b440164a1228
 
 工具分别检查原版完整归档和当前 vendor 的 `npm ci`、`npm test`、`npm run build`、`npm run build:labs`，保留必要失败。之后启动实际 Vite preview，真实 Chrome 验证 GPU draw、镜头矩阵、10个组件、外壳模式、叶片交互、HDR和请求/控制台；完成后回收该次 preview 和浏览器。无图像采集。
 
+镜头验证为每个步骤保存实际输入、矩阵、差值、上传及绘制序号，失败时保存当时观测。共享判断 [camera-observation.mjs](../scripts/fe-base/camera-observation.mjs) 要求可信输入已到达目标canvas且完成处理，并使用该输入之后上传及绘制的viewMatrix；旋转阈值仍为1e-5、双向缩放仍为0.01，单条件超时120秒。观察器只记录实际调用和DOM事件，不更改相机或控制器状态。
+
+主入口和干净模式均执行 [camera-regression.mjs](../scripts/fe-base/camera-regression.mjs)：真实拖动后保持无滚轮输入，使余下运动跨越原距离条件；共享判断必须拒绝该负对照，再以实际wheel -600/+600验证双向变化。该回归使用完整源程序、冻结浏览器和实际WebGL，不缩减场景。已启动preview时也可按同一环境单独执行：
+
+```sh
+node scripts/fe-base/camera-regression.mjs http://127.0.0.1:4173 .scratch-runtime/camera-regression-<唯一运行编号>.json
+```
+
 ## 干净检出复现
 
 从当前主仓库以 `git clone --no-local --no-checkout` 建立 `.scratch-runtime/clean-<C前12位>`，在该独立仓库 `git switch --detach <C>`，确认 HEAD和干净状态，clone 的 origin 设置为唯一主仓库。该clone不共享工作树或依赖安装。将 TMPDIR/TMP/TEMP 指向该clone自己的 `.scratch-runtime/tmp` 短路径符号链接，FE_BASE_CHROME及已核实的实际系统库保持相同；在clone运行同一命令并添加 `--clean`，使用4174端口。

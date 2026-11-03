@@ -4,14 +4,38 @@
   const programs = new WeakMap();
   const states = new Map();
   let nextProgram = 0;
+  let nextCanvas = 0;
+  let nextInput = 0;
+  const inputEvents = [];
+  const inputRecords = new WeakMap();
   const state = gl => {
     let value = states.get(gl.canvas);
     if (!value) {
-      value = {canvas: gl.canvas, draws: 0, programs: {}, frameDraws: [], currentFrameDraws: 0};
+      value = {canvas: gl.canvas, canvasId: ++nextCanvas, draws: 0, viewUploads: 0,
+        programs: {}, frameDraws: [], currentFrameDraws: 0};
       states.set(gl.canvas, value);
     }
     return value;
   };
+  for (const type of ['pointerdown', 'pointermove', 'pointerup', 'wheel']) {
+    document.addEventListener(type, event => {
+      const canvas = states.get(event.target);
+      const data = {sequence: ++nextInput, type, at: performance.now(), trusted: event.isTrusted,
+        target: event.target.id || event.target.tagName, canvasId: canvas?.canvasId,
+        x: event.clientX, y: event.clientY, buttons: event.buttons,
+        deltaX: event.deltaX, deltaY: event.deltaY, deltaMode: event.deltaMode,
+        drawsAtInput: canvas?.draws, viewUploadsAtInput: canvas?.viewUploads,
+        defaultPrevented: event.defaultPrevented, completed: false};
+      inputEvents.push(data);
+      if (inputEvents.length > 100) inputEvents.shift();
+      inputRecords.set(event, data);
+    }, {capture: true, passive: true});
+    document.addEventListener(type, event => {
+      const data = inputRecords.get(event);
+      data.completed = true;
+      data.defaultPrevented = event.defaultPrevented;
+    }, {passive: true});
+  }
   const prototype = WebGL2RenderingContext.prototype;
   const getLocation = prototype.getUniformLocation;
   prototype.getUniformLocation = function(program, name) {
@@ -28,6 +52,10 @@
       const data = state(this);
       data.programs[metadata.program] ??= {};
       data.programs[metadata.program][metadata.name] = Array.from(values);
+      if (metadata.name === 'viewMatrix') {
+        data.programs[metadata.program].viewUpload = ++data.viewUploads;
+        data.programs[metadata.program].viewUploadedAtDraw = data.draws;
+      }
     }
     return result;
   };
@@ -72,8 +100,12 @@
       return value.viewMatrix && p && Math.abs(p[11] + 1) < 1e-6
         && Math.abs(p[14] + expectedDepth) < 1e-5;
     }).sort((a, b) => (b[1].lastDraw ?? 0) - (a[1].lastDraw ?? 0));
-    return {draws: data.draws, frameDraws: data.frameDraws.slice(),
-      programs: data.programs, main: candidates.map(([id, value]) => ({id, matrix: value.viewMatrix}))};
+    return {at: performance.now(), timeOrigin: performance.timeOrigin, canvasId: data.canvasId,
+      inputSequence: nextInput, inputEvents: inputEvents.map(event => ({...event})),
+      draws: data.draws, viewUploads: data.viewUploads, frameDraws: data.frameDraws.slice(),
+      programs: data.programs, main: candidates.map(([id, value]) => ({id, matrix: value.viewMatrix,
+        projection: value.projectionMatrix, viewUpload: value.viewUpload,
+        viewUploadedAtDraw: value.viewUploadedAtDraw, lastDraw: value.lastDraw}))};
   };
   window.__feBaseResetFrames = selector => {
     const data = states.get(document.querySelector(selector));
