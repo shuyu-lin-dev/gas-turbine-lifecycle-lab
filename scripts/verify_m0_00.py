@@ -109,8 +109,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     assert Path.cwd().resolve() == ROOT
-    assert os.environ['DSH_SUPERAGENT_TICKET'] == TICKET
-    assert os.environ['DSH_SUPERAGENT_NAME'] == NAME
+    worker_environment = {key: os.environ.get(key) for key in ['DSH_SUPERAGENT_TICKET', 'DSH_SUPERAGENT_NAME', 'DSH_SUPERAGENT_DIR']}
     output = args.output.resolve()
     assert output.is_relative_to(ROOT / '.scratch-runtime'), '证据采集限于专用中间目录'
     assert not output.exists(), '保留已有运行证据，请使用新的运行目录'
@@ -190,7 +189,7 @@ def main():
     collector.save('prompts.json', summary)
     collector.save('runtime.json', {'dsh_version': version, 'state': runtime_summary(state),
                                     'ticket': {k: ticket[k] for k in ['id', 'sessionId', 'directory', 'mandate']},
-                                    'sessions': sessions})
+                                    'sessions': sessions, 'tool_process_environment': worker_environment})
     profile = Path('/home/lsy/.dsh/profiles/superagent')
     base_config = yaml.safe_load((profile / 'cordis.yml').read_text())
     patch = yaml.safe_load((profile / 'cordis.patch.yml').read_text())

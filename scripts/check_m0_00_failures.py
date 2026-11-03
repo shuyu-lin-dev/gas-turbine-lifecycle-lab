@@ -42,9 +42,9 @@ invalid_output = root / '.scratch-runtime' / ('invalid-criteria-' + candidate)
 command = ['python3', 'scripts/verify_m0_00.py', '--criteria', candidate, '--candidate', candidate,
            '--output', str(invalid_output)]
 completed = subprocess.run(command, cwd=root, capture_output=True, text=True, timeout=30)
-assert completed.returncode == 1 and '使用已提交的 M0-00 冻结 S' in completed.stderr
 collector.save('invalid-criteria.json', {'argv': command, 'exit_code': completed.returncode,
                                        'stdout': completed.stdout, 'stderr': completed.stderr})
+assert completed.returncode == 1 and '使用已提交的 M0-00 冻结 S' in completed.stderr
 results.append({'case': 'candidate-as-criteria', 'result': 'PASS', 'actual_exit_code': completed.returncode})
 collector.save('results.json', {'tested_code_sha': candidate, 'cases': results,
                                 'method': '实际进程、Docker CLI 与现有面板错误路径，无 Mock'})
