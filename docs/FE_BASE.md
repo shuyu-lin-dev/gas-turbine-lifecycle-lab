@@ -14,6 +14,8 @@
 
 模型、路径和流动具有教学性质，原作者的额定功率与教学计算保持原有含义。范围及限制见 [上游技术来源](../vendor/turbine-explorer/docs/SOURCES.md)。
 
+本地兼容补丁仅涉及 [component-inspector.ts](../vendor/turbine-explorer/src/component-inspector.ts)：选择组件、滑块输入、拖动及抽出/归位按钮将百分比写入 `.lab-assembly-tools output`。实际产品版本为完整固定源码加该补丁；原版文件哈希、候选文件哈希及完整 unified diff 分别保存于验收 `source.json` 和 `upstream.patch`，原版浏览器失败记录独立保留。
+
 ## 独立运行
 
 在 `vendor/turbine-explorer` 内执行原始命令：

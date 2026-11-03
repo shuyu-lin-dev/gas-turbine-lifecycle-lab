@@ -150,14 +150,23 @@ def main():
     assert not (vendor / '.git').exists()
     listing = git('ls-files', '--stage')
     assert not any(line.startswith('160000 ') for line in listing.splitlines())
+    actual_files = {}
+    changed_files = []
     for name, metadata in entries.items():
-        assert sha((vendor / name).read_bytes()) == metadata['sha256'], name
+        original_bytes = subprocess.check_output(['git', 'show', IMPORT + ':vendor/turbine-explorer/' + name])
+        assert sha(original_bytes) == metadata['sha256'] and len(original_bytes) == metadata['bytes'], name
+        actual_bytes = (vendor / name).read_bytes()
+        actual_files[name] = {'sha256': sha(actual_bytes), 'bytes': len(actual_bytes)}
+        if actual_files[name] != metadata:
+            assert name == 'src/component-inspector.ts', f'未登记的上游改动: {name}'
+            changed_files.append(name)
     tracked_vendor = git('ls-tree', '-r', '--name-only', args.candidate, '--', 'vendor/turbine-explorer').splitlines()
     assert set(tracked_vendor) == {'vendor/turbine-explorer/' + name for name in entries}
     patch = git('diff', IMPORT, args.candidate, '--', 'vendor/turbine-explorer')
     (output / 'upstream.patch').write_text(patch)
     run.save('source.json', {'upstream': UPSTREAM, 'tree': TREE, 'import_commit': IMPORT, 'squash': True,
-                            'files': entries, 'patch_empty': patch == ''})
+                            'files': entries, 'actual_files': actual_files, 'changed_files': changed_files,
+                            'patch_empty': patch == ''})
     for revision in [args.criteria, IMPORT, args.candidate]:
         assert git('show', '-s', '--format=%an%n%ae%n%cn%n%ce', revision).splitlines() == [
             'lucy-assistant', '162398512+lucy-assistant@users.noreply.github.com'] * 2
