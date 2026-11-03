@@ -2,7 +2,7 @@
 
 唯一目标为 [shuyu-lin-dev/gas-turbine-lifecycle-lab](https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/issues)。Issue/Ticket 承载派工、来源、讨论与回执；[TASKS.md](../../TASKS.md) 是任务、依赖及 LOCKED 状态的唯一清单，[ACCEPTANCE.md](../../ACCEPTANCE.md) 定义硬通过条件。Issue 关闭、标签或 GitHub 原生 blocking 状态不能代替前置 LOCKED 和实际成果集成。
 
-当前 Issue #1 已授权 M0-00 的提交、推送、审查回执和 PR 交付；使用 dsh 提供的 `gh`，其 CLI 为现有 agent 包装器；不得使用 gh-owner 或操作者身份。每次写入前先核对 `gh api user --jq .login` 及 `gh repo view --json nameWithOwner`，目标必须为上面的唯一仓库。评论 6597814032 指定协调会话在全部交付条件通过后合并；开发 worker 保留 PR 交付职责。
+当前 Issue #3 已授权 FE-BASE 的调查、上游取得、验收冻结、subtree 导入、必要兼容修正、真实验证、提交、推送、审查回执和 PR 交付；使用 dsh 提供的 `gh`，其 CLI 为现有 agent 包装器；不得使用 gh-owner 或操作者身份。每次写入前先核对 `gh api user --jq .login` 及 `gh repo view --json nameWithOwner`，目标必须为上面的唯一仓库。协调会话负责独立审查和最终合并，开发 worker 保留 PR 交付职责。
 
 常用只读入口：
 

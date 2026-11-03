@@ -1,0 +1,34 @@
+diff --git a/vendor/turbine-explorer/src/component-inspector.ts b/vendor/turbine-explorer/src/component-inspector.ts
+index 1fdc520..4ddca19 100644
+--- a/vendor/turbine-explorer/src/component-inspector.ts
++++ b/vendor/turbine-explorer/src/component-inspector.ts
+@@ -220,7 +220,7 @@ export function installComponentInspector(model: TurbineModel, onActive: (active
+   function select(part: Part, nextMode: 'assembly' | 'focus' = 'assembly') {
+     releaseSelection(); current = part; mode = nextMode; extraction = targetExtraction = 0;
+     updateCopy(); resize();
+-    el<HTMLInputElement>('#part-extraction').value = '0'; el('output').textContent = '0%';
++    el<HTMLInputElement>('#part-extraction').value = '0'; el('.lab-assembly-tools output').textContent = '0%';
+     model.root.updateWorldMatrix(true, true);
+       selected = part.instance !== undefined && part.source instanceof THREE.InstancedMesh
+         ? new THREE.Mesh(part.source.geometry, part.source.material) : cloneVisible(part.source);
+@@ -310,9 +310,9 @@ export function installComponentInspector(model: TurbineModel, onActive: (active
+     if(part===current&&mode!=='blade')return;
+     select(part,['turbine-1','single-blade','combustor'].includes(part.id)?'focus':'assembly');
+   }));
+-  el<HTMLInputElement>('#part-extraction').addEventListener('input', event => { targetExtraction = Number((event.target as HTMLInputElement).value) / 100; el('output').textContent = `${Math.round(targetExtraction * 100)}%`; });
++  el<HTMLInputElement>('#part-extraction').addEventListener('input', event => { targetExtraction = Number((event.target as HTMLInputElement).value) / 100; el('.lab-assembly-tools output').textContent = `${Math.round(targetExtraction * 100)}%`; });
+   function setExtraction(value: number) {
+-    targetExtraction = THREE.MathUtils.clamp(value, 0, 1); el<HTMLInputElement>('#part-extraction').value = String(targetExtraction * 100); el('output').textContent = `${Math.round(targetExtraction * 100)}%`;
++    targetExtraction = THREE.MathUtils.clamp(value, 0, 1); el<HTMLInputElement>('#part-extraction').value = String(targetExtraction * 100); el('.lab-assembly-tools output').textContent = `${Math.round(targetExtraction * 100)}%`;
+   }
+   let drag: { x: number; y: number; start: number } | undefined;
+   pullHandle.addEventListener('pointerdown', event => { drag = { x: event.clientX, y: event.clientY, start: targetExtraction }; pullHandle.setPointerCapture(event.pointerId); orbit.enabled = false; });
+@@ -342,7 +342,7 @@ export function installComponentInspector(model: TurbineModel, onActive: (active
+     if (command === 'focus') select(current, 'focus');
+     else if (command === 'assembly') select(current);
+     else if (command === 'blade') openBlade();
+-    else { targetExtraction = command === 'extract' ? 1 : 0; el<HTMLInputElement>('#part-extraction').value = String(targetExtraction * 100); el('output').textContent = `${targetExtraction * 100}%`; }
++    else { targetExtraction = command === 'extract' ? 1 : 0; el<HTMLInputElement>('#part-extraction').value = String(targetExtraction * 100); el('.lab-assembly-tools output').textContent = `${targetExtraction * 100}%`; }
+   }));
+   dialog.querySelectorAll<HTMLButtonElement>('[data-blade-view]').forEach(button => button.addEventListener('click', () => bladeView(button.dataset.bladeView as BladeView)));
+   dialog.querySelectorAll<HTMLButtonElement>('[data-camera]').forEach(button => button.addEventListener('click', () => frame(mode === 'blade' ? blade.root : mode === 'assembly' ? context! : selected!, button.dataset.camera)));

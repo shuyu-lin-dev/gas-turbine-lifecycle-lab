@@ -1,0 +1,6 @@
+{
+  "candidate": "86c1c3b5bca425e4a930ac7beb8fdad80b9b4463",
+  "state": "INTERRUPTED",
+  "reason": "主验收已确认相同旧候选的画质选择器歧义，停止旧复现，使用新候选重验",
+  "acceptance_pass_claimed": false
+}

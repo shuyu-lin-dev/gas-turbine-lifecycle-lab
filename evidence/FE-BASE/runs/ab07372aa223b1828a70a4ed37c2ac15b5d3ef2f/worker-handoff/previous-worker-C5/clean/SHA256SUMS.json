@@ -1,0 +1,14 @@
+{
+  "candidate-browser.json": "2f8387f280c84b07a189cbf507f145d3b97c937c1ac09bb889e297b11aac66ce",
+  "candidate-dependencies.json": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+  "candidate-licenses.json": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+  "candidate-missing-resource.json": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+  "candidate-server.json": "0197f73a35df99117060dfd5e477032e5e114fe00f8a8193b8bd89e36184ba1c",
+  "candidate-server.log": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+  "commands.json": "a9a2b54357056b19e6d9c3f3cc3605127cc03b92227b36b4c45f0bcb35d67f24",
+  "regression.json": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+  "results.json": "b3b4fd71de7c46b320b0d16b6ab3bad3c328589820de722734d9cadb01b15e9d",
+  "source.json": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+  "upstream.patch": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+  "version.json": "4b4165bb78507562ed1f5d4a31b327e738b550450702e444f1138a9fabf4dd08"
+}

@@ -335,7 +335,7 @@ Compose 按阶段只启动必要服务。SQLite、Chroma/BM25、模型缓存、�
 
 必要 FAIL/BLOCKED/SKIP/NOT_RUN 不算通过；TASKS 勾选只表示 LOCKED。标签是基线标识，不是文件写保护。后续变更注明影响并回归，保留旧基线。
 
-后续真实 Ticket 授权内普通开发、修复、提交和推送连续进行；保留已有合并/分支保护。依据 Issue #1 评论 6597814032，必要验收、独立审查、S/C/E/K、远程标签与最终 head 核查全部通过后，由协调会话执行 PR 合并并核查实际集成。当前开发 worker 只执行 M0-00；后续任务须单独派发。提交、推送、合并分别记录，开 PR 不等于完成。细则由 AGENTS.md、docs/agents/dsh.md 与 docs/agents/workflow.md 管理。
+后续真实 Ticket 授权内普通开发、修复、提交和推送连续进行；保留已有合并/分支保护。当前 Issue #3 授权 FE-BASE；M0-00 已通过 PR #2 集成到 `86e521184a4d5bbd42dfe93a48999fa714c233f2`。当前 worker 只执行 FE-BASE，提交准确候选、真实验收和 draft PR，等待协调会话独立审查；通过后完成 E、远程基线与 K，再由协调会话最终核查、合并和确认实际集成。后续任务单独派发。提交、推送、合并分别记录，开 PR 不等于完成。细则由 AGENTS.md、docs/agents/dsh.md 与 docs/agents/workflow.md 管理。
 
 ## 13. 阶段与里程碑
 

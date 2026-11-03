@@ -1,0 +1,19 @@
+{
+  "candidate-browser.json": "5d126537b53f5173a00cf1dc50536eba57e395cf670040a981ea69a785dd67de",
+  "candidate-dependencies.json": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+  "candidate-licenses.json": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+  "candidate-missing-resource.json": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+  "candidate-server.json": "7b7357d2a2683ba850ae6384ffdbff3084786f2f2ebb54902e9adfda70d65415",
+  "candidate-server.log": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+  "commands.json": "3cbacc4ec13ef020e48308c50783414dde98962dad54319c18264bcab8fb8364",
+  "configuration-regression.json": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+  "github.json": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+  "original-dependencies.json": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+  "original-licenses.json": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+  "original.tar": "49e5185df1b34c2e0518adbee4fa2625a09cdecd0b56c6238747bf5ad895d72c",
+  "regression.json": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+  "results.json": "5847094708a9ec3025e9de83e3f43b240ff56104a8a1e3298e29c5c394ba745b",
+  "source.json": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+  "upstream.patch": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+  "version.json": "9077c3b3de439aff4ebc5575965b0b0393f05c8965e1663e68187021da35e670"
+}

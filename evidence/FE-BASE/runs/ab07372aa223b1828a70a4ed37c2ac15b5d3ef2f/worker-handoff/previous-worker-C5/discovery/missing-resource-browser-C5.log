@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+Error: {"type":"document","url":"http://127.0.0.1:4175/absent-fe-base/?lang=en&quality=balanced&experience=console&speed=0","status":404}
+    at fail (file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/browser.mjs:27:74)
+    at Page.<anonymous> (file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/browser.mjs:38:29)
+    at Page._callHandler (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:66:29)
+    at Page.emit (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:56:12)
+    at BrowserContext._onResponse (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/browserContext.js:172:12)
+    at Proxy.<anonymous> (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/browserContext.js:123:63)
+    at Proxy._callHandler (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:66:29)
+    at Proxy.emit (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/eventEmitter.js:56:12)
+    at Connection.dispatch (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/client/connection.js:175:21)
+    at Immediate.<anonymous> (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/node_modules/playwright-core/lib/inProcessFactory.js:48:85)
+
+Node.js v24.22.2

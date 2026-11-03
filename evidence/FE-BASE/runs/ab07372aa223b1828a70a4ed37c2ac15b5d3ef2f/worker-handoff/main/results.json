@@ -1,0 +1,12 @@
+{
+  "criteria_commit": "7704387252b293bee1ec671b440164a12287ca16",
+  "tested_code_sha": "ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f",
+  "required": {
+    "FE-BASE-A01": "PASS",
+    "FE-BASE-A02": "PASS",
+    "FE-BASE-A03": "PASS",
+    "FE-BASE-A04": "PASS"
+  },
+  "clean_checkout_mode": false,
+  "commands": 32
+}

@@ -1,0 +1,462 @@
+[
+  {
+    "argv": [
+      "git",
+      "remote",
+      "get-url",
+      "origin"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.005806+00:00",
+    "exit_code": 0,
+    "stdout": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n",
+    "stderr": "",
+    "stdout_sha256": "91978bc78eb760af1b35e6b40f228d2e3199b7633314ca1246da0857f04fe664",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "7704387252b293bee1ec671b440164a12287ca16",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.008276+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "86e521184a4d5bbd42dfe93a48999fa714c233f2",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.012065+00:00",
+    "exit_code": 0,
+    "stdout": "86e521184a4d5bbd42dfe93a48999fa714c233f2\n",
+    "stderr": "",
+    "stdout_sha256": "1763531bd94c478df491483292377330884a68bfba25d24c3f1ec12e0c567c45",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "459a359afd4e2e2bdaca05acccc4b65f79b741d8:vendor/turbine-explorer"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.024650+00:00",
+    "exit_code": 0,
+    "stdout": "03487ef57f6bc957dfc83b890de1f1e700ed2841\n",
+    "stderr": "",
+    "stdout_sha256": "46234b5a40cd231caebd93c9ff6e015f2b9b92360c30ad39cbbd4bba89b8beb5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%B",
+      "459a359afd4e2e2bdaca05acccc4b65f79b741d8^2"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.027126+00:00",
+    "exit_code": 0,
+    "stdout": "Squashed 'vendor/turbine-explorer/' content from commit efc5d2e\n\ngit-subtree-dir: vendor/turbine-explorer\ngit-subtree-split: efc5d2ecd12055f880a41b47215791c22d3656d4\n\n",
+    "stderr": "",
+    "stdout_sha256": "f7d03e20ba65c0f52d0be875877c78fd51012698a2b1a85e329d1b3f96947709",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "ls-files",
+      "--stage"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.030044+00:00",
+    "exit_code": 0,
+    "stdout": "100644 c0e96c7ef7396ee47a92f397996d3294e2f2e5e7 0\t.gitattributes\n100644 74720d4a8e6d23bd52df162b974113b0fe80dc10 0\t.gitignore\n100644 d1093c9d34d29dd6146b3453678510c202df7e64 0\tACCEPTANCE.md\n100644 a1308e3b4eb478ef52e316f95777a8dcaaa1f795 0\tAGENTS.md\n100644 67c0eac44b618f2b698b31b01f2bd7cd80cdf434 0\tDEV_SPEC.md\n100644 ad82020319db078cd2265da11183cdd91da832e6 0\tGLOSSARY.md\n100644 513034a9f217f6f02fea612047537c414ef4a76d 0\tLICENSE\n100644 56e89329f7a3ccf9ebb3a970750de299bc1db5eb 0\tREADME.md\n100644 208800646729b2f2d5e49cf33a584ad7c39bdb00 0\tTASKS.md\n100644 126a741984addaa17ed1ba1c6bff6a111cdfa9c7 0\tassets/models/LICENSE.txt\n100644 6dd60bdd79f9b6a0b9a2fb8f1491f56c8057de76 0\tassets/models/README.md\n100644 cf781430404b0ae0ba7d8dea3457a3515dd7c9b9 0\tassets/models/THREE-LICENSE.txt\n100644 3adeda8498091107c6ec92db378743646a838fdb 0\tassets/models/component-map.json\n100644 b174339797562a8de713e7d3a8b433fd120d1743 0\tassets/models/industrial-gas-turbine-educational.glb\n100644 3c07f85b8962b3e82a912e126d3587d954999e09 0\tassets/models/industrial-model-inspection.json\n100644 126a741984addaa17ed1ba1c6bff6a111cdfa9c7 0\tassets/models/source/LICENSE\n100644 8e4a3b79ffd0d0fdec9d56a28e1eeeaa2a45d127 0\tassets/models/source/README.md\n100644 4a477d78aef9699a58dedbda01662792cec3ddb6 0\tassets/models/source/THIRD_PARTY_NOTICES.md\n100644 d6136dfbc9d7aee8eb1865bad574c10ddc489cc9 0\tassets/models/source/export_glb.mjs\n100644 bf9b23ba84de2c964b99249cfed89ca903ae3957 0\tassets/models/source/package-lock.json\n100644 8e062090e0ef597401993b4cd59cfcf043d6cb9a 0\tassets/models/source/package.json\n100644 ec26ff988bb33e23be9eb6616898fbe7ab5f6174 0\tassets/models/source/src/inlet-support.ts\n100644 ec003baeb718c38aaa4932275dccfc72599426f6 0\tassets/models/source/src/sectioned-case.ts\n100644 a8010c11223bd0c16e077392734d7de48f8b7b1d 0\tassets/models/source/src/turbine.ts\n100644 c0947ed87f4ce0101069f61c375c5609ea6c4b56 0\tassets/models/source/verify_glb.mjs\n100644 cc1b20882d4069c9d485b75a28bfa031821bba28 0\tdocs/FE_BASE.md\n100644 40e9d866224c7af5e64e56a9c90c0fd35f348599 0\tdocs/UPSTREAM_REUSE.md\n100644 300299b6bd9e074f955846a1511f69aff7b4675b 0\tdocs/agents/domain.md\n100644 ec060648b57fe08a8bbe96f44cde23c8c6a9f4e1 0\tdocs/agents/dsh.md\n100644 811eae9566947652e6eb3731e9caa171c1f55439 0\tdocs/agents/issue-tracker.md\n100644 1d4f77d72e7b141e52bce552c86b00c9a2bb804b 0\tdocs/agents/triage-labels.md\n100644 a2f6ae8314d2c188a3c03b3e605ac72f1b6f451b 0\tdocs/agents/workflow.md\n100644 9a6b2ebb5d773257a605b9794458458d36a00b5c 0\tevidence/FE-BASE/browser-environment.json\n100644 65c5c2ebfeb8c6d4131ec1e9c70ebfe28a935cf1 0\tevidence/FE-BASE/criteria.md\n100644 0e3be16b662803a2006cbb65a67de2ff51b442a1 0\tevidence/FE-BASE/upstream-manifest.json\n100644 a23cf7aed939df243934930f0a2aeae99d4dfb0c 0\tevidence/M0-00/criteria.md\n100644 d5e07c65db79d5d679edcaf1b3b2a9878f09455f 0\tevidence/M0-00/delivery/remote-E-commands.json\n100644 45241375d4be6b7762007cc7c495ab4c9bc566fd 0\tevidence/M0-00/initial-fingerprints.json\n100644 5747c007a3f22086bf3e7e9cd0c04866a3b121d6 0\tevidence/M0-00/migration-verification.json\n100644 009425381ce7cd1b3bce76b79f59666e5bc63684 0\tevidence/M0-00/preparation/20261103T142014+0800/FINAL_STATUS.json\n100644 a38e2613fce791ab961561432eecefbf8ca44ba2 0\tevidence/M0-00/preparation/20261103T142014+0800/HANDOFF_EXIT.json\n100644 bbee9da8dd14b344e516293c8c28635092f5760c 0\tevidence/M0-00/preparation/20261103T142014+0800/README.md\n100644 cfeb75a55e7b7716dd7c948a7e0c61ae2e011fe9 0\tevidence/M0-00/preparation/20261103T142014+0800/TRANSFER.md\n100644 17089a5c8df828ea905f99e933eb08a6990191f1 0\tevidence/M0-00/preparation/20261103T142014+0800/TRANSFER_RECEIPT.json\n100644 9b01d42da3dc41e7ac231f230b4c2092337b3df2 0\tevidence/M0-00/preparation/20261103T142014+0800/archive-record.json\n100644 e3b9ac4cda14fdb2abf320b319bbf3bc39892c53 0\tevidence/M0-00/preparation/20261103T142014+0800/commands.json\n100644 f01316ee5b3fbdc81d74d930940585c33c3b3d59 0\tevidence/M0-00/preparation/20261103T142014+0800/configuration-diff.json\n100644 1a0b603c066cb8a5e1ca0a4f069fbaf327fac14f 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-prompts-after.json\n100644 45f1b37e18a5778daa044f6faafc5205da1e2723 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-prompts-before.json\n100644 8862237ddc0bb2c7863e714a6c031ce00534a24e 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-save-events.json\n100644 e9b1a8137ca85589cf96f34899263c0dd5034846 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-settings-after.json\n100644 6ae1963cbb729f6da81ec825a6f12666b88b5a46 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-settings-before.json\n100644 82bf9eeac605ac9200fe407013389d38e004f776 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-state-after.json\n100644 0bb5ffc52820bf4ed36b5d0cc19dfe5645e0f7e1 0\tevidence/M0-00/preparation/20261103T142014+0800/dsh-state-before.json\n100644 c87595b57f79e5dcddd8617fa8f9ddb3cec8ba4e 0\tevidence/M0-00/preparation/20261103T142014+0800/environment-focused.json\n100644 ca7a94d35197e9f7e9e7f144f33abaf757814927 0\tevidence/M0-00/preparation/20261103T142014+0800/final-checks.json\n100644 4db931b09535d1829648435e9cdfef7bd224596d 0\tevidence/M0-00/preparation/20261103T142014+0800/identities.json\n100644 5af52c240debc85f5b705a85be416104195c9357 0\tevidence/M0-00/preparation/20261103T142014+0800/initial-workspace-inventory.json\n100644 5ca46e5b2f9e1d160c3761b5a8e15d5e2434e9c2 0\tevidence/M0-00/preparation/20261103T142014+0800/installed-components.json\n100644 c0a6974328687693704d0d474b21255171cfd3ba 0\tevidence/M0-00/preparation/20261103T142014+0800/migration-DSH_HANDOFF.md.diff\n100644 a58aa26e1b569754e7cd8f087372946365c4559e 0\tevidence/M0-00/preparation/20261103T142014+0800/migration-README.md.diff\n100644 eae0909122e998fdd1e9dd2f70005dfc6df5cb84 0\tevidence/M0-00/preparation/20261103T142014+0800/migration-map.json\n100644 a2abccfcd16765a33afbf4ec96e8744f1a8dfa9c 0\tevidence/M0-00/preparation/20261103T142014+0800/migration-project_AGENTS.md.diff\n100644 f2843997dc307e1bc39cb4c3b9be86eb40943608 0\tevidence/M0-00/preparation/20261103T142014+0800/migration-project_DEV_SPEC.md.diff\n100644 f676c6167ecd4151020edc33503806ff09095aec 0\tevidence/M0-00/preparation/20261103T142014+0800/migration-project_docs_UPSTREAM_REUSE.md.diff\n100644 3be1776d88e1389de1058fe70596e59146431819 0\tevidence/M0-00/preparation/20261103T142014+0800/original-SHA256SUMS.txt\n100644 54546a09e2891320519f230a4d11432229c4d54d 0\tevidence/M0-00/preparation/20261103T142014+0800/original-sha256-check.json\n100644 d3be693dd497ed73a704be8c9cb7f645f3a057e6 0\tevidence/M0-00/preparation/20261103T142014+0800/prepare.sh\n100644 f395894ae2e67f342561ee4e33278aa1d4bea8a4 0\tevidence/M0-00/preparation/20261103T142014+0800/preserved-host-configuration.json\n100644 ce184f9e2348242d73b8e30a305e201df0c7e48b 0\tevidence/M0-00/preparation/20261103T142014+0800/remote-final-verification.json\n100644 061d567283d08dbcb09f7bf9ad7df1d7b3b8b739 0\tevidence/M0-00/preparation/20261103T142014+0800/skill-invocation-audit.json\n100644 c27f177beaf4afda91b9538ce28909cd4cae2710 0\tevidence/M0-00/preparation/20261103T142014+0800/source-status-before.json\n100644 0faae349d8562337eb004470285e4dbfff96a9e1 0\tevidence/M0-00/preparation/20261103T142014+0800/task-acceptance-mapping.json\n100644 a99631fa1f35c5e9ae9a89456df30fe2a3f4a702 0\tevidence/M0-00/preparation/20261103T142014+0800/team-additions.json\n100644 75559719212cac34b45499c52b2391f825cbfb25 0\tevidence/M0-00/preparation/20261103T142014+0800/tickets-open-after.json\n100644 75559719212cac34b45499c52b2391f825cbfb25 0\tevidence/M0-00/preparation/20261103T142014+0800/tickets-open-before.json\n100644 e2f0b4d0c62dddadc85922f5a63d6b3a48148d37 0\tevidence/M0-00/preparation/20261103T142014+0800/validation-archive.json\n100644 1abed936f1a64e2199a34307415a516bb7efa4d0 0\tevidence/M0-00/preparation/20261103T142014+0800/validation.json\n100644 1341e5f6187253b5eb4befb4d21b7cc1f0653578 0\tevidence/M0-00/preparation/20261103T142014+0800/worker-skills-manifest.json\n100644 74094352028120391549ab4a3a0a139d0d2206ee 0\tevidence/M0-00/preparation/20261103T142014+0800/wsl-decoded.json\n100644 17c2194503243241885b3a5ac64452f7f7f87afc 0\tevidence/M0-00/remote-E-verification.json\n100644 aaccdce30bf93312192c0cd025f52d09e50be4a8 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md\n100644 c569467544981d012e46a2fcce58b22a5c59382f 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/SHA256SUMS.json\n100644 e7a8ee1ca5e784344fd4725cc86fa85e7a7976af 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/ci-check-runs.json\n100644 8579aee009dcb2379ccc7c8cf36dd3bad122eca4 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/ci-status.json\n100644 c3d3e127794a210952f3e3a45c1944e9ca3c1ae5 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/commands.json\n100644 43a5a8bb1a5f580e7ea63321235f7bd8369aaef9 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/configuration.json\n100644 2044a9bf73acc13985f06b4c710a7a19c275b787 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/docker.json\n100644 31765cb3de8c462689855d5773c1902984547afd 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/evidence-hashes.json\n100644 da72fb20bf6aa655e9b6330ab7344b73f5f62596 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/failure-probes/commands.json\n100644 682cce6688ee57c86407134941f8669d5fc398dd 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/failure-probes/invalid-criteria.json\n100644 4caf3f2862c4cc422e981eeab56cc022e49d76fc 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/failure-probes/results.json\n100644 c94c348d361e4c978b29fe39051dfeca8634db59 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/git.json\n100644 5381752d8ad08636c8106627cd5012f88425a8fc 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/github.json\n100644 4135e189a88374cddd7398892ac9372f79e7d8bc 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/REVIEW.md\n100644 4b3907f092ace238f765723facd259337b6d35ea 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/commands.json\n100644 43a5a8bb1a5f580e7ea63321235f7bd8369aaef9 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/configuration.json\n100644 2044a9bf73acc13985f06b4c710a7a19c275b787 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/docker.json\n100644 b512c492c5f907400600f18885842c4eca5cc57a 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/evidence-hashes.json\n100644 c94c348d361e4c978b29fe39051dfeca8634db59 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/git.json\n100644 5381752d8ad08636c8106627cd5012f88425a8fc 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/github.json\n100644 c75160d5fc8ed3dd60c260fbf29ab0790b1fde25 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/preservation.json\n100644 d0abdda8b10752ad189fa7627960d76d77772f44 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/profile.json\n100644 b4712669437a0b7c3eeb05fee51d6564d233e033 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/prompts.json\n100644 09ee6a6ac442e6f0d33b148e253d76f50c01787a 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/regression.json\n100644 61ce0be72927d9ef38d7c34edb729a408e834f6c 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/remote.json\n100644 f17723e262821d1814098e6c4dff57ccb06f9310 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/runtime.json\n100644 b84d48403f6bbb14cbb90cbc979e2a568dc6a5cd 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/version-check.json\n100644 309d3d62358499885627128c694e5b01f1fdca8a 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/main-protection.json\n100644 4075c319afd023beee44d761dbeb8c620e3d7cf0 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/pre-review-report.md\n100644 c75160d5fc8ed3dd60c260fbf29ab0790b1fde25 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/preservation.json\n100644 f661bf5cde47e61242ead61a62b0c607d5fd33f8 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/previous-failure/commands.json\n100644 eb36ddf9fdcd28f1751e76c004ff0421dad3b81b 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/previous-failure/executor-output.txt\n100644 d0abdda8b10752ad189fa7627960d76d77772f44 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/profile.json\n100644 b4712669437a0b7c3eeb05fee51d6564d233e033 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/prompts.json\n100644 25df5d4451a0b01c4781ab2e2b8c6b6d9abfcea9 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/push-C.json\n100644 3ca268e0296c26490154169df651592fa8c24d64 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/push-C3.json\n100644 09ee6a6ac442e6f0d33b148e253d76f50c01787a 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/regression.json\n100644 61ce0be72927d9ef38d7c34edb729a408e834f6c 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/remote.json\n100644 f17723e262821d1814098e6c4dff57ccb06f9310 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/runtime.json\n100644 b84d48403f6bbb14cbb90cbc979e2a568dc6a5cd 0\tevidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/version-check.json\n100644 1fdcae2b939162b591dbfcc92970df00c033d76c 0\tevidence/REPORT.template.md\n100644 21da9c110f694830b2a8fbdc391882a08bf95121 0\tscripts/check_m0_00_failures.py\n100644 927a5252c39695ff986b50721863958dd0f1409c 0\tscripts/fe-base/browser.mjs\n100644 b9b3cfd9922fb54d5b18732be209180109c18c25 0\tscripts/fe-base/observe-webgl.js\n100644 174592be0312b7327d4a50175fe58c8b8d8185f2 0\tscripts/fe-base/package-lock.json\n100644 381177744d9db1684a96babea1d65aabe7ca9bca 0\tscripts/fe-base/package.json\n100644 be2b74db40f0b7cee3f1e1c1a51f8eff3cbb6f8c 0\tscripts/requirements-m0-00.txt\n100644 ea9764bb24298a7bbee51fb7e5f31d4a071bb2ca 0\tscripts/verify_fe_base.py\n100644 dbe8d56b77b1ee5009973cb5e6990846b56781a5 0\tscripts/verify_m0_00.py\n100644 e851fcbc6ba624e54bbfdcedd18844fd77b90529 0\tvendor/turbine-explorer/.gitignore\n100644 126a741984addaa17ed1ba1c6bff6a111cdfa9c7 0\tvendor/turbine-explorer/LICENSE\n100644 8e4a3b79ffd0d0fdec9d56a28e1eeeaa2a45d127 0\tvendor/turbine-explorer/README.md\n100644 4a477d78aef9699a58dedbda01662792cec3ddb6 0\tvendor/turbine-explorer/THIRD_PARTY_NOTICES.md\n100644 01f794fba45a0a1bea2baa804b13012ad6aecc66 0\tvendor/turbine-explorer/docs/SOURCES.md\n100644 0f7a42e37650f566bb59445e0e83c7d55c9969f8 0\tvendor/turbine-explorer/docs/ci.example.yml\n100644 d0debca30fd2d73eb0011651bd3d2f37c8682f1d 0\tvendor/turbine-explorer/docs/cooled-blade-light.png\n100644 9c6e848351724f374ab8a0390567a3857ce99bf7 0\tvendor/turbine-explorer/docs/cooled-blade.png\n100644 6d30c292597494ed46b15e7272304939d85fea2a 0\tvendor/turbine-explorer/docs/exploded.png\n100644 bd2c8ae914422c06ba84676889b1062c1d5815dc 0\tvendor/turbine-explorer/docs/preview.png\n100644 15437a7747cb218d87ec81628be395b7a1f6a197 0\tvendor/turbine-explorer/hosting/404.html\n100644 25a42f74e2a5c0c49737a636dd335a75bd8bd025 0\tvendor/turbine-explorer/hosting/_headers\n100644 929f6b38e268a0dda4fd34a240334b8869561484 0\tvendor/turbine-explorer/hosting/article.html\n100644 4148cfd44243b537f87d0af7919900e2aaf1d444 0\tvendor/turbine-explorer/hosting/labs.html\n100644 f59cb9b5dc77a1ab812360dd2126ef414c8b2e35 0\tvendor/turbine-explorer/hosting/robots.txt\n100644 edfdd80f3513a17893888d5a91667ac9d9ea170c 0\tvendor/turbine-explorer/hosting/sitemap.xml\n100644 9bc469e22300a2c9e159af403806962893771a11 0\tvendor/turbine-explorer/index.html\n100644 cf781430404b0ae0ba7d8dea3457a3515dd7c9b9 0\tvendor/turbine-explorer/licenses/three-LICENSE.txt\n100644 bf9b23ba84de2c964b99249cfed89ca903ae3957 0\tvendor/turbine-explorer/package-lock.json\n100644 8e062090e0ef597401993b4cd59cfcf043d6cb9a 0\tvendor/turbine-explorer/package.json\n100644 a41a93b7e9eeec4411e1567e2bc5804bf19ad495 0\tvendor/turbine-explorer/public/_headers\n100644 75be518a3fb27147b06af5557684dbc95750f515 0\tvendor/turbine-explorer/public/environment/README.md\n100644 5bc3edf77673aad702b7ae181d30b30d22d38b88 0\tvendor/turbine-explorer/public/environment/poly_haven_studio_1k.hdr\n100644 5dac4ddf484b65b7ddc356ce28b3e776cfd2b3f0 0\tvendor/turbine-explorer/public/environment/studio_kontrast_02_1k.hdr\n100644 35516c210907c82116413358012fa3a84a3d91c5 0\tvendor/turbine-explorer/public/favicon.svg\n100644 472064afc4b8dec9079fab03b8ffafb617a1b2d8 0\tvendor/turbine-explorer/public/fonts/Manrope-OFL.txt\n100644 23dcf5e05a97f19a3567d40ebb3765580a4325f7 0\tvendor/turbine-explorer/public/fonts/Manrope-Variable.ttf\n100644 f831dbc69f05a4d5abbb54c530f0123bc0ff2d8b 0\tvendor/turbine-explorer/public/fonts/SpaceGrotesk-OFL.txt\n100644 a1b2e6c26093066510a31147e7aec9abdc8d6c5e 0\tvendor/turbine-explorer/public/fonts/SpaceGrotesk-Variable.ttf\n100644 126a741984addaa17ed1ba1c6bff6a111cdfa9c7 0\tvendor/turbine-explorer/public/licenses/project-MIT.txt\n100644 cf781430404b0ae0ba7d8dea3457a3515dd7c9b9 0\tvendor/turbine-explorer/public/licenses/three-LICENSE.txt\n100644 6d30c292597494ed46b15e7272304939d85fea2a 0\tvendor/turbine-explorer/public/share.png\n100644 d3afa02cfa9cb0b8515624ec644eb7a92231306e 0\tvendor/turbine-explorer/scripts/package-labs.mjs\n100644 6b418edda620e1a42d551f91ff122b197214e910 0\tvendor/turbine-explorer/scripts/verify-assembly.mjs\n100644 8faf540c60020d880c4d350323f7f61d99495787 0\tvendor/turbine-explorer/scripts/verify-blade.mjs\n100644 ef9a6031186dbbc0770492c12013ce243c38c46a 0\tvendor/turbine-explorer/scripts/verify-case.mjs\n100644 5c4e45fd8407c70d4e500d23ff8d39a14b9c3bff 0\tvendor/turbine-explorer/scripts/verify-energy.mjs\n100644 e61c450cac249796ab012a243388726fb08e1032 0\tvendor/turbine-explorer/scripts/verify-language.mjs\n100644 054a40036fd6401fabedfd4554d63e7db16805ce 0\tvendor/turbine-explorer/scripts/verify-quality.mjs\n100644 59d5709c42c86ad6dc29e17ed274e808c50263c9 0\tvendor/turbine-explorer/scripts/verify-service.mjs\n100644 acf56fef87d7ee6e475f7e141f44a9c6fbcda8d3 0\tvendor/turbine-explorer/src/audio.ts\n100644 0478fe007b775773d9b907d0c214428941d2bff0 0\tvendor/turbine-explorer/src/backdrop.css\n100644 2dc18f75d16aaf8d3843fd019710b4556774fb6b 0\tvendor/turbine-explorer/src/backdrop.ts\n100644 515837255788aa26feedc60eb2a0956583144482 0\tvendor/turbine-explorer/src/blade-study.ts\n100644 1fdc520b163aecacdc0cb7b155cddbf462ac8397 0\tvendor/turbine-explorer/src/component-inspector.ts\n100644 7e8b528b276c9f226400c795c78376b1af3eabdc 0\tvendor/turbine-explorer/src/energy.ts\n100644 ce0420408a4019d6f5a621b55236b1918bd355c5 0\tvendor/turbine-explorer/src/exhibition.css\n100644 ca8488958923b4b3b0b83035a14971e0be4d02b7 0\tvendor/turbine-explorer/src/exhibition.ts\n100644 aa5b5a604c575be3c7764d5024d33860b5075156 0\tvendor/turbine-explorer/src/i18n.ts\n100644 ec26ff988bb33e23be9eb6616898fbe7ab5f6174 0\tvendor/turbine-explorer/src/inlet-support.ts\n100644 a805651a79a7c63c3c64c89b62590f05607bfdec 0\tvendor/turbine-explorer/src/inspector.css\n100644 f36792ba7e3767652989e432551522197dac1673 0\tvendor/turbine-explorer/src/main.ts\n100644 d109ee3fa4aa50e9da6236c801153d2fe3195fb8 0\tvendor/turbine-explorer/src/operating-effects.ts\n100644 f617fa5e5a23943fc6b3dc41dc696ab2da1ac097 0\tvendor/turbine-explorer/src/render-quality.ts\n100644 ec003baeb718c38aaa4932275dccfc72599426f6 0\tvendor/turbine-explorer/src/sectioned-case.ts\n100644 a4ecd3f900b9cd6f069d685f531f9d142821f742 0\tvendor/turbine-explorer/src/service-state.ts\n100644 7ae9413604be9320dfeab030e8fb299cbbe206ad 0\tvendor/turbine-explorer/src/style.css\n100644 5e3a7c318a293ccbbc012e93e57690289691fa6e 0\tvendor/turbine-explorer/src/translations.ts\n100644 a8010c11223bd0c16e077392734d7de48f8b7b1d 0\tvendor/turbine-explorer/src/turbine.ts\n100644 84bbb90803780ea2e2348489df3b2c202a38ad09 0\tvendor/turbine-explorer/src/typography.css\n100644 d861f5cc6928b89e169e1e892fe902d80fbcca86 0\tvendor/turbine-explorer/tsconfig.json\n100644 c5257bb9d6b0f7fd99d1992f1ad4218203b4a80c 0\tvendor/turbine-explorer/vite.config.ts\n",
+    "stderr": "",
+    "stdout_sha256": "25200587e4aca987732718b70edfac8c328760bd2a6436431979b9b7a937475b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "ls-tree",
+      "-r",
+      "--name-only",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9",
+      "--",
+      "vendor/turbine-explorer"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.040393+00:00",
+    "exit_code": 0,
+    "stdout": "vendor/turbine-explorer/.gitignore\nvendor/turbine-explorer/LICENSE\nvendor/turbine-explorer/README.md\nvendor/turbine-explorer/THIRD_PARTY_NOTICES.md\nvendor/turbine-explorer/docs/SOURCES.md\nvendor/turbine-explorer/docs/ci.example.yml\nvendor/turbine-explorer/docs/cooled-blade-light.png\nvendor/turbine-explorer/docs/cooled-blade.png\nvendor/turbine-explorer/docs/exploded.png\nvendor/turbine-explorer/docs/preview.png\nvendor/turbine-explorer/hosting/404.html\nvendor/turbine-explorer/hosting/_headers\nvendor/turbine-explorer/hosting/article.html\nvendor/turbine-explorer/hosting/labs.html\nvendor/turbine-explorer/hosting/robots.txt\nvendor/turbine-explorer/hosting/sitemap.xml\nvendor/turbine-explorer/index.html\nvendor/turbine-explorer/licenses/three-LICENSE.txt\nvendor/turbine-explorer/package-lock.json\nvendor/turbine-explorer/package.json\nvendor/turbine-explorer/public/_headers\nvendor/turbine-explorer/public/environment/README.md\nvendor/turbine-explorer/public/environment/poly_haven_studio_1k.hdr\nvendor/turbine-explorer/public/environment/studio_kontrast_02_1k.hdr\nvendor/turbine-explorer/public/favicon.svg\nvendor/turbine-explorer/public/fonts/Manrope-OFL.txt\nvendor/turbine-explorer/public/fonts/Manrope-Variable.ttf\nvendor/turbine-explorer/public/fonts/SpaceGrotesk-OFL.txt\nvendor/turbine-explorer/public/fonts/SpaceGrotesk-Variable.ttf\nvendor/turbine-explorer/public/licenses/project-MIT.txt\nvendor/turbine-explorer/public/licenses/three-LICENSE.txt\nvendor/turbine-explorer/public/share.png\nvendor/turbine-explorer/scripts/package-labs.mjs\nvendor/turbine-explorer/scripts/verify-assembly.mjs\nvendor/turbine-explorer/scripts/verify-blade.mjs\nvendor/turbine-explorer/scripts/verify-case.mjs\nvendor/turbine-explorer/scripts/verify-energy.mjs\nvendor/turbine-explorer/scripts/verify-language.mjs\nvendor/turbine-explorer/scripts/verify-quality.mjs\nvendor/turbine-explorer/scripts/verify-service.mjs\nvendor/turbine-explorer/src/audio.ts\nvendor/turbine-explorer/src/backdrop.css\nvendor/turbine-explorer/src/backdrop.ts\nvendor/turbine-explorer/src/blade-study.ts\nvendor/turbine-explorer/src/component-inspector.ts\nvendor/turbine-explorer/src/energy.ts\nvendor/turbine-explorer/src/exhibition.css\nvendor/turbine-explorer/src/exhibition.ts\nvendor/turbine-explorer/src/i18n.ts\nvendor/turbine-explorer/src/inlet-support.ts\nvendor/turbine-explorer/src/inspector.css\nvendor/turbine-explorer/src/main.ts\nvendor/turbine-explorer/src/operating-effects.ts\nvendor/turbine-explorer/src/render-quality.ts\nvendor/turbine-explorer/src/sectioned-case.ts\nvendor/turbine-explorer/src/service-state.ts\nvendor/turbine-explorer/src/style.css\nvendor/turbine-explorer/src/translations.ts\nvendor/turbine-explorer/src/turbine.ts\nvendor/turbine-explorer/src/typography.css\nvendor/turbine-explorer/tsconfig.json\nvendor/turbine-explorer/vite.config.ts\n",
+    "stderr": "",
+    "stdout_sha256": "24f3bdd63f008a291f0907c4d0e99600072577ce14cf93e8de223b738d279f06",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "459a359afd4e2e2bdaca05acccc4b65f79b741d8",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9",
+      "--",
+      "vendor/turbine-explorer"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.043831+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an%n%ae%n%cn%n%ce",
+      "7704387252b293bee1ec671b440164a12287ca16"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.048537+00:00",
+    "exit_code": 0,
+    "stdout": "lucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\nlucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\n",
+    "stderr": "",
+    "stdout_sha256": "3904e4ec8a1e9849bd36bbc3e917df37fa837c43d6b09464892e9debebe4dd8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an%n%ae%n%cn%n%ce",
+      "459a359afd4e2e2bdaca05acccc4b65f79b741d8"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.055617+00:00",
+    "exit_code": 0,
+    "stdout": "lucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\nlucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\n",
+    "stderr": "",
+    "stdout_sha256": "3904e4ec8a1e9849bd36bbc3e917df37fa837c43d6b09464892e9debebe4dd8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an%n%ae%n%cn%n%ce",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.062591+00:00",
+    "exit_code": 0,
+    "stdout": "lucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\nlucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\n",
+    "stderr": "",
+    "stdout_sha256": "3904e4ec8a1e9849bd36bbc3e917df37fa837c43d6b09464892e9debebe4dd8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only",
+      "86e521184a4d5bbd42dfe93a48999fa714c233f2",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9",
+      "--",
+      "LICENSE",
+      "assets",
+      "evidence/M0-00",
+      "scripts/verify_m0_00.py",
+      "scripts/check_m0_00_failures.py",
+      "scripts/requirements-m0-00.txt",
+      "ACCEPTANCE.md"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.066552+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "7704387252b293bee1ec671b440164a12287ca16",
+      "d42a280c2be5d7cc1632a11e30a96be49dce2bb9",
+      "--",
+      ".",
+      ":!vendor"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.082350+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "node",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.086875+00:00",
+    "exit_code": 0,
+    "stdout": "v24.22.2\n",
+    "stderr": "",
+    "stdout_sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.091044+00:00",
+    "exit_code": 0,
+    "stdout": "11.19.1\n",
+    "stderr": "",
+    "stdout_sha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "api",
+      "user",
+      "--jq",
+      ".login"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:35.205186+00:00",
+    "exit_code": 0,
+    "stdout": "lucy-assistant\n",
+    "stderr": "",
+    "stdout_sha256": "9f686002f4e40fe7de7f411f030b35194d22350011487b7ba5d856cfcfb2bae7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "repo",
+      "view",
+      "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+      "--json",
+      "nameWithOwner,viewerPermission"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:36.458686+00:00",
+    "exit_code": 0,
+    "stdout": "{\"nameWithOwner\":\"shuyu-lin-dev/gas-turbine-lifecycle-lab\",\"viewerPermission\":\"WRITE\"}\n",
+    "stderr": "",
+    "stdout_sha256": "bb6e89981280d0774dd9ea28f4bc115b85383486c73180b99c1a120095b4f13c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "ci",
+      "--prefix",
+      "scripts/fe-base"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:39.403988+00:00",
+    "exit_code": 0,
+    "stdout": "\nadded 2 packages, and audited 3 packages in 1s\n\nfound 0 vulnerabilities\n",
+    "stderr": "",
+    "stdout_sha256": "e267642ab716615ca47beb18b9a488fb647807fb2f4748e8293534a1ec0e1f59",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "archive",
+      "--format=tar",
+      "--output",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/original.tar",
+      "459a359afd4e2e2bdaca05acccc4b65f79b741d8:vendor/turbine-explorer"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:08:40.901277+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "ci"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/original",
+    "at": "2026-11-03T09:08:40.949920+00:00",
+    "exit_code": 0,
+    "stdout": "\nadded 25 packages, and audited 26 packages in 10s\n\n5 packages are looking for funding\n  run `npm fund` for details\n\n2 high severity vulnerabilities\n\nTo address all issues, run:\n  npm audit fix\n\nRun `npm audit` for details.\n",
+    "stderr": "npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:\nnpm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\n",
+    "stdout_sha256": "88b1bd695e5fe1410ed2f949a8f6cfb004d096f16f960f80782dfc4dc27bf61f",
+    "stderr_sha256": "960379ab2b6e16c97f4063bcd816d9df4cc6c32cbcc2d926fac49aca2dc92829"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/original",
+    "at": "2026-11-03T09:08:50.727060+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 test\n> npm run test:quality && npm run test:energy && npm run test:language && npm run test:blade && npm run test:service && npm run test:geometry\n\n\n> turbine-explorer@0.1.0 test:quality\n> node --experimental-strip-types scripts/verify-quality.mjs\n\nPASS: default quality, supersampling, GPU size cap, saved preference and shared change events.\n\n> turbine-explorer@0.1.0 test:energy\n> node --experimental-strip-types scripts/verify-energy.mjs\n\nPASS: MW/kWh/seconds conversion, household assumption, frame integration, attached heat effects and shutdown.\n\n> turbine-explorer@0.1.0 test:language\n> node --experimental-strip-types scripts/verify-language.mjs\n\nPASS: bilingual catalog covers authored static UI text. Runtime state preservation is checked in the live browser.\n\n> turbine-explorer@0.1.0 test:blade\n> node --experimental-strip-types scripts/verify-blade.mjs\n\nPASS: blade volume, finite geometry, default integral cutaway, animated airflow, coating modes, instance isolation. 155404 triangles / 24 meshes.\n\n> turbine-explorer@0.1.0 test:service\n> node --experimental-strip-types scripts/verify-service.mjs\n\nPASS: coastdown, return interlock, casing-first sequence, installed hot-inspection cans, reversible normalized travel.\n\n> turbine-explorer@0.1.0 test:geometry\n> node --experimental-strip-types scripts/verify-case.mjs && node --experimental-strip-types scripts/verify-assembly.mjs\n\nPASS: shell face orientation, complementary half-spaces, full barrel, drilled joints and enclosure bolts.\nPASS: expanding turbine stages, attached lugs, consistent combustor ring, connected transitions, rotating vs stationary hierarchy.\nPASS: lower-casing group separation, stationary core, exact reassembly.\n",
+    "stderr": "",
+    "stdout_sha256": "d821979430c682a633c2bf69069bec9ea81b1fcd570b079eb207fafbad8510b3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/original",
+    "at": "2026-11-03T09:08:54.121059+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 build\n> tsc && vite build\n\nvite v7.3.6 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                  16.83 kB │ gzip:   5.81 kB\ndist/assets/index-BmpRa__N.css   78.45 kB │ gzip:  16.56 kB\ndist/assets/index-BD7bhfSp.js   999.90 kB │ gzip: 313.43 kB\n✓ built in 1.44s\n",
+    "stderr": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "stdout_sha256": "e330cb568313dfa7f4e10f84ad0352308f55eb2b5a86fd62a4f37868fcbd9ec0",
+    "stderr_sha256": "ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build:labs"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/original",
+    "at": "2026-11-03T09:08:57.242899+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 build:labs\n> tsc && vite build --base=/gas-turbine/ --outDir dist-labs/gas-turbine && node scripts/package-labs.mjs\n\nvite v7.3.6 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist-labs/gas-turbine/index.html                  16.85 kB │ gzip:   5.81 kB\ndist-labs/gas-turbine/assets/index-axLSd0Ng.css   78.47 kB │ gzip:  16.57 kB\ndist-labs/gas-turbine/assets/index-MkpUvsGe.js   999.90 kB │ gzip: 313.43 kB\n✓ built in 1.40s\nLabs landing and /gas-turbine/ are ready in dist-labs/.\n",
+    "stderr": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "stdout_sha256": "06320e29836de170b7d08d4d68ac8904d06433bda3ebf7ec28c21150aa7f1085",
+    "stderr_sha256": "ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c"
+  },
+  {
+    "argv": [
+      "npm",
+      "ls",
+      "--all",
+      "--json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/original",
+    "at": "2026-11-03T09:09:00.208426+00:00",
+    "exit_code": 0,
+    "stdout": "{\n  \"version\": \"0.1.0\",\n  \"name\": \"turbine-explorer\",\n  \"dependencies\": {\n    \"@types/three\": {\n      \"version\": \"0.179.0\",\n      \"resolved\": \"https://registry.npmjs.org/@types/three/-/three-0.179.0.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@dimforge/rapier3d-compat\": {\n          \"version\": \"0.12.0\",\n          \"resolved\": \"https://registry.npmjs.org/@dimforge/rapier3d-compat/-/rapier3d-compat-0.12.0.tgz\",\n          \"overridden\": false\n        },\n        \"@tweenjs/tween.js\": {\n          \"version\": \"23.1.3\",\n          \"resolved\": \"https://registry.npmjs.org/@tweenjs/tween.js/-/tween.js-23.1.3.tgz\",\n          \"overridden\": false\n        },\n        \"@types/stats.js\": {\n          \"version\": \"0.17.4\",\n          \"resolved\": \"https://registry.npmjs.org/@types/stats.js/-/stats.js-0.17.4.tgz\",\n          \"overridden\": false\n        },\n        \"@types/webxr\": {\n          \"version\": \"0.5.24\",\n          \"resolved\": \"https://registry.npmjs.org/@types/webxr/-/webxr-0.5.24.tgz\",\n          \"overridden\": false\n        },\n        \"@webgpu/types\": {\n          \"version\": \"0.1.72\",\n          \"resolved\": \"https://registry.npmjs.org/@webgpu/types/-/types-0.1.72.tgz\",\n          \"overridden\": false\n        },\n        \"fflate\": {\n          \"version\": \"0.8.3\",\n          \"resolved\": \"https://registry.npmjs.org/fflate/-/fflate-0.8.3.tgz\",\n          \"overridden\": false\n        },\n        \"meshoptimizer\": {\n          \"version\": \"0.22.0\",\n          \"resolved\": \"https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-0.22.0.tgz\",\n          \"overridden\": false\n        }\n      }\n    },\n    \"three\": {\n      \"version\": \"0.179.1\",\n      \"resolved\": \"https://registry.npmjs.org/three/-/three-0.179.1.tgz\",\n      \"overridden\": false\n    },\n    \"typescript\": {\n      \"version\": \"5.9.3\",\n      \"resolved\": \"https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz\",\n      \"overridden\": false\n    },\n    \"vite\": {\n      \"version\": \"7.3.6\",\n      \"resolved\": \"https://registry.npmjs.org/vite/-/vite-7.3.6.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@types/node\": {},\n        \"esbuild\": {\n          \"version\": \"0.28.2\",\n          \"resolved\": \"https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@esbuild/aix-ppc64\": {},\n            \"@esbuild/android-arm\": {},\n            \"@esbuild/android-arm64\": {},\n            \"@esbuild/android-x64\": {},\n            \"@esbuild/darwin-arm64\": {},\n            \"@esbuild/darwin-x64\": {},\n            \"@esbuild/freebsd-arm64\": {},\n            \"@esbuild/freebsd-x64\": {},\n            \"@esbuild/linux-arm\": {},\n            \"@esbuild/linux-arm64\": {},\n            \"@esbuild/linux-ia32\": {},\n            \"@esbuild/linux-loong64\": {},\n            \"@esbuild/linux-mips64el\": {},\n            \"@esbuild/linux-ppc64\": {},\n            \"@esbuild/linux-riscv64\": {},\n            \"@esbuild/linux-s390x\": {},\n            \"@esbuild/linux-x64\": {\n              \"version\": \"0.28.2\",\n              \"resolved\": \"https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.28.2.tgz\",\n              \"overridden\": false\n            },\n            \"@esbuild/netbsd-arm64\": {},\n            \"@esbuild/netbsd-x64\": {},\n            \"@esbuild/openbsd-arm64\": {},\n            \"@esbuild/openbsd-x64\": {},\n            \"@esbuild/openharmony-arm64\": {},\n            \"@esbuild/sunos-x64\": {},\n            \"@esbuild/win32-arm64\": {},\n            \"@esbuild/win32-ia32\": {},\n            \"@esbuild/win32-x64\": {}\n          }\n        },\n        \"fdir\": {\n          \"version\": \"6.5.0\",\n          \"resolved\": \"https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"picomatch\": {\n              \"version\": \"4.0.7\"\n            }\n          }\n        },\n        \"fsevents\": {},\n        \"jiti\": {},\n        \"less\": {},\n        \"lightningcss\": {},\n        \"picomatch\": {\n          \"version\": \"4.0.7\",\n          \"resolved\": \"https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz\",\n          \"overridden\": false\n        },\n        \"postcss\": {\n          \"version\": \"8.5.28\",\n          \"resolved\": \"https://registry.npmjs.org/postcss/-/postcss-8.5.28.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"nanoid\": {\n              \"version\": \"3.3.18\",\n              \"resolved\": \"https://registry.npmjs.org/nanoid/-/nanoid-3.3.18.tgz\",\n              \"overridden\": false\n            },\n            \"picocolors\": {\n              \"version\": \"1.1.1\",\n              \"resolved\": \"https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz\",\n              \"overridden\": false\n            },\n            \"source-map-js\": {\n              \"version\": \"1.2.1\",\n              \"resolved\": \"https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz\",\n              \"overridden\": false\n            }\n          }\n        },\n        \"rollup\": {\n          \"version\": \"4.63.1\",\n          \"resolved\": \"https://registry.npmjs.org/rollup/-/rollup-4.63.1.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@napi-rs/lzma-linux-x64-gnu\": {\n              \"version\": \"1.5.1\",\n              \"resolved\": \"https://registry.npmjs.org/@napi-rs/lzma-linux-x64-gnu/-/lzma-linux-x64-gnu-1.5.1.tgz\",\n              \"overridden\": false\n            },\n            \"@rollup/rollup-android-arm-eabi\": {},\n            \"@rollup/rollup-android-arm64\": {},\n            \"@rollup/rollup-darwin-arm64\": {},\n            \"@rollup/rollup-darwin-x64\": {},\n            \"@rollup/rollup-freebsd-arm64\": {},\n            \"@rollup/rollup-freebsd-x64\": {},\n            \"@rollup/rollup-linux-arm-gnueabihf\": {},\n            \"@rollup/rollup-linux-arm-musleabihf\": {},\n            \"@rollup/rollup-linux-arm64-gnu\": {},\n            \"@rollup/rollup-linux-arm64-musl\": {},\n            \"@rollup/rollup-linux-loong64-gnu\": {},\n            \"@rollup/rollup-linux-loong64-musl\": {},\n            \"@rollup/rollup-linux-ppc64-gnu\": {},\n            \"@rollup/rollup-linux-ppc64-musl\": {},\n            \"@rollup/rollup-linux-riscv64-gnu\": {},\n            \"@rollup/rollup-linux-riscv64-musl\": {},\n            \"@rollup/rollup-linux-s390x-gnu\": {},\n            \"@rollup/rollup-linux-x64-gnu\": {\n              \"version\": \"4.63.1\",\n              \"resolved\": \"https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.63.1.tgz\",\n              \"overridden\": false\n            },\n            \"@rollup/rollup-linux-x64-musl\": {\n              \"version\": \"4.63.1\",\n              \"resolved\": \"https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.63.1.tgz\",\n              \"overridden\": false\n            },\n            \"@rollup/rollup-openbsd-x64\": {},\n            \"@rollup/rollup-openharmony-arm64\": {},\n            \"@rollup/rollup-win32-arm64-msvc\": {},\n            \"@rollup/rollup-win32-ia32-msvc\": {},\n            \"@rollup/rollup-win32-x64-gnu\": {},\n            \"@rollup/rollup-win32-x64-msvc\": {},\n            \"@types/estree\": {\n              \"version\": \"1.0.9\",\n              \"resolved\": \"https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz\",\n              \"overridden\": false\n            },\n            \"fsevents\": {}\n          }\n        },\n        \"sass-embedded\": {},\n        \"sass\": {},\n        \"stylus\": {},\n        \"sugarss\": {},\n        \"terser\": {},\n        \"tinyglobby\": {\n          \"version\": \"0.2.17\",\n          \"resolved\": \"https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"fdir\": {\n              \"version\": \"6.5.0\"\n            },\n            \"picomatch\": {\n              \"version\": \"4.0.7\"\n            }\n          }\n        },\n        \"tsx\": {},\n        \"yaml\": {}\n      }\n    }\n  }\n}\n",
+    "stderr": "",
+    "stdout_sha256": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "ci"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer",
+    "at": "2026-11-03T09:09:00.455771+00:00",
+    "exit_code": 0,
+    "stdout": "\nadded 25 packages, and audited 26 packages in 2s\n\n5 packages are looking for funding\n  run `npm fund` for details\n\n2 high severity vulnerabilities\n\nTo address all issues, run:\n  npm audit fix\n\nRun `npm audit` for details.\n",
+    "stderr": "npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:\nnpm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\n",
+    "stdout_sha256": "c5f4ec1bb4a47431854ee5dd20e4ecec689deeaaae8b7934539a3a7c04f4c3fa",
+    "stderr_sha256": "960379ab2b6e16c97f4063bcd816d9df4cc6c32cbcc2d926fac49aca2dc92829"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer",
+    "at": "2026-11-03T09:09:02.087324+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 test\n> npm run test:quality && npm run test:energy && npm run test:language && npm run test:blade && npm run test:service && npm run test:geometry\n\n\n> turbine-explorer@0.1.0 test:quality\n> node --experimental-strip-types scripts/verify-quality.mjs\n\nPASS: default quality, supersampling, GPU size cap, saved preference and shared change events.\n\n> turbine-explorer@0.1.0 test:energy\n> node --experimental-strip-types scripts/verify-energy.mjs\n\nPASS: MW/kWh/seconds conversion, household assumption, frame integration, attached heat effects and shutdown.\n\n> turbine-explorer@0.1.0 test:language\n> node --experimental-strip-types scripts/verify-language.mjs\n\nPASS: bilingual catalog covers authored static UI text. Runtime state preservation is checked in the live browser.\n\n> turbine-explorer@0.1.0 test:blade\n> node --experimental-strip-types scripts/verify-blade.mjs\n\nPASS: blade volume, finite geometry, default integral cutaway, animated airflow, coating modes, instance isolation. 155404 triangles / 24 meshes.\n\n> turbine-explorer@0.1.0 test:service\n> node --experimental-strip-types scripts/verify-service.mjs\n\nPASS: coastdown, return interlock, casing-first sequence, installed hot-inspection cans, reversible normalized travel.\n\n> turbine-explorer@0.1.0 test:geometry\n> node --experimental-strip-types scripts/verify-case.mjs && node --experimental-strip-types scripts/verify-assembly.mjs\n\nPASS: shell face orientation, complementary half-spaces, full barrel, drilled joints and enclosure bolts.\nPASS: expanding turbine stages, attached lugs, consistent combustor ring, connected transitions, rotating vs stationary hierarchy.\nPASS: lower-casing group separation, stationary core, exact reassembly.\n",
+    "stderr": "",
+    "stdout_sha256": "d821979430c682a633c2bf69069bec9ea81b1fcd570b079eb207fafbad8510b3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer",
+    "at": "2026-11-03T09:09:05.244896+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 build\n> tsc && vite build\n\nvite v7.3.6 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                  16.83 kB │ gzip:   5.81 kB\ndist/assets/index-BmpRa__N.css   78.45 kB │ gzip:  16.56 kB\ndist/assets/index-BD7bhfSp.js   999.90 kB │ gzip: 313.43 kB\n✓ built in 2.26s\n",
+    "stderr": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "stdout_sha256": "608a65dff7edc04ae9f6145befd49ef5675635bb9d1f9ad1ab7c60e785730848",
+    "stderr_sha256": "ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build:labs"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer",
+    "at": "2026-11-03T09:09:09.136079+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 build:labs\n> tsc && vite build --base=/gas-turbine/ --outDir dist-labs/gas-turbine && node scripts/package-labs.mjs\n\nvite v7.3.6 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist-labs/gas-turbine/index.html                  16.85 kB │ gzip:   5.81 kB\ndist-labs/gas-turbine/assets/index-axLSd0Ng.css   78.47 kB │ gzip:  16.57 kB\ndist-labs/gas-turbine/assets/index-MkpUvsGe.js   999.90 kB │ gzip: 313.43 kB\n✓ built in 1.42s\nLabs landing and /gas-turbine/ are ready in dist-labs/.\n",
+    "stderr": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "stdout_sha256": "acb3523caf570414aea0638967e158f813be4e7757d5e6fc0a251c6afc10940c",
+    "stderr_sha256": "ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c"
+  },
+  {
+    "argv": [
+      "npm",
+      "ls",
+      "--all",
+      "--json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/vendor/turbine-explorer",
+    "at": "2026-11-03T09:09:13.050862+00:00",
+    "exit_code": 0,
+    "stdout": "{\n  \"version\": \"0.1.0\",\n  \"name\": \"turbine-explorer\",\n  \"dependencies\": {\n    \"@types/three\": {\n      \"version\": \"0.179.0\",\n      \"resolved\": \"https://registry.npmjs.org/@types/three/-/three-0.179.0.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@dimforge/rapier3d-compat\": {\n          \"version\": \"0.12.0\",\n          \"resolved\": \"https://registry.npmjs.org/@dimforge/rapier3d-compat/-/rapier3d-compat-0.12.0.tgz\",\n          \"overridden\": false\n        },\n        \"@tweenjs/tween.js\": {\n          \"version\": \"23.1.3\",\n          \"resolved\": \"https://registry.npmjs.org/@tweenjs/tween.js/-/tween.js-23.1.3.tgz\",\n          \"overridden\": false\n        },\n        \"@types/stats.js\": {\n          \"version\": \"0.17.4\",\n          \"resolved\": \"https://registry.npmjs.org/@types/stats.js/-/stats.js-0.17.4.tgz\",\n          \"overridden\": false\n        },\n        \"@types/webxr\": {\n          \"version\": \"0.5.24\",\n          \"resolved\": \"https://registry.npmjs.org/@types/webxr/-/webxr-0.5.24.tgz\",\n          \"overridden\": false\n        },\n        \"@webgpu/types\": {\n          \"version\": \"0.1.72\",\n          \"resolved\": \"https://registry.npmjs.org/@webgpu/types/-/types-0.1.72.tgz\",\n          \"overridden\": false\n        },\n        \"fflate\": {\n          \"version\": \"0.8.3\",\n          \"resolved\": \"https://registry.npmjs.org/fflate/-/fflate-0.8.3.tgz\",\n          \"overridden\": false\n        },\n        \"meshoptimizer\": {\n          \"version\": \"0.22.0\",\n          \"resolved\": \"https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-0.22.0.tgz\",\n          \"overridden\": false\n        }\n      }\n    },\n    \"three\": {\n      \"version\": \"0.179.1\",\n      \"resolved\": \"https://registry.npmjs.org/three/-/three-0.179.1.tgz\",\n      \"overridden\": false\n    },\n    \"typescript\": {\n      \"version\": \"5.9.3\",\n      \"resolved\": \"https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz\",\n      \"overridden\": false\n    },\n    \"vite\": {\n      \"version\": \"7.3.6\",\n      \"resolved\": \"https://registry.npmjs.org/vite/-/vite-7.3.6.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@types/node\": {},\n        \"esbuild\": {\n          \"version\": \"0.28.2\",\n          \"resolved\": \"https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@esbuild/aix-ppc64\": {},\n            \"@esbuild/android-arm\": {},\n            \"@esbuild/android-arm64\": {},\n            \"@esbuild/android-x64\": {},\n            \"@esbuild/darwin-arm64\": {},\n            \"@esbuild/darwin-x64\": {},\n            \"@esbuild/freebsd-arm64\": {},\n            \"@esbuild/freebsd-x64\": {},\n            \"@esbuild/linux-arm\": {},\n            \"@esbuild/linux-arm64\": {},\n            \"@esbuild/linux-ia32\": {},\n            \"@esbuild/linux-loong64\": {},\n            \"@esbuild/linux-mips64el\": {},\n            \"@esbuild/linux-ppc64\": {},\n            \"@esbuild/linux-riscv64\": {},\n            \"@esbuild/linux-s390x\": {},\n            \"@esbuild/linux-x64\": {\n              \"version\": \"0.28.2\",\n              \"resolved\": \"https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.28.2.tgz\",\n              \"overridden\": false\n            },\n            \"@esbuild/netbsd-arm64\": {},\n            \"@esbuild/netbsd-x64\": {},\n            \"@esbuild/openbsd-arm64\": {},\n            \"@esbuild/openbsd-x64\": {},\n            \"@esbuild/openharmony-arm64\": {},\n            \"@esbuild/sunos-x64\": {},\n            \"@esbuild/win32-arm64\": {},\n            \"@esbuild/win32-ia32\": {},\n            \"@esbuild/win32-x64\": {}\n          }\n        },\n        \"fdir\": {\n          \"version\": \"6.5.0\",\n          \"resolved\": \"https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"picomatch\": {\n              \"version\": \"4.0.7\"\n            }\n          }\n        },\n        \"fsevents\": {},\n        \"jiti\": {},\n        \"less\": {},\n        \"lightningcss\": {},\n        \"picomatch\": {\n          \"version\": \"4.0.7\",\n          \"resolved\": \"https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz\",\n          \"overridden\": false\n        },\n        \"postcss\": {\n          \"version\": \"8.5.28\",\n          \"resolved\": \"https://registry.npmjs.org/postcss/-/postcss-8.5.28.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"nanoid\": {\n              \"version\": \"3.3.18\",\n              \"resolved\": \"https://registry.npmjs.org/nanoid/-/nanoid-3.3.18.tgz\",\n              \"overridden\": false\n            },\n            \"picocolors\": {\n              \"version\": \"1.1.1\",\n              \"resolved\": \"https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz\",\n              \"overridden\": false\n            },\n            \"source-map-js\": {\n              \"version\": \"1.2.1\",\n              \"resolved\": \"https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz\",\n              \"overridden\": false\n            }\n          }\n        },\n        \"rollup\": {\n          \"version\": \"4.63.1\",\n          \"resolved\": \"https://registry.npmjs.org/rollup/-/rollup-4.63.1.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@napi-rs/lzma-linux-x64-gnu\": {\n              \"version\": \"1.5.1\",\n              \"resolved\": \"https://registry.npmjs.org/@napi-rs/lzma-linux-x64-gnu/-/lzma-linux-x64-gnu-1.5.1.tgz\",\n              \"overridden\": false\n            },\n            \"@rollup/rollup-android-arm-eabi\": {},\n            \"@rollup/rollup-android-arm64\": {},\n            \"@rollup/rollup-darwin-arm64\": {},\n            \"@rollup/rollup-darwin-x64\": {},\n            \"@rollup/rollup-freebsd-arm64\": {},\n            \"@rollup/rollup-freebsd-x64\": {},\n            \"@rollup/rollup-linux-arm-gnueabihf\": {},\n            \"@rollup/rollup-linux-arm-musleabihf\": {},\n            \"@rollup/rollup-linux-arm64-gnu\": {},\n            \"@rollup/rollup-linux-arm64-musl\": {},\n            \"@rollup/rollup-linux-loong64-gnu\": {},\n            \"@rollup/rollup-linux-loong64-musl\": {},\n            \"@rollup/rollup-linux-ppc64-gnu\": {},\n            \"@rollup/rollup-linux-ppc64-musl\": {},\n            \"@rollup/rollup-linux-riscv64-gnu\": {},\n            \"@rollup/rollup-linux-riscv64-musl\": {},\n            \"@rollup/rollup-linux-s390x-gnu\": {},\n            \"@rollup/rollup-linux-x64-gnu\": {\n              \"version\": \"4.63.1\",\n              \"resolved\": \"https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.63.1.tgz\",\n              \"overridden\": false\n            },\n            \"@rollup/rollup-linux-x64-musl\": {\n              \"version\": \"4.63.1\",\n              \"resolved\": \"https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.63.1.tgz\",\n              \"overridden\": false\n            },\n            \"@rollup/rollup-openbsd-x64\": {},\n            \"@rollup/rollup-openharmony-arm64\": {},\n            \"@rollup/rollup-win32-arm64-msvc\": {},\n            \"@rollup/rollup-win32-ia32-msvc\": {},\n            \"@rollup/rollup-win32-x64-gnu\": {},\n            \"@rollup/rollup-win32-x64-msvc\": {},\n            \"@types/estree\": {\n              \"version\": \"1.0.9\",\n              \"resolved\": \"https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz\",\n              \"overridden\": false\n            },\n            \"fsevents\": {}\n          }\n        },\n        \"sass-embedded\": {},\n        \"sass\": {},\n        \"stylus\": {},\n        \"sugarss\": {},\n        \"terser\": {},\n        \"tinyglobby\": {\n          \"version\": \"0.2.17\",\n          \"resolved\": \"https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"fdir\": {\n              \"version\": \"6.5.0\"\n            },\n            \"picomatch\": {\n              \"version\": \"4.0.7\"\n            }\n          }\n        },\n        \"tsx\": {},\n        \"yaml\": {}\n      }\n    }\n  }\n}\n",
+    "stderr": "",
+    "stdout_sha256": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "node",
+      "scripts/fe-base/browser.mjs",
+      "http://127.0.0.1:4173",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/.scratch-runtime/fe-base-d42a280c2be5d7cc1632a11e30a96be49dce2bb9/candidate-browser.json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d",
+    "at": "2026-11-03T09:09:14.416119+00:00",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nlocator.getAttribute: Error: strict mode violation: locator('[data-housing=\"enclosed\"]') resolved to 2 elements:\n    1) <main id=\"app\" data-service=\"0\" aria-pressed=\"true\" data-housing=\"enclosed\">…</main> aka getByText('Operating console Clean showcase Model explorer Cutaway Enclosed Rotor and')\n    2) <button type=\"button\" aria-pressed=\"true\" data-housing=\"enclosed\">Enclosed</button> aka getByRole('button', { name: 'Enclosed' })\n\nCall log:\n  - waiting for locator('[data-housing=\"enclosed\"]')\n\n    at /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/fe-base/browser.mjs:101:68\n\nNode.js v24.22.2\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "17257ae148db68c9409360e18f8e4adff34fd258cfabc2190292701b03ceb421"
+  }
+]

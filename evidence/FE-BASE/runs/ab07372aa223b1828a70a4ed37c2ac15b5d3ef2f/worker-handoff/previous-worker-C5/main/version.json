@@ -1,0 +1,9 @@
+{
+  "criteria_commit": "7704387252b293bee1ec671b440164a12287ca16",
+  "tested_code_sha": "e77466c3390b6c8b05f52d5b5a4bd00fc77b291c",
+  "base": "86e521184a4d5bbd42dfe93a48999fa714c233f2",
+  "node": "v24.22.2",
+  "npm": "11.19.1",
+  "clean_checkout_mode": false,
+  "initial_working_tree_clean": true
+}

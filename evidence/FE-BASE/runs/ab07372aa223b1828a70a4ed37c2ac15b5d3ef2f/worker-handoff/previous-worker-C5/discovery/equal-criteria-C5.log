@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/verify_fe_base.py", line 237, in <module>
+    main()
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/frontend-upstream-baseline-914d2ac32b5d/scripts/verify_fe_base.py", line 126, in main
+    assert args.criteria == S and args.criteria != args.candidate, '使用准确冻结 S，S 严格先于 C'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 使用准确冻结 S，S 严格先于 C

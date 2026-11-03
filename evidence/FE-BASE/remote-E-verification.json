@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-11-03T15:15:16.687939+00:00",
+  "task_id": "FE-BASE",
+  "criteria_commit": "7704387252b293bee1ec671b440164a12287ca16",
+  "tested_code_sha": "ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f",
+  "evidence_commit": "a7966085071051d07cb7e80d0843a07ad9687183",
+  "branch": "agent/frontend-upstream-baseline-914d2ac32b5d",
+  "baseline_tag": "baseline/FE-BASE-ab07372aa223",
+  "remote_branch_sha": "a7966085071051d07cb7e80d0843a07ad9687183",
+  "remote_tag_sha": "a7966085071051d07cb7e80d0843a07ad9687183",
+  "remote_tree_sha": "8c01db3f55593e39014eef15be44b21fa7427db3",
+  "remote_evidence_blobs_verified": 193,
+  "raw_manifest_and_report_match": true,
+  "manifest_sha256": "8a3461de61ecdf1c4bd658387e087e78cce220f775b895439f476ea81574d0ef",
+  "report_sha256": "2d18f2bfe981842a3f07ca7564444442f5567bb97d6dd8799e26a956f4375aba",
+  "old_baseline_target_unchanged": "398b923f01eb97bcf7c22e9e31f344662c2365c5",
+  "remote_tag_absent_before_creation": true,
+  "E_scope": "仅证据及必要VERIFIED登记"
+}

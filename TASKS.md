@@ -16,7 +16,7 @@
 | 完成 | 任务 ID | 交付结果 | 依赖 | 初始状态 | 验收条款 | 测试提交 / 证据 / 基线 |
 |---|---|---|---|---|---|---|
 | [x] | M0-00 | 本机、主仓库、dsh 接入与规格冻结 | 无 | LOCKED | M0-00-A01～M0-00-A07 | S=`3980867902a9c102f18894e9acf65b8c72051b19`；C=`b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61`；E=`398b923f01eb97bcf7c22e9e31f344662c2365c5`；[正式报告](evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md)；基线 `baseline/M0-00-b4ae8e35d782` 已远程核实 |
-| [ ] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | PLANNED | FE-BASE-A01～FE-BASE-A05 | 未执行 |
+| [x] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | LOCKED | FE-BASE-A01～FE-BASE-A05 | S=`7704387252b293bee1ec671b440164a12287ca16`；C=`ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f`；E=`a7966085071051d07cb7e80d0843a07ad9687183`；[正式报告](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)；基线 `baseline/FE-BASE-ab07372aa223` 已远程核实 |
 | [ ] | M0-01 | Vue 与 Python 前后端独立运行 | FE-BASE | PLANNED | M0-01-A01～M0-01-A05 | 未执行 |
 | [ ] | FE-INTEGRATE | Vue 业务壳与同源 viewer 桥接 | M0-01 | PLANNED | FE-INTEGRATE-A01～FE-INTEGRATE-A06 | 未执行 |
 | [ ] | M0-02 | 事件契约、幂等持久化和范围查询 | FE-INTEGRATE | PLANNED | M0-02-A01～M0-02-A07 | 未执行 |
@@ -113,3 +113,22 @@ M4-01 是预算与测量方法的前置任务，不表示性能已通过。当�
 - integration_status：PR #2 待协调会话最终审查、合并与实际集成核查；main 在本项核实时仍为原基准。后续 FE-BASE 须单独派发，并确认实际工作分支包含前置成果。
 - CI：当前 C 零条 check-runs、零条 commit statuses，没有上报 CI 检查，不记作 CI 通过；既有保护保留。
 - failure_and_fix_history：[原始失败、修正与复验](evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md)；完整 S 冻结后未改变验收语义，保留原候选和基线。
+
+## FE-BASE 执行追溯
+
+- task_id / state：FE-BASE / LOCKED。
+- dsh_ticket：`914d2ac32b5d2f130d718138164c8bab`；actual_worker：`worker-914d2ac32b5d2f130d718138164c8bab`；branch：`agent/frontend-upstream-baseline-914d2ac32b5d`。
+- criteria_commit_S：`7704387252b293bee1ec671b440164a12287ca16`；[冻结记录](evidence/FE-BASE/criteria.md) SHA256 `d24a5b12c91ba193012e7d05d5791033bb10e78baafa16280b614b249c9d19ac`。
+- dependency_baseline：`baseline/M0-00-b4ae8e35d782`；integrated_base_sha / comparison_base / merge_base：`86e521184a4d5bbd42dfe93a48999fa714c233f2`，工作分支包含前置成果。
+- upstream_commit：`efc5d2ecd12055f880a41b47215791c22d3656d4`；完整62项文件通过实际subtree导入`459a359afd4e2e2bdaca05acccc4b65f79b741d8`；local_patch_scope：部件百分比四处output选择器，许可与原锁保持。
+- tested_code_sha_C：`ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f`。
+- required_total / passed / failed / blocked / skipped / not_run：5 / 5 / 0 / 0 / 0 / 0；worker主32条、干净26条、协调独立26条命令全部退出0，真实全模型镜头负对照和全部浏览器交互通过。
+- actual_commands / runtime_environment：[正式报告](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)与原始命令记录；Node24.22.2/npm11.19.1，Chrome156.0.8078.80，1920×1080，WebGL2 ANGLE/SwiftShader。
+- evidence_path：[正式报告与原始证据](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)；[SHA256总清单](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/SHA256SUMS.json) SHA256 `8a3461de61ecdf1c4bd658387e087e78cce220f775b895439f476ea81574d0ef`。
+- independent_review：接续协调聊天`01a1a186-0661-7540-b368-f70449bdae16`；Standards `/root/febase_ab07372_standards`、Spec `/root/febase_ab07372_spec`完整79文件/9提交均通过，独立实际五条验收PASS；[独立记录](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent-review.json) SHA256 `64526dd2f202477658381901aa2da395299fc6e3b9d024c1b2247b6cad5b54fe`；外部通过回执为Issue #3评论`6607173203`。
+- evidence_commit_E：`a7966085071051d07cb7e80d0843a07ad9687183`；baseline_tag：`baseline/FE-BASE-ab07372aa223`，全新标签指向E。
+- remote_verified_E：2026-11-03T15:15:16.687939+00:00；远程分支/tag均为E，完整tree及193项证据blob一致，远程原文REPORT和总清单逐字节核实，原M0-00基线保持；[远程核实](evidence/FE-BASE/remote-E-verification.json)。
+- lock_record_K_external_receipt：K推送后的准确远程SHA在Issue #3最终外部回执核实；本记录仅引用已存在的S/C/E及远程结果。
+- integration_status：PR #4待协调最终核查及用户当前授权合并；本项尚未合并至main，后续任务需实际集成并单独派发。
+- CI：准确C零条check-runs、零条commit statuses，仅记没有上报检查；既有保护保持。
+- failure_and_fix_history：[原独立FAIL、真实red/green诊断及历次失败](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)；冻结S及硬验收语义保持，历史失败与原哈希完整保留。

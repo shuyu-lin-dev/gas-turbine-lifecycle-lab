@@ -1,0 +1,100 @@
+{
+  "criteria_commit": "7704387252b293bee1ec671b440164a12287ca16",
+  "tested_code_sha": "e77466c3390b6c8b05f52d5b5a4bd00fc77b291c",
+  "required": {
+    "FE-BASE-A01": "PASS",
+    "FE-BASE-A02": "PASS",
+    "FE-BASE-A03": "PASS",
+    "FE-BASE-A04": "PASS",
+    "FE-BASE-A05": "PASS"
+  },
+  "main_command_count": 31,
+  "clean_command_count": 25,
+  "main_operations": 32,
+  "clean_operations": 32,
+  "main_requests": 20,
+  "clean_requests": 20,
+  "main_warnings": [
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    }
+  ],
+  "clean_warnings": [
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.11, is too large and will clip, as it requested 54 samples when the maximum is set to 20"
+    }
+  ],
+  "webgl": {
+    "version": "156.0.8078.80",
+    "executablePath": "/home/lsy/.agent-browser/browsers/chrome-156.0.8078.80/chrome",
+    "args": [
+      "--no-sandbox",
+      "--use-angle=swiftshader",
+      "--enable-unsafe-swiftshader"
+    ],
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1,
+    "webgl": {
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "vendor": "Google Inc. (Google)",
+      "width": 1920,
+      "height": 1080,
+      "contextLost": false
+    }
+  },
+  "check_runs": 0,
+  "commit_statuses": 0,
+  "main_protected": false,
+  "remote_candidate": "e77466c3390b6c8b05f52d5b5a4bd00fc77b291c",
+  "archive_included": true,
+  "coordinator_independent_review": "PENDING",
+  "E": null,
+  "baseline_tag": null,
+  "K": null
+}

@@ -1,14 +1,16 @@
 # GT Lifecycle Lab 开发执行规则
 
-版本：2.1；日期：2026-11-03（Asia/Shanghai）。本文件保存用户已经确定的开发要求。
+版本：2.2；日期：2026-11-03（Asia/Shanghai）。本文件保存用户已经确定的开发要求。
 
-## 当前 M0-00 派工
+## 当前 FE-BASE 派工
 
-[Issue #1](https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/issues/1) 已明确授权真实 M0-00：核实本机与既有 dsh 接入、迁入准备材料、冻结规格、验证、提交、推送及 PR 交付。当前 worker 只执行 M0-00。后续任务须在本项合并、实际集成核查完成后单独派发。
+[Issue #3](https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/issues/3) 已明确授权真实 FE-BASE：固定前端上游调查与取得、验收冻结、Git subtree 导入、必要兼容修正、真实检查与浏览器验证、证据、提交、推送及 PR 交付。当前 worker 只执行 FE-BASE，后续任务单独派发。
 
-合并执行依据为 Issue #1 中 shuyu-lin-dev 于 2026-11-03T07:20:33Z 发布的评论 `6597814032`，协调会话标识 `01a1a040-ff3b-7f31-977e-71d5bd2d1e61`。必要验收、独立审查、S/C/E/K、远程标签与最终 head 核查全部通过后，由协调会话执行合并并核查实际集成。开发 worker 交付 PR，保留既有分支保护与必要检查，不执行 approve、merge 或 auto-merge，不调用 gh-owner。该授权适用于当前执行说明；准备证据保留原样。
+M0-00 已由 PR #2 合并至 `86e521184a4d5bbd42dfe93a48999fa714c233f2`，本工作分支包含其完整成果。K 外部回执为 Issue #1 评论 `6599010057`；合并与实际集成回执为评论 `6599090173`。既有 M0-00 冻结及历史证据保留。
 
-当前完整冻结记录见 [M0-00 冻结记录](evidence/M0-00/criteria.md)。
+Issue #3 指定协调会话 `01a1a040-ff3b-7f31-977e-71d5bd2d1e61` 独立审查并完成最终合并。开发 worker 提交准确 C、真实验收和 draft PR，等待对应候选的协调审查；通过后完成 E、远程基线、K 和正式 PR。开发 worker 保留既有保护与必要检查，不执行 approve、merge 或 auto-merge，不调用 gh-owner。
+
+当前完整冻结记录见 [FE-BASE 冻结记录](evidence/FE-BASE/criteria.md)。
 
 ## 本轮接入边界与规则优先级
 
