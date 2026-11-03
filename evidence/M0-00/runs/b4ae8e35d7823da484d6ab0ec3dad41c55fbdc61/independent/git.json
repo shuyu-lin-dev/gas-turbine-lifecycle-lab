@@ -1,0 +1,21 @@
+{
+  "base": "dad14da1561ac609a5d14076629d1698c53b3627",
+  "criteria_commit": "3980867902a9c102f18894e9acf65b8c72051b19",
+  "tested_code_sha": "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+  "branch": "agent/bootstrap-spec-freeze-910aedd83224",
+  "identities": {
+    "3980867902a9c102f18894e9acf65b8c72051b19": [
+      "lucy-assistant",
+      "162398512+lucy-assistant@users.noreply.github.com",
+      "lucy-assistant",
+      "162398512+lucy-assistant@users.noreply.github.com"
+    ],
+    "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61": [
+      "lucy-assistant",
+      "162398512+lucy-assistant@users.noreply.github.com",
+      "lucy-assistant",
+      "162398512+lucy-assistant@users.noreply.github.com"
+    ]
+  },
+  "worktrees": "worktree /home/lsy/workspace/lab/gas-turbine-lifecycle-lab\nHEAD dad14da1561ac609a5d14076629d1698c53b3627\nbranch refs/heads/main\n\nworktree /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224\nHEAD b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61\nbranch refs/heads/agent/bootstrap-spec-freeze-910aedd83224"
+}

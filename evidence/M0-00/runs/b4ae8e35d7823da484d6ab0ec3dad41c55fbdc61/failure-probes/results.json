@@ -1,0 +1,29 @@
+{
+  "tested_code_sha": "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61",
+  "cases": [
+    {
+      "case": "missing-executable",
+      "result": "PASS",
+      "actual_failure_type": "FileNotFoundError",
+      "actual_exit_code": null
+    },
+    {
+      "case": "http-error",
+      "result": "PASS",
+      "actual_failure_type": "RuntimeError",
+      "actual_exit_code": 22
+    },
+    {
+      "case": "invalid-json",
+      "result": "PASS",
+      "actual_failure_type": "JSONDecodeError",
+      "actual_exit_code": 0
+    },
+    {
+      "case": "candidate-as-criteria",
+      "result": "PASS",
+      "actual_exit_code": 1
+    }
+  ],
+  "method": "实际进程、Docker CLI 与现有面板错误路径，无 Mock"
+}

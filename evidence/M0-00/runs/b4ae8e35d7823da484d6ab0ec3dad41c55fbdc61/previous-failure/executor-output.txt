@@ -1,0 +1,27 @@
+以下内容摘录自执行器在候选 4d2b3595138539956645475dbf88b75062ee5660 上的实际命令输出。
+
+命令：python3 scripts/check_m0_00_failures.py
+退出码：1
+
+Traceback (most recent call last):
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/scripts/check_m0_00_failures.py", line 45, in <module>
+    assert completed.returncode == 1 and '使用已提交的 M0-00 冻结 S' in completed.stderr
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+诊断命令：python3 scripts/verify_m0_00.py --criteria 4d2b3595138539956645475dbf88b75062ee5660 --candidate 4d2b3595138539956645475dbf88b75062ee5660 --output .scratch-runtime/invalid-criteria-diagnostic
+退出码：1
+
+Traceback (most recent call last):
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/scripts/verify_m0_00.py", line 266, in <module>
+    main()
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/scripts/verify_m0_00.py", line 112, in main
+    assert os.environ['DSH_SUPERAGENT_TICKET'] == TICKET
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 685, in __getitem__
+KeyError: 'DSH_SUPERAGENT_TICKET'
+
+随后实际读取工具进程环境的结果：
+{'DSH_SUPERAGENT_TICKET': None, 'DSH_SUPERAGENT_NAME': None, 'DSH_SUPERAGENT_DIR': None}
+
+对应原始子命令记录见 commands.json。修正提交 b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61 的完整实际回归证据见上级 failure-probes/；原候选和失败记录均保留。

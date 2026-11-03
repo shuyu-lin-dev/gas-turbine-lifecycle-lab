@@ -1,0 +1,71 @@
+{
+  "dsh_version": "0.2.1-rc.3",
+  "state": {
+    "setup": {
+      "machine": {
+        "stateDir": "/home/lsy/.dsh/state/gas-turbine-lifecycle-lab",
+        "promptMaxChars": 100000,
+        "admissionContextMaxPages": 10,
+        "admissionContextTimeoutMs": 15000
+      },
+      "problem": null,
+      "accounts": {
+        "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+        "agent": "lucy-assistant"
+      }
+    },
+    "health": {
+      "runtime": {
+        "state": "ready",
+        "detail": "Orchestrator is ready",
+        "at": "2026-11-03T05:15:19.674Z"
+      }
+    },
+    "load": {
+      "running": 1,
+      "queued": 0,
+      "maxWorkers": 1
+    },
+    "paused": false,
+    "masterId": "orchestrator-391b11e342f86cd09212857f354f3b57"
+  },
+  "ticket": {
+    "id": "910aedd83224919debc9bc9021d86450",
+    "sessionId": "worker-910aedd83224919debc9bc9021d86450",
+    "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "mandate": {
+      "strength": "explicit",
+      "policyVersion": "1384243174ac0cc77f72c227868b6f6f",
+      "basis": {
+        "source": "github",
+        "scope": {
+          "number": 1,
+          "isPr": false,
+          "kind": "issue"
+        },
+        "row": "issues",
+        "sender": "shuyu-lin-dev",
+        "via": "addressed",
+        "addressed": "mention"
+      },
+      "actor": {
+        "source": "github",
+        "id": "shuyu-lin-dev",
+        "name": {
+          "zh": "shuyu-lin-dev",
+          "en": "shuyu-lin-dev"
+        }
+      },
+      "scope": "M0-00：本机、主仓库、dsh 接入与规格冻结"
+    }
+  },
+  "sessions": {
+    "orchestrator-391b11e342f86cd09212857f354f3b57": 4,
+    "worker-910aedd83224919debc9bc9021d86450": 4
+  },
+  "tool_process_environment": {
+    "DSH_SUPERAGENT_TICKET": null,
+    "DSH_SUPERAGENT_NAME": null,
+    "DSH_SUPERAGENT_DIR": null
+  }
+}

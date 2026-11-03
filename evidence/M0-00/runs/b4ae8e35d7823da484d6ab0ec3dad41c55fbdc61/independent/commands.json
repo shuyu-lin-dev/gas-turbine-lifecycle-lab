@@ -1,0 +1,891 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.318200+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61\n",
+    "stderr": "",
+    "stdout_sha256": "3baf3ccec9d1b8d379b66370aa197cf394d25bdc11b64b7b7f7509486d2a3ca5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.320521+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "3980867902a9c102f18894e9acf65b8c72051b19",
+      "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.323458+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "dad14da1561ac609a5d14076629d1698c53b3627",
+      "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.325857+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "dad14da1561ac609a5d14076629d1698c53b3627\n",
+    "stderr": "",
+    "stdout_sha256": "d8c2421cf0b3abf597143c41bd51faf8c53f2be2d351a25f948136283252d2e4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "3980867902a9c102f18894e9acf65b8c72051b19:ACCEPTANCE.md"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.327840+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "# GT Lifecycle Lab 硬验收规则\n\n版本：2.0；日期：2026-11-03（Asia/Shanghai）。这是执行规格，全部条款初始 NOT_RUN；本机开发、绑定和本项目验收尚无本会话核实的通过证据。应用代码、测试代码和 Git 提交由本机 dsh-superagent 执行。\n\n## 统一开工与判定规则\n\n1. 当前任务开工前，必须把范围、条款版本、固定输入、独立期望、实际命令、环境和证据位置提交为 S；实现提交 C 必须以 S 为祖先。尚未冻结的条款细节不能靠“开发时看情况”补成通过。\n2. 所有编号 `<task_id>-Axx` 的条款都是该任务必要项。状态只可为 PASS / FAIL / BLOCKED / SKIP / NOT_RUN；只有实际 PASS 计入通过。`TASKS.md` 的 `[x]` 只表示任务 LOCKED。\n3. 功能条款全部 PASS、证据完整且匹配 C，才可 VERIFIED。随后按 `AGENTS.md` 的 S→C→E→K 完成统一交付门：E 记录被测 C；E 与指向 E 的基线标签远程核实后，由 K 登记 LOCKED；K 的推送在外部 Ticket 回执核对。不在文件内记录包含自身的提交 SHA。\n4. 验收报告逐条登记条款 ID、实际命令、退出码、期望、实际、输入/证据 SHA256。截图不能代替数据断言，单元 Mock 不能代替必要的真实服务/浏览器/模型工具验收。\n5. 失败先修实现、测试或环境。不能删除失败断言、改标准答案、放宽阈值或把必要检查变成可选。条款确有错误时，先建立单独的验收变更记录及新版本，保留原失败和理由；不得回写旧结果。\n6. 上游测试结果、上游任务勾选及上一版本模型解析结果不能继承为本项目 PASS。FE-BASE/RAG-BASE 通过只证明各自明确范围的上游基线；业务集成必须通过自己的条款。\n7. 一次一个任务，按 TASKS 顺序执行；前项 LOCKED 且实际集成基线可用后再推进。未完成任务需要的页面或工具，应使用明确的真实接口测试客户端验收，不能提前铺开后续业务。\n8. 后续任务虽然已有可判定条款，实际命令和夹具仍须在该任务编码前补齐并冻结。M3-04 的模型误差通过线、M4-01 的硬件性能预算明确标为尚未冻结；未填齐时相关实现/优化任务不得 READY。\n\n## 固定版本与运行主路径\n\n| 对象 | 本轮固定决定 |\n|---|---|\n| 前端源程序 | AlexZhangji/turbine-explorer，efc5d2ecd12055f880a41b47215791c22d3656d4 |\n| 前端集成 | Vue 业务壳 + 同源 /viewer iframe，复用完整源程序；GLB 是可交换资产，不是必需运行主路径 |\n| RAG 源程序 | jerry-ai-dev/MODULAR-RAG-MCP-SERVER，f658c5a4011c8b826707a65a3b11ce9301b0626f |\n| 首版 RAG | Chroma + BM25 + 已有 Ollama provider；Milvus Lite 不作为首版必要项 |\n| RAG 运行 | 独立 Python assistant 管理长期 stdio 子进程，独立 venv/cwd，同一容器内建立 stdio；本地推理可复用已核实端点 |\n| 源码管理 | 两个上游以 Git subtree 导入同一主仓库，保留来源/commit/补丁；dsh 只绑定主仓库 |\n\n“完整获取”指固定版本的完整源码和运行资源，不要求下载全部 Git 历史。克隆深度不作为失败条件；必须能核实指定 commit，缺少该提交或运行资源时补齐。\n\n## 固定教学夹具 F120\n\n数值仅验证工程链路和教学告警，不代表工业报警标准。\n\n| 项目 | 定义 |\n|---|---|\n| device_id | GT-001 |\n| 行数/序号 | 120 行，i=0…119 |\n| event_time | 2026-11-03T00:00:00Z + i 秒 |\n| event_id | e000000…e000119，重试不变 |\n| load_pct / power_mw | 50.0 / 50.0 |\n| T1/T2/T3 | 500.0 / 503.0 / 501.0 °C |\n| T4 | i=60…79 为 560.0 °C；其余为 502.0 °C |\n| exhaust_spread_c | 四测点 max-min；正常 3.0 °C，异常 60.0 °C |\n| quality | 全部 valid；坏质量、缺口、重复、冲突及乱序为独立夹具 |\n| 播放 | 1× 与 20×，仅改变发送节奏 |\n\n固定 CSV 只包含设备、事件 ID、序号、event_time、测量和质量；run_id、sent_at、received_at 不进入固定文件。每次新播放创建新 run_id，同次重试不变；sent_at 由发送尝试注入，received_at 由接收端生成。固定文件重复生成必须得到相同 SHA256。\n\n标准化跨 run 比较只比较 event_id、source_sequence、event_time、metrics、quality_flags，排除运行/传输时间和追踪字段。另备 GT-002 与另一 run 的 GT-001 记录，各 3 行，验证范围隔离；不得污染正常 F120 运行。\n\n## 教学告警 R1\n\n温差 >30°C 连续 3 秒事件时间触发；已告警时温差 <25°C 连续 2 秒恢复；25…30°C 中间带保持已确认状态，并打断待触发/待恢复计时。25 与 30 均不满足相应严格不等式。\n\n有效事件采样间隔为 1 秒；无效质量或缺口中断待计时。已存在告警仍 active，质量可以 unknown，失联不自动恢复。重复不推进计时；M0 迟到事件存档标识，不静默改写告警历史。\n\nF120 在 i60 开始超限，i63 才跨满 3 秒；triggered_at=2026-11-03T00:01:03Z，触发事件 e000063。i80 开始恢复，i82 跨满 2 秒；resolved_at=2026-11-03T00:01:22Z。条件开始时间与确认时间分别保存，不能混为同一字段。对应教学部件为 exhaust。\n\n## 同源 viewer 桥接验收边界\n\n仅四类消息：viewer-ready、select-component、component-selected、update-component-state。父端掌握 run/device/component 与 context_revision；每次挂载或重载生成新的 viewer_instance_id，并作为初始化参数传入 iframe。双方验证 origin、source、schema_version、实例及载荷。\n\nviewer-ready 是初始化例外：context_revision 可为 null，不要求尚未知的 run/device；父端验证当前实例后，下发包含当前 context_revision/run/device 的完整 update-component-state 快照。iframe 据此绑定上下文，再发业务 component-selected。尚未绑定时的拾取只改变本地视觉，不向父端回传无上下文业务选择。update-component-state 是父端更新上下文的唯一消息：来源、实例及载荷校验通过后，更高 revision 清除旧业务状态并采用新 run/device/context，相等 revision 要求 run/device 相同，更低 revision 拒绝。其他业务消息必须带完全匹配的上下文；旧实例不得污染当前界面。普通部件选择不递增 revision。实际字段形状以 DEV_SPEC.md 冻结契约为准。\n\n## M3 窗口共同夹具与判定\n\nW120 使用 F120，UTC 60 秒滚动窗口为 [00:00:00,00:01:00) 与 [00:01:00,00:02:00)。指标按 valid 业务事件逐条计算，先按业务唯一键去重，控制消息不计入测量。\n\n| 最终窗口 | valid count | T4 min/max/mean | spread min/max/mean |\n|---|---:|---|---|\n| 第一窗 | 60 | 502 / 502 / 502 | 3 / 3 / 3 |\n| 第二窗 | 60 | 502 / 560 / 521.3333333333333 | 3 / 60 / 22 |\n\ncount 和窗口边界必须完全一致；上述 mean 数值绝对误差不超过 1e-6 °C。其他统计若增加，须在实现前定义公式、单位、空值及容差，不把两引擎相同当作独立答案。\n\n另冻结三类序列：①交换同窗相邻两条并重发一个稳定 event_id，最终结果不变；②将一条记录质量设无效，原始记录保留，相关窗口 valid count 减一，独立重算其他指标；③等待第一窗经真实引擎确认为 final 后，注入属于该窗的新超迟到事件，原始/隔离审计可见，已 final 结果不静默改写。\n\n水位线延迟、引擎配置与末窗收尾命令须在 M3-01 的 S 中固定。收尾可使用有明确类型的控制消息或经验证的有界运行策略；控制事件必须参与所需的真实引擎进展而不计入业务测量、样本数、告警或统计。不得用普通伪测量推进窗口，或仅在 UI 将未完成窗口改为 final。\n\n## M0-00 本机、主仓库、dsh 接入与规格冻结\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-00-A01 | 读取本机 dsh 实际版本、profile、面板和运行状态；记录实际执行者，不把云端规划当成本机执行 | 脱敏版本、状态和路径 |\n| M0-00-A02 | 核实唯一主仓库 owner/repo、存在性、agent 实际 GitHub 身份及读取/push 权限；dsh GitHub Source 与主 checkout origin 均一致 | 远程元数据、身份、Source 摘要 |\n| M0-00-A03 | 操作者在已有 allowed list 中；保留现有 profile、认证和无关配置；必要配置修改使用当前 revision，保存后回读一致 | 变更摘要、revision 和回读 |\n| M0-00-A04 | 主 checkout 与 Ticket worktree 均在 /home/lsy/workspace/lab 下；当前 worker 位于正确 worktree，分支和 remote 正确；dsh 只绑定主仓库 | pwd/realpath、Git 元数据、Ticket |\n| M0-00-A05 | WSL Docker 客户端实际连接 Windows Docker Desktop 的 Linux 引擎，Compose 可用；记录客户端与服务端版本 | 版本、引擎及 Compose 输出 |\n| M0-00-A06 | 本轮规格、任务及当前硬验收先提交；Worker 与 Router 范围/交付规则一致；单 worker、一次一个任务生效 | 规格提交 S、prompt 摘要、并发配置 |\n| M0-00-A07 | 一个真实规格落地任务被 dsh 接收，产生 Ticket，并由实际 agent 提交及推送到正确主仓库；远程可核对 | Ticket、候选提交、远程分支/PR |\n\n若新仓库没有基准提交，先由有权的本机初始化流程建立最小基准，再准备 Ticket worktree。绑定权限缺失列 BLOCKED；不得替换身份、仓库或重新初始化已配置的 dsh 来蒙混通过。\n\n## FE-BASE 固定前端上游源码与独立基线\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| FE-BASE-A01 | 从 AlexZhangji/turbine-explorer 获取源码并核实 efc5d2ecd12055f880a41b47215791c22d3656d4；以 Git subtree 导入主仓库并保留来源/版本；不把上游仓库设为主 origin | 远程 URL、commit、subtree 导入记录 |\n| FE-BASE-A02 | 记录上游许可、第三方资产许可、锁文件、实际 Node/包管理器版本和采用的原始构建/检查命令；不复制上游完成勾选为本项目结果 | 来源清单、许可与命令登记 |\n| FE-BASE-A03 | 按固定上游版本构建并在真实浏览器运行完整源程序；旋转、缩放、外壳切换和上游原有部件查看可用；资源无缺失错误 | 构建输出、浏览器操作和控制台 |\n| FE-BASE-A04 | 必要上游检查在本机实际执行；采用的必要检查均通过；原始失败、必要兼容修复及本地补丁完整记录，不能称修补后的代码为未修改上游 | 逐项结果、失败记录、补丁差异 |\n| FE-BASE-A05 | 从主仓库干净检出可复现该上游基线，不依赖未纳入版本控制的本机源码；GLB 导出文件不作为完整 viewer 源程序运行的必需前提 | 干净检出复现、依赖/资源清单 |\n\n本任务只证明固定上游能够按记录的条件构建和运行，不证明 Vue、业务数据、桥接或告警通过。原源程序是运行主路径；GLB 仅为可交换/备份资产，不要求重写源程序为 GLB 播放器。\n\n## M0-01 Vue 与 Python 前后端独立运行\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-01-A01 | Vue 业务壳与 Python API 分别具备安装、构建、启动入口及依赖锁；从干净环境按文档分别成功 | 两端构建、依赖版本 |\n| M0-01-A02 | Python 健康接口返回 200 与冻结的版本/状态；Vue 按配置地址取得同样结果 | 接口响应、浏览器请求 |\n| M0-01-A03 | 停止 web 时 API 仍能访问；停止 API 时 web 仍能显示页面，并明确显示连接失败 | 独立启停记录 |\n| M0-01-A04 | 更换 API 地址后前端连接对应后端；开发跨源/反代与部署路由有明确配置，不依赖个人绝对路径 | 配置及切换请求 |\n| M0-01-A05 | 实际测试与构建入口可执行，必要检查缺失或跳过不判成功；Python API 不托管前端 dist，API 不依附 Spark | 命令登记、必要失败路径 |\n\n## FE-INTEGRATE Vue 业务壳与同源 viewer 桥接\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| FE-INTEGRATE-A01 | Vue 页面以同源 /viewer iframe 装载 FE-BASE 的完整源程序；刷新或直接打开该路径均可用，静态资源解析正确 | 路由、网络请求及浏览器记录 |\n| FE-INTEGRATE-A02 | 仅实现 viewer-ready、select-component、component-selected、update-component-state 四类已冻结消息，公共 schema_version/viewer_instance_id/context_revision 与各自载荷校验生效 | 消息契约、合法与非法消息用例 |\n| FE-INTEGRATE-A03 | 父端每次挂载/重载建立新 viewer_instance_id；ready 可携带 null context_revision；父验证当前实例后发送当前业务上下文及完整状态快照，iframe 绑定上下文后才回传业务选择 | 首次挂载、重载和握手消息序列 |\n| FE-INTEGRATE-A04 | 两端验证 origin 和 source；错误来源、错误实例、未知类型、非法 component_id、旧 context_revision 均不改变业务状态；旧 ready 不回滚当前上下文 | 拒绝用例及前后状态 |\n| FE-INTEGRATE-A05 | 用冻结的消息夹具验证父端选件和 viewer 选件双向一致，状态更新确实应用；程序选择回执不形成无限互发或重复业务动作 | 真实 iframe 的消息及视觉检查 |\n| FE-INTEGRATE-A06 | 不重建 iframe 切换设备/批次时，父端递增 context_revision；子端接受更高 revision 完整快照、清除旧业务状态，拒绝旧快照回滚及相等 revision 的不同 run/device；普通选件不递增 revision；未就绪时不发送无效业务选择，ready 后重发最新快照；连续 5 次挂载/卸载无叠加父监听器、旧帧回调或重复画布 | 上下文切换、旧快照拒绝与重复挂载记录 |\n\n本任务使用明确标为“桥接夹具”的消息，不等待尚未实现的运行数据、SSE、告警或检修页面。不得用夹具状态冒充实时业务验收。消息完整定义以 DEV_SPEC.md 为准；不得自行增加第五类消息。\n\n## M0-02 事件契约、幂等持久化和范围查询\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-02-A01 | 有效事件返回 201，保存后可逐字段查询；单位、时区、业务唯一键和请求追踪标识符合冻结契约 | 请求、响应及落库查询 |\n| M0-02-A02 | 必填缺失、无时区/非法时间、非有限测量值返回 422；拒绝前后业务记录数不变 | 各类坏输入和计数 |\n| M0-02-A03 | 同一业务事件重发 10 次仍只有一条；重复返回 200；重试 sent_at 改变不构成业务内容冲突 | 输入、响应和唯一键计数 |\n| M0-02-A04 | 相同唯一键的 event_time/测量值等业务内容不同返回 409；原记录不被覆盖 | 冲突请求和前后记录 |\n| M0-02-A05 | 另一设备与另一 run 的隔离夹具存在时，run+device+[from,to) 查询仅返回目标集合，边界和稳定排序正确 | 完整结果与独立预期集合 |\n| M0-02-A06 | 后接收更旧的事件不会令最新测量值回退；该事件仍可在历史中查询并有迟到标识 | 最新值、历史及迟到状态 |\n| M0-02-A07 | API 正常重启后记录仍在；写入失败不提交业务记录、不返回成功；读错误明确失败 | 重启比对及故障注入 |\n\n## M0-03 单设备固定 CSV 播放\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-03-A01 | F120 的行数、时间范围和数值符合独立定义，重复生成得到相同 CSV SHA256；动态运行字段在发送时注入 | CSV、哈希及独立核对 |\n| M0-03-A02 | 1× 播放取得 120 个有效接收确认，目标 run 查询恰好 120 条，逐项符合 F120 | 发送确认、查询和差异 |\n| M0-03-A03 | 新一次 20× 播放使用新 run_id；标准化后的 event_id、sequence、event_time、metrics、quality 与 1× 一致，排除运行/传输字段 | 两个 run 的标准化比对 |\n| M0-03-A04 | 第 40 条接收确认后暂停，后续发送确实停止；恢复到 120 条；发送重试保持 event_id | 暂停/恢复控制与确认序号 |\n| M0-03-A05 | 接收端中断时不报告完成；恢复并确认全部预期事件后才 completed；当前来源明确为 HTTP | 中断、恢复和最终计数 |\n\n播放器可用一次性 Python 进程，不要求此时增加两个常驻 Producer。实际命令须在本任务实现前登记。\n\n## M0-04 持久 SSE、补读与快照一致性\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-04-A01 | 通知携带持久递增 stream_seq；同范围序号严格递增但允许间隙；业务事件 ID 单独保留 | 数据库事件与真实 SSE 帧 |\n| M0-04-A02 | 业务记录与对应推送事件事务提交后才能通知成功；故障回滚不产生成功记录/通知 | 事务故障注入结果 |\n| M0-04-A03 | 真实 SSE 测试客户端收到业务序号 39 后断开，后台继续接收 40…59；按最后游标补读并完成运行，最终有效业务集合恰好 120 条 | 游标、补读帧及集合差异 |\n| M0-04-A04 | API 重启后仍能按保存游标补齐已提交未展示事件，没有重复有效业务点 | 重启与恢复记录 |\n| M0-04-A05 | 非法/未来/不可用游标采用预先冻结的错误或重置流程，不静默跳到最新；响应保持 run/device 过滤，切换范围从新快照建立游标 | 坏游标、范围与响应 |\n| M0-04-A06 | 快照和游标 S 来自同一一致性视图，订阅读取 >S 并先补读持久事件；在快照读取期间及返回后订阅前分别注入新事件，集合均完整 | 两类竞态用例与集合检查 |\n\n本任务使用连接真实 API/数据库的测试客户端，不依赖 M0-05 的 Vue 数据页面；M0-05 再进行浏览器复验。M0 不必建立历史自动清理，已有游标保留行为必须记录。\n\n## M0-05 Vue 趋势、记录表与真实连接状态\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-05-A01 | 首点、i=60、i=79、末点的温度与时间符合 F120；当前值、趋势和表格使用同一 run/device | 浏览器实际值与 API 结果 |\n| M0-05-A02 | 1× 和 20× 均按 event_time 作横轴，单位和时间范围可见 | 两次浏览器核对 |\n| M0-05-A03 | SSE 补读不增加重复点；切换设备或运行不会混入旧范围；旧请求晚返回不能覆盖当前选择 | 恢复、切换、旧响应注入及 ID 集合 |\n| M0-05-A04 | API 停止时显示连接异常和最后更新时间，不把旧值标为新收到 | 故障注入和页面状态 |\n| M0-05-A05 | 悬停只暂停记录表滚动，输入继续接收；恢复后能查看期间新增记录 | 输入计数与页面观察 |\n\n## M0-06 业务部件、测点与 viewer 状态联动\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-06-A01 | 五类业务 ID compressor、combustor、turbine、bearing_front、exhaust 稳定可选；逐项登记实际源程序节点映射，有对应几何的选择返回正确 ID，无对应几何明确 unavailable；排气主场景有标明教学性质的定位映射，不伪称真实传感器位置 | 映射/缺项清单及五组业务选择记录 |\n| M0-06-A02 | 父端保存唯一 run/device/component/time_range；viewer 选件更新业务选择，业务选择反向定位 viewer；同一动作不重复触发查询 | 两向操作、查询及 ID 对照 |\n| M0-06-A03 | F120 已关联排气测点显示真实测量值、时间和质量；未关联的部件明确显示无关联测点，不补造运行数值 | 映射、实际 API 值及页面 |\n| M0-06-A04 | 业务更新只通过约定 update-component-state 消息作用于当前上下文；切换 run/device 时旧数据、旧 iframe 和旧 revision 不能改变新状态 | 切换和迟到响应/消息用例 |\n| M0-06-A05 | viewer 重载后用新的实例握手，并由父端重发当前完整快照，选中部件及当前数据恢复；API 失联能显示 unknown 与旧更新时间 | 重载、重新同步及失联检查 |\n| M0-06-A06 | 保留源程序旋转、缩放、机壳/结构视图能力，相关模式不改变业务身份；许可与教学标识可查看；不要求重做完整源程序已有动画 | 浏览器操作、来源和许可入口 |\n\n此阶段不提前要求尚未实现的告警或检修档案。普通状态与质量用真实数据验证；告警驱动的部件状态在 M0-07 复验。教学测点布置不得标成真实上燃传感器位置。\n\n## M0-07 教学告警与实时监测主线复验\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M0-07-A01 | F120 每个 run 恰好一条 R1 告警，triggered_at=i63、resolved_at=i82；1× 与 20× 标准化结果相同 | 两个 run 的告警时间线 |\n| M0-07-A02 | 短尖峰未持续满 3 秒不触发；连续有效超限跨满 3 秒才触发，不以三条样本代替三秒 | 独立输入与预期时间表 |\n| M0-07-A03 | 中间带不会反复新增告警；恢复未满 2 秒不关闭；25/30 边界遵守严格比较 | 边界、迟滞与恢复用例 |\n| M0-07-A04 | 缺样或无效质量打断待触发/待恢复计时；已有告警保持 active，数据质量可以 unknown，不以失联自动恢复 | 缺口、质量及状态记录 |\n| M0-07-A05 | 重复和迟到事件不重复创建同一异常，也不静默改写已记下的触发/恢复时间 | 重复/迟到用例 |\n| M0-07-A06 | 点击告警能关联 run、device、exhaust 部件、规则版本、e000063 和原始时间范围；viewer 当前部件状态随真实告警更新 | 页面、API、桥接与原始事件 |\n| M0-07-A07 | 从独立构建启动到 CSV、SQLite、SSE、Vue、源程序 viewer、告警和追溯完成真实闭环，人工核对关键值；行级日志自动带 run/device/event，全局入口及组件/时段/级别/关键词筛选返回冻结的预期集合，记录含实际时间、原文与简短说明，不出现未发生处理的成功日志 | 端到端报告、日志筛选对照、输入哈希和代码 C |\n| M0-07-A08 | 在干净 checkout 对 C 重跑 A01…A07 和受影响既有功能条款，全部通过；不把远程交付门加入本条形成循环 | 复验范围、命令和结果 |\n\n## RAG-BASE 固定 RAG 上游与本地运行基线\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| RAG-BASE-A01 | 获取 jerry-ai-dev/MODULAR-RAG-MCP-SERVER 并核实 f658c5a4011c8b826707a65a3b11ce9301b0626f，以 Git subtree 导入同一主仓库；dsh 仍只绑定主仓库 | 来源、commit 与 subtree 记录 |\n| RAG-BASE-A02 | 记录上游实际许可声明、依赖和采用的检查命令；使用独立 Python venv/cwd，避免与业务 API 依赖隐式混用 | 来源许可、环境及命令登记 |\n| RAG-BASE-A03 | 用现有 Chroma、BM25 和 Ollama provider 配置跑通最小文本导入及查询；记录真实推理/嵌入端点和模型标识，视觉扩展先关闭 | 实际配置摘要、导入和查询 |\n| RAG-BASE-A04 | 断开本地模型端点时明确失败，不静默回退云端；业务服务不可用不影响已声明的 RAG 独立基线检查 | 失败注入、请求目标及结果 |\n| RAG-BASE-A05 | 实际运行本任务冻结的必要上游检查和 stdio 检索探针；所有必要项通过，原始失败和兼容补丁保留，不能继承上游勾选 | 逐项检查、协议记录和差异 |\n| RAG-BASE-A06 | 从主仓库干净检出可复现这一基线；报告准确区分上游原码、配置变化及本地补丁，不把基线通过标成产品 RAG/Agent 已通过 | 干净检出复现及范围声明 |\n\n首版采用 Chroma+BM25；Milvus Lite 不是本阶段必需项。Ollama 复用实际可用的本地推理服务，不要求为了上游基线重复部署同一个模型。后续业务过滤、证据契约和进程生命周期在专门任务中验收。\n\n## M1-01 最小知识集、切分与文档版本\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M1-01-A01 | 建立小知识集 K1，逐文档记录来源、许可/使用依据、公开或教学标识、版本、页码/章节；原件和解析文本可追溯 | 文档清单、原件/解析哈希 |\n| M1-01-A02 | 在检索业务实现前冻结 Q12：8 个可回答问题、4 个资料或运行证据不足的问题；人工登记预期资料/事实、允许引用与缺失项 | 问题集、人工标注和哈希 |\n| M1-01-A03 | 每个切分片段保留 document_id/version/chunk_id、出处与适用部件；表格单位和条件不被错误剥离，抽查清单全部符合原文 | 片段映射和逐项原文核对 |\n| M1-01-A04 | 重复导入相同内容和版本不重复增加有效片段；同文档更新版有新版本标识，旧版仍可按历史分析引用定位 | 导入前后数量、版本与定位 |\n| M1-01-A05 | 另外建立另一部件/型号和同文档旧版的隔离资料，冻结应匹配/不应匹配集合；教学文字不能标成真实厂商维护规程 | 隔离夹具与期望集合 |\n\n## M1-02 Chroma 与 BM25 检索及引用证据\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M1-02-A01 | 索引 K1 后真实向量检索、BM25 和融合路径均可运行；记录嵌入模型、维度、切分/索引版本，配置不匹配禁止混写 | 索引清单、路径结果和冲突检查 |\n| M1-02-A02 | 写入、重启读取、删除当前索引中的指定文档版本均有效；向量和 BM25 对同一有效语料一致，已撤下版本不再被当前搜索返回 | 重启/删除前后双索引结果 |\n| M1-02-A03 | Q12 的 8 个可回答问题均在 Top-5 命中至少一个人工预先标注的适用证据片段；原文定位和版本准确 | 逐题结果、排名、预期匹配 |\n| M1-02-A04 | 部件/型号/文档版本过滤前后结果符合隔离夹具；未知或不兼容范围明确为空或返回冻结错误，不回退到其他范围 | 过滤输入、实际/预期集合 |\n| M1-02-A05 | 编码前冻结引用字段类型及缺失值规则，统一返回 document_id/document_version/chunk_id/source_uri/title/locator/snippet/retrieval_score；上游 source 映射为可访问来源，所有引用能回到实际片段；记录仅向量与混合检索的实际结果和耗时，不能声称未测的提升或把检索分数当故障概率 | 证据契约、引用核查和对照结果 |\n\nQ12 中的 4 个证据不足问题不要求向量搜索天然返回零条；它们要求产品在 M1-03 中不据此编造数值或结论。重排不是本任务的必需项；若增加重排，先建明确改动任务与同一问题集对照。\n\n## RAG-INTEGRATE 受控 stdio MCP 与业务工具接入\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| RAG-INTEGRATE-A01 | 独立 Python assistant 运行角色启动 RAG 长期 stdio 子进程，使用明确 venv/cwd；连续两次查询复用同一健康子进程，不跨容器假装使用本地 stdio | 启动配置、PID/生命周期与两次真实查询 |\n| RAG-INTEGRATE-A02 | 协议 stdout 仅传 MCP 消息，诊断日志走独立通道；启动失败、进程退出、超时和取消产生明确状态，不泄漏或无限重启进程 | 协议、故障、超时/取消及进程记录 |\n| RAG-INTEGRATE-A03 | 搜索工具的业务过滤参数完整传至检索层，返回 M1-02 的证据对象；用隔离夹具证明没有在 MCP 适配中丢失条件 | 真实 MCP 请求、结果与过滤比对 |\n| RAG-INTEGRATE-A04 | 历史、窗口结果、告警、检修查询工具访问真实业务 API，固定 run/device/time_range；尚未产生窗口或检修记录时明确 no_data，不伪造结果 | 工具请求、API 响应和空结果 |\n| RAG-INTEGRATE-A05 | 无效工具参数、越出允许范围及 API 失败均可判定；assistant 停止时子进程被收回，业务 API 仍可独立工作；真实接口客户端经业务 API 调用 assistant，stdio 和数据库不暴露给浏览器 | 接口调用、非法输入、独立启停与进程回收 |\n\n该任务使用实际 MCP/HTTP 工具探针验收，不提前要求 M1-03 的完整模型规划或 Vue 分析页面。若本机复用已有模型端点，应记录端点归属与模型标识；不得让浏览器直接访问 MCP stdio 或数据库。\n\n## M1-03 本地 Agent 分析、证据及前端呈现\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M1-03-A01 | 对真实告警创建 analysis_id，并固定 run/device/alarm/component/time_range；页面继续播放不改变本次分析范围 | 分析请求、固定上下文与持续播放记录 |\n| M1-03-A02 | 本地模型在限定工具集合内实际调用数据/告警/知识工具；预先固定调用轮数、超时和输出契约，不用写死答案或预录工具轨迹冒充 Agent | 模型标识、工具请求与执行轨迹 |\n| M1-03-A03 | Q12 的可回答样例中，数值结论逐项匹配真实查询，文献引用逐项匹配实际返回片段；无凭空数值、假引用或跨设备证据 | 逐条数值/文献核查 |\n| M1-03-A04 | 4 个证据不足样例均明确缺失信息，不给确定故障结论；模型端点或工具失败时显示失败/部分证据状态，不显示完成成功 | 不足与故障样例的完整结果 |\n| M1-03-A05 | Vue 显示真实工具状态、固定查询范围、引用入口及检查建议；重复点击同一个幂等分析请求不产生重复执行结果 | 浏览器、接口、重复请求结果 |\n| M1-03-A06 | 分析记录持久保存模型/规则/资料版本、输入范围和证据快照；重启后可打开同一记录并定位当时引用，资料更新不悄悄替换历史证据 | 重启、文档更新和历史查看 |\n\n## M1-04 部件档案、教学工单与生命周期事件\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M1-04-A01 | 设备/部件档案明确编号、教学安装信息、文档版本和历史；预置设计/制造/检修教学记录与实际系统事件可区分 | 档案及来源字段 |\n| M1-04-A02 | 从同一告警/分析创建教学检查工单，保存 device/component/alarm/analysis 关联；不能串到其他设备或运行 | 创建响应、关系查询和隔离用例 |\n| M1-04-A03 | 工单按已冻结状态机推进，非法状态转换被拒绝；完成后追加一次部件检修事件并保留原记录 | 合法/非法转换及事件 |\n| M1-04-A04 | 重复创建/完成请求按幂等约定处理，不多建工单或检修事件；失败事务不产生半完成关联 | 重复请求、计数和事务失败 |\n| M1-04-A05 | Vue 能从告警打开工单、从部件档案回到该告警/分析，页面所列版本与后端一致 | 双向浏览器路径与 API 对照 |\n\n## M1-05 最小智能运维闭环复验\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M1-05-A01 | 以冻结的教学运行完成数据→告警→真实工具/知识查询→建议→人工创建/完成工单→部件事件的全链路，所有关联可核查 | 端到端操作、ID 关系和关键值 |\n| M1-05-A02 | 从一条结论打开数值证据与原文片段，能核对原始事件、固定时段、文档版本和真实出处；历史查看不调用新分析覆盖旧结果 | 逐级追溯记录 |\n| M1-05-A03 | 重跑一个无证据和一个工具失败场景，页面、分析和工单均不把失败当作成功；无自动创建已完成检修结果 | 失败/不足场景报告 |\n| M1-05-A04 | 干净 checkout 对候选 C 运行本闭环及受影响 M0/M1 条款，全部通过；上游基线单独列示，不代替产品结果 | 复验清单、结果和代码 C |\n\n## M2-01 Kafka 输入与两路 Producer\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M2-01-A01 | 两路 Producer 使用同一程序的独立设备配置，通过实际 Kafka 发送；返回真实发送确认和 Topic/Partition/Offset，失败有明确状态 | 配置、确认及消息元数据 |\n| M2-01-A02 | 两台设备各播放 F120 变体，各自 run/device 范围内恰好 120 条有效业务记录，时间和值与原夹具一致 | 源输入、Kafka 消息及落库集合 |\n| M2-01-A03 | Kafka 接收路径复用既有业务校验/幂等契约；相同业务事件经 HTTP 与 Kafka 重复到达仍只有一条，来源尝试可追踪 | 双入口输入、计数和来源记录 |\n| M2-01-A04 | 非法输入进入明确拒绝/隔离路径，不静默污染业务数据或永久阻塞后续有效事件；记录实际失败消息元数据和原因 | 坏消息、后续有效消息和结果 |\n| M2-01-A05 | 独立暂停/恢复一台 Producer 不使另一台停止；设备切换的 API、SSE 与 Vue 结果保持隔离 | 独立控制及两设备集合 |\n\n## M2-02 持久化与 Kafka offset 故障恢复\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M2-02-A01 | 在数据库提交前强制终止接收程序；该事件 offset 未被提前确认，恢复后事件完整接收，无丢失 | 故障点、已提交 offset 与恢复集合 |\n| M2-02-A02 | 在数据库已提交、offset 尚未提交时强制终止；恢复后发生重放但有效业务记录、告警和下游通知语义不重复 | 提交边界、重放记录及业务计数 |\n| M2-02-A03 | 持久化失败时不提交相应消费进度；恢复后继续处理；不能以跳过失败消息取得“无积压” | 失败/恢复、offset 和记录 |\n| M2-02-A04 | 重启或消费分配变化后，对固定输入逐 ID 核对接收集合；业务数值、告警和已有关联保持一致 | 输入清单、分配/恢复与集合差异 |\n| M2-02-A05 | 对外明确至少一次接收加幂等持久化的实际保证；分别保留业务 ID、Kafka 元数据、stream_seq，不未经验证宣称整链 exactly-once | 保证说明、日志样例和故障证据 |\n\n## M2-03 双设备消息主线及智能闭环复验\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M2-03-A01 | 两台设备同时通过 Kafka 播放并完成，发送完成、接收完成有独立状态；接收端尚未排空时不能标为业务运行已完成 | 双方进度、积压与最终集合 |\n| M2-03-A02 | 选择其中一个异常完成 M1 全闭环，数据/知识/建议/工单都属于目标设备与运行；另一设备记录不混入 | 完整关系和隔离核查 |\n| M2-03-A03 | 同时制造前端断线和消息重放，恢复后 Vue、告警及检修关联一致，无额外业务事件 | 故障组合及恢复前后比对 |\n| M2-03-A04 | 干净 checkout 运行受影响 M0/M1 及本阶段必要条款，记录与 HTTP 基线保持/变化的行为，不删原有通过标准 | 回归报告、版本与差异 |\n\n## M3-01 Flink 事件时间窗口与收尾\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M3-01-A01 | 固定 W120 与乱序/重复/无效质量/超迟到夹具；在实现前冻结实际事件时间、水位线、窗口关闭和控制消息策略及独立预期 | 夹具、策略与标准答案提交 S |\n| M3-01-A02 | 实际 Flink 对 W120 输出两个 UTC 60 秒最终窗口，各有效 count=60；T4/spread 的 min/max/mean 与独立答案一致，浮点误差满足预定容差 | Flink 输出、窗口状态及对照 |\n| M3-01-A03 | 允许的乱序与重复不改变最终统计；无效质量按冻结规则排除计数；已完成窗口收到超迟到事件不静默改写 final 结果，事件可审计 | 各输入序列、计数与迟到记录 |\n| M3-01-A04 | 真实引擎处理结束控制/排空流程，最后一个业务窗口完成；控制消息不进入测量、样本数或告警，不能在 UI 伪造 final | 控制消息、引擎完成及最终窗口 |\n| M3-01-A05 | 重启恢复后窗口键及版本幂等，状态/结果可追溯；本任务暂不改变既有业务告警主权，Flink 影子结果不重复写正式告警 | 重启、结果键和告警写入检查 |\n\n## M3-02 Spark 同窗结果与独立参考答案\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M3-02-A01 | 实际 Spark 与 Flink 读取相同冻结输入，使用各自消费身份/检查点；窗口、质量、去重、迟到和最终状态语义相同 | 配置、输入哈希与语义清单 |\n| M3-02-A02 | W120 的两个最终窗口分别与独立参考答案比对后再互相比对；count 完全一致，数值误差不超预先冻结容差 | 三方逐窗口逐字段结果 |\n| M3-02-A03 | 对乱序、重复、无效质量和超迟到用例分别核对，不能只挑两个引擎恰好相同的结果作为正确性证明 | 边界夹具和三方差异 |\n| M3-02-A04 | 两个引擎均真实完成末窗收尾；暂未完成的窗口明确 pending/provisional，不参加 final 对比或被标作不一致已解决 | 引擎收尾、状态及比对范围 |\n| M3-02-A05 | 页面显示 engine、窗口起止、计算版本、修订与状态；重启不产生相同结果键的多条有效行，原始数据仍可追溯 | 页面、结果键和重启比对 |\n\n## M3-03 Flink 告警主权显式切换\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M3-03-A01 | 迁移前记录告警规则版本、旧生产者和新生产者；按新 run 切换 authority，不在首版无定义地搬迁进行中告警状态 | 切换计划、版本和 run 配置 |\n| M3-03-A02 | 新 run 中 Flink 是唯一正式告警生产者，Python/其他引擎的旧路径不可再创建同一业务告警；权限/路由检查及重复输入均证明唯一性 | 生产者标识、写入记录和计数 |\n| M3-03-A03 | 按等价 R1 规则重放 F120，仍仅一条告警且 triggered_at=i63、resolved_at=i82；实现版本变化不掩盖行为变化 | 时间线及原基线比对 |\n| M3-03-A04 | 旧 run 的历史告警、分析和工单保留原生产者/规则版本，切换后仍可打开；Flink 故障时明确降级/失败，不偷偷启用第二告警生产者 | 旧记录、故障与生产者核查 |\n| M3-03-A05 | 乱序/迟到策略变化通过显式新规则或计算版本记录，回归已有告警及智能闭环；超迟到不静默改写已绑定的历史分析 | 版本差异、回归和历史证据 |\n\n## M3-04 工况合成与正常运行基线模型\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M3-04-A01 | 冻结负荷/环境/燃料/温度等教学关系、参数单位和随机种子；有稳定、负荷变化及异常场景区间/预期现象，生成可重现 | 生成规格、场景清单及数据哈希 |\n| M3-04-A02 | 按独立运行批次划分训练/验证/测试，记录各集合 ID 且无重叠；异常标签或测试批次不泄露到正常基线训练 | 划分清单与泄漏检查 |\n| M3-04-A03 | 训练前冻结预测目标、误差指标、参照基线、数值通过线及适用工况；若尚未填写通过线，任务不得 READY，更不能先训练再改线 | 先行指标/预算提交及数据版本 |\n| M3-04-A04 | 实际训练并对独立测试批次报告全部冻结指标，逐项满足通过线；超出适用范围有标识，不因合成数据好结果宣称实机诊断准确率 | 模型版本、指标、适用边界 |\n| M3-04-A05 | Vue 显示同一时段的实际值、正常预测、残差和模型版本，Agent 的相关数值来自实际查询；模型切换或失败不会把旧预测当作新值 | 页面、查询、模型切换/失败 |\n\n## M4-01 性能预算、负载与测量方法冻结\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M4-01-A01 | 实测并登记本机硬件、Windows/WSL/Docker/GPU和主要软件版本，所有长驻角色、模型及量化/上下文配置明确，不能沿用未核实硬件数字 | 脱敏环境、模型及部署清单 |\n| M4-01-A02 | 冻结全链路负载：两设备、数据规模/速度、viewer 画质、推理并发、输入输出长度、冷/热启动、运行时长及至少 30 次实际分析样本 | 负载清单、问题/数据哈希 |\n| M4-01-A03 | 在任何性能优化代码前，为 RAM/VRAM 上限、API/消息 P95、首 token/回答耗时、生成速度下限、viewer 帧率下限、积压恢复时间填有限且有单位的通过线；字段未填不得锁定 | 性能预算提交 S 与各字段理由 |\n| M4-01-A04 | 冻结时钟来源、计时起止、百分位算法、采样频率和资源统计范围；历史 event_time 不用于发送延迟，失败/超时不得从统计中静默剔除 | 测量协议和命令 |\n| M4-01-A05 | 登记未优化版本的测量基线与已知失败，用同一测量方法确认工具能得到真实值；本任务只锁定预算和方法，不把预算已填写当作性能已通过 | 原始测量、预算状态及差距 |\n\n本交接文档不虚构用户设备上的性能数字。该任务是优化工作的前置硬门：预算当前为 NOT_FROZEN；M4-01 未 LOCKED，M4-02 不得开始优化。基线测量可以失败于未来性能目标，但数据缺失、测量方法不明或预算未填不能让本任务通过。\n\n## M4-02 稳定性、并行性能实测与必要优化\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M4-02-A01 | 严格按锁定负载让本地模型、viewer、两设备及双引擎同时运行，采集全程原始资源/延迟/帧率/积压和请求结果，样本数与时长达标 | 原始监测、请求及运行清单 |\n| M4-02-A02 | 数据有效集合、告警唯一性和检修关联始终正确；无丢失、无重复有效事件、无未处理崩溃或隐藏失败 | 集合、告警/关联与错误核查 |\n| M4-02-A03 | RAM/VRAM、API/消息 P95、首 token/回答时间、生成速度、帧率及恢复时间逐项满足 M4-01 数值预算；任一必要预算未达即 FAIL | 逐指标预算对照及计算 |\n| M4-02-A04 | 按冻结方案注入连接/服务故障后，在预算内恢复且业务证据保持一致；不能只测正常态或最快一次 | 故障时间线、恢复及全样本统计 |\n| M4-02-A05 | 必要优化每次对应独立变更任务或显式 REOPEN，保留原失败与前后相同负载对照，重跑受影响验收；不得降低预算来把本次失败改 PASS | 变更、回归及前后对照 |\n\n## M4-03 可复现交付、全任务核对与 JD 证据\n\n| 条款 | 操作与硬通过条件 | 必需证据 |\n|---|---|---|\n| M4-03-A01 | 从主仓库干净检出，按依赖锁、subtree来源和说明完成构建启动；两个上游及实际补丁版本可核对，未依赖未声明的个人文件 | 干净环境复现及版本清单 |\n| M4-03-A02 | 按已冻结脚本演示完整业务主线与故障样例，真实展示 Kafka/Flink/Spark/RAG/Agent/模型和检修链；所有结论可追溯 | 完整演示和追溯记录 |\n| M4-03-A03 | 逐项核对 TASKS 与对应验收报告，前 26 项任务均已完成其功能与交付门；本任务功能条款先判定，不要求自身先 LOCKED | 任务-条款-证据对照表 |\n| M4-03-A04 | README 的 JD 要求—功能—实测证据对应到实际代码、批次和报告；区分上游复用、本项目新增、教学数据和未验证能力 | README 对照及逐项核验 |\n| M4-03-A05 | 模型/代码/资料来源和许可齐全，可公开的示例数据及验收证据已整理，个人认证与运行秘密不混入交付；剩余缺项如实列出，必要缺项不宣布全部完成 | 交付清单、来源和缺项检查 |\n\n本任务 A01…A05 全部 PASS 后仍需执行统一 S→C→E→K 交付门。最终“全部完成”必须在该任务本身 LOCKED、远程回执可核对后才能宣布，避免最终验收自引用。\n\n## 明确的未冻结项\n\n- 实际接口路径、测试命令和环境值：在所属任务 S 中登记；未登记的任务不 READY。\n- 本地模型与嵌入模型标识：RAG-BASE 本机核实后记录，不能写成已配置成功。\n- M3-04 正常基线误差通过线：训练实现前提交，不在看到测试结果后倒推“合格线”。\n- M4-01 性能数值预算：当前 NOT_FROZEN。包含硬件条件、负载、时长、样本数、统计方法与所有必要通过线；冻结并锁定后才能开始 M4-02 优化。\n\n这些缺项不是 PASS，也不是本轮已执行的结果。任务清单、条款、源版本与执行证据必须共同核对。\n",
+    "stderr": "",
+    "stdout_sha256": "6593f43c6605311bec2375f0455b2e42940052a200ecc38f37da1bc93d382bb1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "3980867902a9c102f18894e9acf65b8c72051b19:evidence/M0-00/criteria.md"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.330796+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "# M0-00 范围与验收冻结\n\n日期：2026-11-03（Asia/Shanghai）。条款版本为 ACCEPTANCE.md 2.0，M0-00-A01～A07 共七条；本记录补齐执行方法，保留原条款语义。完整 M0～M4 的 27 项任务、145 条必要验收及依赖保持不变。状态只登记在 TASKS.md。\n\n## 来源与版本\n\n- 来源：GitHub Issue #1，2026-11-03T07:19:04Z，派工 trigger `43b6da81cc692e348a4e29d1e45cc0c9`。\n- Ticket：`910aedd83224919debc9bc9021d86450`；worker session：`worker-910aedd83224919debc9bc9021d86450`。\n- 分支：`agent/bootstrap-spec-freeze-910aedd83224`；工作树：`/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224`。\n- 唯一主仓库：`shuyu-lin-dev/gas-turbine-lifecycle-lab`；主 checkout：`/home/lsy/workspace/lab/gas-turbine-lifecycle-lab`。\n- 集成基准、比较基准、预期 merge-base：`dad14da1561ac609a5d14076629d1698c53b3627`；无 predecessor。\n- 合并授权：shuyu-lin-dev 在 Issue #1 评论 `6597814032`（2026-11-03T07:20:33Z，trigger `9d88e31f73669fd31a07291d2b7e3ab5`）明确由协调会话执行最终合并。协调标识 `01a1a040-ff3b-7f31-977e-71d5bd2d1e61`。必要验收、独立审查、S/C/E/K、远程标签与最终 head 核查全部通过后，协调会话合并并核查实际集成；开发 worker 交付 PR，后续任务单独派发。保留保护与必要检查，不执行 approve 或 auto-merge，不调用 gh-owner。\n\n本文件首次提交为 S；S 的完整 SHA 由其后 C 的 TASKS 登记与外部 Issue 回执引用。S 不记录自身最终 SHA。候选 C 必须包含 S；输出报告的 tested_code_sha 必须等于实测 HEAD。C 包含所有资产、核查脚本及依赖声明，证据不得携带未提交的行为变更。E 只保存证据与必要登记；K 只引用已存在 S/C/E 和核实结果，二者不记录自身最终 SHA。\n\n## 允许变更与边界\n\n允许迁入已核对的根规则、完整规格、任务清单、领域与协作文档、已有模型资产及历史准备证据；补齐当前验收、来源与环境核查工具、报告和版本追溯。代码文件经文件编辑工具迁入；二进制 GLB 保持字节一致。主 checkout 保留当前内容。准备记录保持历史身份。\n\n当前任务核实已有 dsh、身份权限、主仓库/独立 worktree、Windows Docker Desktop Linux 引擎和真实接单/推送。应用开发、业务测试、业务脚手架、完整上游取得、viewer、RAG 与后续任务均属于各自后续派工范围。profile、模型、认证、Policy、保护与无关设置保持；本任务预期无需设置修改。必要修改须重新读取 revision、按当前值保存、回读并记录。中间文件仅使用 `.scratch-runtime/`。\n\n## 固定输入与独立预期\n\n输入以用户派工、准备文件、实际 API 和独立环境为来源，不从核查脚本生成预期。迁入前已只读核对全部 71 个运输路径及当前主 checkout：均与 after_sha256 一致。运输校验与功能验收分别报告。\n\n| 固定输入 | SHA256 / 固定值 |\n| --- | --- |\n| 准备 payload | `07b1295ac3381974bc857d4106120b1f77932f601346058a6ff7c8a818fea03d` |\n| 准备 AGENTS.md | `1f2cb141140a6ffdb87d4b299a47f9bb35ef0a907c5558beebd5eb89021622be` |\n| 准备 DEV_SPEC.md | `ff4a63adc625e1e5d608f5eae18f22959bdfbd5029d17b141136dc0577c1ee63` |\n| 准备 TASKS.md | `484c5945664a9996f02e687b778d510aa460b73da0b3bf8644d349088734f38a` |\n| ACCEPTANCE.md 原文 | `6593f43c6605311bec2375f0455b2e42940052a200ecc38f37da1bc93d382bb1` |\n| GLB | 13,479,328 bytes；`f650a3b2c080ea76bb5daa9e0f4c7f37f0f5bf7774f2d323e42ef432a00fa316` |\n| prepare 历史正文 | `3688da872189a8c2d773a6bc68ca0ff039d21d586e477b41e75eb02edd885ae4` |\n| 环境/设置初始指纹 | 同一 S 内的 `initial-fingerprints.json`；每个设置块与 profile 文件逐项 SHA256 |\n| 固定主分支基准 | `dad14da1561ac609a5d14076629d1698c53b3627` |\n| agent / 操作者 | `lucy-assistant` / `shuyu-lin-dev` |\n| Source / Policy / Executor / Prompts 初始 revision | `2 / 1 / 2 / 4` |\n\n独立预期来自 ACCEPTANCE.md 七条原文与用户给定路径、账号、范围。dsh/工具版本读取实际值，准备值作为比较信息；版本变化须说明并重新核实，不伪造预期版本。唯一性、身份、路径、哈希、提交关系和数量要求完全相等；无浮点容差。调用失败、缺少权限、未知配置或无法核实的结果均阻止相应条款通过。服务可用性不以历史准备快照代替。\n\n## 执行接口、命令与逐条判定\n\n环境为当前 WSL Linux、已有 superagent profile、原面板 `http://127.0.0.1:3082`、已认证 worker gh、Git、Python 3.12 与 PyYAML 6.0.1、Windows Docker Desktop。HTTP 仅读取现有面板/API；请求头 `x-orchestrator-request: 1`。本阶段无需视觉工具、截图、浏览器操作或项目服务启动。\n\n统一采集接口为 `python3 scripts/verify_m0_00.py --criteria S --candidate C --output .scratch-runtime/m0-00-C`，其中 S/C 用已存在的完整 SHA 替换。工具通过 subprocess 实际执行下列命令，通过 JSON/YAML 现成库读取输出与配置，只输出脱敏证据，不修改项目代码或宿主配置。每个命令保存 argv、cwd、退出码、stdout/stderr、采集时刻；报告保存每条独立期望、实际结果、输入哈希与证据哈希。失败即时终止并保留已取得的命令证据。\n\n| 条款 | seam / 实际命令或请求 | 独立通过条件与边界 | 证据 |\n| --- | --- | --- | --- |\n| A01 | `dsh --version`；`GET /orchestrator/api/state`；`GET /orchestrator/api/tickets/<ticket>`；实际 dsh 进程 argv；PyYAML 读取 superagent profile 结构并只输出插件名、stateDir 和哈希 | dsh 可执行；现有面板 runtime ready；profile 与实际进程/状态目录对应；实际 worker session、Ticket 与工作路径相等。版本与 profile 的历史值只供比较 | `commands.json`、`runtime.json`、`profile.json` |\n| A02 | `gh api user`；`gh repo view shuyu-lin-dev/gas-turbine-lifecycle-lab --json nameWithOwner,viewerPermission,defaultBranchRef`；`gh api repos/shuyu-lin-dev/gas-turbine-lifecycle-lab`；`GET /orchestrator/api/settings`；`git -C <main> remote -v` | 实际 agent 为 lucy-assistant；远程 owner/repo 精确相等；READ/WRITE 元数据与 pull/push=true；启用的 GitHub Source 与主 origin 均为唯一目标。真实 push 由 A07 单独验证 | `commands.json`、`github.json`、`configuration.json` |\n| A03 | 上述 settings、`GET /orchestrator/api/prompts`；对 initial-fingerprints.json 所列 profile/认证包装器文件与设置值进行 SHA256 比较 | shuyu-lin-dev 在已有 GitHub allowed list；配置值/revision 与初始值相等，profile/认证保持；如发生授权配置变更需保存前后 revision、原因与回读结果。凭据与飞书私有标识只在内存使用，公开证据保存哈希 | `configuration.json`、`preservation.json` |\n| A04 | `pwd`；`realpath <main> <worktree>`；`git worktree list --porcelain`；`git remote -v`；`git symbolic-ref --short HEAD`；`git rev-parse --show-toplevel`；Ticket 与 settings 请求 | 真实路径在指定 lab 下；主 checkout 的 main 与当前 Ticket worktree 独立；branch 为 agent/bootstrap-spec-freeze-910aedd83224；origin、Ticket、session、Source 绑定完全一致 | `commands.json`、`git.json`、`runtime.json` |\n| A05 | `uname -a`；`docker context show`；`docker context inspect`；`docker version --format '{{json .}}'`；`docker info --format '{{json .}}'`；`docker compose version`；`wsl.exe --version`、`wsl.exe --list --verbose`（UTF-16 解码） | WSL 客户端与实际 Server 成功通信，Server OSType=linux、OperatingSystem= Docker Desktop、Name=docker-desktop；版本记录两端；context endpoint 与 WSL 2 docker-desktop 发行版印证；Compose 正常；不启动 dockerd | `commands.json`、`docker.json` |\n| A06 | `git show S:ACCEPTANCE.md`；`git show S:evidence/M0-00/criteria.md`；`git merge-base --is-ancestor S C`；`git merge-base <base> C`；`GET /orchestrator/api/prompts`；settings/state/tickets | S 中完整规格/任务/当前验收已提交且先于 C；ACCEPTANCE 字节语义保持；Router 与当前 worker 使用同一 scope/delivery revision 和项目约束，当前派工跟进有效；maxWorkers=1，唯一执行 Ticket 为本项，queued=0。scope/delivery 全文由人工逐项审查，字符串存在检查只作辅助 | `commands.json`、`prompts.json`、`version-check.json`、审查记录 |\n| A07 | Ticket 请求；`git show -s --format=fuller C`；`git push -u origin agent/bootstrap-spec-freeze-910aedd83224`；`gh api repos/shuyu-lin-dev/gas-turbine-lifecycle-lab/git/ref/heads/agent/bootstrap-spec-freeze-910aedd83224`；`gh pr view <PR> --repo shuyu-lin-dev/gas-turbine-lifecycle-lab --json number,url,author,headRefName,headRefOid,baseRefName` | 真实请求与 Ticket/worker 对应；S/C author、committer 均为指定代理身份；真实 push 退出 0，远程 branch SHA=C；PR author=lucy-assistant，正确分支/main，head=C。之后 E/K 远程结果分别记录 | `commands.json`、`remote.json`、PR/Issue 回执 |\n\n上传前 `gh api user --jq .login` 和 `gh repo view ... --json nameWithOwner` 复核写入身份。PR 创建前查仓库 PR 模板；实际 CI 通过 checks/read API 读取，零条 CI 记录为没有配置，不能称为 CI 通过。推送与 PR 是已授权验收步骤，不再额外设普通审批门。\n\n## 回归、审查与证据\n\n回归包括：原 LICENSE 字节不变；16 个模型文件与许可逐字节哈希一致；历史 preparation 证据与来源一致；全部 27 项任务/145 条验收的编号、映射、依赖保持；全部后续任务仍 PLANNED；根文件的本次有效授权改动单列；无应用/业务测试/脚手架、vendor、嵌套 .git 或秘密文件；`git diff --check` 通过。历史 `migration-*.diff` 是 unified diff，空白上下文行必须保留前导空格；.gitattributes 仅对这些历史格式文件关闭 blank-at-eol/blank-at-eof 检查，其全部字节另以来源 SHA256 核实。\n\n候选固定比较命令：`git diff dad14da1561ac609a5d14076629d1698c53b3627...C`；提交清单用 `git log <base>..C --oneline`。Standards 和 Spec 分别使用只读子代理审查，覆盖全部差异及未提交状态。候选和证据准备后，在 Issue #1 回执 S/C、比较基准/merge-base、分支、worktree、session、七条结果、命令、证据与哈希；由协调会话组织外部独立审查。收到对应候选的独立审查结果前保持候选准确。任何行为或脚本变化形成新 C 并重验受影响条款。\n\n证据先写 `.scratch-runtime/m0-00-C/`，供独立审查读取；独立审查通过且七条全部 PASS 后，复制脱敏证据到 `evidence/M0-00/runs/C/`，形成 E 并登记 VERIFIED。必要 FAIL/BLOCKED/SKIP/NOT_RUN 阻止验收。E 验证后创建全新且不覆盖的 `baseline/M0-00-<C前12位>` 标签，指向 E；推送并核实标签及远程 E 后，以 K 登记 LOCKED。K 推送完整 SHA 在 Issue 外部回执核对。当前任务交付后等待协调会话合并、集成核查及后续单独派工。\n\n## Skills 计划\n\n- dsh-superagent-github：已调用 skill 工具；实际加载路径 `/mnt/e/DSH_SuperAgent/dsh-superagent-prototype/skills/dsh-superagent-github/SKILL.md`，SHA256 `7907778f735550f642b7e3d511007be9ae67d29965aa17ac50119a0eeeb8e54b`；用于来源、身份与 GitHub 回执。\n- code-review：候选阶段调用 skill 工具；已核对 `/home/lsy/.dsh/skills/code-review/SKILL.md`，SHA256 `9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd`；该说明无本步骤必须加载的相对引用，采用固定比较与 Standards/Spec 只读并行审查。\n- 现有领域、术语与初始化配置直接迁入，无新增术语、ADR 或模块接口；domain-modeling、setup、codebase-design 不新增调用。\n- 需求、27 项任务与依赖已有明确授权，grill-with-docs、grilling、to-spec、to-tickets、triage 不适用。\n- 当前属于来源、Git、环境、配置和资产运输核查；无新增业务或缺陷修复，implement、tdd、diagnosing-bugs 不适用。核查脚本服务于实际验收，预期来自冻结规格与固定哈希。\n- 本任务来源为 GitHub，dsh-superagent-feishu 不适用；无飞书发送授权。\n",
+    "stderr": "",
+    "stdout_sha256": "50d7288f78db414505c1245145d794171b2d126cad33294552b163f707f7ba48",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "dad14da1561ac609a5d14076629d1698c53b3627",
+      "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.334067+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.367548+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "symbolic-ref",
+      "--short",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.370839+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "agent/bootstrap-spec-freeze-910aedd83224\n",
+    "stderr": "",
+    "stdout_sha256": "2ab824444043f480ad8f2b26a1a5842985dfa9f1e79c6a86b5a792966ad89303",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "remote",
+      "get-url",
+      "origin"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.373834+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n",
+    "stderr": "",
+    "stdout_sha256": "91978bc78eb760af1b35e6b40f228d2e3199b7633314ca1246da0857f04fe664",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "remote",
+      "get-url",
+      "origin"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "at": "2026-11-03T08:05:28.376392+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n",
+    "stderr": "",
+    "stdout_sha256": "91978bc78eb760af1b35e6b40f228d2e3199b7633314ca1246da0857f04fe664",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "symbolic-ref",
+      "--short",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "at": "2026-11-03T08:05:28.378828+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "main\n",
+    "stderr": "",
+    "stdout_sha256": "6403203dd5a0867eb14d104ee8a73730bd72dd9ad92e78d996a6dba0a5dcfc01",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.381049+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224\n",
+    "stderr": "",
+    "stdout_sha256": "89a381830126af1f0f2422efc949f474adc2d4200671f83570ed363d9a2cfaad",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--path-format=absolute",
+      "--git-common-dir"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.383499+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/.git\n",
+    "stderr": "",
+    "stdout_sha256": "b78767b55682cbd77260c53679d767a65b933310007a96875ccf64e8ec99ed6c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "pwd"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.386159+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224\n",
+    "stderr": "",
+    "stdout_sha256": "89a381830126af1f0f2422efc949f474adc2d4200671f83570ed363d9a2cfaad",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "realpath",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.389522+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab\n/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224\n",
+    "stderr": "",
+    "stdout_sha256": "e33a24cf481eb8b159e5e019e103c52512ad3ff259ea5ede633033ad999b1ca1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "worktree",
+      "list",
+      "--porcelain"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.393555+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "worktree /home/lsy/workspace/lab/gas-turbine-lifecycle-lab\nHEAD dad14da1561ac609a5d14076629d1698c53b3627\nbranch refs/heads/main\n\nworktree /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224\nHEAD b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61\nbranch refs/heads/agent/bootstrap-spec-freeze-910aedd83224\n\n",
+    "stderr": "",
+    "stdout_sha256": "fbd21c661413aa559dd3c9e62c622f33e242a3509c181aadf07df2f120db0a68",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "remote",
+      "-v"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab",
+    "at": "2026-11-03T08:05:28.398040+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "origin\thttps://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git (fetch)\norigin\thttps://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git (push)\n",
+    "stderr": "",
+    "stdout_sha256": "1a59b8f760e16226545dc1358fe85659848115751d9cdbe151ad2af850d23068",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "remote",
+      "-v"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.401448+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "origin\thttps://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git (fetch)\norigin\thttps://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git (push)\n",
+    "stderr": "",
+    "stdout_sha256": "1a59b8f760e16226545dc1358fe85659848115751d9cdbe151ad2af850d23068",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an%n%ae%n%cn%n%ce",
+      "3980867902a9c102f18894e9acf65b8c72051b19"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.404703+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "lucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\nlucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\n",
+    "stderr": "",
+    "stdout_sha256": "3904e4ec8a1e9849bd36bbc3e917df37fa837c43d6b09464892e9debebe4dd8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an%n%ae%n%cn%n%ce",
+      "b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.408470+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "lucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\nlucy-assistant\n162398512+lucy-assistant@users.noreply.github.com\n",
+    "stderr": "",
+    "stdout_sha256": "3904e4ec8a1e9849bd36bbc3e917df37fa837c43d6b09464892e9debebe4dd8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "-H",
+      "x-orchestrator-request: 1",
+      "http://127.0.0.1:3082/orchestrator/api/settings"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.412630+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "github": {
+        "value": {
+          "enabled": true,
+          "config": {
+            "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+            "cli": "/home/lsy/.local/bin/gh-agent-bot",
+            "pollSeconds": 60,
+            "failuresBeforeError": 3,
+            "observeIssues": true,
+            "observePulls": true,
+            "observeComments": true,
+            "observeCi": true
+          }
+        },
+        "revision": 2
+      },
+      "allowed": [
+        {
+          "id": "shuyu-lin-dev"
+        }
+      ],
+      "executor": {
+        "value": {
+          "model": null,
+          "maxWorkers": 1,
+          "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees",
+          "prepare": "set -eu\ngt_main=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab\ngt_root=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees\n: \"${DSH_SUPERAGENT_DIR:?missing ticket directory}\"\n: \"${DSH_SUPERAGENT_NAME:?missing framework ticket name}\"\n: \"${DSH_SUPERAGENT_TICKET:?missing ticket id}\"\n[ \"${DSH_SUPERAGENT_GITHUB_REPOSITORY:-}\" = shuyu-lin-dev/gas-turbine-lifecycle-lab ] || exit 60\n[ \"${DSH_SUPERAGENT_GITHUB_ACCOUNT:-}\" = lucy-assistant ] || exit 61\n[ \"$(realpath \"$gt_main\")\" = \"$gt_main\" ] || exit 62\n[ \"$(realpath \"$gt_root\")\" = \"$gt_root\" ] || exit 63\n[ \"$(git -C \"$gt_main\" rev-parse --show-toplevel)\" = \"$gt_main\" ] || exit 64\n[ \"$(git -C \"$gt_main\" remote get-url origin)\" = https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git ] || exit 65\ncase \"$DSH_SUPERAGENT_NAME\" in ''|.|..|*/*) exit 66;; esac\n[ \"$DSH_SUPERAGENT_DIR\" = \"$gt_root/$DSH_SUPERAGENT_NAME\" ] || exit 67\n[ ! -e \"$DSH_SUPERAGENT_DIR\" ] && [ ! -L \"$DSH_SUPERAGENT_DIR\" ] || exit 68\ngt_ref=\"refs/dsh-superagent/$DSH_SUPERAGENT_TICKET\"\ngt_branch=\"agent/$DSH_SUPERAGENT_NAME\"\ngit check-ref-format \"$gt_ref\"\ngit check-ref-format \"refs/heads/$gt_branch\"\ngt_start=\"${DSH_SUPERAGENT_GITHUB_PR_HEAD:-refs/heads/main}\"\ngit -C \"$gt_main\" fetch --no-tags origin \"$gt_start:$gt_ref\"\ngt_base=$(git -C \"$gt_main\" rev-parse --verify \"${gt_ref}^{commit}\")\ngit -C \"$gt_main\" merge-base --is-ancestor dad14da1561ac609a5d14076629d1698c53b3627 \"$gt_base\"\ngit -C \"$gt_main\" worktree add -b \"$gt_branch\" \"$DSH_SUPERAGENT_DIR\" \"$gt_base\"\n[ \"$(git -C \"$DSH_SUPERAGENT_DIR\" rev-parse --show-toplevel)\" = \"$DSH_SUPERAGENT_DIR\" ] || exit 69\n[ \"$(git -C \"$DSH_SUPERAGENT_DIR\" config user.name)\" = lucy-assistant ] || exit 70\n[ \"$(git -C \"$DSH_SUPERAGENT_DIR\" config user.email)\" = 162398512+lucy-assistant@users.noreply.github.com ] || exit 71\nprintf 'Prepared independent worktree %s on %s at committed base %s\\n' \"$DSH_SUPERAGENT_DIR\" \"$gt_branch\" \"$gt_base\"\n",
+          "blockedCommands": [
+            "gh-owner"
+          ]
+        },
+        "revision": 2
+      },
+      "fingerprints": {
+        "policy": {
+          "revision": 1,
+          "value_sha256": "19e96a0fb8076bca87b8e359a7ff116f0a0321e705b91c5828b96ab9f90355c5"
+        },
+        "eval": {
+          "revision": 0,
+          "value_sha256": "079d2f4f77afcdad7338e6cf917e309d0960df07e634d69c2e2825e791e32ceb"
+        },
+        "executor": {
+          "revision": 2,
+          "value_sha256": "82949afd9f4736495929db1dd07ecaad8168bc6d040337b64e0ae958ce468891"
+        }
+      },
+      "source_fingerprints": {
+        "feishu": {
+          "revision": 1,
+          "value_sha256": "104469f55d3a214fdf10f0378f735595d237a53318a085121848880381869bbe"
+        },
+        "github": {
+          "revision": 2,
+          "value_sha256": "bf755da54adb8eb4e9dc22a9807329fd817bb7f905a25bdb867b893cc008334d"
+        }
+      }
+    },
+    "stderr": "",
+    "stdout_sha256": "22374aa8589d9e3bccbecfaa2e3cebbb2312da87cf9f45d24c92217aaeea2612",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "dsh",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.443050+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "0.2.1-rc.3\n",
+    "stderr": "",
+    "stdout_sha256": "96bad88b8a312b7297de5c9c1d57cd158d8b2964dab42a39463bd743d94fbd7a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "-H",
+      "x-orchestrator-request: 1",
+      "http://127.0.0.1:3082/orchestrator/api/state"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.530819+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "setup": {
+        "machine": {
+          "stateDir": "/home/lsy/.dsh/state/gas-turbine-lifecycle-lab",
+          "promptMaxChars": 100000,
+          "admissionContextMaxPages": 10,
+          "admissionContextTimeoutMs": 15000
+        },
+        "problem": null,
+        "accounts": {
+          "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+          "agent": "lucy-assistant"
+        }
+      },
+      "health": {
+        "runtime": {
+          "state": "ready",
+          "detail": "Orchestrator is ready",
+          "at": "2026-11-03T05:15:19.674Z"
+        }
+      },
+      "load": {
+        "running": 1,
+        "queued": 0,
+        "maxWorkers": 1
+      },
+      "paused": false,
+      "masterId": "orchestrator-391b11e342f86cd09212857f354f3b57"
+    },
+    "stderr": "",
+    "stdout_sha256": "dcba82ba5c69d1cb6fbacce0430c80dd60f91ab2ac4f888ae50f23dd128ff4dd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "-H",
+      "x-orchestrator-request: 1",
+      "http://127.0.0.1:3082/orchestrator/api/tickets/910aedd83224919debc9bc9021d86450"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.542345+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "id": "910aedd83224919debc9bc9021d86450",
+      "title": "M0-00：本机、主仓库、dsh 接入与规格冻结",
+      "sessionId": "worker-910aedd83224919debc9bc9021d86450",
+      "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+      "mandate": {
+        "strength": "explicit",
+        "policyVersion": "1384243174ac0cc77f72c227868b6f6f",
+        "basis": {
+          "source": "github",
+          "scope": {
+            "number": 1,
+            "isPr": false,
+            "kind": "issue"
+          },
+          "row": "issues",
+          "sender": "shuyu-lin-dev",
+          "via": "addressed",
+          "addressed": "mention"
+        },
+        "actor": {
+          "source": "github",
+          "id": "shuyu-lin-dev",
+          "name": {
+            "zh": "shuyu-lin-dev",
+            "en": "shuyu-lin-dev"
+          }
+        },
+        "scope": "M0-00：本机、主仓库、dsh 接入与规格冻结"
+      },
+      "assignments": [
+        {
+          "id": "ae32bc24672908260900e63e389d8df9",
+          "state": "running",
+          "createdAt": "2026-11-03T07:19:39.101Z",
+          "startedAt": "2026-11-03T07:19:41.199Z",
+          "deliveredAt": "2026-11-03T07:20:35.537Z",
+          "report": {
+            "state": "progress",
+            "summary": "已创建本 Ticket draft PR https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/pull/2，author lucy-assistant，head agent/bootstrap-spec-freeze-910aedd83224。S=3980867902a9c102f18894e9acf65b8c72051b19，当前准确C=b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61，比较基准/merge-base=dad14da1561ac609a5d14076629d1698c53b3627。真实推送已退出0，失败路径真实回归四项PASS。Standards复核通过，Spec复核和完整实际采集正在进行。尚未E/K/LOCKED，尚未交付就绪；创建PR仅作内部关联，原来源trigger=43b6da81cc692e348a4e29d1e45cc0c9，后续独立审查回执按Issue#1。",
+            "at": "2026-11-03T07:58:18.060Z"
+          },
+          "ref": "worker-910aedd83224919debc9bc9021d86450"
+        }
+      ]
+    },
+    "stderr": "",
+    "stdout_sha256": "95d249c0ec50fe80a50b22e74903c40c1a434e3fe66f2ba95aceb4f4f8907369",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "-H",
+      "x-orchestrator-request: 1",
+      "http://127.0.0.1:3082/orchestrator/api/tickets"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.554012+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "items": [
+        {
+          "id": "910aedd83224919debc9bc9021d86450",
+          "sessionId": "worker-910aedd83224919debc9bc9021d86450",
+          "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+          "state": "open",
+          "stage": "working"
+        }
+      ],
+      "total": 1,
+      "next_offset": null
+    },
+    "stderr": "",
+    "stdout_sha256": "2ff78df6ecc6a34ca7197ddc0404231e7a9051cd10e9897391fefea3496c74c8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "-H",
+      "x-orchestrator-request: 1",
+      "http://127.0.0.1:3082/orchestrator/api/prompts"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.564400+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "revision": 4,
+      "savedAt": "2026-11-03T06:44:35.673Z",
+      "config": {
+        "communication": "使用中文回复。请求通过 GitHub 中对 lucy-assistant 的提及、飞书群 superagent-workspace 中的 @机器人、已订阅的任务线程和已授权私聊传入。把可审核的结果、真实 PR 链接以及需要用户处理的问题回复到原始对话。常规调查、重试和检查过程保留在内部记录。用户询问状态时直接回答，已经授权的工作持续完成。GitHub 中由代理发布的评论、review 回复和 PR 描述以固定披露行开始：本条内容由自动化代理发布。",
+        "scope": "按照用户明确请求及仓库规则实施修改，并自行完成相关检查、代码审查与必要修正。使用文件编辑工具修改代码；中间文件放入任务目录内被 Git 忽略的专门目录，禁止读写 /tmp。禁止主动使用视觉工具或截图。仅在缺少必要权限、资源或必须由用户决定的信息时提出具体问题。主动发现的候选遵循 observe 设置，仅记录观察结果。新消息中的修正、约束和停止要求持续生效。\n\nGT Lifecycle Lab 项目适配（本轮仅保存规则和完成接入准备）：\n当前准备请求不是真实开发 Ticket。保存配置、提示词或迁移文档产生的通知不是派工，不得据此创建或触发 Ticket、远程 Issue/PR/标签、提交、推送、上游克隆或应用开发；准备完成后停止。仅在后续用户明确派发真实 Ticket 后执行下文开发约定。保留完整 M0～M4 目标及依赖顺序。\n唯一目标 shuyu-lin-dev/gas-turbine-lifecycle-lab；主 checkout /home/lsy/workspace/lab/gas-turbine-lifecycle-lab；Ticket worktree 根 /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees。maxWorkers=1，一次一个开发任务；不通过额外 Ticket/worker 绕过并发。prepare 分支最后一段保持 DSH_SUPERAGENT_NAME，任务 ID 写入记录与提交信息。\n未提交的主 checkout 规则/资产不会自动进入独立 worktree。后续真实 M0-00 worker 在正式规则尚未提交时，先只读主 checkout 的 evidence/M0-00/preparation/20261103T142014+0800/TRANSFER.md，核对基准和清单、应用变更包到自己的独立 worktree，再按根 AGENTS.md 完成范围冻结与真实提交。规则提交并集成后直接读取工作树内正式入口，不依赖原交接包或原包归档。\n\nTeam Ticket scope 原交接约定（完整增补）：\nWork on one dependency-ready GT Lifecycle Lab task at a time with a single worker. The root AGENTS.md and DEV_SPEC.md govern execution; TASKS.md is the sole task and dependency ledger, and ACCEPTANCE.md defines the gates. Commit and freeze the current task's scope, inputs, expected results and required acceptance steps before application code. M0-00 only bootstraps the existing dsh binding and root rules; do not import or run RAG or implement the viewer during bootstrap. Execute FE-BASE and FE-INTEGRATE in M0, and RAG-BASE and RAG-INTEGRATE in M1, following the exact dependencies in TASKS.md. Fully clone the pinned upstreams and import their complete trees through git subtree only in the corresponding task. Preserve provenance and licenses; do not enable upstream skills or overwrite root rules. Use the Vue shell with the same-origin /viewer iframe and the actual RAG MCP entry python -m src.mcp_server.server. Finish, verify and lock each task before expanding scope. Preserve and continue the complete M0–M4 goal when dependencies are ready. Repair missing functionality and failures, report actual blockers, and continue within the user's existing authorization.\n\nMatt skills 后续调用约定：\n先读根 AGENTS.md、当前 DEV_SPEC/TASKS/ACCEPTANCE、GLOSSARY 与相关已有 ADR、前置证据；确认前置 LOCKED 且实际分支包含成果。GitHub Issues 仅派工关联，TASKS.md 是唯一任务/依赖/锁定状态清单；Issue 关闭/标签不能代替验收。领域文档为 single-context（根 GLOSSARY.md、按需 docs/adr/），triage 使用 docs/agents/triage-labels.md 本地映射。\n每个 Ticket 执行计划明确适用 skills。实质歧义用 grill-with-docs（grilling+domain-modeling），已确定要求直接沿用；术语/必要决策用 domain-modeling；模块接口设计参考 codebase-design；新增业务行为用 implement+tdd；缺陷/性能回归用 diagnosing-bugs；候选提交用 code-review。to-spec/to-tickets 只处理授权范围内确需变更的需求，不重新划分现有 27 项任务，不另建完成状态，实质调整保留记录和依赖映射。\n以实际 worker 解析到的 skill 文件和版本为准，记录路径/哈希及相对引用文件；不更新全局 skills。实际 dsh 工具为 skill({\"name\":\"名称\"})；部分 skill 禁止模型直接调用，授权使用其方法时以文件读取加载实际说明并如实记录，不改禁用标记或假记工具调用。已安装不等于实际调用。详读 docs/agents/workflow.md；每项记录实际采用/文件加载或不适用理由。skills 通用默认服从本项目范围、验收、提交和人工合并要求。\n\n\n项目文件操作要求（与根规则一致）：\n- 使用简单、完整的中文表达，保留英文 identifier 和适用的英文专用名词。描述具体动作和对象，不使用自造简称、无依据的比较、工作量评价或修改过程中的解释性残留。\n- 用户在消息中提及 AGENTS.md 时重新读取本文件；提及 Claude.md 时重新读取对应文件。用户修改过的文件必须重新读取，后续编辑保留当前内容。\n- 使用文件编辑工具修改代码；禁止通过 Python、sed、perl 或其他程序改写代码。长脚本保存为文件后执行，禁止把长脚本直接写进 Bash 命令。\n- 中间文件保存在当前工作目录明确设置并由 .gitignore 忽略的目录；禁止读写 /tmp。完整秘密配置备份保存在仓库外受控目录。\n- Python 直接 import 必需依赖，不用 try-except 包围 import；文件开头不添加 docstring 或 shebang。注释使用中文，identifier 保持英文。错误在发生位置立即终止；不吞掉错误，不设置掩盖失败的替代路径。\n- 成熟文件格式使用现成解析库。依赖按任务需要正常使用，禁止自行编写替代解析器或绕过必需依赖。\n- 实现和测试使用实际依赖，禁止 Mock、伪造结果和只为通过检查的特殊处理。保持必要验收与受影响回归，直至当前授权范围正确运行。\n- 禁止通过 Git 恢复或撤销代码；用户要求恢复文件时，使用文件编辑工具。禁止擅自进入 Plan mode、主动使用视觉功能或截图；示意图按需要使用 Mermaid。\n- 提供网页链接前阅读页面完整内容；发现库用法有误时重新阅读相关页面完整内容。用户以疑问句提出问题时直接回答该问题，随后继续已经授权的独立工作。",
+        "delivery": "所有提交的 author 和 committer 使用 lucy-assistant，邮箱使用 162398512+lucy-assistant@users.noreply.github.com。分支使用 prepare 命令创建的 agent/ 前缀。完成请求、相关验证和代码审查后创建可审核 PR，在原始飞书线程交付真实链接与必要说明。所有 PR 由用户手动合并；禁止启用 auto-merge、代替用户合并或 approve，禁止调用 gh-owner。保持提交历史，按请求范围提交修改。未完成的工作说明具体阻碍与尚需完成的内容，禁止宣称检查已经通过或修改已经生效。\n\nTeam Delivery requirements 原交接约定（完整增补）：\nFor every task, report the task ID, criteria commit S, tested code SHA C, commands, exit codes, per-criterion results, evidence hashes, remote branch and baseline. Required SKIP, BLOCKED, FAIL or NOT_RUN results block acceptance. Do not weaken assertions or substitute mocks for required integration paths. Separate candidate code commit C from evidence-only commit E: E records VERIFIED, references C, and must not alter implementation, tests, dependencies, behavior-changing configuration or acceptance semantics. After remotely verifying E and its baseline tag, which must not be overwritten, use a bookkeeping commit K to record LOCKED and reference the known ancestor SHAs. Push K and confirm its remote SHA in the external Ticket receipt; do not try to embed a commit's own final SHA in itself. Mark a task checked only after all required criteria pass and the exact evidence and baseline are remotely verifiable. Before starting a dependent task, verify its prerequisite baseline is included in the actual working branch; a tag or open PR alone does not prove integration. Reopen or create a change task before modifying locked behavior, preserve old baselines and rerun affected regressions. Use the configured agent commit identity. Preserve existing repository merge and protection rules; do not add an approval gate for routine implementation or push operations, and do not bypass an existing one.\n\nMatt 测试、审查与交付适配：\n在 S 冻结测试接口、输入、独立预期、命令、环境、证据与回归范围；既有授权和冻结决定直接沿用，不重复访谈或增设普通开发审批门。新增业务采用失败测试→最小实现→验证的小步 TDD；预期来自冻结规格或独立答案，不照抄实现。上游/文档/环境任务采用合适的来源、构建或实际运行验证，不写形式测试。浏览器、MCP、本地模型、Kafka、流引擎和持久化按阶段真实验证，Mock/上游测试不得替代硬验收。保留既有主动视觉/截图限制，具体必要浏览器操作按冻结范围核实，不以截图替代断言。\n缺陷/性能回归先建立能捕捉原始症状的反馈循环，保留失败、原因、修复和回归。code-review 记录固定比较基准、merge-base 与候选 SHA C，覆盖当前任务完整差异，不遗漏未提交改动；规范和规格分别审查。支持子代理时仅作只读并行审查，不新增开发 Ticket/worker；不支持时串行完成两个维度并如实记录。审查/实测后若改应用、测试、依赖或行为配置，形成新 C 并重验受影响条款。\n后续每项严格读取前置基线→提交冻结 S→按适用 skills 实现→候选 C→审查和必要实测→失败修复形成新 C 重验→证据 E→远程 E 和不可覆盖的基线标签→状态 K 登记 LOCKED→推送 K 并在外部 Ticket 回执核实 SHA→交付 PR 由用户手动审核合并→确认实际分支包含前置成果再推进。E 只含证据与必要登记，不夹带实现/测试/依赖/行为配置/验收语义变化；E 不填自身最终 SHA，K 不填自身最终 SHA；标签指向 E，旧标签不覆盖，K 仅引用已知祖先及已核实结果。FAIL/BLOCKED/SKIP/NOT_RUN 均阻止验收，TASKS 勾选只表示 LOCKED。改锁定行为先建变更任务或显式 REOPEN，保留旧基线并回归。标签/PR 不证明集成，需要合并时等待用户；Matt 的实现完成并提交后仍必须完成本项目实测、证据、远程验证和集成。skills 更新不得改变已冻结内容。\n保留中文沟通、代理 author/committer、披露行、gh-owner 禁令、用户手动审核合并及既有保护，不扩展账号或 Policy 权限。本轮 preparation 不是已提交 S，不勾选 M0-00，不登记 VERIFIED/LOCKED，不虚构 Ticket、SHA、推送或远程验收。\n\n\n测试使用实际依赖，禁止 Mock。文件操作、临时目录、Python、成熟格式解析与沟通要求按根规则执行。必要验收的失败、修复和回归证据按 S→C→E→K 保存。",
+        "skills": {}
+      },
+      "config_sha256": "e6968ca0d0ae0916ec753236aa0f3144fdbce3e4f725de4af59498c5145fd3a4",
+      "sessions": [
+        {
+          "sessionId": "orchestrator-391b11e342f86cd09212857f354f3b57",
+          "revision": 4
+        },
+        {
+          "sessionId": "worker-910aedd83224919debc9bc9021d86450",
+          "revision": 4
+        }
+      ],
+      "notificationPending": false
+    },
+    "stderr": "",
+    "stdout_sha256": "3707b481dc0492be5aee7c58db4a9ac44a7558312e51eb80a4c579393c7b1b6d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "ps",
+      "-eo",
+      "pid,args"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.584026+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": [
+      " 235967 tmux new-session -s dsh-superagent -d -P -F #{pane_pid} -n server -c /mnt/e/DSH_SuperAgent/dsh-superagent-prototype umask 077; exec /mnt/e/DSH_SuperAgent/.setup/service-bin/dsh --profile superagent --no-open >> /mnt/e/DSH_SuperAgent/dsh-superagent-prototype/.artifacts/dsh-superagent-superagent-20261103-121143-235960.log 2>&1",
+      " 235968 /home/lsy/.local/node/bin/node /home/lsy/.local/lib/node_modules/@deepseek-ai/dsh/lib/bin.js --profile superagent --no-open"
+    ],
+    "stderr": "",
+    "stdout_sha256": "f7246bb056a6cc95c1a4c536bc0ae5b5ab87d588006ceb943a8678c279a5d0b8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "api",
+      "user"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:28.593924+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "login": "lucy-assistant",
+      "id": 162398512
+    },
+    "stderr": "",
+    "stdout_sha256": "4e317c94d7057d21b822f67184723522a292fa383bf033baa20bf686d200d6a9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "repo",
+      "view",
+      "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+      "--json",
+      "nameWithOwner,viewerPermission,defaultBranchRef"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:30.817287+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "{\"defaultBranchRef\":{\"name\":\"main\"},\"nameWithOwner\":\"shuyu-lin-dev/gas-turbine-lifecycle-lab\",\"viewerPermission\":\"WRITE\"}\n",
+    "stderr": "",
+    "stdout_sha256": "4c1636230188681202c10e7ad89c0fbf4cb1f2c8c55ebf2937b774fdab81553c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "api",
+      "repos/shuyu-lin-dev/gas-turbine-lifecycle-lab"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:33.150469+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "full_name": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+      "permissions": {
+        "admin": false,
+        "maintain": false,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "default_branch": "main",
+      "visibility": "public"
+    },
+    "stderr": "",
+    "stdout_sha256": "e759c8ae63be58f7822f28ae215ba9407781303dec353c0bd74cd9281089fda4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "uname",
+      "-a"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:35.418919+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "Linux WIN-6HO7ENC4OCU 6.18.33.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jun  5 01:12:21 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+    "stderr": "",
+    "stdout_sha256": "0ee3018903bf7c9763db9c3a63e4f5b8b928a044ebce1602a8f0f72c3083f2b4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "context",
+      "show"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:35.451831+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "default\n",
+    "stderr": "",
+    "stdout_sha256": "01666ec060466c14b9fa06c613fbac449163f2a2017558fe16526209ab78c6b0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "context",
+      "inspect"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:35.572295+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "[\n    {\n        \"Name\": \"default\",\n        \"Metadata\": {},\n        \"Endpoints\": {\n            \"docker\": {\n                \"Host\": \"unix:///var/run/docker.sock\",\n                \"SkipTLSVerify\": false\n            }\n        },\n        \"TLSMaterial\": {},\n        \"Storage\": {\n            \"MetadataPath\": \"\\u003cIN MEMORY\\u003e\",\n            \"TLSPath\": \"\\u003cIN MEMORY\\u003e\"\n        }\n    }\n]\n",
+    "stderr": "",
+    "stdout_sha256": "ee957e0747d2328a52b4c9210052a1fddf721cdeaebbaddc288f438c65c54057",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "version",
+      "--format",
+      "{{json .}}"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:35.583463+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "{\"Client\":{\"Version\":\"29.5.3\",\"ApiVersion\":\"1.54\",\"DefaultAPIVersion\":\"1.54\",\"GitCommit\":\"d1c06ef\",\"GoVersion\":\"go1.26.4\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"BuildTime\":\"Wed Jun  3 17:59:16 2026\",\"Context\":\"default\"},\"Server\":{\"Platform\":{\"Name\":\"Docker Desktop 4.78.0 (229452)\"},\"Version\":\"29.5.3\",\"ApiVersion\":\"1.54\",\"MinAPIVersion\":\"1.40\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"Components\":[{\"Name\":\"Engine\",\"Version\":\"29.5.3\",\"Details\":{\"ApiVersion\":\"1.54\",\"Arch\":\"amd64\",\"BuildTime\":\"Wed Jun  3 17:59:56 2026\",\"Experimental\":\"false\",\"GitCommit\":\"285b471\",\"GoVersion\":\"go1.26.4\",\"KernelVersion\":\"6.18.33.1-microsoft-standard-WSL2\",\"MinAPIVersion\":\"1.40\",\"Module\":\"github.com/moby/moby/v2\",\"ModuleVersion\":\"v2.0.0+unknown\",\"Os\":\"linux\"}},{\"Name\":\"containerd\",\"Version\":\"v2.2.4\",\"Details\":{\"GitCommit\":\"193637f7ee8ae5f5aa5248f49e7baa3e6164966e\"}},{\"Name\":\"runc\",\"Version\":\"1.3.5\",\"Details\":{\"GitCommit\":\"v1.3.5-0-g488fc13e\"}},{\"Name\":\"docker-init\",\"Version\":\"0.19.0\",\"Details\":{\"GitCommit\":\"de40ad0\"}}],\"GitCommit\":\"285b471\",\"GoVersion\":\"go1.26.4\",\"KernelVersion\":\"6.18.33.1-microsoft-standard-WSL2\",\"BuildTime\":\"2026-06-03T17:59:56.000000000+00:00\"}}\n",
+    "stderr": "",
+    "stdout_sha256": "dfaea6edad64fdcf89b4b7e389f53ed50e6906ce9888df6734ebf8d89185b1f8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "info",
+      "--format",
+      "{{json .}}"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:35.648014+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": {
+      "ServerVersion": "29.5.3",
+      "OperatingSystem": "Docker Desktop",
+      "OSType": "linux",
+      "Name": "docker-desktop",
+      "KernelVersion": "6.18.33.1-microsoft-standard-WSL2",
+      "NCPU": 12,
+      "MemTotal": 14655565824,
+      "Labels": [
+        "com.docker.desktop.address=unix:///var/run/docker-cli.sock"
+      ]
+    },
+    "stderr": "",
+    "stdout_sha256": "ec9b51181afbc09609f22eec85da1156b90914dd283d170e697eb40c71f27f8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:36.558914+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "Docker Compose version v5.1.4\n",
+    "stderr": "",
+    "stdout_sha256": "6d6841c290e7d1c4949f660c36aa44d8b6e7fd931ab9d7c499006f4859b3ba21",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "wsl.exe",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:36.616114+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "WSL 版本: 2.7.8.0\r\n内核版本: 6.18.33.1-1\r\nWSLg 版本: 1.0.73.2\r\nMSRDC 版本: 1.2.6676\r\nDirect3D 版本: 1.611.1-81528511\r\nDXCore 版本: 10.0.26100.1-240331-1435.ge-release\r\nWindows: 10.0.22631.2861\r\n",
+    "stderr": "",
+    "stdout_sha256": "dc2389851b51e42a3523f41cb4527a1d766b2c0c128ee237a85a58132fc03da1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "wsl.exe",
+      "--list",
+      "--verbose"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:36.671498+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "  NAME              STATE           VERSION\r\n* ubuntu            Running         2\r\n  docker-desktop    Running         2\r\n",
+    "stderr": "",
+    "stdout_sha256": "ddc282b4606436656d9b7bff20e5bda5698c45e7178d49bfb5fd8f1a2bef36f0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "show",
+      "dad14da1561ac609a5d14076629d1698c53b3627:LICENSE"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:36.777539+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "MIT License\n\nCopyright (c) 2026 Shuyu Lin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "stderr": "",
+    "stdout_sha256": "1ac65e5a6313e49270bfbfd1a4b5cf82324d5c8203abb6f6f8c8307b3d7d6f29",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "ls-files"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:36.784545+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": ".gitattributes\n.gitignore\nACCEPTANCE.md\nAGENTS.md\nDEV_SPEC.md\nGLOSSARY.md\nLICENSE\nREADME.md\nTASKS.md\nassets/models/LICENSE.txt\nassets/models/README.md\nassets/models/THREE-LICENSE.txt\nassets/models/component-map.json\nassets/models/industrial-gas-turbine-educational.glb\nassets/models/industrial-model-inspection.json\nassets/models/source/LICENSE\nassets/models/source/README.md\nassets/models/source/THIRD_PARTY_NOTICES.md\nassets/models/source/export_glb.mjs\nassets/models/source/package-lock.json\nassets/models/source/package.json\nassets/models/source/src/inlet-support.ts\nassets/models/source/src/sectioned-case.ts\nassets/models/source/src/turbine.ts\nassets/models/source/verify_glb.mjs\ndocs/UPSTREAM_REUSE.md\ndocs/agents/domain.md\ndocs/agents/dsh.md\ndocs/agents/issue-tracker.md\ndocs/agents/triage-labels.md\ndocs/agents/workflow.md\nevidence/M0-00/criteria.md\nevidence/M0-00/initial-fingerprints.json\nevidence/M0-00/migration-verification.json\nevidence/M0-00/preparation/20261103T142014+0800/FINAL_STATUS.json\nevidence/M0-00/preparation/20261103T142014+0800/HANDOFF_EXIT.json\nevidence/M0-00/preparation/20261103T142014+0800/README.md\nevidence/M0-00/preparation/20261103T142014+0800/TRANSFER.md\nevidence/M0-00/preparation/20261103T142014+0800/TRANSFER_RECEIPT.json\nevidence/M0-00/preparation/20261103T142014+0800/archive-record.json\nevidence/M0-00/preparation/20261103T142014+0800/commands.json\nevidence/M0-00/preparation/20261103T142014+0800/configuration-diff.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-prompts-after.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-prompts-before.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-save-events.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-settings-after.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-settings-before.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-state-after.json\nevidence/M0-00/preparation/20261103T142014+0800/dsh-state-before.json\nevidence/M0-00/preparation/20261103T142014+0800/environment-focused.json\nevidence/M0-00/preparation/20261103T142014+0800/final-checks.json\nevidence/M0-00/preparation/20261103T142014+0800/identities.json\nevidence/M0-00/preparation/20261103T142014+0800/initial-workspace-inventory.json\nevidence/M0-00/preparation/20261103T142014+0800/installed-components.json\nevidence/M0-00/preparation/20261103T142014+0800/migration-DSH_HANDOFF.md.diff\nevidence/M0-00/preparation/20261103T142014+0800/migration-README.md.diff\nevidence/M0-00/preparation/20261103T142014+0800/migration-map.json\nevidence/M0-00/preparation/20261103T142014+0800/migration-project_AGENTS.md.diff\nevidence/M0-00/preparation/20261103T142014+0800/migration-project_DEV_SPEC.md.diff\nevidence/M0-00/preparation/20261103T142014+0800/migration-project_docs_UPSTREAM_REUSE.md.diff\nevidence/M0-00/preparation/20261103T142014+0800/original-SHA256SUMS.txt\nevidence/M0-00/preparation/20261103T142014+0800/original-sha256-check.json\nevidence/M0-00/preparation/20261103T142014+0800/prepare.sh\nevidence/M0-00/preparation/20261103T142014+0800/preserved-host-configuration.json\nevidence/M0-00/preparation/20261103T142014+0800/remote-final-verification.json\nevidence/M0-00/preparation/20261103T142014+0800/skill-invocation-audit.json\nevidence/M0-00/preparation/20261103T142014+0800/source-status-before.json\nevidence/M0-00/preparation/20261103T142014+0800/task-acceptance-mapping.json\nevidence/M0-00/preparation/20261103T142014+0800/team-additions.json\nevidence/M0-00/preparation/20261103T142014+0800/tickets-open-after.json\nevidence/M0-00/preparation/20261103T142014+0800/tickets-open-before.json\nevidence/M0-00/preparation/20261103T142014+0800/validation-archive.json\nevidence/M0-00/preparation/20261103T142014+0800/validation.json\nevidence/M0-00/preparation/20261103T142014+0800/worker-skills-manifest.json\nevidence/M0-00/preparation/20261103T142014+0800/wsl-decoded.json\nevidence/REPORT.template.md\nscripts/check_m0_00_failures.py\nscripts/requirements-m0-00.txt\nscripts/verify_m0_00.py\n",
+    "stderr": "",
+    "stdout_sha256": "facba8d55db1e8dcea12b53bee0125a1791137ed2cd76beb71351d6977b73138",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "api",
+      "repos/shuyu-lin-dev/gas-turbine-lifecycle-lab/git/ref/heads/agent/bootstrap-spec-freeze-910aedd83224"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:36.789866+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "{\"ref\":\"refs/heads/agent/bootstrap-spec-freeze-910aedd83224\",\"node_id\":\"REF_kwDOVg5Ly9oAM3JlZnMvaGVhZHMvYWdlbnQvYm9vdHN0cmFwLXNwZWMtZnJlZXplLTkxMGFlZGQ4MzIyNA\",\"url\":\"https://api.github.com/repos/shuyu-lin-dev/gas-turbine-lifecycle-lab/git/refs/heads/agent/bootstrap-spec-freeze-910aedd83224\",\"object\":{\"sha\":\"b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/shuyu-lin-dev/gas-turbine-lifecycle-lab/git/commits/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61\"}}",
+    "stderr": "",
+    "stdout_sha256": "765ac1e7e9d6b6cfc0bb5cd8e818a0fd96c561786e70ce3ef86e4b0563781a88",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "pr",
+      "list",
+      "--repo",
+      "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+      "--head",
+      "agent/bootstrap-spec-freeze-910aedd83224",
+      "--state",
+      "open",
+      "--json",
+      "number,url,author,headRefName,headRefOid,baseRefName"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T08:05:38.461722+00:00",
+    "exit_code": 0,
+    "state": "completed",
+    "stdout": "[{\"author\":{\"id\":\"U_kgDOCa4BMA\",\"is_bot\":false,\"login\":\"lucy-assistant\",\"name\":\"lucy-assistant\"},\"baseRefName\":\"main\",\"headRefName\":\"agent/bootstrap-spec-freeze-910aedd83224\",\"headRefOid\":\"b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61\",\"number\":2,\"url\":\"https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab/pull/2\"}]\n",
+    "stderr": "",
+    "stdout_sha256": "7a510d7f74fbc967f598efcbab01f08478f993cfd1e4696cb5198ad758f44b54",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

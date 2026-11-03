@@ -1,0 +1,35 @@
+{
+  "unchanged_files": [
+    {
+      "path": "/home/lsy/.dsh/profiles/superagent/cordis.yml",
+      "sha256": "c300dcf2ebc5f02062d6591268d29d3db6fe45e0cb138f5467276fe2ba06076e",
+      "bytes": 223
+    },
+    {
+      "path": "/home/lsy/.dsh/profiles/superagent/cordis.patch.yml",
+      "sha256": "2e4a318888e604b4b9eabe41be4739785830cc5ffa524c5b62a5d7bfa7e60a1c",
+      "bytes": 4251
+    },
+    {
+      "path": "/home/lsy/.dsh/profiles/superagent/package.json",
+      "sha256": "e6ac2b52905fefd477d60410d4e12224fb9e81bad60c2f5f7ed3e157ca66cc01",
+      "bytes": 319
+    },
+    {
+      "path": "/home/lsy/.local/bin/gh-agent-bot",
+      "sha256": "487872a9674b6936c70f2c2775381b96efc466de37b9af35828b21c59f219081",
+      "bytes": 244
+    },
+    {
+      "path": "/home/lsy/.config/gh-dsh-superagent-bot/hosts.yml",
+      "sha256": "e51779fe8aa685618999c666f19a5848a82c5594544408345e7640f70b666b5a",
+      "bytes": 220
+    },
+    {
+      "path": "/home/lsy/.config/gh-dsh-superagent-bot/config.yml",
+      "sha256": "984afedcf245679b68294c3b4e1afb6fedcda5aa60454eb60ded651cb64fb195",
+      "bytes": 1965
+    }
+  ],
+  "unchanged_settings": true
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224/.scratch-runtime/missing-command"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T07:52:05.037091+00:00",
+    "exit_code": null,
+    "state": "failed",
+    "stdout": null,
+    "stderr": null,
+    "failure_type": "FileNotFoundError"
+  },
+  {
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "-H",
+      "x-orchestrator-request: 1",
+      "http://127.0.0.1:3082/orchestrator/api/missing-m0-00-resource"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T07:52:05.037828+00:00",
+    "exit_code": 22,
+    "state": "failed",
+    "stdout": "输出已脱敏，仅保留 SHA256",
+    "stderr": "输出已脱敏，仅保留 SHA256",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "0fb219efe96c7b0a4962325763ebbe3324456de8ca7b7d1e71142d92a6d8eab2",
+    "failure_type": "RuntimeError"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/bootstrap-spec-freeze-910aedd83224",
+    "at": "2026-11-03T07:52:05.045418+00:00",
+    "exit_code": 0,
+    "state": "failed",
+    "stdout": null,
+    "stderr": null,
+    "stdout_sha256": "6d6841c290e7d1c4949f660c36aa44d8b6e7fd931ab9d7c499006f4859b3ba21",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "failure_type": "JSONDecodeError"
+  }
+]

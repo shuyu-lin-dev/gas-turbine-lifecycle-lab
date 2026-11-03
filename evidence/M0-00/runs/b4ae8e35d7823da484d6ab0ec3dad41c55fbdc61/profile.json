@@ -1,0 +1,18 @@
+{
+  "profile": "superagent",
+  "path": "/home/lsy/.dsh/profiles/superagent",
+  "stateDir": "/home/lsy/.dsh/state/gas-turbine-lifecycle-lab",
+  "plugin_ids": [
+    "webserver",
+    "dsh-superagent",
+    "dsh-superagent-feishu",
+    "agent-default-model",
+    "llm-pi-ai",
+    "web-search-deepseek",
+    "ui-settings-general"
+  ],
+  "processes": [
+    " 235967 tmux new-session -s dsh-superagent -d -P -F #{pane_pid} -n server -c /mnt/e/DSH_SuperAgent/dsh-superagent-prototype umask 077; exec /mnt/e/DSH_SuperAgent/.setup/service-bin/dsh --profile superagent --no-open >> /mnt/e/DSH_SuperAgent/dsh-superagent-prototype/.artifacts/dsh-superagent-superagent-20261103-121143-235960.log 2>&1",
+    " 235968 /home/lsy/.local/node/bin/node /home/lsy/.local/lib/node_modules/@deepseek-ai/dsh/lib/bin.js --profile superagent --no-open"
+  ]
+}
