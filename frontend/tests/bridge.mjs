@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFile, writeFile } from 'node:fs/promises'
 import { chromium } from 'playwright'
 import { pageFailureGuard } from './page-failure-guard.mjs'
+import { invalidProtocolCases } from './invalid-protocol-cases.mjs'
 import { cameraChangedAfterInput } from '../../scripts/fe-base/camera-observation.mjs'
 
 const [url, output] = process.argv.slice(2)
@@ -80,14 +81,14 @@ async function verify() {
   const childState = frame => frame.evaluate(() => ({ context: document.querySelector('#bridge-context').textContent,
     selected: document.querySelector('#bridge-selection').textContent, values: document.querySelector('#bridge-values').textContent }))
   async function toChild(frame, message) {
-    const before = await frame.evaluate(() => window.__feiObserve.messages.length)
+    const before = await frame.evaluate(() => window.__feiObserve.messageEvents)
     await page.evaluate(({ message, origin }) => document.querySelector('iframe[title="燃气轮机教学模型"]').contentWindow.postMessage(message, origin), { message, origin })
-    await frame.waitForFunction(before => window.__feiObserve.messages.length > before, before)
+    await frame.waitForFunction(before => window.__feiObserve.messageEvents > before, before)
   }
   async function toParent(frame, message) {
-    const before = await page.evaluate(() => window.__feiObserve.messages.length)
+    const before = await page.evaluate(() => window.__feiObserve.messageEvents)
     await frame.evaluate(({ message, origin }) => parent.postMessage(message, origin), { message, origin })
-    await page.waitForFunction(before => window.__feiObserve.messages.length > before, before)
+    await page.waitForFunction(before => window.__feiObserve.messageEvents > before, before)
   }
   await page.goto(url)
   const baselineListeners = await page.evaluate(() => window.__feiObserve.messageListeners)
@@ -199,6 +200,25 @@ async function verify() {
     assert.deepEqual(await childState(frame), beforeChild, name)
     record.rejections.push({ name, beforeParent, beforeChild, result: 'PASS' })
   }
+  const matrixMessages = [
+    { schema_version: '1', type: 'viewer-ready', viewer_instance_id: instance, context_revision: null, payload: {} },
+    base,
+    { ...base, type: 'component-selected', payload: { ...base.payload, trigger: 'request', result: 'selected' } },
+    { ...base, type: 'update-component-state', payload: fixture.snapshot_a },
+  ]
+  record.protocolMatrix = []
+  for (const message of matrixMessages) {
+    const cases = invalidProtocolCases(message)
+    for (const invalid of cases) {
+      const beforeParent = await parentState(), beforeChild = await childState(frame)
+      if (['viewer-ready', 'component-selected'].includes(message.type)) await toParent(frame, invalid.message)
+      else await toChild(frame, invalid.message)
+      assert.deepEqual(await parentState(), beforeParent, invalid.name)
+      assert.deepEqual(await childState(frame), beforeChild, invalid.name)
+      record.protocolMatrix.push({ type: message.type, name: invalid.name, beforeParent, beforeChild, result: 'PASS' })
+    }
+  }
+  await step('A02：四消息必填缺失、额外字段与各类非法输入经真实Window拒绝，父子业务保持')
   await page.evaluate(() => { const probe = document.createElement('iframe'); probe.name = 'wrong-source'; probe.src = 'about:blank'; document.body.append(probe) })
   const probe = page.frame({ name: 'wrong-source' })
   const beforeSource = await parentState(), childBeforeSource = await childState(frame)

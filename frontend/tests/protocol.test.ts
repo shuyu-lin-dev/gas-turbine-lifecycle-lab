@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import { validMessage } from '../../shared/viewer-protocol.ts'
+import { invalidProtocolCases } from './invalid-protocol-cases.mjs'
 
 const fixture = JSON.parse(readFileSync(new URL('../../evidence/FE-INTEGRATE/bridge-fixture.json', import.meta.url), 'utf8'))
 test('完整快照验证时间、质量、唯一部件和测量值', () => {
@@ -120,3 +121,20 @@ test('选择请求与回执只接受冻结字段及有效范围', () => {
     assert.equal(validMessage(invalid), false)
   }
 })
+
+for (const type of ['viewer-ready', 'select-component', 'component-selected', 'update-component-state']) {
+  test(`冻结四消息矩阵：${type}`, () => {
+    const payload = type === 'viewer-ready' ? {} : type === 'update-component-state' ? structuredClone(fixture.snapshot_a)
+      : type === 'component-selected' ? { component_id: 'compressor', request_id: 'matrix-request', trigger: 'request', result: 'selected' }
+        : { component_id: 'compressor', request_id: 'matrix-request' }
+    const message = type === 'viewer-ready' ? { ...ready }
+      : { schema_version: '1', type, viewer_instance_id: 'instance-a', ...fixture.context_a, payload }
+    assert.equal(validMessage(message), true)
+    if (type !== 'viewer-ready') {
+      for (const revision of [0, 2147483647]) assert.equal(validMessage({ ...message, context_revision: revision }), true)
+    }
+    const cases = invalidProtocolCases(message)
+    assert(cases.length > 0)
+    for (const invalid of cases) assert.equal(validMessage(invalid.message), false, invalid.name)
+  })
+}
