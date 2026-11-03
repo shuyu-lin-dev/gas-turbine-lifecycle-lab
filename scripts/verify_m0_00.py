@@ -38,18 +38,33 @@ class Collector:
         path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
 
     def run(self, argv, cwd=ROOT, project=None, encoding='utf-8'):
-        completed = subprocess.run(argv, cwd=cwd, capture_output=True, timeout=60)
-        stdout = completed.stdout.decode(encoding).replace('\x00', '')
-        stderr = completed.stderr.decode(encoding).replace('\x00', '')
         record = {'argv': argv, 'cwd': str(cwd), 'at': datetime.now(timezone.utc).isoformat(),
-                  'exit_code': completed.returncode, 'stdout_sha256': sha(completed.stdout),
-                  'stdout': project(stdout) if project and completed.returncode == 0 else stdout,
-                  'stderr': stderr}
+                  'exit_code': None, 'state': 'started', 'stdout': None, 'stderr': None}
         self.commands.append(record)
         self.save('commands.json', self.commands)
-        if completed.returncode != 0:
-            raise RuntimeError(f'命令失败，退出码 {completed.returncode}: {argv}')
-        return stdout
+        try:
+            completed = subprocess.run(argv, cwd=cwd, capture_output=True, timeout=60)
+            record.update(exit_code=completed.returncode, state='decoding',
+                          stdout_sha256=sha(completed.stdout), stderr_sha256=sha(completed.stderr))
+            stdout = completed.stdout.decode(encoding).replace('\x00', '')
+            stderr = completed.stderr.decode(encoding).replace('\x00', '')
+            if project:
+                record['stdout'] = project(stdout) if completed.returncode == 0 else '输出已脱敏，仅保留 SHA256'
+                record['stderr'] = '输出已脱敏，仅保留 SHA256' if stderr else ''
+            else:
+                record.update(stdout=stdout, stderr=stderr)
+            record['state'] = 'completed'
+            if completed.returncode != 0:
+                raise RuntimeError(f'命令失败，退出码 {completed.returncode}: {argv}')
+            return stdout
+        except Exception as error:
+            record.update(state='failed', failure_type=type(error).__name__)
+            if isinstance(error, subprocess.TimeoutExpired):
+                record.update(stdout_sha256=sha(error.stdout or b''), stderr_sha256=sha(error.stderr or b''),
+                              timeout_seconds=error.timeout)
+            raise
+        finally:
+            self.save('commands.json', self.commands)
 
     def get(self, path, project):
         text = self.run(['curl', '--fail', '--silent', '--show-error', '--max-time', '30',
@@ -104,12 +119,15 @@ def main():
     git = collector.git
     assert git('rev-parse', 'HEAD') == args.candidate
     assert len(args.criteria) == len(args.candidate) == 40
+    assert args.criteria == '3980867902a9c102f18894e9acf65b8c72051b19', '使用已提交的 M0-00 冻结 S'
+    assert args.criteria != args.candidate, '冻结 S 必须先于候选 C'
+    assert yaml.__version__ == '6.0.1'
     assert git('status', '--porcelain') == '', '准确候选必须包含全部改动'
     git('merge-base', '--is-ancestor', args.criteria, args.candidate)
     assert git('merge-base', BASE, args.candidate) == BASE
     assert git('show', args.criteria + ':ACCEPTANCE.md') == (ROOT / 'ACCEPTANCE.md').read_text().strip()
     assert sha((ROOT / 'ACCEPTANCE.md').read_bytes()) == '6593f43c6605311bec2375f0455b2e42940052a200ecc38f37da1bc93d382bb1'
-    git('show', args.criteria + ':evidence/M0-00/criteria.md')
+    assert git('show', args.criteria + ':evidence/M0-00/criteria.md') == (ROOT / 'evidence/M0-00/criteria.md').read_text().strip()
     git('diff', '--check', BASE, args.candidate)
     git('diff', '--check')
     assert git('symbolic-ref', '--short', 'HEAD') == BRANCH
@@ -219,7 +237,7 @@ def main():
     for item in assets:
         data = (ROOT / item['destination']).read_bytes()
         assert sha(data) == item['source_sha256'] and len(data) == item['source_bytes'], item['destination']
-    license_original = subprocess.check_output(['git', 'show', BASE + ':LICENSE'], cwd=ROOT)
+    license_original = collector.run(['git', 'show', BASE + ':LICENSE']).encode()
     assert (ROOT / 'LICENSE').read_bytes() == license_original
     tracked = git('ls-files').splitlines()
     assert not any(name.startswith(('frontend/', 'backend/', 'assistant/', 'vendor/', 'tests/')) for name in tracked)
