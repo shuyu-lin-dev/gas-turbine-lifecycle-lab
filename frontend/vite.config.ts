@@ -2,7 +2,21 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), {
+    name: 'viewer-entry-redirect',
+    configureServer(server) {
+      server.middlewares.use((request, response, next) => {
+        if (request.url === undefined) throw new Error('开发请求缺少URL')
+        const target = new URL(request.url, 'http://127.0.0.1')
+        if (target.pathname !== '/viewer') {
+          next()
+          return
+        }
+        response.writeHead(308, { Location: `/viewer/${target.search}` })
+        response.end()
+      })
+    },
+  }],
   server: {
     fs: { allow: ['..'] },
     proxy: {
