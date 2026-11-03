@@ -129,11 +129,10 @@ class Run:
         wheels = list((back / 'dist').glob('*.whl'))
         assert len(wheels) == 1
         self.command([self.uv, 'pip', 'install', '--python', python, '--no-deps', wheels[0]])
-        for origin in ['http://*', 'https://*.example.com']:
-            self.command([python, '-c', 'import gt_lifecycle_api.app'],
-                         env={'API_CORS_ORIGINS': json.dumps([origin])}, expected=1)
-        self.command([python, '-c', 'import gt_lifecycle_api.app'],
-                     env={'API_CORS_ORIGINS': '["http://127.0.0.1:5173"]'})
+        configuration_cases = json.loads((back / 'tests/configuration_cases.json').read_text())
+        for name, value, expected in configuration_cases:
+            self.command([python, '-B', '-c', 'import gt_lifecycle_api.app'],
+                         env={'API_INSTANCE_ID': 'api-a', 'API_CORS_ORIGINS': '[]', name: value}, expected=expected)
         api_a = self.api('api-a', 8201, python)
         api_b = self.api('api-b', 8202, python)
         web = self.web('web-direct-a', 'http://127.0.0.1:8201/api/v1')

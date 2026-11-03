@@ -53,6 +53,9 @@ def test_cors_allows_declared_origin_and_rejects_other_origin(api):
     assert preflight.status_code == 200
     assert preflight.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
     assert preflight.headers['access-control-allow-methods'] == 'GET'
+    denied_get = httpx.get(api + '/api/v1/health', headers={'Origin': 'http://untrusted.invalid'}, trust_env=False)
+    assert denied_get.status_code == 200
+    assert 'access-control-allow-origin' not in denied_get.headers
     denied = httpx.options(api + '/api/v1/health', headers={
         'Origin': 'http://untrusted.invalid', 'Access-Control-Request-Method': 'GET'}, trust_env=False)
     assert denied.status_code == 400
@@ -72,6 +75,15 @@ def test_invalid_configuration_prevents_startup(name, value):
                             env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
     assert result.returncode != 0
     assert name in result.stderr
+
+
+@pytest.mark.parametrize('name,value,expected', json.loads(
+    (Path(__file__).with_name('configuration_cases.json')).read_text()))
+def test_configuration_boundaries(name, value, expected):
+    result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                            env=dict(os.environ) | {'API_INSTANCE_ID': 'api-a', 'API_CORS_ORIGINS': '[]', name: value},
+                            capture_output=True, text=True, timeout=10)
+    assert result.returncode == expected, (name, value, result.stdout, result.stderr)
 
 
 @pytest.mark.parametrize('path', ['/', '/index.html', '/api/v1/missing'])

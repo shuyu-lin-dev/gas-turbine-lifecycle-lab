@@ -28,12 +28,15 @@ if not isinstance(origins, list) or not all(isinstance(origin, str) for origin i
     raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')
 for origin in origins:
     parsed = urlsplit(origin)
-    if (parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username
-            or parsed.password or parsed.path or parsed.query or parsed.fragment
-            or '*' in origin or any(character.isspace() for character in origin)):
+    if (parsed.scheme not in ('http', 'https') or not parsed.hostname
+            or parsed.username is not None or parsed.password is not None
+            or parsed.path or parsed.query or parsed.fragment or parsed.netloc.endswith(':')
+            or '*' in origin or '\\' in origin
+            or any(character.isspace() or ord(character) < 32 or ord(character) == 127 for character in origin)):
         raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
     validated = TypeAdapter(AnyHttpUrl).validate_python(origin)
-    if validated.host and '*' in validated.host:
+    if (validated.query is not None or validated.fragment is not None
+            or (validated.host and '*' in validated.host)):
         raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
     if parsed.port is not None and not 1 <= parsed.port <= 65535:
         raise ValueError('API_CORS_ORIGINS端口需要处于1～65535')
