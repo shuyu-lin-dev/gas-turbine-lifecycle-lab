@@ -55,10 +55,15 @@ test('固定标识长度、测量边界与缺失字段不能被隐式补齐', ()
   const duplicates = structuredClone(fixture.snapshot_a)
   duplicates.components[4].measurements.push({ ...duplicates.components[4].measurements[0] })
   assert.equal(validMessage(state(duplicates)), false)
-  for (const unit of ['', ' ', 'u'.repeat(33), 'u\n']) {
+  for (const unit of ['', ' ', 'u'.repeat(33), 'u\n', 'u\u0080', 'u\u0085', 'u\u009f']) {
     const input = structuredClone(fixture.snapshot_a)
     input.components[4].measurements[0].unit = unit
     assert.equal(validMessage(state(input)), false)
+  }
+  for (const unit of ['µg/m³', '°C']) {
+    const input = structuredClone(fixture.snapshot_a)
+    input.components[4].measurements[0].unit = unit
+    assert.equal(validMessage(state(input)), true)
   }
   for (const key of ['component_id', 'status', 'measurements']) {
     const input = structuredClone(fixture.snapshot_a)

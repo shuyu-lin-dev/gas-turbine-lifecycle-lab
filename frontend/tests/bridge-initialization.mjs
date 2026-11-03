@@ -1,18 +1,21 @@
 import assert from 'node:assert/strict'
 import { readFile, writeFile } from 'node:fs/promises'
 import { chromium } from 'playwright'
+import { pageFailureGuard } from './page-failure-guard.mjs'
 
 const [url, output] = process.argv.slice(2)
 assert(url && output && process.env.M0_01_CHROME)
 const origin = new URL(url).origin
 const fixture = JSON.parse(await readFile(new URL('../../evidence/FE-INTEGRATE/bridge-fixture.json', import.meta.url)))
 const record = { steps: [], errors: [] }
+const guard = pageFailureGuard(record)
 const browser = await chromium.launch({ executablePath: process.env.M0_01_CHROME,
   args: ['--no-sandbox', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
-try {
+async function verify() {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, reducedMotion: 'reduce' })
   page.setDefaultTimeout(120000)
-  page.on('pageerror', error => record.errors.push(error.message))
+  guard.watch(page)
+  page.context().on('page', created => guard.watch(created))
   await page.addInitScript({ path: new URL('./observe-bridge.js', import.meta.url).pathname })
   await page.addInitScript(() => localStorage.setItem('turbine-quality', 'balanced'))
   await page.goto(url)
@@ -87,12 +90,19 @@ try {
   record.messages = await page.evaluate(() => window.__feiObserve.messages)
   assert(record.messages.every(item => item.trusted && item.origin === origin))
   assert.deepEqual(record.errors, [])
-  record.state = 'PASS'
+  record.state = 'FUNCTIONAL_PASS'
+}
+try {
+  await guard.run(verify)
 } catch (error) {
   record.state = 'FAIL'
   record.failure = { name: error.name, message: error.message }
   throw error
 } finally {
+  await writeFile(output, JSON.stringify(record, null, 2) + '\n')
   await browser.close()
+  record.browserClosed = !browser.isConnected()
+  assert.equal(record.browserClosed, true)
+  if (record.state === 'FUNCTIONAL_PASS') record.state = 'PASS'
   await writeFile(output, JSON.stringify(record, null, 2) + '\n')
 }

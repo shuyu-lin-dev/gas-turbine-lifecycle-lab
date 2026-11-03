@@ -70,7 +70,7 @@ function validSnapshot(value: Record<string, unknown>): boolean {
         || (measurement.value !== null && (typeof measurement.value !== 'number' || !Number.isFinite(measurement.value)))
         || (['invalid', 'no_data'].includes(value.measurement_quality as string) && measurement.value !== null)
         || typeof measurement.unit !== 'string' || measurement.unit.length < 1 || measurement.unit.length > 32
-        || !measurement.unit.trim() || /[\u0000-\u001f\u007f]/.test(measurement.unit)) return false
+        || !measurement.unit.trim() || /\p{Cc}/u.test(measurement.unit)) return false
       tags.add(measurement.tag_id)
     }
   }

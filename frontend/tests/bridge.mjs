@@ -1,12 +1,15 @@
 import assert from 'node:assert/strict'
 import { readFile, writeFile } from 'node:fs/promises'
 import { chromium } from 'playwright'
+import { pageFailureGuard } from './page-failure-guard.mjs'
+import { cameraChangedAfterInput } from '../../scripts/fe-base/camera-observation.mjs'
 
 const [url, output] = process.argv.slice(2)
 assert(url && output && process.env.M0_01_CHROME)
 const fixture = JSON.parse(await readFile(new URL('../../evidence/FE-INTEGRATE/bridge-fixture.json', import.meta.url)))
 const started = performance.now()
 const record = { url, started_at: new Date().toISOString(), steps: [], errors: [], console: [], responses: [], messages: [], lifecycle: [], rejections: [], timeline: [], windows: [] }
+const guard = pageFailureGuard(record)
 const save = () => writeFile(output, JSON.stringify(record, null, 2) + '\n')
 const browser = await chromium.launch({ executablePath: process.env.M0_01_CHROME,
   args: ['--no-sandbox', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
@@ -36,6 +39,7 @@ function frameDetails(frame) {
 function observePage(page, role) {
   if (pageIds.has(page)) return
   pageIds.set(page, `${role}-${++pageSequence}`)
+  guard.watch(page)
   record.windows.push({ role, ...pageDetails(page) })
   timeline('page-observed', { role, ...pageDetails(page) })
   page.on('framenavigated', frame => timeline('frame-navigated', { ...pageDetails(page), ...frameDetails(frame) }))
@@ -50,14 +54,14 @@ function observePage(page, role) {
   page.on('console', message => timeline('page-console', { ...pageDetails(page), type: message.type(), text: redactText(message.text()) }))
 }
 browser.on('disconnected', () => timeline('browser-disconnected'))
-try {
+async function verify() {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, reducedMotion: 'reduce', timezoneId: 'Asia/Shanghai' })
   observePage(page, 'business-page')
   page.context().on('page', created => observePage(created, 'popup'))
   page.setDefaultTimeout(120000)
   await page.addInitScript({ path: new URL('./observe-bridge.js', import.meta.url).pathname })
+  await page.addInitScript({ path: new URL('../../scripts/fe-base/observe-webgl.js', import.meta.url).pathname })
   await page.addInitScript(() => localStorage.setItem('turbine-quality', 'balanced'))
-  page.on('pageerror', error => record.errors.push(String(error)))
   page.on('console', message => record.console.push({ type: message.type(), text: redactText(message.text()) }))
   page.on('response', response => record.responses.push({ url: safeUrl(response.url()), status: response.status() }))
   const step = async name => { record.steps.push(name); await save() }
@@ -172,6 +176,8 @@ try {
 
   const base = { schema_version: '1', type: 'select-component', viewer_instance_id: instance, ...fixture.context_a,
     payload: { component_id: 'compressor', request_id: 'rejection-case' } }
+  const badUnit = structuredClone(fixture.snapshot_a)
+  badUnit.components[4].measurements[0].unit = 'u\u0085'
   const badMessages = [
     ['错误实例', { ...base, viewer_instance_id: 'old-instance' }],
     ['未知类型', { ...base, type: 'fifth-message' }],
@@ -183,6 +189,7 @@ try {
     ['额外字段', { ...base, extra: true }],
     ['错误schema', { ...base, schema_version: 2 }],
     ['错误状态快照', { ...base, type: 'update-component-state', payload: { ...fixture.snapshot_a, measurement_quality: 'no_data' } }],
+    ['单位包含C1控制字符', { ...base, type: 'update-component-state', payload: badUnit }],
   ]
   for (const [name, message] of badMessages) {
     const beforeParent = await parentState(), beforeChild = await childState(frame)
@@ -295,6 +302,15 @@ try {
     await toChild(frame, { schema_version: '1', type: 'update-component-state', viewer_instance_id: instance, ...context, payload: fixture.snapshot_a })
     assert.deepEqual(await childState(frame), newState)
   }
+  const staleSelect = { ...base, device_id: 'fixture-device-b', run_id: 'fixture-run-b', context_revision: 1,
+    payload: { component_id: 'compressor', request_id: 'old-revision-selection' } }
+  const acknowledgementsBefore = await page.evaluate(request => window.__feiObserve.messages.filter(entry => entry.data.payload?.request_id === request).length, staleSelect.payload.request_id)
+  await toChild(frame, staleSelect)
+  await frame.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
+  assert.deepEqual(await childState(frame), newState)
+  assert.deepEqual(await parentState(), parentNewState)
+  assert.equal(await page.evaluate(request => window.__feiObserve.messages.filter(entry => entry.data.payload?.request_id === request).length, staleSelect.payload.request_id), acknowledgementsBefore)
+  record.oldRevisionSelection = { message: staleSelect, parent: parentNewState, child: newState, acknowledgementsBefore }
   await toParent(frame, { schema_version: '1', type: 'viewer-ready', viewer_instance_id: 'old-instance', context_revision: null, payload: {} })
   await toParent(frame, ready.data)
   await toParent(frame, { ...userMessage, viewer_instance_id: instance, ...fixture.context_a })
@@ -362,6 +378,48 @@ try {
   }
   await step('A06：连续五次实际卸载/挂载，父监听器恢复原数目，旧frame回调停止，无重复iframe或主画布')
 
+  const cameraContext = await parentState()
+  const observeCamera = () => frame.evaluate(() => window.__feBaseObserve('#scene'))
+  const rotationDelta = (a, b) => Math.max(...[0, 1, 2, 4, 5, 6, 8, 9, 10].map(index => Math.abs(a[index] - b[index])))
+  const distance = matrix => Math.hypot(...matrix.slice(12, 15))
+  await frame.waitForFunction(() => window.__feBaseObserve('#scene')?.main.length > 0)
+  const cameraBefore = await observeCamera()
+  await frame.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
+  const stationary = await observeCamera()
+  assert(rotationDelta(cameraBefore.main[0].matrix, stationary.main[0].matrix) <= 1e-5)
+  const canvas = frame.locator('#scene')
+  const cameraBounds = await canvas.boundingBox()
+  assert(await canvas.evaluate(canvas => {
+    const bounds = canvas.getBoundingClientRect()
+    return document.elementFromPoint(bounds.left + bounds.width * .55, bounds.top + bounds.height * .52) === canvas
+  }))
+  const input = { x: cameraBounds.x + cameraBounds.width * .55, y: cameraBounds.y + cameraBounds.height * .52, dx: 160, dy: 80 }
+  await page.mouse.move(input.x, input.y)
+  await page.mouse.down()
+  await page.mouse.move(input.x + input.dx, input.y + input.dy, { steps: 12 })
+  await page.mouse.up()
+  await frame.waitForFunction(cameraChangedAfterInput, { selector: '#scene', reference: stationary.main[0].matrix,
+    operation: 'rotate', afterInput: stationary.inputSequence })
+  const rotated = await observeCamera()
+  assert(rotationDelta(stationary.main[0].matrix, rotated.main[0].matrix) > 1e-5)
+  await page.mouse.move(input.x, input.y)
+  const inward = await observeCamera()
+  await page.mouse.wheel(0, -600)
+  await frame.waitForFunction(cameraChangedAfterInput, { selector: '#scene', reference: inward.main[0].matrix,
+    operation: 'zoom-in', afterInput: inward.inputSequence })
+  const zoomed = await observeCamera()
+  assert(distance(inward.main[0].matrix) - distance(zoomed.main[0].matrix) > .01)
+  const outward = await observeCamera()
+  await page.mouse.wheel(0, 600)
+  await frame.waitForFunction(cameraChangedAfterInput, { selector: '#scene', reference: outward.main[0].matrix,
+    operation: 'zoom-out', afterInput: outward.inputSequence })
+  const restored = await observeCamera()
+  assert(distance(restored.main[0].matrix) - distance(outward.main[0].matrix) > .01)
+  const afterCamera = await parentState()
+  for (const key of ['device', 'run', 'revision']) assert.equal(afterCamera[key], cameraContext[key])
+  record.embeddedCamera = { frame: frameDetails(frame), input, before: cameraBefore, stationary, rotated, zoomed, restored }
+  await step('A05/A06：真实嵌入canvas旋转与双向缩放改变GPU镜头矩阵，保持设备、批次与revision')
+
   await page.setViewportSize({ width: 390, height: 844 })
   await frame.waitForFunction(() => Math.abs(document.querySelector('#scene').getBoundingClientRect().width - innerWidth) < 1)
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
@@ -375,6 +433,9 @@ try {
   assert(!record.timeline.some(entry => entry.event === 'page-crash'))
   assert(!record.responses.some(response => response.status >= 400 && !response.url.includes('/api/')))
   record.state = 'FUNCTIONAL_PASS'
+}
+try {
+  await guard.run(verify)
 } catch (error) {
   record.state = 'FAIL'
   record.failure = { name: error.name, message: error.message }
