@@ -28,7 +28,7 @@ npm run dev:viewer --prefix frontend
 npm run dev --prefix frontend -- --port 5173
 ```
 
-Vue 在127.0.0.1的5173端口提供页面，`/viewer/`经同源代理到4177端口的真实完整viewer进程，`/api`代理到8201端口。`VIEWER_PROXY_TARGET`可更改开发代理目标，viewer的base必须保持`/viewer/`；API配置继续遵循 [M0-01运行说明](M0_01.md)。单独启动Python不需要Node或viewer。
+Vue 在127.0.0.1的5173端口提供页面，`/viewer/`的HTTP与WebSocket连接经同源代理到4177端口的真实完整viewer进程，`/api`代理到8201端口。`VIEWER_PROXY_TARGET`可更改开发代理目标，viewer的base必须保持`/viewer/`；API配置继续遵循 [M0-01运行说明](M0_01.md)。单独启动Python不需要Node或viewer。
 
 ```sh
 npm run build --prefix frontend
