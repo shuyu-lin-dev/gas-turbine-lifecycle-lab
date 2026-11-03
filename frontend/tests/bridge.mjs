@@ -5,20 +5,61 @@ import { chromium } from 'playwright'
 const [url, output] = process.argv.slice(2)
 assert(url && output && process.env.M0_01_CHROME)
 const fixture = JSON.parse(await readFile(new URL('../../evidence/FE-INTEGRATE/bridge-fixture.json', import.meta.url)))
-const record = { url, steps: [], errors: [], console: [], responses: [], messages: [], lifecycle: [], rejections: [] }
+const started = performance.now()
+const record = { url, started_at: new Date().toISOString(), steps: [], errors: [], console: [], responses: [], messages: [], lifecycle: [], rejections: [], timeline: [], windows: [] }
 const save = () => writeFile(output, JSON.stringify(record, null, 2) + '\n')
 const browser = await chromium.launch({ executablePath: process.env.M0_01_CHROME,
   args: ['--no-sandbox', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const origin = new URL(url).origin
 const ids = ['compressor', 'combustor', 'turbine', 'bearing_front', 'exhaust']
+const pageIds = new WeakMap(), frameIds = new WeakMap()
+let pageSequence = 0, frameSequence = 0
+const timeline = (event, details = {}) => record.timeline.push({ event, observed_elapsed_ms: performance.now() - started, ...details })
+const redactText = text => text.replace(/([?&](?:token|password|authorization|secret|signature|credential|api_key)=)[^&\s"'`]+/gi, '$1[REDACTED]')
+function safeUrl(value) {
+  if (!value) return value
+  const parsed = new URL(value)
+  for (const key of [...parsed.searchParams.keys()]) {
+    if (/token|password|authorization|secret|signature|credential|api_key/i.test(key)) parsed.searchParams.set(key, '[REDACTED]')
+  }
+  return parsed.href
+}
+function pageDetails(page) {
+  return { page_id: pageIds.get(page), page_url: safeUrl(page.url()), page_closed: page.isClosed() }
+}
+function frameDetails(frame) {
+  if (!frameIds.has(frame)) frameIds.set(frame, `frame-${++frameSequence}`)
+  const parent = frame.parentFrame()
+  return { frame_id: frameIds.get(frame), frame_name: frame.name(), frame_url: safeUrl(frame.url()),
+    parent_frame_id: parent ? frameDetails(parent).frame_id : null, is_main_frame: frame === frame.page().mainFrame() }
+}
+function observePage(page, role) {
+  if (pageIds.has(page)) return
+  pageIds.set(page, `${role}-${++pageSequence}`)
+  record.windows.push({ role, ...pageDetails(page) })
+  timeline('page-observed', { role, ...pageDetails(page) })
+  page.on('framenavigated', frame => timeline('frame-navigated', { ...pageDetails(page), ...frameDetails(frame) }))
+  page.on('frameattached', frame => timeline('frame-attached', { ...pageDetails(page), ...frameDetails(frame) }))
+  page.on('framedetached', frame => timeline('frame-detached', { ...pageDetails(page), ...frameDetails(frame) }))
+  page.on('domcontentloaded', () => timeline('domcontentloaded', pageDetails(page)))
+  page.on('load', () => timeline('load', pageDetails(page)))
+  page.on('close', () => timeline('page-close', pageDetails(page)))
+  page.on('crash', () => timeline('page-crash', pageDetails(page)))
+  page.on('requestfailed', request => timeline('request-failed', { ...pageDetails(page), request_url: safeUrl(request.url()),
+    navigation_request: request.isNavigationRequest(), error: request.failure()?.errorText ?? null }))
+  page.on('console', message => timeline('page-console', { ...pageDetails(page), type: message.type(), text: redactText(message.text()) }))
+}
+browser.on('disconnected', () => timeline('browser-disconnected'))
 try {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, reducedMotion: 'reduce', timezoneId: 'Asia/Shanghai' })
+  observePage(page, 'business-page')
+  page.context().on('page', created => observePage(created, 'popup'))
   page.setDefaultTimeout(120000)
   await page.addInitScript({ path: new URL('./observe-bridge.js', import.meta.url).pathname })
   await page.addInitScript(() => localStorage.setItem('turbine-quality', 'balanced'))
   page.on('pageerror', error => record.errors.push(String(error)))
-  page.on('console', message => record.console.push({ type: message.type(), text: message.text() }))
-  page.on('response', response => record.responses.push({ url: response.url(), status: response.status() }))
+  page.on('console', message => record.console.push({ type: message.type(), text: redactText(message.text()) }))
+  page.on('response', response => record.responses.push({ url: safeUrl(response.url()), status: response.status() }))
   const step = async name => { record.steps.push(name); await save() }
   const getFrame = async () => {
     await page.getByText('模型已就绪', { exact: true }).waitFor()
@@ -165,12 +206,28 @@ try {
   assert.deepEqual(await childState(frame), childBeforeSource)
   const other = new URL(url)
   other.hostname = other.hostname === 'localhost' ? '127.0.0.1' : 'localhost'
+  timeline('window-open-start', { ...pageDetails(page), target_url: safeUrl(other.href) })
   const popupEvent = page.waitForEvent('popup')
   await page.evaluate(target => window.open(target, 'wrong-origin'), other.href)
   const popup = await popupEvent
-  await popup.waitForLoadState('domcontentloaded')
+  observePage(popup, 'popup')
+  timeline('popup-acquired', pageDetails(popup))
+  timeline('popup-target-wait-start', { ...pageDetails(popup), expected_url: safeUrl(other.href) })
+  await popup.waitForURL(other.href, { waitUntil: 'domcontentloaded', timeout: 120000 })
+  timeline('popup-target-wait-complete', pageDetails(popup))
   const originBefore = await page.evaluate(() => window.__feiObserve.messages.length)
-  await popup.evaluate(({ message, origin }) => window.opener.postMessage(message, origin), { message: userMessage, origin })
+  timeline('popup-evaluate-start', pageDetails(popup))
+  await save()
+  const popupDocument = await popup.evaluate(({ message, origin }) => {
+    const identity = { url: location.href, origin: location.origin, document_time_origin_ms: performance.timeOrigin,
+      document_elapsed_ms: performance.now(), ready_state: document.readyState, opener_present: window.opener !== null }
+    window.opener.postMessage(message, origin)
+    return identity
+  }, { message: userMessage, origin })
+  timeline('popup-evaluate-complete', { ...pageDetails(popup), document: { ...popupDocument, url: safeUrl(popupDocument.url) } })
+  assert.equal(popupDocument.url, other.href)
+  assert.equal(popupDocument.origin, other.origin)
+  assert.equal(popupDocument.opener_present, true)
   await page.waitForFunction(count => window.__feiObserve.messages.length > count, originBefore)
   const wrongOrigin = await page.evaluate(() => window.__feiObserve.messages.at(-1))
   assert.equal(wrongOrigin.origin, other.origin)
@@ -195,7 +252,7 @@ try {
   await popup.addInitScript({ path: new URL('./observe-bridge.js', import.meta.url).pathname })
   await popup.addInitScript(() => localStorage.setItem('turbine-quality', 'balanced'))
   record.foreignParentConsole = []
-  popup.on('console', message => record.foreignParentConsole.push({ type: message.type(), text: message.text() }))
+  popup.on('console', message => record.foreignParentConsole.push({ type: message.type(), text: redactText(message.text()) }))
   await popup.evaluate(childOrigin => {
     const iframe = document.createElement('iframe')
     iframe.name = 'foreign-parent-viewer'
@@ -270,6 +327,8 @@ try {
         run_id: document.querySelector('#bridge-context').dataset.run, context_revision: Number(document.querySelector('#bridge-context').dataset.revision) } }))
     const staleMessage = { schema_version: '1', type: 'component-selected', viewer_instance_id: new URL(oldHref).searchParams.get('viewer_instance_id'),
       ...oldStats.context, payload: { component_id: 'compressor', request_id: `old-frame-cycle-${cycle}`, trigger: 'user', result: 'selected' } }
+    timeline('old-window-unload-start', { cycle: cycle + 1, ...pageDetails(page), ...frameDetails(oldFrame), old_href: safeUrl(oldHref) })
+    await save()
     await page.evaluate(message => {
       const document = window.document.querySelector('iframe[title="燃气轮机教学模型"]').contentDocument
       const script = document.createElement('script')
@@ -278,6 +337,7 @@ try {
     }, staleMessage)
     await page.waitForFunction(() => document.querySelectorAll('iframe[title="燃气轮机教学模型"]').length === 0)
     assert.equal(oldFrame.isDetached(), true)
+    timeline('old-window-unload-complete', { cycle: cycle + 1, ...pageDetails(page), ...frameDetails(oldFrame), detached: oldFrame.isDetached() })
     assert.equal(await page.evaluate(() => window.__feiObserve.messageListeners), baselineListeners)
     await page.getByRole('button', { name: '模型联动', exact: true }).click()
     frame = await getFrame()
@@ -312,6 +372,7 @@ try {
   record.messages = await page.evaluate(() => window.__feiObserve.messages)
   record.childMessages = await frame.evaluate(() => window.__feiObserve.messages)
   assert.deepEqual(record.errors, [])
+  assert(!record.timeline.some(entry => entry.event === 'page-crash'))
   assert(!record.responses.some(response => response.status >= 400 && !response.url.includes('/api/')))
   record.state = 'FUNCTIONAL_PASS'
 } catch (error) {
@@ -319,9 +380,13 @@ try {
   record.failure = { name: error.name, message: error.message }
   throw error
 } finally {
+  timeline('browser-close-start', { connected: browser.isConnected() })
   await save()
   await browser.close()
-  record.browserClosed = true
+  record.browserClosed = !browser.isConnected()
+  timeline('browser-close-complete', { connected: browser.isConnected() })
+  assert.equal(record.browserClosed, true)
+  record.finished_at = new Date().toISOString()
   if (record.state === 'FUNCTIONAL_PASS') record.state = 'PASS'
   await save()
 }

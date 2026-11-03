@@ -63,6 +63,6 @@ python3 scripts/verify_fe_integrate.py --criteria 7bc1cb91d822560b32f804891798ba
 
 [统一验收入口](../scripts/verify_fe_integrate.py)检查准确HEAD、干净候选、S和固定基准祖先、冻结夹具与前置完整证据哈希。实际执行上游必要test/build/build:labs、M0-01全部本地与容器健康/配置/错误路径、独立wheel、浏览器和完整viewer回归，然后对开发与Nginx部署分别执行六条桥接验收。Chrome采用1920×1080和SwiftShader软件WebGL2，当前不作性能结论。
 
-[主要浏览器入口](../frontend/tests/bridge.mjs)执行真实父子选件、状态、真实Window拒绝用例、上下文切换及五次生命周期；[初始化入口](../frontend/tests/bridge-initialization.mjs)执行ready前最新状态与未绑定子窗口；[显示状态入口](../frontend/tests/bridge-display-state.mjs)在原动静分组开关的两种状态下验证当前材质、上下文变化和状态恢复。浏览器使用上游原有balanced画质设置，完整几何与颜色断言保持。初始化探针使用真实DOM激活和实际Window，窗口消息由浏览器产生真实origin/source；没有伪造MessageEvent或网络响应。观察器仅记录真实WebGL材质上传与后续绘制、消息和资源调用，保持函数原参数和返回值。所有命令、退出码、原始输出、DOM/网络/控制台、消息与GPU证据及SHA256保存在输出目录，不采集图像或截图。
+[主要浏览器入口](../frontend/tests/bridge.mjs)执行真实父子选件、状态、真实Window拒绝用例、上下文切换及五次生命周期；[初始化入口](../frontend/tests/bridge-initialization.mjs)执行ready前最新状态与未绑定子窗口；[显示状态入口](../frontend/tests/bridge-display-state.mjs)在原动静分组开关的两种状态下验证当前材质、上下文变化和状态恢复。浏览器使用上游原有balanced画质设置，完整几何与颜色断言保持。初始化探针使用真实DOM激活和实际Window，窗口消息由浏览器产生真实origin/source；没有伪造MessageEvent或网络响应。观察器仅记录真实WebGL材质上传与后续绘制、消息和资源调用，保持函数原参数和返回值。主要浏览器入口同时记录页面/frame身份、目标导航、文档就绪、关闭、崩溃、失败请求，以及异源evaluate和旧窗口卸载的单调时刻；敏感query值隐藏，浏览器关闭后保存实际连接状态。所有命令、退出码、原始输出、DOM/网络/控制台、消息与GPU证据及SHA256保存在输出目录，不采集图像或截图。
 
 干净复现使用`git clone --no-local --no-checkout`在当前忽略目录建立`clean-<唯一编号>`，以`git switch --detach <C>`检出准确候选，origin设置为唯一主仓库。重新准备该clone内的TMPDIR/TMP/TEMP及缓存，运行同一入口并添加`--clean`。不共享node_modules/venv或未追踪源码；平台Chrome、系统共享库与uv可复用已声明版本。历史验收入口与冻结保持，当前任务通过其实际行为入口重跑适用回归，完整viewer变化由本项授权和验收覆盖。
