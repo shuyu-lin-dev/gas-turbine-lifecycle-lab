@@ -117,7 +117,7 @@ try {
     await page.locator('.parts-launch').click();
     await page.waitForFunction(() => document.querySelector('.parts-lab').open);
     await rendered('.parts-lab canvas');
-    await page.locator('.lab-library-toggle').click();
+    assert(await page.locator('.lab-library').isVisible(), '桌面组件目录应直接可见');
     await page.locator('.lab-secondary > summary').click();
     const expected = {
       'turbine-1': 'First-stage turbine rotor', 'single-blade': 'First-stage turbine blade',
@@ -155,7 +155,6 @@ try {
       }, originalPosition);
       record('extraction-' + id, {originalPosition, extractedPosition, restoredPosition: await position()});
     }
-    await page.locator('.lab-library-toggle').click();
     await interact('.parts-lab canvas');
     await page.locator('[data-command="blade"]').click();
     assert(await page.locator('.parts-lab').evaluate(el => el.classList.contains('blade-hero')));
