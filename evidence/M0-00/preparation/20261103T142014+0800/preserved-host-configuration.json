@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-11-03T14:45:50.759196+08:00",
+  "profile_files": [
+    {
+      "file": "cordis.yml",
+      "before_sha256": "c300dcf2ebc5f02062d6591268d29d3db6fe45e0cb138f5467276fe2ba06076e",
+      "current_sha256": "c300dcf2ebc5f02062d6591268d29d3db6fe45e0cb138f5467276fe2ba06076e",
+      "byte_identical": true,
+      "changed_fields": [],
+      "written_by_this_preparation": false,
+      "current_content_preserved": true
+    },
+    {
+      "file": "cordis.patch.yml",
+      "before_sha256": "6ffb84fc102e9739a5734b4e271df6670c60e7cef5af27d61d7d9a930ad9798e",
+      "current_sha256": "2e4a318888e604b4b9eabe41be4739785830cc5ffa524c5b62a5d7bfa7e60a1c",
+      "byte_identical": false,
+      "changed_fields": [],
+      "written_by_this_preparation": false,
+      "current_content_preserved": true
+    },
+    {
+      "file": "package.json",
+      "before_sha256": "e6ac2b52905fefd477d60410d4e12224fb9e81bad60c2f5f7ed3e157ca66cc01",
+      "current_sha256": "e6ac2b52905fefd477d60410d4e12224fb9e81bad60c2f5f7ed3e157ca66cc01",
+      "byte_identical": true,
+      "changed_fields": [],
+      "written_by_this_preparation": false,
+      "current_content_preserved": true
+    },
+    {
+      "file": "pnpm-lock.yaml",
+      "before_sha256": "39973d409ef61bb6a62dbf2e0a96c1458e8a564cc4e5468521e4ca2f725386a7",
+      "current_sha256": "39973d409ef61bb6a62dbf2e0a96c1458e8a564cc4e5468521e4ca2f725386a7",
+      "byte_identical": true,
+      "changed_fields": [],
+      "written_by_this_preparation": false,
+      "current_content_preserved": true
+    }
+  ],
+  "worker_skill_files_unchanged": 50,
+  "source_revision": 2,
+  "policy_revision": 1,
+  "executor_revision": 2,
+  "prompt_revision": 4,
+  "open_tickets": 0,
+  "note": "profile 当前内容完整保留；字段变化通过 SHA256 登记，秘密值只保存在仓库外受控备份。"
+}

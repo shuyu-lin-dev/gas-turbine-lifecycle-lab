@@ -1,0 +1,20 @@
+--- v2/project/docs/UPSTREAM_REUSE.md
++++ docs/UPSTREAM_REUSE.md
+@@ -2,7 +2,7 @@
+ 
+ 版本：v2。日期：2026-11-03（Asia/Shanghai）。
+ 
+-本文件规定两个上游项目怎样进入 GT Lifecycle Lab、哪些能力直接保留、哪些接入能力需要新增。完整业务范围见根目录 `DEV_SPEC.md`；任务顺序、硬验收与交付规则分别以 `TASKS.md`、`ACCEPTANCE.md`、`AGENTS.md` 为准。本文件不另设一套完成状态，也不改变这些文件的验收要求。
++本文件规定两个上游项目怎样进入 GT Lifecycle Lab、哪些能力直接保留、哪些接入能力需要新增。完整业务范围见 [DEV_SPEC.md](../DEV_SPEC.md)；任务顺序、硬验收与交付规则分别以 [TASKS.md](../TASKS.md)、[ACCEPTANCE.md](../ACCEPTANCE.md)、[AGENTS.md](../AGENTS.md) 为准。本文件不另设一套完成状态，也不改变这些文件的验收要求。
+ 
+ **当前交付是方案、规则与已准备的模型资产。两个上游的完整源码尚未由本包在用户 WSL 中克隆、导入、运行或验收；下述集成是待执行工作。** “已有源码”仅表示固定上游快照中能读到相应实现，不能替代用户环境中的执行证据。
+ 
+@@ -13,7 +13,7 @@
+ | [AlexZhangji/turbine-explorer](https://github.com/AlexZhangji/turbine-explorer) | `efc5d2ecd12055f880a41b47215791c22d3656d4` | `vendor/turbine-explorer/` | 保留完整 Three.js 演示源码、组件检视与程序几何；增加嵌入模式和业务消息桥接 |
+ | [jerry-ai-dev/MODULAR-RAG-MCP-SERVER](https://github.com/jerry-ai-dev/MODULAR-RAG-MCP-SERVER) | `f658c5a4011c8b826707a65a3b11ce9301b0626f` | `vendor/modular-rag-mcp-server/` | 保留文档导入、Chroma、BM25、混合检索、Ollama provider、MCP stdio 和追踪模块；补燃机业务合同 |
+ 
+-本机执行时，先在 `/home/lsy/workspace/lab` 范围内完整克隆两个上游，核对上述 commit，再通过 **Git subtree** 纳入唯一主仓库。不得把引用版本自动改为执行当天的 `main`。如需升级，建立单独变更任务，记录旧、新 SHA、差异与受影响验收。
++本机后续执行到对应任务时，分别在 `/home/lsy/workspace/lab` 范围内完整克隆相应上游，核对上述 commit，再通过 **Git subtree** 纳入唯一主仓库。FE-BASE/FE-INTEGRATE 在 M0，RAG-BASE/RAG-INTEGRATE 在 M1；本轮接入准备不克隆或导入。不得把引用版本自动改为执行当天的 `main`。如需升级，建立单独变更任务，记录旧、新 SHA、差异与受影响验收。
+ 
+ 导入目录不得遗留独立 `.git`，不得成为无法由普通主仓库 checkout 还原的嵌套仓库或隐式 gitlink。上游原始源码、配置示例、测试和已有来源说明应随 subtree 一起纳入；依赖安装产物、模型权重、数据库、凭据和临时日志不进入 Git。上游资料、演示数据和素材各自的许可仍需保留并核对。
+ 

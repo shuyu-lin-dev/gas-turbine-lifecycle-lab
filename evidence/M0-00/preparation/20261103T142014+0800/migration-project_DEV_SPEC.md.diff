@@ -1,0 +1,29 @@
+--- v2/project/DEV_SPEC.md
++++ DEV_SPEC.md
+@@ -8,7 +8,7 @@
+ 
+ 项目用于教学、工程能力验证和面试演示，核心场景是负荷变化下的性能异常分析。通过通用燃机教学结构、可复现合成数据和带来源的专业资料，串起监测、异常、数据查询、知识检索、检查建议和检修事件。它不是制造商真实 CAD、经过工业标定的数字孪生，也不直接控制设备。
+ 
+-本包为执行规格与资产交接。所有软件任务初始为 PLANNED；本机仓库绑定、完整上游克隆、应用实现和硬验收由本地 dsh-superagent 实际完成。已有 GLB 解析记录只证明资产离线检查，不替代浏览器或业务验收。
++本文为正式仓库的完整执行规格，由 v2 交接材料迁入。任务的实际状态只查 TASKS.md；接入准备结果另见 evidence/M0-00/preparation/ 下记录。完整上游克隆、应用实现和正式硬验收由本地 dsh-superagent 实际完成。已有 GLB 解析记录只证明资产离线检查，不替代浏览器或业务验收。
+ 
+ ## 1. 目标与根本原则
+ 
+@@ -318,7 +318,7 @@
+ 
+ ## 12. 仓库与 dsh 工作流
+ 
+-拟定唯一远程是 `shuyu-lin-dev/gas-turbine-lifecycle-lab`；此前连接读取返回 404 仅说明未能读取。本机核实目标、存在性、agent 身份与写权限，不自动换用其它仓库。
++唯一远程是 `shuyu-lin-dev/gas-turbine-lifecycle-lab`。交接材料此前连接读取返回 404 只是历史观察；本轮已读取既有仓库和权限元数据，实际推送留待真实 worker。每次执行核对目标与 agent 身份，不自动换用其它仓库。
+ 
+ 主仓库规划含 frontend、backend、assistant、vendor/turbine-explorer、vendor/modular-rag-mcp-server、data/synthetic、docs、evidence 和部署配置。vendor 是被主仓库实际追踪的源码，不留嵌套 .git。自有代码与上游、模型、资料的许可分别记录。
+ 
+@@ -335,7 +335,7 @@
+ 
+ 必要 FAIL/BLOCKED/SKIP/NOT_RUN 不算通过；TASKS 勾选只表示 LOCKED。标签是基线标识，不是文件写保护。后续变更注明影响并回归，保留旧基线。
+ 
+-授权内普通开发、修复、提交和推送连续进行；保留已有合并/分支保护。提交、推送、合并分别记录，开 PR 不等于完成。细则由 AGENTS.md 与 DSH_HANDOFF.md 管理。
++后续真实 Ticket 授权内普通开发、修复、提交和推送连续进行；保留已有合并/分支保护，PR 由用户手动审核合并。提交、推送、合并分别记录，开 PR 不等于完成。细则由 AGENTS.md、docs/agents/dsh.md 与 docs/agents/workflow.md 管理；本轮准备边界以 AGENTS.md 为准。
+ 
+ ## 13. 阶段与里程碑
+ 

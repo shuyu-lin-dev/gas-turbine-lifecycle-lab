@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-11-03T14:55:58.759167+08:00",
+  "preparation_complete": true,
+  "repository_normalization_complete": true,
+  "formal_m0_00_worker_acceptance": "NOT_RUN",
+  "task_checkboxes_changed": false,
+  "verified_or_locked_registered": false,
+  "new_project_commits": 0,
+  "pushes": 0,
+  "remote_issues_prs_or_tags_created": 0,
+  "external_messages_sent": 0,
+  "git": {
+    "head": "dad14da1561ac609a5d14076629d1698c53b3627",
+    "branch": "main",
+    "origin": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git",
+    "default_branch": "main",
+    "ahead": 0,
+    "behind": 0,
+    "index_empty": true,
+    "worktree_has_uncommitted_authorized_changes": true,
+    "remote_ref_observation": "2026-11-03T14:54:50+08:00",
+    "remote_observer": "shuyu-lin-dev"
+  },
+  "handoff_original_moved": true,
+  "dsh": {
+    "profile": "superagent",
+    "source_github_revision": 2,
+    "policy_revision": 1,
+    "executor_revision": 2,
+    "prompts_revision": 4,
+    "router_last_used_revision": 4,
+    "maxWorkers": 1,
+    "running": 0,
+    "queued": 0,
+    "open_tickets": 0,
+    "prepare_sha256": "3688da872189a8c2d773a6bc68ca0ff039d21d586e477b41e75eb02edd885ae4"
+  },
+  "worker_transfer": "TRANSFER.md and transfer/manifest.json",
+  "environment_items_requiring_future_task_work": [
+    "Python pip/ensurepip unavailable",
+    "uv unavailable",
+    "git lfs version exits 128",
+    "Intermittent GitHub EOF/TLS termination from host CLI"
+  ],
+  "required_future_m0_00_validation": [
+    "real Ticket admission",
+    "real independent worker worktree",
+    "committed scope S",
+    "actual worker commit/push",
+    "remote verification and PR delivery"
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "at": "2026-11-03T14:30:15.833319+08:00",
+    "command": [
+      "wsl.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "WSL 版本: 2.7.8.0\n内核版本: 6.18.33.1-1\nWSLg 版本: 1.0.73.2\nMSRDC 版本: 1.2.6676\nDirect3D 版本: 1.611.1-81528511\nDXCore 版本: 10.0.26100.1-240331-1435.ge-release\nWindows: 10.0.22631.2861",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-03T14:30:15.876787+08:00",
+    "command": [
+      "wsl.exe",
+      "--list",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "stdout": "NAME              STATE           VERSION\n* ubuntu            Running         2\n  docker-desktop    Running         2",
+    "stderr": ""
+  }
+]

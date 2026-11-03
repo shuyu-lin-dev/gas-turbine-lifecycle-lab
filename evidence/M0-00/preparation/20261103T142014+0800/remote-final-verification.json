@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-11-03T14:54:50+08:00",
+  "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+  "default_branch": "main",
+  "confirmed_ref": "refs/heads/main",
+  "confirmed_sha": "dad14da1561ac609a5d14076629d1698c53b3627",
+  "type": "commit",
+  "tool": "mcp__codex_apps__github_fetch",
+  "request_url": "https://api.github.com/repos/shuyu-lin-dev/gas-turbine-lifecycle-lab/git/ref/heads/main",
+  "connection_actor": "shuyu-lin-dev",
+  "tool_is_error": false,
+  "worker_cli_identity_evidence": "commands.json and identities.json",
+  "actual_worker_push": "NOT_RUN",
+  "host_network_observations": [
+    {
+      "at": "2026-11-03T14:50:46.323492+08:00",
+      "command": ["gh", "repo", "view", "--json", "nameWithOwner,viewerPermission,defaultBranchRef"],
+      "account_context": "configured worker shim / lucy-assistant",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Post \"https://api.github.com/graphql\": EOF\n"
+    },
+    {
+      "at": "2026-11-03T14:52:53.572471+08:00",
+      "command": ["git", "ls-remote", "--symref", "origin"],
+      "account_context": "configured worker Git environment",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: unable to access 'https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.\n"
+    }
+  ]
+}

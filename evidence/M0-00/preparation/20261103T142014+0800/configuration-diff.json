@@ -1,0 +1,56 @@
+{
+  "github_source": {
+    "before_revision": 2,
+    "after_revision": 2,
+    "value_unchanged": true
+  },
+  "policy": {
+    "before_revision": 1,
+    "after_revision": 1,
+    "value_unchanged": true
+  },
+  "eval": {
+    "before_revision": 0,
+    "after_revision": 0,
+    "value_unchanged": true
+  },
+  "executor": {
+    "before_revision": 1,
+    "after_revision": 2,
+    "changed": {
+      "maxWorkers": {
+        "before": 3,
+        "after": 1
+      },
+      "directory": {
+        "before": "/mnt/e/DSH_SuperAgent/workspaces/tickets/gas-turbine-lifecycle-lab",
+        "after": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees"
+      },
+      "prepare": {
+        "before": "git -C /mnt/e/DSH_SuperAgent/workspaces/gas-turbine-lifecycle-lab fetch --no-tags \"https://github.com/$DSH_SUPERAGENT_GITHUB_REPOSITORY.git\" \"${DSH_SUPERAGENT_GITHUB_PR_HEAD:-HEAD}:refs/dsh-superagent/$DSH_SUPERAGENT_TICKET\" && git -C /mnt/e/DSH_SuperAgent/workspaces/gas-turbine-lifecycle-lab worktree add -b \"agent/$DSH_SUPERAGENT_NAME\" \"$DSH_SUPERAGENT_DIR\" \"refs/dsh-superagent/$DSH_SUPERAGENT_TICKET\"",
+        "after": "set -eu\ngt_main=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab\ngt_root=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees\n: \"${DSH_SUPERAGENT_DIR:?missing ticket directory}\"\n: \"${DSH_SUPERAGENT_NAME:?missing framework ticket name}\"\n: \"${DSH_SUPERAGENT_TICKET:?missing ticket id}\"\n[ \"${DSH_SUPERAGENT_GITHUB_REPOSITORY:-}\" = shuyu-lin-dev/gas-turbine-lifecycle-lab ] || exit 60\n[ \"${DSH_SUPERAGENT_GITHUB_ACCOUNT:-}\" = lucy-assistant ] || exit 61\n[ \"$(realpath \"$gt_main\")\" = \"$gt_main\" ] || exit 62\n[ \"$(realpath \"$gt_root\")\" = \"$gt_root\" ] || exit 63\n[ \"$(git -C \"$gt_main\" rev-parse --show-toplevel)\" = \"$gt_main\" ] || exit 64\n[ \"$(git -C \"$gt_main\" remote get-url origin)\" = https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git ] || exit 65\ncase \"$DSH_SUPERAGENT_NAME\" in ''|.|..|*/*) exit 66;; esac\n[ \"$DSH_SUPERAGENT_DIR\" = \"$gt_root/$DSH_SUPERAGENT_NAME\" ] || exit 67\n[ ! -e \"$DSH_SUPERAGENT_DIR\" ] && [ ! -L \"$DSH_SUPERAGENT_DIR\" ] || exit 68\ngt_ref=\"refs/dsh-superagent/$DSH_SUPERAGENT_TICKET\"\ngt_branch=\"agent/$DSH_SUPERAGENT_NAME\"\ngit check-ref-format \"$gt_ref\"\ngit check-ref-format \"refs/heads/$gt_branch\"\ngt_start=\"${DSH_SUPERAGENT_GITHUB_PR_HEAD:-refs/heads/main}\"\ngit -C \"$gt_main\" fetch --no-tags origin \"$gt_start:$gt_ref\"\ngt_base=$(git -C \"$gt_main\" rev-parse --verify \"${gt_ref}^{commit}\")\ngit -C \"$gt_main\" merge-base --is-ancestor dad14da1561ac609a5d14076629d1698c53b3627 \"$gt_base\"\ngit -C \"$gt_main\" worktree add -b \"$gt_branch\" \"$DSH_SUPERAGENT_DIR\" \"$gt_base\"\n[ \"$(git -C \"$DSH_SUPERAGENT_DIR\" rev-parse --show-toplevel)\" = \"$DSH_SUPERAGENT_DIR\" ] || exit 69\n[ \"$(git -C \"$DSH_SUPERAGENT_DIR\" config user.name)\" = lucy-assistant ] || exit 70\n[ \"$(git -C \"$DSH_SUPERAGENT_DIR\" config user.email)\" = 162398512+lucy-assistant@users.noreply.github.com ] || exit 71\nprintf 'Prepared independent worktree %s on %s at committed base %s\\n' \"$DSH_SUPERAGENT_DIR\" \"$gt_branch\" \"$gt_base\"\n"
+      }
+    }
+  },
+  "prompts": {
+    "before_revision": 2,
+    "after_revision": 4,
+    "communication_unchanged": true,
+    "original_scope_preserved": true,
+    "original_delivery_preserved": true,
+    "skills_unchanged": true,
+    "scope_original_addition_complete": true,
+    "delivery_original_addition_complete": true,
+    "persisted_readback_equal_to_saved": true,
+    "effect": "next-request",
+    "model_request_for_verification": "NOT_RUN",
+    "router_last_used_revision": 3,
+    "worker_sessions": 0,
+    "project_file_rules_saved": true,
+    "all_tests_use_actual_dependencies": true
+  },
+  "feishu_unchanged": true,
+  "http_conflicts": 0,
+  "restarts": 0,
+  "new_ticket_or_external_message": false
+}

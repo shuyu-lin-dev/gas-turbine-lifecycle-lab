@@ -1,0 +1,101 @@
+{
+  "recorded_at": "2026-11-03T14:57:35.332996+08:00",
+  "kind": "preparation consistency checks",
+  "parser": "markdown-it-py",
+  "local_markdown_links_checked": 94,
+  "broken_active_links": [],
+  "active_legacy_dependencies": [],
+  "inherited_source_subset_missing_links": [
+    {
+      "path": "assets/models/source/README.md",
+      "link": "docs/exploded.png"
+    },
+    {
+      "path": "assets/models/source/README.md",
+      "link": "docs/cooled-blade.png"
+    },
+    {
+      "path": "assets/models/source/README.md",
+      "link": "docs/SOURCES.md"
+    }
+  ],
+  "inherited_missing_links_note": "原作者说明中的两幅截图及 SOURCES.md 属于完整应用，现有资产目录保持原字节；完整上游由 FE-BASE 取得。",
+  "assets_byte_identical": [
+    {
+      "path": "assets/models/LICENSE.txt",
+      "sha256": "e3ae860e9f2dd7688a37d305d64e524f324cd0fa4fa499363d4eb3e7599320c5"
+    },
+    {
+      "path": "assets/models/README.md",
+      "sha256": "9c82dd18192c9612a28eb845e298817dacb1a43dc82feeac56e694936b0a15d4"
+    },
+    {
+      "path": "assets/models/THREE-LICENSE.txt",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "assets/models/component-map.json",
+      "sha256": "4ad0b5ef9394bb252aee976dfcf6f420aa12a4bbb6370c852926bc7f23ce94c8"
+    },
+    {
+      "path": "assets/models/industrial-gas-turbine-educational.glb",
+      "sha256": "f650a3b2c080ea76bb5daa9e0f4c7f37f0f5bf7774f2d323e42ef432a00fa316"
+    },
+    {
+      "path": "assets/models/industrial-model-inspection.json",
+      "sha256": "21f843fa9b1ac78d243c438ce479a836eb0022fce45b24f65d7f881fa30a7f88"
+    },
+    {
+      "path": "assets/models/source/LICENSE",
+      "sha256": "e3ae860e9f2dd7688a37d305d64e524f324cd0fa4fa499363d4eb3e7599320c5"
+    },
+    {
+      "path": "assets/models/source/README.md",
+      "sha256": "81f26212e2dc3300c35e2c7b5ed50a5645a44735836be464dcec92357394dae2"
+    },
+    {
+      "path": "assets/models/source/THIRD_PARTY_NOTICES.md",
+      "sha256": "da50fb2711ec5ac78de4918a6162c9a614e1cb4f4a59d6b9a34cbb64dd24d321"
+    },
+    {
+      "path": "assets/models/source/export_glb.mjs",
+      "sha256": "0cf617b4139a6f13f472f01961f66604c2ab7d752f710cc33a9dece096ca1d27"
+    },
+    {
+      "path": "assets/models/source/package-lock.json",
+      "sha256": "b2be10e2180b7b59d7d792d863a91a9daaf1b4286badc91c5fc50034263ba2f5"
+    },
+    {
+      "path": "assets/models/source/package.json",
+      "sha256": "3afdb8a78e894f19ccff44df9303ad4b5bcd9e4748d8fb376adb7259b8e26593"
+    },
+    {
+      "path": "assets/models/source/src/inlet-support.ts",
+      "sha256": "685ddd4fa59e16dc30636ba61f8e279b39b0d8f1e43c5a8c53a850081c92c16e"
+    },
+    {
+      "path": "assets/models/source/src/sectioned-case.ts",
+      "sha256": "ff6300f4b278abfdcd2a338cb376549ab87bde714b7047d025c21acec0827f58"
+    },
+    {
+      "path": "assets/models/source/src/turbine.ts",
+      "sha256": "61fc88e4ce4d38effa256db3b4d8588a06b7813c3ea221b5404d56d5b17e221b"
+    },
+    {
+      "path": "assets/models/source/verify_glb.mjs",
+      "sha256": "32c095fc559612c01c78fc00d17db7eff3069a5b1f5c8ee68814c1622c0f517b"
+    }
+  ],
+  "tasks_count": 27,
+  "necessary_criteria_count": 145,
+  "tasks_and_acceptance_unchanged": true,
+  "root_license_unchanged": true,
+  "secret_pattern_findings": [],
+  "index_untouched": true,
+  "prepare_shell_syntax_exit_code": 0,
+  "prepare_matches_saved_configuration": true,
+  "git_diff_check_exit_code": 0,
+  "prompt_revision": 4,
+  "no_new_application_scaffold": true,
+  "m0_00_formal_acceptance": "NOT_RUN"
+}

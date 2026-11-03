@@ -1,0 +1,94 @@
+--- v2/project/AGENTS.md
++++ AGENTS.md
+@@ -1,12 +1,62 @@
+ # GT Lifecycle Lab 开发执行规则
+ 
+-版本：2.0；日期：2026-11-03（Asia/Shanghai）。本文件落实用户已经确定的开发要求。
++版本：2.0；日期：2026-11-03（Asia/Shanghai）。本文件保存用户已经确定的开发要求。
++
++## 本轮接入边界与规则优先级
++
++2026-11-03 的本机准备只整理文档、迁移已有资产、关联既有 Git 历史并配置已有 dsh。准备会话不得创建真实开发 Ticket、远程 Issue/PR/标签、项目提交或推送，不得写应用/测试代码、生成业务脚手架、取得两套完整上游、实现 viewer 或运行 RAG。保存规则和配置不构成后续开发授权的触发消息；完成准备后停止。
++
++后续由用户明确派发的真实 dsh Ticket 才执行下文开发流程。完整 M0～M4 范围保留。准备材料不是已提交的 S，也不是正式验收；本轮不勾选 M0-00，不登记 VERIFIED/LOCKED。实际准备记录见 [M0-00 本机准备记录](evidence/M0-00/preparation/20261103T142014+0800/README.md)。
++
++优先遵守当前用户明确授权和边界，其次遵守根规则。根文件按职责配合：本文件规定执行纪律，[DEV_SPEC.md](DEV_SPEC.md) 定义产品范围，[TASKS.md](TASKS.md) 是唯一任务、依赖与锁定状态清单，[ACCEPTANCE.md](ACCEPTANCE.md) 保存硬验收语义。然后读取 `docs/agents/` 的项目适配约定，最后使用适用 skills 和上游参考。不得用 skill 默认流程、Issue 关闭、标签、上游规则或执行结果放宽根验收；遇到真实冲突保留现场并说明具体差异。
++
++## 阅读顺序
++
++1. 本文件及当前用户/Ticket 的授权范围。
++2. [DEV_SPEC.md](DEV_SPEC.md)、[TASKS.md](TASKS.md)、[ACCEPTANCE.md](ACCEPTANCE.md) 中的当前任务和前置项。
++3. [领域文档约定](docs/agents/domain.md)、[GLOSSARY.md](GLOSSARY.md) 与已存在的相关 ADR；不存在的 ADR 不预先创建。
++4. [dsh 接入与派工](docs/agents/dsh.md)、[工作流与 Matt skills](docs/agents/workflow.md)、[Issue tracker](docs/agents/issue-tracker.md)；涉及上游时读 [复用说明](docs/UPSTREAM_REUSE.md)。
++5. 前置任务的实际证据、当前分支的集成基线，以及当前任务冻结记录 S。只有未提交的本机整理时，先按准备记录中的 worker 变更包说明核对、应用，再由真实 worker 提交。
++
++## Agent skills
++
++### Issue tracker
++
++唯一目标是 `shuyu-lin-dev/gas-turbine-lifecycle-lab` 的 GitHub Issues。Issue/Ticket 用于派工关联；任务状态只登记在 TASKS.md。见 [issue-tracker.md](docs/agents/issue-tracker.md)。
++
++### Triage labels
++
++已检测到 worker 安装 `triage`，采用五个默认角色的本地映射；本轮不操作远程标签。见 [triage-labels.md](docs/agents/triage-labels.md)。
++
++### Domain docs
++
++采用 single-context：根 GLOSSARY.md 与按需建立的 docs/adr/。见 [domain.md](docs/agents/domain.md)。术语表只定义已确认术语，ADR 只保存值得保留理由的重要决策。
++
++### 调用与项目适配
++
++worker 以实际可见的 skill 版本为准，开始任务时核对路径与哈希，读取 SKILL.md 及当前步骤引用的文件；不自动更新全局 skills。dsh 使用 `skill` 工具，参数为 `{"name":"<实际名称>"}`。部分安装文件设置 `disable-model-invocation: true`，不可声称能由模型直接调用；本项目已授权使用其方法时，通过文件读取工具加载实际说明，记录为“文件加载”，保留禁用标记。详见 [调用矩阵及适配差异](docs/agents/workflow.md)。
++
++实质歧义用 grill-with-docs；术语/重要决策用 domain-modeling；模块接口设计参考 codebase-design；新增业务行为用 implement 配合 tdd；缺陷/性能回归用 diagnosing-bugs；候选提交用 code-review 分别审查规范和规格。to-spec/to-tickets 仅处理派工范围内确有必要的需求变更，不重新划分现有 27 项任务。Ticket 执行计划与证据必须记录适用 skill、实际加载/使用方式，或不适用理由。
++
++测试接口、输入、独立预期、命令、环境、证据和回归范围在 S 中明确；已授权且已冻结的决定直接沿用，不逐项重复确认。审查固定比较基准与准确候选 C，覆盖完整任务差异及未提交行为改动。支持子代理时仅可作只读并行审查，不新增开发 Ticket/worker；不支持时串行完成两个维度并记录。技能中“实现并提交”的结束点仍须继续本项目实测、E、远程验证、K 和集成交付门。
++
++## 沟通、文件与工具
++
++- 使用简单、完整的中文表达，保留英文 identifier 和适用的英文专用名词。描述具体动作和对象，不使用自造简称、无依据的比较、工作量评价或修改过程中的解释性残留。
++- 用户在消息中提及 AGENTS.md 时重新读取本文件；提及 Claude.md 时重新读取对应文件。用户修改过的文件必须重新读取，后续编辑保留当前内容。
++- 使用文件编辑工具修改代码；禁止通过 Python、sed、perl 或其他程序改写代码。长脚本保存为文件后执行，禁止把长脚本直接写进 Bash 命令。
++- 中间文件保存在当前工作目录明确设置并由 .gitignore 忽略的目录；禁止读写 /tmp。完整秘密配置备份保存在仓库外受控目录。
++- Python 直接 import 必需依赖，不用 try-except 包围 import；文件开头不添加 docstring 或 shebang。注释使用中文，identifier 保持英文。错误在发生位置立即终止；不吞掉错误，不设置掩盖失败的替代路径。
++- 成熟文件格式使用现成解析库。依赖按任务需要正常使用，禁止自行编写替代解析器或绕过必需依赖。
++- 实现和测试使用实际依赖，禁止 Mock、伪造结果和只为通过检查的特殊处理。保持必要验收与受影响回归，直至当前授权范围正确运行。
++- 禁止通过 Git 恢复或撤销代码；用户要求恢复文件时，使用文件编辑工具。禁止擅自进入 Plan mode、主动使用视觉功能或截图；示意图按需要使用 Mermaid。
++- 提供网页链接前阅读页面完整内容；发现库用法有误时重新阅读相关页面完整内容。用户以疑问句提出问题时直接回答该问题，随后继续已经授权的独立工作。
+ 
+ ## 执行者、位置与任务依据
+ 
+ - 应用代码、测试代码、提交和推送均由用户本机已配置的 dsh-superagent 执行。规格、预备资产及云端审查不构成本机运行证据。
+-- 在 `/home/lsy/workspace/lab` 下开发；主 checkout 预定为 `/home/lsy/workspace/lab/gas-turbine-lifecycle-lab`，Ticket worktree 也必须位于 lab 下。
+-- 拟定主仓库为 `shuyu-lin-dev/gas-turbine-lifecycle-lab`，须在本机核实存在性、目标身份、origin 与权限。不得将拟定地址写成绑定成功，或自动改用无关仓库。
++- 在 `/home/lsy/workspace/lab` 下开发；主 checkout 为 `/home/lsy/workspace/lab/gas-turbine-lifecycle-lab`，Ticket worktree 根为 `/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees`。
++- 唯一主仓库为 `shuyu-lin-dev/gas-turbine-lifecycle-lab`。准备阶段已只读核实存在性、操作者/agent 身份及权限元数据，并接续既有历史；实际 worker 推送仍须真实 Ticket 验证。每次执行核对 origin 与身份，不自动改用无关仓库。
+ - 根 `DEV_SPEC.md` 定义完整目标；`TASKS.md` 是任务、依赖和状态的唯一清单；`ACCEPTANCE.md` 定义硬验收；证据报告保存实际结果。本文件规定执行纪律。
+ - 使用 Windows Docker Desktop 的 WSL 2 Linux 引擎；不另起与现有配置冲突的 dockerd。版本、端口、端点和资源可用性实查并记录。
+ 
+@@ -14,7 +64,7 @@
+ 
+ 1. 先跑通主流程，再叠加功能。单 worker，一次只实现一个依赖就绪的任务。
+ 2. 写应用代码前先冻结当前任务的范围、硬验收、测试输入、期望输出和证据要求。
+-3. 写一块，测一块。必要标准逐条验证；缺少实现则补实现，存在缺陷则修复，随后重验。
++3. 完成一个明确范围的实现后验证对应行为。必要标准逐条验证；补齐缺少的实现、修复缺陷，并重新验证。
+ 4. 所有必要标准实际通过、证据完整且远程基线核实后，立即锁定当前任务，再推进依赖它的任务。
+ 5. 代码存在、页面能打开、截图好看或单元测试通过，均不能替代任务要求的集成和端到端验收。
+ 6. 必要项的 SKIP、BLOCKED、FAIL、NOT_RUN 均不算通过。禁止静默删除失败断言、放宽阈值或用 Mock 冒充真实链路。
+@@ -28,7 +78,7 @@
+ - 后端采用 Python。前后端独立依赖、构建、运行和部署，通过 HTTP/SSE 通信；Python API 不托管 Vue 构建产物，也不混入 Spark 容器。
+ - M0 建设 web/api 与实时监测主线，包含 FE-BASE、FE-INTEGRATE；M1 增加独立 Python assistant 运行角色，包含 RAG-BASE、RAG-INTEGRATE；M2 增加 Kafka、source_a、source_b；M3 增加 Flink、Spark。算法、生命周期及性能等任务的确切先后关系只查 `TASKS.md`。
+ - 不为维持旧的六容器设想混装职责。推理服务可以独立运行，也可复用实测符合规格的既有端点；总容器数不固定。
+-- M0-00 只接入现有 dsh、核实环境并落地根规则。不在 bootstrap 中提前导入、安装或运行 RAG，不提前实现 viewer。上游的取得、原版验收和产品集成分别在对应任务执行。
++- M0-00 只接入现有 dsh、核实环境并写入根规则。不在 bootstrap 中提前导入、安装或运行 RAG，不提前实现 viewer。上游的取得、原版验收和产品集成分别在对应任务执行。
+ - RAG 初期保留 Chroma、BM25、Ollama。在 assistant 内以独立 venv、明确 cwd 和长期存活的 stdio 子进程运行。真实入口是 `python -m src.mcp_server.server`；占位 `main.py` 返回 0 不算启动成功。
+ - RAG 必须实际完成 MCP 初始化、工具发现、知识索引和查询，记录模型及端点。不得用假返回、未声明的云端调用或仅导入成功替代本地能力验收。
+ - GLB 保留为已下载模型资产及备用展示材料，不能代替 `/viewer` 主展示链路的验收。Milvus Lite 是后续可选迁移，不替换当前 Chroma/BM25 基线任务。
+@@ -89,6 +139,7 @@
+ ## dsh 配置与持续交付
+ 
+ - 保留用户现有 profile、模型配置与认证，不重跑会覆盖 profile 的初始化命令。实际 CLI、端口、权限和配置 revision 从本机读取；更新完整配置块时保留无关键。
++- 继承团队要求：中文沟通；提交 author/committer 使用 `lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>`；禁止调用 gh-owner、代用户 approve/merge 或启用 auto-merge。PR 由用户手动审核与合并。保留既有 worker 中间文件和主动视觉工具限制，必要真实浏览器验收按冻结范围执行，不用截图替代断言。
+ - 不把操作者 GitHub 账户当作 agent 账户；核实已有 agent CLI 的实际身份及目标仓库写权限。
+ - 使用单 worker，一次只推进一个未锁定功能任务。Worker 读取本文件，Router 的 Ticket scope / Delivery requirements 同时保存任务推进、验收和交付规则。
+ - 产品运行时的 assistant 与开发用 dsh-superagent 是不同角色，各有独立职责、配置和证据。

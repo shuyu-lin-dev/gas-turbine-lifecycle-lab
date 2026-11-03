@@ -1,0 +1,208 @@
+[
+  {
+    "at": "2026-11-03T14:30:46.039306+08:00",
+    "method": "GET",
+    "endpoint": "state",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.042295+08:00",
+    "method": "GET",
+    "endpoint": "tickets?state=open&limit=20",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.043588+08:00",
+    "method": "GET",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.065948+08:00",
+    "method": "PUT",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "revision": 3,
+      "effect": "next-request",
+      "context_delivery": "injected"
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.130500+08:00",
+    "method": "GET",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.135819+08:00",
+    "method": "GET",
+    "endpoint": "state",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.137463+08:00",
+    "method": "GET",
+    "endpoint": "tickets?state=open&limit=20",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.138783+08:00",
+    "method": "GET",
+    "endpoint": "settings",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.145584+08:00",
+    "method": "PUT",
+    "endpoint": "settings/executor",
+    "http_status": 200,
+    "response": {
+      "saved": true,
+      "revision": 2,
+      "policy_changed": false,
+      "restarting": false,
+      "context_delivery": "injected"
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.188272+08:00",
+    "method": "GET",
+    "endpoint": "settings",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.191777+08:00",
+    "method": "GET",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.197854+08:00",
+    "method": "GET",
+    "endpoint": "state",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:30:46.199079+08:00",
+    "method": "GET",
+    "endpoint": "tickets?state=open&limit=20",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.656295+08:00",
+    "method": "GET",
+    "endpoint": "state",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.658022+08:00",
+    "method": "GET",
+    "endpoint": "tickets?state=open&limit=20",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.660980+08:00",
+    "method": "GET",
+    "endpoint": "settings",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.664514+08:00",
+    "method": "GET",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.692092+08:00",
+    "method": "PUT",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "revision": 4,
+      "effect": "next-request",
+      "context_delivery": "injected"
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.696112+08:00",
+    "method": "GET",
+    "endpoint": "prompts",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.699312+08:00",
+    "method": "GET",
+    "endpoint": "settings",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.700432+08:00",
+    "method": "GET",
+    "endpoint": "state",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  },
+  {
+    "at": "2026-11-03T14:44:35.701639+08:00",
+    "method": "GET",
+    "endpoint": "tickets?state=open&limit=20",
+    "http_status": 200,
+    "response": {
+      "read": true
+    }
+  }
+]

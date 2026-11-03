@@ -1,0 +1,11 @@
+{
+  "command": [
+    "sha256sum",
+    "--check",
+    "SHA256SUMS.txt"
+  ],
+  "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab/dsh_handoff_v2",
+  "exit_code": 0,
+  "stdout": "DSH_HANDOFF.md: OK\nREADME.md: OK\nproject/ACCEPTANCE.md: OK\nproject/AGENTS.md: OK\nproject/DEV_SPEC.md: OK\nproject/TASKS.md: OK\nproject/assets/models/LICENSE.txt: OK\nproject/assets/models/README.md: OK\nproject/assets/models/THREE-LICENSE.txt: OK\nproject/assets/models/component-map.json: OK\nproject/assets/models/industrial-gas-turbine-educational.glb: OK\nproject/assets/models/industrial-model-inspection.json: OK\nproject/assets/models/source/LICENSE: OK\nproject/assets/models/source/README.md: OK\nproject/assets/models/source/THIRD_PARTY_NOTICES.md: OK\nproject/assets/models/source/export_glb.mjs: OK\nproject/assets/models/source/package-lock.json: OK\nproject/assets/models/source/package.json: OK\nproject/assets/models/source/src/inlet-support.ts: OK\nproject/assets/models/source/src/sectioned-case.ts: OK\nproject/assets/models/source/src/turbine.ts: OK\nproject/assets/models/source/verify_glb.mjs: OK\nproject/docs/UPSTREAM_REUSE.md: OK\nproject/evidence/REPORT.template.md: OK\n",
+  "stderr": ""
+}

@@ -1,0 +1,62 @@
+--- v2/README.md
++++ README.md
+@@ -1,31 +1,37 @@
+-# GT Lifecycle Lab v2 项目方案与执行包
++# GT Lifecycle Lab｜燃气轮机数字化样机与智能运维实验平台
+ 
+-日期：2026-11-03。完整方案从 [project/DEV_SPEC.md](project/DEV_SPEC.md) 阅读；交给本机执行会话时从 [DSH_HANDOFF.md](DSH_HANDOFF.md) 开始。
++教学与工程验证项目，围绕负荷变化下的异常分析，连接实时监测、三维部件、运行数据、知识证据、检查建议与检修履历。通用教学结构与合成场景不代表制造商真实 CAD、工业标定或设备控制。
+ 
+-## 本次修订
++前端规划为 Vue 3/TypeScript/ECharts，与同源 `/viewer` iframe 中完整 turbine-explorer 联动；业务后端为独立 Python API，后续增加本地 RAG/MCP Assistant、Kafka 双设备输入、Flink/Spark 同窗对照和正常运行基线。完整范围以规格为准，各阶段按依赖逐项推进。
+ 
+-1. 完整克隆并二次开发 turbine-explorer，Vue 业务页面同源嵌入 Three.js viewer；GLB 保留为可交换资产。
+-2. 完整克隆并二次开发 MODULAR-RAG-MCP-SERVER；首版 Chroma/BM25、Ollama 接口和 MCP stdio，Milvus Lite 为后续可选适配。
+-3. 增加上游基线和接入任务，保留 Kafka、双 Producer、Flink/Spark、正常基线及性能验收。
+-4. 应用开发由本机 dsh-superagent 执行：先冻结硬验收，逐块实现、逐条验证、提交证据并锁定。
++## 阅读入口
+ 
+-## 文件入口
++| 文档 | 用途 |
++| --- | --- |
++| [AGENTS.md](AGENTS.md) | 阅读顺序、执行边界、规则优先级与 skills 导航 |
++| [DEV_SPEC.md](DEV_SPEC.md) | 完整 M0～M4 范围、架构、数据和业务约定 |
++| [TASKS.md](TASKS.md) | 唯一任务、依赖、状态及锁定记录 |
++| [ACCEPTANCE.md](ACCEPTANCE.md) | 必要验收、固定夹具和硬通过条件 |
++| [dsh 接入与派工](docs/agents/dsh.md) | 历史/预期/实测区别、Source/Policy/Executor、prepare 与团队要求 |
++| [Worker 与 Matt 工作流](docs/agents/workflow.md) | skill 加载、测试、代码审查和 S→C→E→K |
++| [Issue tracker](docs/agents/issue-tracker.md) / [标签映射](docs/agents/triage-labels.md) | GitHub Issues 派工与本地协作约定 |
++| [领域文档约定](docs/agents/domain.md) / [GLOSSARY.md](GLOSSARY.md) | 已确认术语；ADR 按需创建 |
++| [上游复用说明](docs/UPSTREAM_REUSE.md) | 两个固定上游、完整源码取得、许可与集成边界 |
++| [证据模板](evidence/REPORT.template.md) | 后续真实 worker 逐条验收记录格式 |
++| [本次准备记录](evidence/M0-00/preparation/20261103T142014+0800/README.md) | 本机检查、迁移、配置及实际缺项，不能替代正式验收 |
++| [Worker 变更包交接](evidence/M0-00/preparation/20261103T142014+0800/TRANSFER.md) | 尚未提交文档/资产如何进入未来独立 worktree |
++| [模型资产](assets/models/README.md) | GLB、映射、导出源码子集、来源与许可证 |
+ 
+-| 文件 | 内容 |
+-|---|---|
+-| project/DEV_SPEC.md | 完整方案、页面、架构、数据、接口、阶段和交付定义 |
+-| project/TASKS.md | 依赖任务、条款映射、追溯登记 |
+-| project/ACCEPTANCE.md | 逐任务硬验收、固定夹具、各阶段通过条件 |
+-| project/AGENTS.md | 开发执行规则、证据与锁定流程 |
+-| project/docs/UPSTREAM_REUSE.md | 上游固定版本、已实现能力、接入缺口、来源与许可 |
+-| project/evidence/REPORT.template.md | 逐条结果、失败修复、版本和基线模板 |
+-| DSH_HANDOFF.md | 本机 dsh 接入及持续执行说明 |
+-| project/assets/models/ | 已有 GLB、映射、来源许可和离线检查 |
++## 当前阶段
+ 
+-## 执行状态
++本轮只做 M0-00 的本机接入准备与仓库规范化，不执行开发 Ticket。已接续唯一仓库 `shuyu-lin-dev/gas-turbine-lifecycle-lab` 的既有 main 历史，保留原 LICENSE；正式文档和模型资产在当前 checkout 中仍待真实 worker 核对、提交、推送和远程验证。当前完成状态只读 TASKS.md，本轮不勾选任何任务，不把准备记录称为 S 或正式 M0-00 通过。
+ 
+-这是修订后的规格包，所有应用任务初始未执行。包内不包含两个上游仓库的完整克隆；完整克隆、subtree 导入、开发和提交由本机 dsh 按任务完成。模型目录的 source 是此前生成 GLB 所需源码子集，不是完整 viewer 应用。
++本仓库尚未取得两套完整上游，也没有本轮新建的应用骨架、接口、测试或 Compose 服务。模型 assets/models/source 是原导出所需子集，原作者说明提到的完整应用文件并不都在此目录；离线解析和资产迁移不能证明 viewer、浏览器或业务已通过。
+ 
+-浏览器表现、MCP 工具、本地模型、流引擎和性能仍须在目标环境逐项验收。完整目标和当前任务范围分开管理，第一项为 M0-00。
++已有资产与第三方声明完整保留；项目原有 LICENSE 与第三方许可各自适用。依赖安装、构建、缓存、运行数据库、模型权重、秘密和临时日志按 .gitignore 的明确位置管理，锁文件、公开模型和必要脱敏证据保留可见。
+ 
+-本包替代 v1 的执行说明；v1 的 Milvus 首版要求和 GLB 主路径要求不再作为 v2 的验收条件。
++## 后续真实 worker
++
++用户在正确来源明确派工后，由既有 dsh 使用 prepare 创建独立工作树；尚未提交的规则/资产先按交接说明核对并应用变更包。读取根规则、当前任务、前置证据和已确认术语/ADR，记录适用 Matt skills，再提交冻结 S、实现候选 C、审查与必要实测、证据 E、远程基线验证和锁定 K。PR 由用户手动审核合并；确认实际分支包含前置成果后再推进依赖就绪任务。
++
++真实提交并合并后，再验证干净检出与可复现性。本轮不推送、不创建远程工单/标签/PR，也不启动 FE-BASE 或应用开发。

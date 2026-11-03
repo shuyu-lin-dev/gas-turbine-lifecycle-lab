@@ -1,0 +1,141 @@
+{
+  "blocks": {
+    "policy": {
+      "value": {
+        "rules": [
+          {
+            "id": "copy",
+            "name": "文案修正",
+            "enabled": true,
+            "instruction": "明确要求修正拼写、措辞、标点或已有翻译。保留产品承诺与业务含义。"
+          },
+          {
+            "id": "visual",
+            "name": "界面修正",
+            "enabled": true,
+            "instruction": "明确要求实施局部间距、排列、溢出或样式修正，并且目标已经说明，或者存在客观确定的既有标准与正确状态。指出界面元素的位置，或认为界面不一致、不美观、难以理解，都不能确定修正目标。不得自行决定视觉样式、信息层次、渲染方式或交互方式。不得重新设计界面、增加交互或改变行为。已知间距问题仅授权修正该问题；附近尚未定义的样式调整需要独立授权。仅评估能够明确分离的授权范围。方向或范围尚未确定时，仅记录观察结果：不确认接单、不创建 worker、不主动提问。"
+          }
+        ],
+        "sources": {
+          "github": {
+            "allowed": [
+              {
+                "id": "shuyu-lin-dev"
+              }
+            ],
+            "admission": {
+              "issues": {
+                "listedUnaddressed": "inferred",
+                "unlistedAddressed": "ignore",
+                "unlistedUnaddressed": "ignore"
+              },
+              "pulls": {
+                "listedUnaddressed": "inferred",
+                "unlistedAddressed": "ignore",
+                "unlistedUnaddressed": "ignore"
+              },
+              "comments": {
+                "listedUnaddressed": "inferred",
+                "unlistedAddressed": "ignore",
+                "unlistedUnaddressed": "ignore"
+              },
+              "ci": {
+                "unlistedUnaddressed": "inferred"
+              }
+            },
+            "bots": []
+          },
+          "feishu": {
+            "allowed": [
+              {
+                "id": "[identifier-sha256:cb1637ef4134]",
+                "name": "用户378620"
+              }
+            ],
+            "admission": {
+              "[identifier-sha256:acd83d5431b4]": {
+                "listedUnaddressed": "ignore",
+                "unlistedAddressed": "ignore",
+                "unlistedUnaddressed": "ignore"
+              },
+              "direct": {
+                "listedUnaddressed": "ignore",
+                "unlistedAddressed": "ignore",
+                "unlistedUnaddressed": "ignore"
+              },
+              "other": {
+                "listedUnaddressed": "ignore",
+                "unlistedAddressed": "ignore",
+                "unlistedUnaddressed": "ignore"
+              }
+            },
+            "syncChat": "[identifier-sha256:acd83d5431b4]",
+            "bots": []
+          }
+        }
+      },
+      "revision": 1
+    },
+    "eval": {
+      "value": {
+        "mode": "observe",
+        "timeoutSeconds": 120,
+        "model": null
+      },
+      "revision": 0
+    },
+    "executor": {
+      "value": {
+        "model": null,
+        "maxWorkers": 3,
+        "directory": "/mnt/e/DSH_SuperAgent/workspaces/tickets/gas-turbine-lifecycle-lab",
+        "prepare": "git -C /mnt/e/DSH_SuperAgent/workspaces/gas-turbine-lifecycle-lab fetch --no-tags \"https://github.com/$DSH_SUPERAGENT_GITHUB_REPOSITORY.git\" \"${DSH_SUPERAGENT_GITHUB_PR_HEAD:-HEAD}:refs/dsh-superagent/$DSH_SUPERAGENT_TICKET\" && git -C /mnt/e/DSH_SuperAgent/workspaces/gas-turbine-lifecycle-lab worktree add -b \"agent/$DSH_SUPERAGENT_NAME\" \"$DSH_SUPERAGENT_DIR\" \"refs/dsh-superagent/$DSH_SUPERAGENT_TICKET\"",
+        "blockedCommands": [
+          "gh-owner"
+        ]
+      },
+      "revision": 1
+    }
+  },
+  "sources": [
+    {
+      "id": "feishu",
+      "value": {
+        "enabled": true,
+        "config": {
+          "cli": "/home/lsy/.local/bin/lark-bot",
+          "readPageSize": 20,
+          "linkTimeoutMs": 5000,
+          "chats": [
+            {
+              "chatId": "[identifier-sha256:acd83d5431b4]",
+              "name": "superagent-workspace",
+              "listen": "mentions"
+            }
+          ],
+          "directMessages": true,
+          "otherChats": "none"
+        }
+      },
+      "revision": 1
+    },
+    {
+      "id": "github",
+      "value": {
+        "enabled": true,
+        "config": {
+          "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+          "cli": "/home/lsy/.local/bin/gh-agent-bot",
+          "pollSeconds": 60,
+          "failuresBeforeError": 3,
+          "observeIssues": true,
+          "observePulls": true,
+          "observeComments": true,
+          "observeCi": true
+        }
+      },
+      "revision": 2
+    }
+  ],
+  "policyVersion": "1384243174ac0cc77f72c227868b6f6f"
+}

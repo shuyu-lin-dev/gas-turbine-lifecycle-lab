@@ -1,0 +1,57 @@
+{
+  "observed_during": "2026-11-03 preparation; Asia/Shanghai",
+  "operator": {
+    "source": "connected GitHub get_user_login and get_repo (read-only tools; no process exit code)",
+    "login": "shuyu-lin-dev",
+    "id": 130219774,
+    "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "pull": true,
+      "push": true,
+      "triage": true
+    }
+  },
+  "agent": {
+    "source": "actual Source CLI via generated worker gh shim, read-only API",
+    "login": "lucy-assistant",
+    "id": 162398512,
+    "cli": "/home/lsy/.local/bin/gh-agent-bot",
+    "repository_permissions": {
+      "admin": false,
+      "maintain": false,
+      "pull": true,
+      "push": true,
+      "triage": true
+    },
+    "viewerPermission": "WRITE",
+    "actual_push": "NOT_RUN; reserved for a real Ticket"
+  },
+  "git": {
+    "configuration_scope": "repository local; no global identity/auth change",
+    "author_name": "lucy-assistant",
+    "author_email": "162398512+lucy-assistant@users.noreply.github.com",
+    "committer_name": "lucy-assistant",
+    "committer_email": "162398512+lucy-assistant@users.noreply.github.com",
+    "verified_by": "git var GIT_AUTHOR_IDENT and GIT_COMMITTER_IDENT under worker Git environment",
+    "new_commit_created": false
+  },
+  "feishu": {
+    "name": "superagent",
+    "connection_state": "ready; listening for bot events",
+    "message_sent": false
+  },
+  "git_baseline": {
+    "head": "dad14da1561ac609a5d14076629d1698c53b3627",
+    "branch": "main",
+    "upstream": "origin/main",
+    "origin": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git",
+    "ahead": 0,
+    "behind": 0,
+    "root_license_sha256": "1ac65e5a6313e49270bfbfd1a4b5cf82324d5c8203abb6f6f8c8307b3d7d6f29",
+    "original_readme_sha256": "5ff9382455effb72238b3b31d13e5cfadf849c13044f0961b2b5bf98c0e4d96c",
+    "active_branch_rules": []
+  },
+  "initial_unrelated_user_changes": []
+}
