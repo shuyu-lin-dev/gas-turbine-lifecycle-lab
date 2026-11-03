@@ -1,0 +1,45 @@
+{
+  "url": "http://127.0.0.1:5173",
+  "healthUrl": "http://127.0.0.1:8202/api/v1/health",
+  "instance": "api-b",
+  "mode": "config",
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8202/api/v1/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8202/api/v1/health",
+      "method": "GET"
+    }
+  ],
+  "requestFailures": [
+    {
+      "url": "http://127.0.0.1:8202/api/v1/health",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:8202/api/v1/health",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    }
+  ],
+  "responses": [],
+  "errors": [],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "steps": [
+    "首次加载：连接失败"
+  ]
+}

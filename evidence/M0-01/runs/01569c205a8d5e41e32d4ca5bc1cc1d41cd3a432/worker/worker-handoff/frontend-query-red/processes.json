@@ -1,0 +1,37 @@
+[
+  {
+    "name": "api-a",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8201"
+    ],
+    "pid": 694064,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "started_at": "2026-11-03T17:18:46.476697+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T17:18:49.875823+00:00"
+  },
+  {
+    "name": "web-empty-query",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 694072,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T17:18:47.502289+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:18:49.891581+00:00"
+  }
+]

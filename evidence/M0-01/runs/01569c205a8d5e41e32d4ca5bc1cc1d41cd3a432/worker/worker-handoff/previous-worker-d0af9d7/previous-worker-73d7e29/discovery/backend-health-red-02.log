@@ -1,0 +1,28 @@
+E                                                                        [100%]
+==================================== ERRORS ====================================
+__ ERROR at setup of test_health_returns_frozen_service_version_and_instance ___
+
+    @pytest.fixture
+    def api():
+        with socket.socket() as reservation:
+            reservation.bind(('127.0.0.1', 0))
+            port = reservation.getsockname()[1]
+        env = dict(os.environ, API_INSTANCE_ID='api-a')
+        process = subprocess.Popen([sys.executable, '-m', 'uvicorn', 'gt_lifecycle_api.app:app',
+                                    '--host', '127.0.0.1', '--port', str(port)], env=env)
+        url = f'http://127.0.0.1:{port}'
+        try:
+            deadline = time.monotonic() + 30
+            while True:
+>               assert process.poll() is None, 'API启动失败'
+E               AssertionError: API启动失败
+E               assert 3 is None
+E                +  where 3 = poll()
+E                +    where poll = <Popen: returncode: 3 args: ['/home/lsy/workspace/lab/gas-turbine-lifecycle-...>.poll
+
+backend/tests/test_http.py:25: AssertionError
+---------------------------- Captured stderr setup -----------------------------
+ERROR:    Error loading ASGI app. Could not import module "gt_lifecycle_api.app".
+=========================== short test summary info ============================
+ERROR backend/tests/test_http.py::test_health_returns_frozen_service_version_and_instance
+1 error in 0.19s

@@ -1,0 +1,210 @@
+[
+  {
+    "name": "api-a",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/run-73d7e29-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8201"
+    ],
+    "pid": 616152,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "started_at": "2026-11-03T16:09:01.753531+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T16:09:08.352741+00:00"
+  },
+  {
+    "name": "api-b",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/run-73d7e29-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8202"
+    ],
+    "pid": 616171,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "started_at": "2026-11-03T16:09:02.797141+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T16:09:23.829357+00:00"
+  },
+  {
+    "name": "web-direct-a",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 616174,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:03.823121+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:05.768992+00:00"
+  },
+  {
+    "name": "web-direct-b",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 616402,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:05.772149+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:06.984506+00:00"
+  },
+  {
+    "name": "web-proxy",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 616606,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:06.985303+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:11.592572+00:00"
+  },
+  {
+    "name": "api-a",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/run-73d7e29-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8201"
+    ],
+    "pid": 616977,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "started_at": "2026-11-03T16:09:09.773431+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T16:09:23.615124+00:00"
+  },
+  {
+    "name": "web-invalid-0",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 617150,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:11.593348+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:13.505045+00:00"
+  },
+  {
+    "name": "web-invalid-1",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 617353,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:13.505909+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:15.290312+00:00"
+  },
+  {
+    "name": "web-invalid-2",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 617596,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:15.291017+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:17.214962+00:00"
+  },
+  {
+    "name": "web-invalid-3",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 617830,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:17.215665+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:19.009900+00:00"
+  },
+  {
+    "name": "web-invalid-4",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 618035,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:19.010850+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:20.793781+00:00"
+  },
+  {
+    "name": "web-preview",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "preview",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "4175",
+      "--strictPort"
+    ],
+    "pid": 618265,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "started_at": "2026-11-03T16:09:20.794673+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T16:09:23.451026+00:00"
+  }
+]

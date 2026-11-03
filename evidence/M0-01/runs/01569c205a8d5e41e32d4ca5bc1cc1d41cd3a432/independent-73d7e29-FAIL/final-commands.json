@@ -1,0 +1,151 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:40.373847+00:00",
+    "exit_code": 0,
+    "stdout": "73d7e29cb2e837eceb4767932e116e76e4916d0f\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:40.378499+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:40.384344+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review",
+    "at": "2026-11-03T16:29:40.386270+00:00",
+    "exit_code": 0,
+    "stdout": "73d7e29cb2e837eceb4767932e116e76e4916d0f\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review",
+    "at": "2026-11-03T16:29:40.390308+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review",
+    "at": "2026-11-03T16:29:40.393786+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--path-format=absolute",
+      "--git-common-dir"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review",
+    "at": "2026-11-03T16:29:40.395316+00:00",
+    "exit_code": 0,
+    "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.git\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only",
+      "b8ad3150cf4480f8e205926541aeeccb072f7f80...73d7e29cb2e837eceb4767932e116e76e4916d0f"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:40.398189+00:00",
+    "exit_code": 0,
+    "stdout": "AGENTS.md\nDEV_SPEC.md\nREADME.md\nTASKS.md\nbackend/.dockerignore\nbackend/Dockerfile\nbackend/pyproject.toml\nbackend/src/gt_lifecycle_api/__init__.py\nbackend/src/gt_lifecycle_api/app.py\nbackend/tests/test_http.py\nbackend/uv.lock\ncompose.yaml\ndocs/M0_01.md\ndocs/agents/dsh.md\ndocs/agents/issue-tracker.md\ndocs/agents/workflow.md\nevidence/M0-01/criteria.md\nevidence/M0-01/health-api-a.json\nevidence/M0-01/health-api-b.json\nfrontend/.dockerignore\nfrontend/Dockerfile\nfrontend/index.html\nfrontend/nginx.conf.template\nfrontend/package-lock.json\nfrontend/package.json\nfrontend/src/App.vue\nfrontend/src/main.ts\nfrontend/src/style.css\nfrontend/tests/browser.mjs\nfrontend/tsconfig.json\nfrontend/vite.config.ts\nscripts/verify_m0_01.py\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/.agent-browser/browsers/chrome-156.0.8078.80/chrome",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:40.428342+00:00",
+    "exit_code": 0,
+    "stdout": "Google Chrome for Testing 156.0.8078.80 \n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "sha256sum",
+      "/home/lsy/.agent-browser/browsers/chrome-156.0.8078.80/chrome",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:41.735864+00:00",
+    "exit_code": 0,
+    "stdout": "1bcad71ad1bff85955db13c6d8dd9f32374934d5a5cb079b526c46fb51f9bd97  /home/lsy/.agent-browser/browsers/chrome-156.0.8078.80/chrome\n6583a1d002bf6165be0a38366538268e028bbcbb8802880ca09cce80d5505447  /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "ss",
+      "-ltnp"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:41.753490+00:00",
+    "exit_code": 0,
+    "stdout": "State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                 \nLISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*                                           \nLISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                           \nLISTEN 0      4096       127.0.0.54:53         0.0.0.0:*                                           \nLISTEN 0      128           0.0.0.0:2222       0.0.0.0:*                                           \nLISTEN 0      511         127.0.0.1:46611      0.0.0.0:*    users:((\"node\",pid=304591,fd=23))      \nLISTEN 0      511         127.0.0.1:30152      0.0.0.0:*    users:((\"node\",pid=305720,fd=43))      \nLISTEN 0      511         127.0.0.1:3082       0.0.0.0:*    users:((\"MainThread\",pid=235968,fd=22))\nLISTEN 0      128              [::]:2222          [::]:*                                           \n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "ps",
+      "--format",
+      "{{json .}}"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+    "at": "2026-11-03T16:29:41.778242+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

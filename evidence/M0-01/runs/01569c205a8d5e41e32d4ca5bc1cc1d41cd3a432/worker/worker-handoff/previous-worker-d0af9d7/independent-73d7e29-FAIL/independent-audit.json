@@ -1,0 +1,230 @@
+{
+  "at": "2026-11-03T16:29:41.778906+00:00",
+  "candidate": "73d7e29cb2e837eceb4767932e116e76e4916d0f",
+  "runs": {
+    "main": {
+      "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/main-01",
+      "manifest_sha256": "bc6970608f4b081d25de8fa07b1d6d135ece4743063686c73a8552031fa35c60",
+      "command_count": 59,
+      "all_exit_zero": true,
+      "all_command_hashes_match": true,
+      "manifest_entries": 47,
+      "all_manifest_hashes_match": true,
+      "all_processes_stopped": true,
+      "raw_results": {
+        "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "tested_code_sha": "73d7e29cb2e837eceb4767932e116e76e4916d0f",
+        "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "clean": false,
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 59
+      }
+    },
+    "clean": {
+      "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01",
+      "manifest_sha256": "8070e93769aa1692c67a8e231087e7d6cacb56ab1cadd67602526fa9584a5d3f",
+      "command_count": 61,
+      "all_exit_zero": true,
+      "all_command_hashes_match": true,
+      "manifest_entries": 46,
+      "all_manifest_hashes_match": true,
+      "all_processes_stopped": true,
+      "raw_results": {
+        "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "tested_code_sha": "73d7e29cb2e837eceb4767932e116e76e4916d0f",
+        "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "clean": true,
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 61
+      }
+    }
+  },
+  "source_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "b129bef04e90fd6c761a0f6df1003687319ce32861965d7b0d7c512b713e3cd4",
+      "clone_sha256": "b129bef04e90fd6c761a0f6df1003687319ce32861965d7b0d7c512b713e3cd4"
+    },
+    {
+      "path": "DEV_SPEC.md",
+      "sha256": "173333e5ccac0b89ab732d46099901379c318342175ede040c1064fe497d8dc9",
+      "clone_sha256": "173333e5ccac0b89ab732d46099901379c318342175ede040c1064fe497d8dc9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d948dacb6242fefc5db9cee88f18f7eccbae0b1eaedb1f3c9fd24c71b8854c72",
+      "clone_sha256": "d948dacb6242fefc5db9cee88f18f7eccbae0b1eaedb1f3c9fd24c71b8854c72"
+    },
+    {
+      "path": "TASKS.md",
+      "sha256": "cd541aac2aacb2c587cea1ea9dc0bb057c0ab7bfee8bf3a60c6edeff5dec8665",
+      "clone_sha256": "cd541aac2aacb2c587cea1ea9dc0bb057c0ab7bfee8bf3a60c6edeff5dec8665"
+    },
+    {
+      "path": "backend/.dockerignore",
+      "sha256": "34a9c054427005af03006e7cd1a82c998b8ecaea1aea2bd40e561a49b8dba156",
+      "clone_sha256": "34a9c054427005af03006e7cd1a82c998b8ecaea1aea2bd40e561a49b8dba156"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "sha256": "9bfee99aea2d1d79e28bded39b749bc4159a75458ddecc3acb87be15b98ec2b8",
+      "clone_sha256": "9bfee99aea2d1d79e28bded39b749bc4159a75458ddecc3acb87be15b98ec2b8"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "sha256": "55c86dc5a62284f90cd0a31ceed0ba5e990c9af861319f7b8d613438901b43f7",
+      "clone_sha256": "55c86dc5a62284f90cd0a31ceed0ba5e990c9af861319f7b8d613438901b43f7"
+    },
+    {
+      "path": "backend/src/gt_lifecycle_api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "clone_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/src/gt_lifecycle_api/app.py",
+      "sha256": "a69060858096ce7c8895190c778f2c3f42633cbb816eccd295cd92cf8cff7ffc",
+      "clone_sha256": "a69060858096ce7c8895190c778f2c3f42633cbb816eccd295cd92cf8cff7ffc"
+    },
+    {
+      "path": "backend/tests/test_http.py",
+      "sha256": "0cdae09a4cbe73e14b3e4daf540679b79ca773113f38c7e199910d749b71ed95",
+      "clone_sha256": "0cdae09a4cbe73e14b3e4daf540679b79ca773113f38c7e199910d749b71ed95"
+    },
+    {
+      "path": "backend/uv.lock",
+      "sha256": "0978378c68fea771ecd794f6f7515674a6beb75dcab05705e1ce5e8c778ae4c6",
+      "clone_sha256": "0978378c68fea771ecd794f6f7515674a6beb75dcab05705e1ce5e8c778ae4c6"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "19cf05ec182f2925e746891cf2bc18a565b8debc89f47b5111a70baff1ce1ac5",
+      "clone_sha256": "19cf05ec182f2925e746891cf2bc18a565b8debc89f47b5111a70baff1ce1ac5"
+    },
+    {
+      "path": "docs/M0_01.md",
+      "sha256": "9f1e7a438bd4f1ac50334cd923b09075ba26a08edaa2432e0222792047901227",
+      "clone_sha256": "9f1e7a438bd4f1ac50334cd923b09075ba26a08edaa2432e0222792047901227"
+    },
+    {
+      "path": "docs/agents/dsh.md",
+      "sha256": "74e0e5722da55e8c2ef21418911ea49874b66a849a60dde5063884ede98c16e5",
+      "clone_sha256": "74e0e5722da55e8c2ef21418911ea49874b66a849a60dde5063884ede98c16e5"
+    },
+    {
+      "path": "docs/agents/issue-tracker.md",
+      "sha256": "ae1e4432aec5ffa5d3d899c357ed31f7122fb58c1e0fc9a3907fcdbd06deb701",
+      "clone_sha256": "ae1e4432aec5ffa5d3d899c357ed31f7122fb58c1e0fc9a3907fcdbd06deb701"
+    },
+    {
+      "path": "docs/agents/workflow.md",
+      "sha256": "9bd81545b602c635a518ada23d6025352943f181071571431cdbd4257838dc94",
+      "clone_sha256": "9bd81545b602c635a518ada23d6025352943f181071571431cdbd4257838dc94"
+    },
+    {
+      "path": "evidence/M0-01/criteria.md",
+      "sha256": "fb0b95eb928b9e76c18d4db5277ac0efe67bc38263cf47d030216304d09e4bd3",
+      "clone_sha256": "fb0b95eb928b9e76c18d4db5277ac0efe67bc38263cf47d030216304d09e4bd3"
+    },
+    {
+      "path": "evidence/M0-01/health-api-a.json",
+      "sha256": "e76127596f4543f6e95cb38dfcf42b342e4d460eb06b96724fbaf7caca918f0a",
+      "clone_sha256": "e76127596f4543f6e95cb38dfcf42b342e4d460eb06b96724fbaf7caca918f0a"
+    },
+    {
+      "path": "evidence/M0-01/health-api-b.json",
+      "sha256": "f79435d71fd824be8fd4de476d2071ef8fa8b19a076ae42f779d48221fa41125",
+      "clone_sha256": "f79435d71fd824be8fd4de476d2071ef8fa8b19a076ae42f779d48221fa41125"
+    },
+    {
+      "path": "frontend/.dockerignore",
+      "sha256": "8c087cc8922943552df587e99c8113c8dfbba5ecdeaf2978dfa2716eed342490",
+      "clone_sha256": "8c087cc8922943552df587e99c8113c8dfbba5ecdeaf2978dfa2716eed342490"
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "sha256": "cc9b5364662f8d4179442d4f83875a525eb9d0b499c774c11ace4f5d3bfcf9f8",
+      "clone_sha256": "cc9b5364662f8d4179442d4f83875a525eb9d0b499c774c11ace4f5d3bfcf9f8"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "8a24f6a0fceb64fca0e0b71e4cdaeb1b562c233c96777d20b45d90d72ec055cf",
+      "clone_sha256": "8a24f6a0fceb64fca0e0b71e4cdaeb1b562c233c96777d20b45d90d72ec055cf"
+    },
+    {
+      "path": "frontend/nginx.conf.template",
+      "sha256": "edfecdcd0705a2db377cd20ceb2c3cde8c0739110583946ca5b35020612de108",
+      "clone_sha256": "edfecdcd0705a2db377cd20ceb2c3cde8c0739110583946ca5b35020612de108"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "b67d14041ff2a143737931fed7b8c4017020cbf6fccad83b8e2ceffae44cae29",
+      "clone_sha256": "b67d14041ff2a143737931fed7b8c4017020cbf6fccad83b8e2ceffae44cae29"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "35f5fc79abc942297483664036c346015450c7ed65c2225a844407ea8548184c",
+      "clone_sha256": "35f5fc79abc942297483664036c346015450c7ed65c2225a844407ea8548184c"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "sha256": "9b1994c83f4929d79b87f86b489940403273a15f027fba07ecc8516d358bc514",
+      "clone_sha256": "9b1994c83f4929d79b87f86b489940403273a15f027fba07ecc8516d358bc514"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "sha256": "50cb9f18b1c7115799ae456f0d0038840278b49ea520b5549d468ec76c248fb9",
+      "clone_sha256": "50cb9f18b1c7115799ae456f0d0038840278b49ea520b5549d468ec76c248fb9"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "sha256": "aa3c2c3a689ce26ea5f450907b7dbb6450c21c1a68c487305fba1f27c50697d4",
+      "clone_sha256": "aa3c2c3a689ce26ea5f450907b7dbb6450c21c1a68c487305fba1f27c50697d4"
+    },
+    {
+      "path": "frontend/tests/browser.mjs",
+      "sha256": "a24818d42ccadff139d2b024c871d531920d80d5dc0ed6f3142fdcd0d99bee91",
+      "clone_sha256": "a24818d42ccadff139d2b024c871d531920d80d5dc0ed6f3142fdcd0d99bee91"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "sha256": "4615b62b30ebe1659e11fcccf8b90fd0cdb3113c808c261b5af63dc7acc96483",
+      "clone_sha256": "4615b62b30ebe1659e11fcccf8b90fd0cdb3113c808c261b5af63dc7acc96483"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "28f11d3deb1337de2d5f3dcf3dcc73f5d8e63c1e0f49b2fc4200cb00a3b57101",
+      "clone_sha256": "28f11d3deb1337de2d5f3dcf3dcc73f5d8e63c1e0f49b2fc4200cb00a3b57101"
+    },
+    {
+      "path": "scripts/verify_m0_01.py",
+      "sha256": "0b22b5ae5efbf5feca6a9a08bc821593b3b5bb667e1c28633a7fffc7f26e9027",
+      "clone_sha256": "0b22b5ae5efbf5feca6a9a08bc821593b3b5bb667e1c28633a7fffc7f26e9027"
+    }
+  ],
+  "clean_dependencies_and_cache_independent": true,
+  "wheel_source_sha256": "a69060858096ce7c8895190c778f2c3f42633cbb816eccd295cd92cf8cff7ffc",
+  "same_page_recovery": "PASS",
+  "wildcard_configuration": "FAIL",
+  "supplement_exit_code": 1,
+  "ci_check_runs": 0,
+  "ci_statuses": 0,
+  "final_required": {
+    "M0-01-A01": "PASS",
+    "M0-01-A02": "PASS",
+    "M0-01-A03": "PASS",
+    "M0-01-A04": "PASS",
+    "M0-01-A05": "FAIL"
+  }
+}

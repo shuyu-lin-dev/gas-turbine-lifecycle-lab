@@ -1,0 +1,14 @@
+{
+  "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+  "tested_code_sha": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+  "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+  "clean": true,
+  "required": {
+    "M0-01-A01": "PASS",
+    "M0-01-A02": "PASS",
+    "M0-01-A03": "PASS",
+    "M0-01-A04": "PASS",
+    "M0-01-A05": "PASS"
+  },
+  "commands": 65
+}

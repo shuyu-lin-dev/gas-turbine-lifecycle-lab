@@ -1,0 +1,33 @@
+{
+  "refresh": {
+    "url": "http://127.0.0.1:8280/service/connection",
+    "status": 200,
+    "headers": {
+      "Server": "nginx/1.28.0",
+      "Date": "Tue, 03 Nov 2026 16:26:55 GMT",
+      "Content-Type": "text/html",
+      "Content-Length": "506",
+      "Last-Modified": "Tue, 03 Nov 2026 16:09:29 GMT",
+      "Connection": "close",
+      "ETag": "\"6aea0739-1fa\"",
+      "Cache-Control": "no-cache",
+      "Accept-Ranges": "bytes"
+    },
+    "body": "<!doctype html>\n<html lang=\"zh-CN\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <meta name=\"theme-color\" content=\"#101e32\" />\n    <title>GT Lifecycle Lab｜服务连接</title>\n    <link rel=\"icon\" href=\"data:,\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-CsidK-5U.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DGeZILIg.css\">\n  </head>\n  <body>\n    <div id=\"app\"></div>\n  </body>\n</html>\n"
+  },
+  "missing-static": {
+    "url": "http://127.0.0.1:8280/assets/missing.js",
+    "status": 404,
+    "body": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.28.0</center>\r\n</body>\r\n</html>\r\n"
+  },
+  "api-root": {
+    "url": "http://127.0.0.1:8281/",
+    "status": 404,
+    "body": "{\"detail\":\"Not Found\"}"
+  },
+  "api-index": {
+    "url": "http://127.0.0.1:8281/index.html",
+    "status": 404,
+    "body": "{\"detail\":\"Not Found\"}"
+  }
+}

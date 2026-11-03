@@ -1,0 +1,4 @@
+
+> gt-lifecycle-web@0.1.0 test:lifecycle
+> node tests/lifecycle.mjs http://127.0.0.1:5173 http://127.0.0.1:5173/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-remediation/same-page-development.json /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python 8201
+

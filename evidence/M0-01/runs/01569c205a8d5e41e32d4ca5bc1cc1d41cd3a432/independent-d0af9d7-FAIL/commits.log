@@ -1,0 +1,39 @@
+commit d0af9d76a459f838f6f8fb8ee656a7b60fc6c790
+Author:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+AuthorDate: Wed Nov 4 00:42:45 2026 +0800
+Commit:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+CommitDate: Wed Nov 4 00:42:45 2026 +0800
+
+    M0-01 C: 拒绝通配 origin 并验收同页实际恢复 [810d967dfbff4f0b93ef72c858f5a6b6]
+
+commit 73d7e29cb2e837eceb4767932e116e76e4916d0f
+Author:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+AuthorDate: Wed Nov 4 00:08:32 2026 +0800
+Commit:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+CommitDate: Wed Nov 4 00:08:32 2026 +0800
+
+    M0-01 C: 校验同源配置与容器启动等待 [810d967dfbff4f0b93ef72c858f5a6b6]
+
+commit 290f173b10f13bf9653835dbdd9e8536c45774c6
+Author:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+AuthorDate: Wed Nov 4 00:04:00 2026 +0800
+Commit:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+CommitDate: Wed Nov 4 00:04:00 2026 +0800
+
+    M0-01 C: 记录实际断线请求的网络失败证据 [810d967dfbff4f0b93ef72c858f5a6b6]
+
+commit f80af8bbed7bfb50731d2ac553180951b82bbaa9
+Author:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+AuthorDate: Wed Nov 4 00:02:20 2026 +0800
+Commit:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+CommitDate: Wed Nov 4 00:02:20 2026 +0800
+
+    M0-01 C: 实现 Vue 与 Python 独立运行及真实验收 [810d967dfbff4f0b93ef72c858f5a6b6]
+
+commit 18a9210947e0114a8bbc6a10c8864701dfb8539e
+Author:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+AuthorDate: Tue Nov 3 23:53:30 2026 +0800
+Commit:     lucy-assistant <162398512+lucy-assistant@users.noreply.github.com>
+CommitDate: Tue Nov 3 23:53:30 2026 +0800
+
+    M0-01 S: 冻结 Vue 与 Python 独立运行验收 [810d967dfbff4f0b93ef72c858f5a6b6]

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-delivery/archive_evidence.py", line 102, in <module>
+    assert source.is_file(), (str(document.relative_to(run)), href, str(source))
+           ^^^^^^^^^^^^^^^^
+AssertionError: ('worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md', 'remote/', '/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/remote')

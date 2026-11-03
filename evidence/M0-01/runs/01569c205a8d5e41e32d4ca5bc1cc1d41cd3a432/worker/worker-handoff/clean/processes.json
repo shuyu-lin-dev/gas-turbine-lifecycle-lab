@@ -1,0 +1,295 @@
+[
+  {
+    "name": "api-a",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/.scratch-runtime/m0-01-origin-structure/clean-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8201"
+    ],
+    "pid": 702151,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2",
+    "started_at": "2026-11-03T17:24:24.674132+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T17:24:32.558264+00:00"
+  },
+  {
+    "name": "api-b",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/.scratch-runtime/m0-01-origin-structure/clean-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8202"
+    ],
+    "pid": 702153,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2",
+    "started_at": "2026-11-03T17:24:25.735349+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T17:24:57.629031+00:00"
+  },
+  {
+    "name": "web-direct-a",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 702217,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:26.765254+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:28.745877+00:00"
+  },
+  {
+    "name": "web-direct-b",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 702422,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:28.749622+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:30.425968+00:00"
+  },
+  {
+    "name": "web-proxy",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 702621,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:30.426728+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:35.366505+00:00"
+  },
+  {
+    "name": "api-a",
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/.scratch-runtime/m0-01-origin-structure/clean-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8201"
+    ],
+    "pid": 703008,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2",
+    "started_at": "2026-11-03T17:24:33.475796+00:00",
+    "exit_code": -15,
+    "stopped_at": "2026-11-03T17:24:54.654131+00:00"
+  },
+  {
+    "name": "web-invalid-0",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 703242,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:35.367491+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:37.265851+00:00"
+  },
+  {
+    "name": "web-invalid-1",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 703464,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:37.266836+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:39.214319+00:00"
+  },
+  {
+    "name": "web-invalid-2",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 703680,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:39.215139+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:41.130302+00:00"
+  },
+  {
+    "name": "web-invalid-3",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 703884,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:41.131173+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:43.113145+00:00"
+  },
+  {
+    "name": "web-invalid-4",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 704100,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:43.114076+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:44.387517+00:00"
+  },
+  {
+    "name": "web-invalid-5",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 704312,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:44.388390+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:46.320211+00:00"
+  },
+  {
+    "name": "web-invalid-6",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 704522,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:46.321327+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:48.257012+00:00"
+  },
+  {
+    "name": "web-invalid-7",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 704742,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:48.257969+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:50.194263+00:00"
+  },
+  {
+    "name": "web-invalid-8",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 704954,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:50.195205+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:51.824465+00:00"
+  },
+  {
+    "name": "web-preview",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "preview",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "4175",
+      "--strictPort"
+    ],
+    "pid": 705166,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:51.825416+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:54.489846+00:00"
+  },
+  {
+    "name": "web-lifecycle",
+    "argv": [
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5173",
+      "--strictPort"
+    ],
+    "pid": 705404,
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+    "started_at": "2026-11-03T17:24:54.655131+00:00",
+    "exit_code": 143,
+    "stopped_at": "2026-11-03T17:24:57.464682+00:00"
+  }
+]

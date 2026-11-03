@@ -1,0 +1,218 @@
+{
+  "candidate": "73d7e29cb2e837eceb4767932e116e76e4916d0f",
+  "processes": [
+    {
+      "name": "api",
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/bin/python",
+        "-m",
+        "uvicorn",
+        "gt_lifecycle_api.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8201"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review",
+      "pid": 643342,
+      "startedAt": "2026-11-03T16:27:54.787Z",
+      "stdout": "INFO:     127.0.0.1:46318 - \"GET /api/v1/health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46334 - \"GET /api/v1/health HTTP/1.1\" 200 OK\n",
+      "stderr": "INFO:     Started server process [643342]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8201 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [643342]\n",
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stoppedAt": "2026-11-03T16:27:57.540Z"
+    },
+    {
+      "name": "web",
+      "argv": [
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5173",
+        "--strictPort"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/frontend",
+      "pid": 643357,
+      "startedAt": "2026-11-03T16:27:55.936Z",
+      "stdout": "\n  VITE v8.3.5  ready in 256 ms\n\n  ➜  Local:   http://127.0.0.1:5173/\n",
+      "stderr": "",
+      "exitCode": 143,
+      "signal": null,
+      "stoppedAt": "2026-11-03T16:27:58.733Z"
+    },
+    {
+      "name": "api",
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/bin/python",
+        "-m",
+        "uvicorn",
+        "gt_lifecycle_api.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8201"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review",
+      "pid": 643542,
+      "startedAt": "2026-11-03T16:27:57.605Z",
+      "stdout": "INFO:     127.0.0.1:46398 - \"GET /api/v1/health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46410 - \"GET /api/v1/health HTTP/1.1\" 200 OK\n",
+      "stderr": "INFO:     Started server process [643542]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8201 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [643542]\n",
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stoppedAt": "2026-11-03T16:27:58.863Z"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/bin/python",
+        "-c",
+        "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+      ],
+      "env": {
+        "API_CORS_ORIGINS": "[\"http://*\"]"
+      },
+      "exitCode": 0,
+      "stdout": "['http://*']\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/bin/python",
+        "-c",
+        "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+      ],
+      "env": {
+        "API_CORS_ORIGINS": "[\"https://*.example.com\"]"
+      },
+      "exitCode": 0,
+      "stdout": "['https://*.example.com']\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/bin/python",
+        "-c",
+        "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+      ],
+      "env": {
+        "API_CORS_ORIGINS": "[\"*\"]"
+      },
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+    },
+    {
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/clean-01/wheel-env/bin/python",
+        "-c",
+        "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+      ],
+      "env": {
+        "API_CORS_ORIGINS": "[\"http://127.0.0.1:5173\"]"
+      },
+      "exitCode": 0,
+      "stdout": "['http://127.0.0.1:5173']\n",
+      "stderr": ""
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/@vite/client",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/src/main.ts",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/node_modules/.vite/deps/vue.js?v=39acdc6b",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/src/App.vue",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/src/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/@id/__x00__plugin-vue:export-helper",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/node_modules/vite/dist/client/env.mjs",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET"
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "status": 200,
+      "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "status": 200,
+      "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+    }
+  ],
+  "requestFailures": [
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "failure": {
+        "errorText": "net::ERR_CONNECTION_REFUSED"
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    }
+  ],
+  "errors": [],
+  "steps": [
+    {
+      "action": "同一页面首次成功",
+      "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接正常\n请求地址\nhttp://127.0.0.1:8201/api/v1/health\n服务名称\ngt-lifecycle-api\n服务版本\n0.1.0\n服务状态\nok\n服务实例\napi-a\n重新检查\n通用燃气轮机教学与工程验证"
+    },
+    {
+      "action": "原页面停止API后实际点击重新检查失败且成功字段清除",
+      "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接失败\n请求地址\nhttp://127.0.0.1:8201/api/v1/health\n\n无法访问API，请检查服务与地址后重新检查。\n\n重新检查\n通用燃气轮机教学与工程验证"
+    },
+    {
+      "action": "原页面恢复API后实际点击重新检查成功",
+      "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接正常\n请求地址\nhttp://127.0.0.1:8201/api/v1/health\n服务名称\ngt-lifecycle-api\n服务版本\n0.1.0\n服务状态\nok\n服务实例\napi-a\n重新检查\n通用燃气轮机教学与工程验证"
+    }
+  ],
+  "wildcardConfigurationRejected": false,
+  "samePageRecovery": "PASS"
+}

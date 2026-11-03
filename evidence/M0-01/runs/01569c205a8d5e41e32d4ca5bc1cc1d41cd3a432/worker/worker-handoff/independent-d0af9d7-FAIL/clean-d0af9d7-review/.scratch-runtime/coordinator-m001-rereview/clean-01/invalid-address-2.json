@@ -1,0 +1,27 @@
+{
+  "url": "http://127.0.0.1:5173",
+  "healthUrl": "http://127.0.0.1:8201/api/v1/health",
+  "instance": "api-a",
+  "mode": "config",
+  "requests": [],
+  "requestFailures": [],
+  "responses": [],
+  "errors": [],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "steps": [
+    "首次加载：连接失败",
+    "实际点击重新检查：连接失败",
+    "390px页面无横向溢出"
+  ],
+  "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接失败\n请求地址\n\nAPI地址为空或包含非法字符，请检查VITE_API_BASE_URL。\n\n重新检查\n通用燃气轮机教学与工程验证",
+  "state": "PASS"
+}

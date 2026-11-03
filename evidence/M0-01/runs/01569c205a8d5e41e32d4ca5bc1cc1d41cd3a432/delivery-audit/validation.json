@@ -1,0 +1,519 @@
+{
+  "tested_code_sha": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432",
+  "checked_at": "2026-11-03T18:03:21.645418+00:00",
+  "source_hash_records": 1105,
+  "report_relative_links": [
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/criteria.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/SHA256SUMS.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/REVIEW.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/remote-E-verification.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/criteria.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/SHA256SUMS.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent-review.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/remote-E-verification.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/criteria.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/archive-index.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/SHA256SUMS.json"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-01569c2-PASS/REVIEW.md"
+    },
+    {
+      "document": "TASKS.md",
+      "href": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "../../criteria.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/main/commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/clean/commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/clean-01569c2/.scratch-runtime/coordinator-m001-origin-review/frozen-clean/commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/audit-results.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/main/same-page-lifecycle.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/clean-01569c2/.scratch-runtime/coordinator-m001-origin-review/frozen-clean/same-page-lifecycle.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-73d7e29-FAIL/REVIEW.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-d0af9d7-FAIL/REVIEW.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/old-c-red.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/green.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/frontend-query-red/empty-query.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/worker-review.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/previous-7bc4050-main/results.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/previous-worker-d0af9d7/"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "worker/worker-handoff/worker-review.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/REVIEW.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/audit.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "delivery-audit/independent-approval.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/run-frozen.sh"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/frozen-clean.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/frozen-clean.exit"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "archive-index.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "delivery-audit/archive-03.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "delivery-audit/validation.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "SHA256SUMS.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "../../../../docs/M0_01.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md",
+      "href": "independent-01569c2-PASS/ci-check-runs.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "full.diff"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "independent-audit.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "issue5.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "issue5-comments.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "pr6.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "pr6-comments.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "inspection-commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "pr4.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "issue3-comments.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "agent-browser-core.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "standards.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "spec.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "supplement/results.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "supplement.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "run-frozen.sh"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "final-commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "existing-evidence-hashes.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "worker-evidence-audit.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "full.diff"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "commits.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "remediation.diff"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "independent-audit.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "remote/"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "agent-browser-core.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "standards.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "spec.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "spec-origin-probe.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-probe.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-probe.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-clean-02.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-clean-02.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "origin-probe.py"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "origin-probe.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "origin-probe.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "run-frozen.sh"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/old-c-red.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/frontend-query-red/empty-query.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/audit-results.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/main/commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/clean/commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/REPORT.md",
+      "href": "worker-handoff/worker-review.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "full.diff"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "commits.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "remediation.diff"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "independent-audit.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "remote/"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "agent-browser-core.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "standards.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "spec.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "spec-origin-probe.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-probe.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-probe.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-clean-02.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "credentials-clean-02.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "origin-probe.py"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "origin-probe.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "origin-probe.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/independent-d0af9d7-FAIL/REVIEW.md",
+      "href": "run-frozen.sh"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "full.diff"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "independent-audit.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "issue5.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "issue5-comments.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "pr6.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "pr6-comments.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "inspection-commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "pr4.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "issue3-comments.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "agent-browser-core.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "standards.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "spec.md"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "supplement/results.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "supplement.log"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "run-frozen.sh"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "final-commands.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "existing-evidence-hashes.json"
+    },
+    {
+      "document": "evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/worker/worker-handoff/previous-worker-d0af9d7/independent-73d7e29-FAIL/REVIEW.md",
+      "href": "worker-evidence-audit.json"
+    }
+  ],
+  "result": "PASS",
+  "implementation_test_dependency_configuration_and_acceptance_diff": [],
+  "markdown_parser": "markdown-it-py==4.0.0",
+  "commands_exit_codes": "全部实际值符合明确预期"
+}

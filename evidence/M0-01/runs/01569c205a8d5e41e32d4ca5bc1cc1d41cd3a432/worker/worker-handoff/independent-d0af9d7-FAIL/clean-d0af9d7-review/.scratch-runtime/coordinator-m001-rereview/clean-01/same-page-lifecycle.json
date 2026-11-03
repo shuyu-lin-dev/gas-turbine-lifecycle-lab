@@ -1,0 +1,121 @@
+{
+  "url": "http://127.0.0.1:5173",
+  "healthUrl": "http://127.0.0.1:5173/api/v1/health",
+  "instance": "api-a",
+  "processes": [
+    {
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review/.scratch-runtime/coordinator-m001-rereview/clean-01/wheel-env/bin/python",
+        "-m",
+        "uvicorn",
+        "gt_lifecycle_api.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8201"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review/frontend",
+      "pid": 674834,
+      "startedAt": "2026-11-03T16:55:58.738Z",
+      "stdout": "INFO:     127.0.0.1:46920 - \"GET /api/v1/health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46936 - \"GET /api/v1/health HTTP/1.1\" 200 OK\n",
+      "stderr": "INFO:     Started server process [674834]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8201 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [674834]\n",
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stoppedAt": "2026-11-03T16:55:59.830Z"
+    },
+    {
+      "argv": [
+        "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review/.scratch-runtime/coordinator-m001-rereview/clean-01/wheel-env/bin/python",
+        "-m",
+        "uvicorn",
+        "gt_lifecycle_api.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8201"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review/frontend",
+      "pid": 674982,
+      "startedAt": "2026-11-03T16:55:59.894Z",
+      "stdout": "INFO:     127.0.0.1:47002 - \"GET /api/v1/health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:47012 - \"GET /api/v1/health HTTP/1.1\" 200 OK\n",
+      "stderr": "INFO:     Started server process [674982]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8201 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [674982]\n",
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stoppedAt": "2026-11-03T16:56:01.301Z"
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "method": "GET"
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "status": 200,
+      "method": "GET",
+      "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "status": 502,
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "status": 200,
+      "method": "GET",
+      "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+    }
+  ],
+  "failures": [
+    {
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+    }
+  ],
+  "navigations": [
+    "http://127.0.0.1:5173/"
+  ],
+  "steps": [
+    {
+      "action": "同一页面初次连接成功",
+      "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接正常\n请求地址\nhttp://127.0.0.1:5173/api/v1/health\n服务名称\ngt-lifecycle-api\n服务版本\n0.1.0\n服务状态\nok\n服务实例\napi-a\n重新检查\n通用燃气轮机教学与工程验证"
+    },
+    {
+      "action": "实际停止API，原页面点击后失败且清除旧成功字段",
+      "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接失败\n请求地址\nhttp://127.0.0.1:5173/api/v1/health\n\n健康接口返回HTTP 502，请检查API服务。\n\n重新检查\n通用燃气轮机教学与工程验证"
+    },
+    {
+      "action": "实际恢复API，原页面点击后连接成功",
+      "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接正常\n请求地址\nhttp://127.0.0.1:5173/api/v1/health\n服务名称\ngt-lifecycle-api\n服务版本\n0.1.0\n服务状态\nok\n服务实例\napi-a\n重新检查\n通用燃气轮机教学与工程验证"
+    }
+  ],
+  "state": "PASS"
+}

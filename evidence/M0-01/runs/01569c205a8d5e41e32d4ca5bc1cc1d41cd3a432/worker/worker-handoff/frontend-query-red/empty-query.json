@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:5173",
+  "healthUrl": "http://127.0.0.1:8201/api/v1/health",
+  "instance": "api-a",
+  "mode": "config",
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8201/api/v1?/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1?/health",
+      "method": "GET"
+    }
+  ],
+  "requestFailures": [],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:8201/api/v1?/health",
+      "method": "GET",
+      "status": 404,
+      "headers": {
+        "access-control-allow-origin": "http://127.0.0.1:5173",
+        "content-length": "22",
+        "date": "Tue, 03 Nov 2026 17:18:48 GMT",
+        "content-type": "application/json",
+        "vary": "Origin",
+        "server": "uvicorn"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1?/health",
+      "method": "GET",
+      "status": 404,
+      "headers": {
+        "access-control-allow-origin": "http://127.0.0.1:5173",
+        "content-length": "22",
+        "date": "Tue, 03 Nov 2026 17:18:48 GMT",
+        "content-type": "application/json",
+        "vary": "Origin",
+        "server": "uvicorn"
+      }
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "steps": [
+    "首次加载：连接失败"
+  ]
+}

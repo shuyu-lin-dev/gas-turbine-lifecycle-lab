@@ -1,0 +1,5 @@
+干净检出首次执行未启动验收程序。Bash在重定向日志时退出1：
+
+bash: line 1: .scratch-runtime/m0-01-remediation/clean-01.log: No such file or directory
+
+工作目录为.scratch-runtime/m0-01-remediation/clean-d0af9d7；prepare仅建立了该clone的.scratch-runtime/m0-01/tmp，未建立新日志父目录.scratch-runtime/m0-01-remediation。建立日志父目录后使用同一准确候选及原验收命令重新执行，保留本次失败记录。未修改任何源码、标准或预期。

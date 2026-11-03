@@ -1,0 +1,1 @@
+{"state": "PASS", "runs": {"main": 63, "clean": 65, "worker-main": 63, "worker-clean": 65}, "manifest_counts": [180, 399, 146, 192, 39], "required": {"M0-01-A01": "PASS", "M0-01-A02": "PASS", "M0-01-A03": "PASS", "M0-01-A04": "PASS", "M0-01-A05": "FAIL"}}

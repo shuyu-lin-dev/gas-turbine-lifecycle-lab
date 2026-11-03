@@ -1,0 +1,56 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__________ test_cors_allows_declared_origin_and_rejects_other_origin ___________
+
+api = 'http://127.0.0.1:48557'
+
+    def test_cors_allows_declared_origin_and_rejects_other_origin(api):
+        allowed = httpx.get(api + '/api/v1/health', headers={'Origin': 'http://127.0.0.1:5173'}, trust_env=False)
+>       assert allowed.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend/tests/test_http.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Headers({'date': 'Tue, 03 Nov 2026 15:55:36 GMT', 'server': 'uvicorn', 'content-length': '105', 'content-type': 'application/json'})
+key = 'access-control-allow-origin'
+
+    def __getitem__(self, key: str) -> str:
+        """
+        Return a single header value.
+    
+        If there are multiple headers with the same key, then we concatenate
+        them with commas. See: https://tools.ietf.org/html/rfc7230#section-3.2.2
+        """
+        normalized_key = key.lower().encode(self.encoding)
+    
+        items = [
+            header_value.decode(self.encoding)
+            for _, header_key, header_value in self._list
+            if header_key == normalized_key
+        ]
+    
+        if items:
+            return ", ".join(items)
+    
+>       raise KeyError(key)
+E       KeyError: 'access-control-allow-origin'
+
+backend/.venv/lib/python3.12/site-packages/httpx/_models.py:302: KeyError
+---------------------------- Captured stdout setup -----------------------------
+INFO:     127.0.0.1:45964 - "GET /api/v1/health HTTP/1.1" 200 OK
+---------------------------- Captured stderr setup -----------------------------
+INFO:     Started server process [604202]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:48557 (Press CTRL+C to quit)
+----------------------------- Captured stdout call -----------------------------
+INFO:     127.0.0.1:45978 - "GET /api/v1/health HTTP/1.1" 200 OK
+--------------------------- Captured stderr teardown ---------------------------
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [604202]
+=========================== short test summary info ============================
+FAILED backend/tests/test_http.py::test_cors_allows_declared_origin_and_rejects_other_origin
+1 failed, 1 deselected in 0.52s

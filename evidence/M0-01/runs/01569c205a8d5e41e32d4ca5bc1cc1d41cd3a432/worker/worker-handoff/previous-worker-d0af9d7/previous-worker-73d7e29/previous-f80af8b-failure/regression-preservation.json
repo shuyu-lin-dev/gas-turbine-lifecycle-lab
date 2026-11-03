@@ -1,0 +1,15 @@
+{
+  "paths": [
+    "vendor",
+    "assets",
+    "evidence/FE-BASE",
+    "evidence/M0-00",
+    "scripts/fe-base",
+    "scripts/verify_fe_base.py",
+    "scripts/verify_m0_00.py",
+    "scripts/check_m0_00_failures.py",
+    "ACCEPTANCE.md",
+    "LICENSE"
+  ],
+  "state": "PASS"
+}

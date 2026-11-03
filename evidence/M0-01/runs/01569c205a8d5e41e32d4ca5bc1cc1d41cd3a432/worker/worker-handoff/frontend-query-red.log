@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/frontend_query_probe.py", line 15, in <module>
+    run.browser('empty-query', 'http://127.0.0.1:5173', 'http://127.0.0.1:8201/api/v1/health', mode='config')
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 97, in browser
+    self.command(['npm', 'test', '--', page, health, instance, self.output / f'{name}.json', mode], cwd=self.root / 'frontend', timeout=120)
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 48, in command
+    assert result.returncode == expected, f'命令失败: {argv}; {record["stderr"]}'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 命令失败: ['npm', 'test', '--', 'http://127.0.0.1:5173', 'http://127.0.0.1:8201/api/v1/health', 'api-a', PosixPath('/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/frontend-query-red/empty-query.json'), 'config']; node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+2 !== 1
+
+    at file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend/tests/browser.mjs:52:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 1,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.2
+
