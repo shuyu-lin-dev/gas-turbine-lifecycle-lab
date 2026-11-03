@@ -12,6 +12,15 @@ server {
         proxy_read_timeout 5s;
     }
 
+    location = /viewer {
+        return 308 /viewer/$is_args$args;
+    }
+
+    location /viewer/ {
+        try_files $uri $uri/ =404;
+        add_header Cache-Control "no-cache";
+    }
+
     location /assets/ {
         try_files $uri =404;
     }

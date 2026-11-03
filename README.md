@@ -23,9 +23,9 @@
 
 ## 当前执行
 
-Issue #5 已正式派发 M0-01「Vue 与 Python 前后端独立运行」。Vue页面提供实际后端健康检查，Python API独立构建和运行；本机开发、配置、容器部署与验收命令见 [M0_01.md](docs/M0_01.md)。FE-BASE已通过PR #4实际集成，完整源程序的独立入口见 [FE_BASE.md](docs/FE_BASE.md)。当前进度与准确版本只查 [TASKS.md](TASKS.md)。
+Issue #7 已正式派发 FE-INTEGRATE「Vue 业务壳与同源 viewer 桥接」。Vue 的“模型联动”工作区使用本机同源完整 viewer，桥接夹具明确标注用途；“服务连接”继续访问独立 Python 健康接口。开发、组合构建、独立部署和真实验收命令见 [FE_INTEGRATE.md](docs/FE_INTEGRATE.md)。前置 M0-01 已通过 PR #6 实际集成，API配置见 [M0_01.md](docs/M0_01.md)；完整上游来源与原演示入口见 [FE_BASE.md](docs/FE_BASE.md)。当前进度与准确版本只查 [TASKS.md](TASKS.md)。
 
-协调聊天组织准确候选的全新上下文独立 Standards/Spec 审查与实际复验，通过后完成证据、远程基线、锁定登记和最终head核查，由协调聊天合并并核查实际集成。开发worker只执行M0-01，后续任务单独派发；不执行approve、merge或auto-merge，不调用gh-owner。
+协调聊天组织准确候选的全新上下文独立 Standards/Spec 审查与实际复验，通过后完成证据、远程基线、锁定登记和最终head核查，由协调聊天合并并核查实际集成。开发worker只执行FE-INTEGRATE，后续任务单独派发；不执行approve、merge或auto-merge，不调用gh-owner。
 
 模型资产保留已有 GLB 与导出源码子集；完整前端与 RAG 上游分别在 FE-BASE、RAG-BASE 取得并通过 Git subtree 导入。原有 LICENSE 与第三方许可分别适用。依赖、构建、运行数据库、模型权重、秘密和中间日志按 .gitignore 管理，公开模型、锁文件及必要脱敏证据进入版本控制。
 

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import './style.css'
+import ViewerPanel from './ViewerPanel.vue'
+const page = ref<'connection' | 'model'>('connection')
 
 interface Health {
   schema_version: '1'
@@ -70,7 +72,12 @@ onMounted(checkConnection)
       <a class="brand" href="/">GT Lifecycle Lab</a>
       <span class="teaching-label">教学实验平台</span>
     </header>
-    <main>
+    <nav class="workspace-nav" aria-label="工作区">
+      <button type="button" :aria-pressed="page === 'connection'" @click="page = 'connection'">服务连接</button>
+      <button type="button" :aria-pressed="page === 'model'" @click="page = 'model'">模型联动</button>
+    </nav>
+    <ViewerPanel v-if="page === 'model'" />
+    <main v-else>
       <section class="introduction" aria-labelledby="page-title">
         <p class="project-name">燃气轮机数字化样机与智能运维实验平台</p>
         <h1 id="page-title">服务连接</h1>

@@ -7,6 +7,7 @@ import { SSAOPass } from 'three/examples/jsm/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
 import type { TurbineModel } from './turbine';
 import { createBladeStudy, type BladeView } from './blade-study';
+import { disposeScene } from './dispose-scene';
 import './inspector.css';
 import { languageControl } from './i18n';
 import { renderPixelRatio, onRenderQuality, getRenderQuality, setRenderQuality, type RenderQuality } from './render-quality';
@@ -348,7 +349,18 @@ export function installComponentInspector(model: TurbineModel, onActive: (active
   dialog.querySelectorAll<HTMLButtonElement>('[data-camera]').forEach(button => button.addEventListener('click', () => frame(mode === 'blade' ? blade.root : mode === 'assembly' ? context! : selected!, button.dataset.camera)));
   onRenderQuality(() => { qualitySelect.value = getRenderQuality(); resize(); });
   const observer = new ResizeObserver(resize); observer.observe(viewPort);
-  return { get active() { return dialog.open; }, open, openPart(id: string) { const part=parts.find(p=>p.id===id);if(part)open(false,part); }, render(delta: number) {
+  return { dispose() {
+    observer.disconnect();
+    if (renderer) {
+      orbit.dispose();
+      disposeScene(scene);
+      composer.passes.forEach(pass => pass.dispose());
+      composer.dispose();
+      renderer.dispose();
+    }
+    dialog.remove();
+    opener.remove();
+  }, get active() { return dialog.open; }, open, openPart(id: string) { const part=parts.find(p=>p.id===id);if(part)open(false,part); }, render(delta: number) {
     if (!dialog.open || !renderer) return;
     elapsed += delta;
     if (mode === 'assembly' && selected) {

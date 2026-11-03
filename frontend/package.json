@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --strictPort",
     "typecheck": "vue-tsc --noEmit",
-    "build": "npm run typecheck && vite build",
+    "build": "node build.mjs",
+    "build:shell": "npm run typecheck && vite build",
+    "dev:viewer": "node ../vendor/turbine-explorer/node_modules/vite/bin/vite.js ../vendor/turbine-explorer --base=/viewer/ --host 127.0.0.1 --port 4177 --strictPort",
     "preview": "vite preview --host 127.0.0.1 --strictPort",
     "test": "node tests/browser.mjs",
     "test:lifecycle": "node tests/lifecycle.mjs"
