@@ -96,7 +96,8 @@ def main():
         viewer = run.start('viewer-dev', ['node', 'node_modules/vite/bin/vite.js', '--host', '127.0.0.1', '--base=/viewer/', '--port', '4177', '--strictPort'], cwd=vendor)
         run.wait('http://127.0.0.1:4177/viewer/', viewer)
         web = run.web('web-bridge', '/api/v1')
-        for script, name in [('bridge.mjs', 'development-bridge'), ('bridge-initialization.mjs', 'development-initialization')]:
+        for script, name in [('bridge.mjs', 'development-bridge'), ('bridge-initialization.mjs', 'development-initialization'),
+                             ('bridge-display-state.mjs', 'development-display-state')]:
             run.command(['node', root / 'frontend/tests' / script, 'http://127.0.0.1:5173', output / f'{name}.json'], timeout=1200)
         run.command(['node', 'scripts/fe-base/browser.mjs', 'http://127.0.0.1:5173/viewer', output / 'development-upstream.json'], timeout=1200)
         run.stop(web)
@@ -114,7 +115,8 @@ def main():
             routes[name] = run.http('http://127.0.0.1:8280' + path, code)
         assert all('id="scene"' in routes[name]['body'] for name in ['viewer-slash', 'viewer-redirect', 'viewer-index'])
         run.save('deployment-routes.json', routes)
-        for script, name in [('bridge.mjs', 'deployment-bridge'), ('bridge-initialization.mjs', 'deployment-initialization')]:
+        for script, name in [('bridge.mjs', 'deployment-bridge'), ('bridge-initialization.mjs', 'deployment-initialization'),
+                             ('bridge-display-state.mjs', 'deployment-display-state')]:
             run.command(['node', root / 'frontend/tests' / script, 'http://127.0.0.1:8280', output / f'{name}.json'], timeout=1200)
         run.command(['node', 'scripts/fe-base/browser.mjs', 'http://127.0.0.1:8280/viewer', output / 'deployment-upstream.json'], timeout=1200)
         git('diff', '--check', BASE, args.candidate)

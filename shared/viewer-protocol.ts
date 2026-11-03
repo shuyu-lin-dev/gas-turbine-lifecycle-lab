@@ -22,7 +22,9 @@ export type BusinessMessage = Envelope & Context & (
 export type Message = ReadyMessage | BusinessMessage
 
 function object(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null && !Array.isArray(value)
+  if (typeof value !== 'object' || value === null || Array.isArray(value)) return false
+  const prototype = Object.getPrototypeOf(value)
+  return prototype === Object.prototype || prototype === null
 }
 function keys(value: Record<string, unknown>, expected: string[]): boolean {
   return Object.keys(value).length === expected.length && expected.every(key => Object.hasOwn(value, key))

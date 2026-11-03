@@ -67,12 +67,24 @@ export function installEmbeddedScene(model: TurbineModel, scene: THREE.Scene, ca
     for (const button of buttons.querySelectorAll('button')) button.setAttribute('aria-pressed', String(button.dataset.component === component))
     return Boolean(node)
   }
+  function paint() {
+    for (const entry of snapshot.components) {
+      const active = new Set(materials.get(entry.component_id)!)
+      nodes.get(entry.component_id)!.traverse(object => {
+        if (!(object instanceof THREE.Mesh)) return
+        for (const material of Array.isArray(object.material) ? object.material : [object.material]) {
+          if (material instanceof THREE.MeshStandardMaterial) active.add(material)
+        }
+      })
+      for (const material of active) {
+        material.emissive.set(colors[entry.status])
+        material.emissiveIntensity = .45
+      }
+    }
+  }
   function apply(value: Snapshot) {
     snapshot = value
-    for (const entry of value.components) for (const material of materials.get(entry.component_id)!) {
-      material.emissive.set(colors[entry.status])
-      material.emissiveIntensity = .45
-    }
+    paint()
     choose(value.selected_component_id, false)
     details.replaceChildren()
     const quality = document.createElement('p')
@@ -122,7 +134,10 @@ export function installEmbeddedScene(model: TurbineModel, scene: THREE.Scene, ca
   canvas.addEventListener('pointerup', onUp)
   apply(snapshot)
   return {
-    update() { if (selected && knownComponent(selected)) helper.setFromObject(nodes.get(selected)!) },
+    update() {
+      paint()
+      if (selected && knownComponent(selected)) helper.setFromObject(nodes.get(selected)!)
+    },
     dispose() {
       bridge.dispose()
       canvas.removeEventListener('pointerdown', onDown)

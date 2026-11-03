@@ -88,7 +88,8 @@ const ready = { schema_version: '1', type: 'viewer-ready', viewer_instance_id: '
 test('初次ready无需未知运行范围，字段和版本必须精确', () => {
   assert.equal(validMessage(ready), true)
   for (const value of [null, [], {}, { ...ready, run_id: 'unknown' }, { ...ready, schema_version: 1 },
-    { ...ready, context_revision: -1 }, { ...ready, payload: { extra: true } }, { ...ready, viewer_instance_id: '' }]) {
+    { ...ready, context_revision: -1 }, { ...ready, payload: { extra: true } }, { ...ready, viewer_instance_id: '' },
+    { ...ready, payload: new Map() }, { ...ready, payload: new Set() }, { ...ready, payload: new Date('2026-11-03T00:00:00.000Z') }]) {
     assert.equal(validMessage(value), false)
   }
 })
