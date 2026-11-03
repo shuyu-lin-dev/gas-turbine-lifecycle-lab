@@ -1,0 +1,92 @@
+E                                                                        [100%]
+==================================== ERRORS ====================================
+__ ERROR at setup of test_health_returns_frozen_service_version_and_instance ___
+
+port = ':1]', scheme = 'all'
+
+    def normalize_port(port: str | int | None, scheme: str) -> int | None:
+        # From https://tools.ietf.org/html/rfc3986#section-3.2.3
+        #
+        # "A scheme may define a default port.  For example, the "http" scheme
+        # defines a default port of "80", corresponding to its reserved TCP
+        # port number.  The type of port designated by the port number (e.g.,
+        # TCP, UDP, SCTP) is defined by the URI scheme.  URI producers and
+        # normalizers should omit the port component and its ":" delimiter if
+        # port is empty or if its value would be the same as that of the
+        # scheme's default."
+        if port is None or port == "":
+            return None
+    
+        try:
+>           port_as_int = int(port)
+                          ^^^^^^^^^
+E           ValueError: invalid literal for int() with base 10: ':1]'
+
+backend/.venv/lib/python3.12/site-packages/httpx/_urlparse.py:409: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        with socket.socket() as reservation:
+            reservation.bind(('127.0.0.1', 0))
+            port = reservation.getsockname()[1]
+        env = dict(os.environ, API_INSTANCE_ID='api-a')
+        process = subprocess.Popen([sys.executable, '-m', 'uvicorn', 'gt_lifecycle_api.app:app',
+                                    '--host', '127.0.0.1', '--port', str(port)], env=env)
+        url = f'http://127.0.0.1:{port}'
+        try:
+            deadline = time.monotonic() + 30
+            while True:
+                assert process.poll() is None, 'API启动失败'
+                try:
+>                   response = httpx.get(url + '/api/v1/health', timeout=1)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend/tests/test_http.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+backend/.venv/lib/python3.12/site-packages/httpx/_api.py:195: in get
+    return request(
+backend/.venv/lib/python3.12/site-packages/httpx/_api.py:102: in request
+    with Client(
+backend/.venv/lib/python3.12/site-packages/httpx/_client.py:698: in __init__
+    URLPattern(key): None
+    ^^^^^^^^^^^^^^^
+backend/.venv/lib/python3.12/site-packages/httpx/_utils.py:172: in __init__
+    url = URL(pattern)
+          ^^^^^^^^^^^^
+backend/.venv/lib/python3.12/site-packages/httpx/_urls.py:117: in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+backend/.venv/lib/python3.12/site-packages/httpx/_urlparse.py:321: in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+port = ':1]', scheme = 'all'
+
+    def normalize_port(port: str | int | None, scheme: str) -> int | None:
+        # From https://tools.ietf.org/html/rfc3986#section-3.2.3
+        #
+        # "A scheme may define a default port.  For example, the "http" scheme
+        # defines a default port of "80", corresponding to its reserved TCP
+        # port number.  The type of port designated by the port number (e.g.,
+        # TCP, UDP, SCTP) is defined by the URI scheme.  URI producers and
+        # normalizers should omit the port component and its ":" delimiter if
+        # port is empty or if its value would be the same as that of the
+        # scheme's default."
+        if port is None or port == "":
+            return None
+    
+        try:
+            port_as_int = int(port)
+        except ValueError:
+>           raise InvalidURL(f"Invalid port: {port!r}")
+E           httpx.InvalidURL: Invalid port: ':1]'
+
+backend/.venv/lib/python3.12/site-packages/httpx/_urlparse.py:411: InvalidURL
+---------------------------- Captured stderr setup -----------------------------
+ERROR:    Error loading ASGI app. Could not import module "gt_lifecycle_api.app".
+=========================== short test summary info ============================
+ERROR backend/tests/test_http.py::test_health_returns_frozen_service_version_and_instance
+1 error in 0.27s

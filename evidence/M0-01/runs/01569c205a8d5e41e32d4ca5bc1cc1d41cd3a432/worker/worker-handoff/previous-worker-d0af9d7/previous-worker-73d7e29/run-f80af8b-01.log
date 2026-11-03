@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 272, in <module>
+    main()
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 253, in main
+    run.local()
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 144, in local
+    self.browser('api-stopped', 'http://127.0.0.1:5173', 'http://127.0.0.1:5173/api/v1/health', mode='failed')
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 97, in browser
+    self.command(['npm', 'test', '--', page, health, instance, self.output / f'{name}.json', mode], cwd=self.root / 'frontend', timeout=120)
+  File "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/scripts/verify_m0_01.py", line 48, in command
+    assert result.returncode == 0, f'命令失败: {argv}; {record["stderr"]}'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 命令失败: ['npm', 'test', '--', 'http://127.0.0.1:5173', 'http://127.0.0.1:5173/api/v1/health', 'api-a', PosixPath('/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/run-f80af8b-01/api-stopped.json'), 'failed']; node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier
+    at Page.<anonymous> (/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend/tests/browser.mjs:22:29) {
+  name: 'Error'
+}
+
+Node.js v24.22.2
+

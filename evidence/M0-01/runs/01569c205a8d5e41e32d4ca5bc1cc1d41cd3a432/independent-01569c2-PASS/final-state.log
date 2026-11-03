@@ -1,0 +1,15 @@
+2026-11-04T01:34:39+08:00
+lucy-assistant
+01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432
+01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432	refs/heads/agent/vue-python-runtime-810d967dfbff
+b8ad3150cf4480f8e205926541aeeccb072f7f80	refs/heads/main
+a7966085071051d07cb7e80d0843a07ad9687183	refs/tags/baseline/FE-BASE-ab07372aa223
+State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                 
+LISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*                                           
+LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                           
+LISTEN 0      4096       127.0.0.54:53         0.0.0.0:*                                           
+LISTEN 0      128           0.0.0.0:2222       0.0.0.0:*                                           
+LISTEN 0      511         127.0.0.1:46611      0.0.0.0:*    users:(("node",pid=304591,fd=23))      
+LISTEN 0      511         127.0.0.1:30152      0.0.0.0:*    users:(("node",pid=305720,fd=43))      
+LISTEN 0      511         127.0.0.1:3082       0.0.0.0:*    users:(("MainThread",pid=235968,fd=22))
+LISTEN 0      128              [::]:2222          [::]:*                                           

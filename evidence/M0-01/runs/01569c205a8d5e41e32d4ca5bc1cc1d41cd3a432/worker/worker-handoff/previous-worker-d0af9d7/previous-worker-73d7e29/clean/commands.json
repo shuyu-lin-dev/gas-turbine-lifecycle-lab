@@ -1,0 +1,1027 @@
+[
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.074315+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.077218+00:00",
+    "exit_code": 0,
+    "stdout": "b8ad3150cf4480f8e205926541aeeccb072f7f80\n",
+    "stderr": "",
+    "stdout_sha256": "f0563ecb61b335563e1ca2426e20453bb9f322845f096337c78f2d2a57bfcfb1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "remote",
+      "get-url",
+      "origin"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.079706+00:00",
+    "exit_code": 0,
+    "stdout": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n",
+    "stderr": "",
+    "stdout_sha256": "91978bc78eb760af1b35e6b40f228d2e3199b7633314ca1246da0857f04fe664",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--abbrev-ref",
+      "HEAD"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.082062+00:00",
+    "exit_code": 0,
+    "stdout": "HEAD\n",
+    "stderr": "",
+    "stdout_sha256": "34d6a94dacb895403529caac12a19aed745c6caca7a8d0f4ed631999044f76e8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "--path-format=absolute",
+      "--git-common-dir"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.084456+00:00",
+    "exit_code": 0,
+    "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.git\n",
+    "stderr": "",
+    "stdout_sha256": "e71264449097a451a74490e78515d6dcfb15383d4b149061e8744b04d2340578",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only",
+      "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f",
+      "--",
+      "vendor",
+      "assets",
+      "evidence/FE-BASE",
+      "evidence/M0-00",
+      "scripts/fe-base",
+      "scripts/verify_fe_base.py",
+      "scripts/verify_m0_00.py",
+      "scripts/check_m0_00_failures.py",
+      "ACCEPTANCE.md",
+      "LICENSE"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.087373+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only",
+      "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f",
+      "--",
+      "evidence/M0-01"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.089736+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.118124+00:00",
+    "exit_code": 0,
+    "stdout": "uv 0.9.7\n",
+    "stderr": "",
+    "stdout_sha256": "2a987cd8b0c735116356edc68bbecd86fc69c5000735383e6d227e5ce7ac06f7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "node",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.124793+00:00",
+    "exit_code": 0,
+    "stdout": "v24.22.2\n",
+    "stderr": "",
+    "stdout_sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "--version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.128731+00:00",
+    "exit_code": 0,
+    "stdout": "11.19.1\n",
+    "stderr": "",
+    "stdout_sha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.229612+00:00",
+    "exit_code": 0,
+    "stdout": "Client:\n Version:           29.5.3\n API version:       1.54\n Go version:        go1.26.4\n Git commit:        d1c06ef\n Built:             Wed Jun  3 17:59:16 2026\n OS/Arch:           linux/amd64\n Context:           default\n\nServer: Docker Desktop 4.78.0 (229452)\n Engine:\n  Version:          29.5.3\n  API version:      1.54 (minimum version 1.40)\n  Go version:       go1.26.4\n  Git commit:       285b471\n  Built:            Wed Jun  3 17:59:56 2026\n  OS/Arch:          linux/amd64\n  Experimental:     false\n containerd:\n  Version:          v2.2.4\n  GitCommit:        193637f7ee8ae5f5aa5248f49e7baa3e6164966e\n runc:\n  Version:          1.3.5\n  GitCommit:        v1.3.5-0-g488fc13e\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\n",
+    "stderr": "",
+    "stdout_sha256": "60c49c0ef083bf553debadf8980176147b6a3c6433c3e4aa546b47b9961a467c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "version"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.259220+00:00",
+    "exit_code": 0,
+    "stdout": "Docker Compose version v5.1.4\n",
+    "stderr": "",
+    "stdout_sha256": "6d6841c290e7d1c4949f660c36aa44d8b6e7fd931ab9d7c499006f4859b3ba21",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "api",
+      "user",
+      "--jq",
+      ".login"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:34.296976+00:00",
+    "exit_code": 0,
+    "stdout": "lucy-assistant\n",
+    "stderr": "",
+    "stdout_sha256": "9f686002f4e40fe7de7f411f030b35194d22350011487b7ba5d856cfcfb2bae7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "gh",
+      "repo",
+      "view",
+      "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+      "--json",
+      "nameWithOwner,viewerPermission"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:35.928090+00:00",
+    "exit_code": 0,
+    "stdout": "{\"nameWithOwner\":\"shuyu-lin-dev/gas-turbine-lifecycle-lab\",\"viewerPermission\":\"WRITE\"}\n",
+    "stderr": "",
+    "stdout_sha256": "bb6e89981280d0774dd9ea28f4bc115b85383486c73180b99c1a120095b4f13c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "ci"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:10:37.580669+00:00",
+    "exit_code": 0,
+    "stdout": "\nadded 52 packages, and audited 53 packages in 2s\n\n9 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n",
+    "stderr": "",
+    "stdout_sha256": "c47035b534f8d65adcb25204c2c6822faaa361a2d02cbcf3707b727a8eb975a7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "ls",
+      "--all",
+      "--json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:10:40.003025+00:00",
+    "exit_code": 0,
+    "stdout": "{\n  \"version\": \"0.1.0\",\n  \"name\": \"gt-lifecycle-web\",\n  \"dependencies\": {\n    \"@vitejs/plugin-vue\": {\n      \"version\": \"6.0.10\",\n      \"resolved\": \"https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.10.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@rolldown/pluginutils\": {\n          \"version\": \"1.0.1\",\n          \"resolved\": \"https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz\",\n          \"overridden\": false\n        },\n        \"vite\": {\n          \"version\": \"8.3.5\"\n        },\n        \"vue\": {\n          \"version\": \"3.5.44\"\n        }\n      }\n    },\n    \"playwright\": {\n      \"version\": \"1.56.1\",\n      \"resolved\": \"https://registry.npmjs.org/playwright/-/playwright-1.56.1.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"fsevents\": {},\n        \"playwright-core\": {\n          \"version\": \"1.56.1\",\n          \"resolved\": \"https://registry.npmjs.org/playwright-core/-/playwright-core-1.56.1.tgz\",\n          \"overridden\": false\n        }\n      }\n    },\n    \"typescript\": {\n      \"version\": \"6.0.3\",\n      \"resolved\": \"https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz\",\n      \"overridden\": false\n    },\n    \"vite\": {\n      \"version\": \"8.3.5\",\n      \"resolved\": \"https://registry.npmjs.org/vite/-/vite-8.3.5.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@types/node\": {},\n        \"@vitejs/devtools\": {},\n        \"esbuild\": {},\n        \"fsevents\": {},\n        \"jiti\": {},\n        \"less\": {},\n        \"lightningcss\": {\n          \"version\": \"1.33.0\",\n          \"resolved\": \"https://registry.npmjs.org/lightningcss/-/lightningcss-1.33.0.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"detect-libc\": {\n              \"version\": \"2.1.2\",\n              \"resolved\": \"https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz\",\n              \"overridden\": false\n            },\n            \"lightningcss-android-arm64\": {},\n            \"lightningcss-darwin-arm64\": {},\n            \"lightningcss-darwin-x64\": {},\n            \"lightningcss-freebsd-x64\": {},\n            \"lightningcss-linux-arm-gnueabihf\": {},\n            \"lightningcss-linux-arm64-gnu\": {},\n            \"lightningcss-linux-arm64-musl\": {},\n            \"lightningcss-linux-x64-gnu\": {\n              \"version\": \"1.33.0\",\n              \"resolved\": \"https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.33.0.tgz\",\n              \"overridden\": false\n            },\n            \"lightningcss-linux-x64-musl\": {},\n            \"lightningcss-win32-arm64-msvc\": {},\n            \"lightningcss-win32-x64-msvc\": {}\n          }\n        },\n        \"picomatch\": {\n          \"version\": \"4.0.7\",\n          \"resolved\": \"https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz\",\n          \"overridden\": false\n        },\n        \"postcss\": {\n          \"version\": \"8.5.32\",\n          \"resolved\": \"https://registry.npmjs.org/postcss/-/postcss-8.5.32.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"nanoid\": {\n              \"version\": \"3.3.20\",\n              \"resolved\": \"https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz\",\n              \"overridden\": false\n            },\n            \"picocolors\": {\n              \"version\": \"1.1.1\",\n              \"resolved\": \"https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz\",\n              \"overridden\": false\n            },\n            \"source-map-js\": {\n              \"version\": \"1.2.2\",\n              \"resolved\": \"https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz\",\n              \"overridden\": false\n            }\n          }\n        },\n        \"rolldown\": {\n          \"version\": \"1.2.16\",\n          \"resolved\": \"https://registry.npmjs.org/rolldown/-/rolldown-1.2.16.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@oxc-project/types\": {\n              \"version\": \"0.156.0\",\n              \"resolved\": \"https://registry.npmjs.org/@oxc-project/types/-/types-0.156.0.tgz\",\n              \"overridden\": false\n            },\n            \"@rolldown/binding-android-arm-eabi\": {},\n            \"@rolldown/binding-android-arm64\": {},\n            \"@rolldown/binding-darwin-arm64\": {},\n            \"@rolldown/binding-darwin-x64\": {},\n            \"@rolldown/binding-freebsd-x64\": {},\n            \"@rolldown/binding-linux-arm-gnueabihf\": {},\n            \"@rolldown/binding-linux-arm64-gnu\": {},\n            \"@rolldown/binding-linux-arm64-musl\": {},\n            \"@rolldown/binding-linux-ppc64-gnu\": {},\n            \"@rolldown/binding-linux-s390x-gnu\": {},\n            \"@rolldown/binding-linux-x64-gnu\": {\n              \"version\": \"1.2.16\",\n              \"resolved\": \"https://registry.npmjs.org/@rolldown/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.2.16.tgz\",\n              \"overridden\": false\n            },\n            \"@rolldown/binding-linux-x64-musl\": {},\n            \"@rolldown/binding-openharmony-arm64\": {},\n            \"@rolldown/binding-win32-arm64-msvc\": {},\n            \"@rolldown/binding-win32-x64-msvc\": {},\n            \"@rolldown/pluginutils\": {\n              \"version\": \"1.0.1\"\n            }\n          }\n        },\n        \"sass-embedded\": {},\n        \"sass\": {},\n        \"stylus\": {},\n        \"sugarss\": {},\n        \"terser\": {},\n        \"tinyglobby\": {\n          \"version\": \"0.2.17\",\n          \"resolved\": \"https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"fdir\": {\n              \"version\": \"6.5.0\",\n              \"resolved\": \"https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"picomatch\": {\n                  \"version\": \"4.0.7\"\n                }\n              }\n            },\n            \"picomatch\": {\n              \"version\": \"4.0.7\"\n            }\n          }\n        },\n        \"tsx\": {},\n        \"yaml\": {}\n      }\n    },\n    \"vue-tsc\": {\n      \"version\": \"3.3.14\",\n      \"resolved\": \"https://registry.npmjs.org/vue-tsc/-/vue-tsc-3.3.14.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@volar/typescript\": {\n          \"version\": \"2.4.30\",\n          \"resolved\": \"https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.30.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@volar/language-core\": {\n              \"version\": \"2.4.30\",\n              \"resolved\": \"https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.30.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@volar/source-map\": {\n                  \"version\": \"2.4.30\",\n                  \"resolved\": \"https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.30.tgz\",\n                  \"overridden\": false\n                }\n              }\n            },\n            \"@volar/language-service\": {\n              \"version\": \"2.4.30\",\n              \"resolved\": \"https://registry.npmjs.org/@volar/language-service/-/language-service-2.4.30.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@volar/language-core\": {\n                  \"version\": \"2.4.30\"\n                },\n                \"typescript\": {\n                  \"version\": \"6.0.3\"\n                },\n                \"vscode-languageserver-protocol\": {\n                  \"version\": \"3.18.5\",\n                  \"resolved\": \"https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.18.5.tgz\",\n                  \"overridden\": false,\n                  \"dependencies\": {\n                    \"vscode-jsonrpc\": {\n                      \"version\": \"10.0.0\",\n                      \"resolved\": \"https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-10.0.0.tgz\",\n                      \"overridden\": false\n                    },\n                    \"vscode-languageserver-types\": {\n                      \"version\": \"3.18.5\",\n                      \"resolved\": \"https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.18.5.tgz\",\n                      \"overridden\": false\n                    }\n                  }\n                },\n                \"vscode-languageserver-textdocument\": {\n                  \"version\": \"1.0.16\",\n                  \"resolved\": \"https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.16.tgz\",\n                  \"overridden\": false\n                },\n                \"vscode-uri\": {\n                  \"version\": \"3.2.0\"\n                }\n              }\n            },\n            \"path-browserify\": {\n              \"version\": \"1.0.1\",\n              \"resolved\": \"https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz\",\n              \"overridden\": false\n            },\n            \"typescript\": {\n              \"version\": \"6.0.3\"\n            },\n            \"vscode-uri\": {\n              \"version\": \"3.2.0\",\n              \"resolved\": \"https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz\",\n              \"overridden\": false\n            }\n          }\n        },\n        \"@vue/language-core\": {\n          \"version\": \"3.3.14\",\n          \"resolved\": \"https://registry.npmjs.org/@vue/language-core/-/language-core-3.3.14.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@volar/language-core\": {\n              \"version\": \"2.4.30\"\n            },\n            \"@vue/compiler-dom\": {\n              \"version\": \"3.5.44\"\n            },\n            \"@vue/shared\": {\n              \"version\": \"3.5.44\"\n            },\n            \"alien-signals\": {\n              \"version\": \"3.2.1\",\n              \"resolved\": \"https://registry.npmjs.org/alien-signals/-/alien-signals-3.2.1.tgz\",\n              \"overridden\": false\n            },\n            \"muggle-string\": {\n              \"version\": \"0.4.1\",\n              \"resolved\": \"https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz\",\n              \"overridden\": false\n            },\n            \"path-browserify\": {\n              \"version\": \"1.0.1\"\n            },\n            \"picomatch\": {\n              \"version\": \"4.0.7\"\n            }\n          }\n        },\n        \"typescript\": {\n          \"version\": \"6.0.3\"\n        }\n      }\n    },\n    \"vue\": {\n      \"version\": \"3.5.44\",\n      \"resolved\": \"https://registry.npmjs.org/vue/-/vue-3.5.44.tgz\",\n      \"overridden\": false,\n      \"dependencies\": {\n        \"@vue/compiler-dom\": {\n          \"version\": \"3.5.44\",\n          \"resolved\": \"https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.5.44.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@vue/compiler-core\": {\n              \"version\": \"3.5.44\",\n              \"resolved\": \"https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.5.44.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@babel/parser\": {\n                  \"version\": \"7.29.12\"\n                },\n                \"@vue/shared\": {\n                  \"version\": \"3.5.44\"\n                },\n                \"entities\": {\n                  \"version\": \"7.0.1\",\n                  \"resolved\": \"https://registry.npmjs.org/entities/-/entities-7.0.1.tgz\",\n                  \"overridden\": false\n                },\n                \"estree-walker\": {\n                  \"version\": \"2.0.2\"\n                },\n                \"source-map-js\": {\n                  \"version\": \"1.2.2\"\n                }\n              }\n            },\n            \"@vue/shared\": {\n              \"version\": \"3.5.44\"\n            }\n          }\n        },\n        \"@vue/compiler-sfc\": {\n          \"version\": \"3.5.44\",\n          \"resolved\": \"https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.5.44.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@babel/parser\": {\n              \"version\": \"7.29.12\",\n              \"resolved\": \"https://registry.npmjs.org/@babel/parser/-/parser-7.29.12.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@babel/types\": {\n                  \"version\": \"7.29.11\",\n                  \"resolved\": \"https://registry.npmjs.org/@babel/types/-/types-7.29.11.tgz\",\n                  \"overridden\": false,\n                  \"dependencies\": {\n                    \"@babel/helper-string-parser\": {\n                      \"version\": \"7.29.11\",\n                      \"resolved\": \"https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.29.11.tgz\",\n                      \"overridden\": false\n                    },\n                    \"@babel/helper-validator-identifier\": {\n                      \"version\": \"7.29.7\",\n                      \"resolved\": \"https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.29.7.tgz\",\n                      \"overridden\": false\n                    }\n                  }\n                }\n              }\n            },\n            \"@vue/compiler-core\": {\n              \"version\": \"3.5.44\"\n            },\n            \"@vue/compiler-dom\": {\n              \"version\": \"3.5.44\"\n            },\n            \"@vue/compiler-ssr\": {\n              \"version\": \"3.5.44\",\n              \"resolved\": \"https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.5.44.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@vue/compiler-dom\": {\n                  \"version\": \"3.5.44\"\n                },\n                \"@vue/shared\": {\n                  \"version\": \"3.5.44\"\n                }\n              }\n            },\n            \"@vue/shared\": {\n              \"version\": \"3.5.44\"\n            },\n            \"estree-walker\": {\n              \"version\": \"2.0.2\",\n              \"resolved\": \"https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz\",\n              \"overridden\": false\n            },\n            \"magic-string\": {\n              \"version\": \"0.30.21\",\n              \"resolved\": \"https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@jridgewell/sourcemap-codec\": {\n                  \"version\": \"1.6.0\",\n                  \"resolved\": \"https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.6.0.tgz\",\n                  \"overridden\": false\n                }\n              }\n            },\n            \"postcss\": {\n              \"version\": \"8.5.32\"\n            },\n            \"source-map-js\": {\n              \"version\": \"1.2.2\"\n            }\n          }\n        },\n        \"@vue/runtime-dom\": {\n          \"version\": \"3.5.44\",\n          \"resolved\": \"https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.5.44.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@vue/reactivity\": {\n              \"version\": \"3.5.44\",\n              \"resolved\": \"https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.5.44.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@vue/shared\": {\n                  \"version\": \"3.5.44\"\n                }\n              }\n            },\n            \"@vue/runtime-core\": {\n              \"version\": \"3.5.44\",\n              \"resolved\": \"https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.5.44.tgz\",\n              \"overridden\": false,\n              \"dependencies\": {\n                \"@vue/reactivity\": {\n                  \"version\": \"3.5.44\"\n                },\n                \"@vue/shared\": {\n                  \"version\": \"3.5.44\"\n                }\n              }\n            },\n            \"@vue/shared\": {\n              \"version\": \"3.5.44\"\n            },\n            \"csstype\": {\n              \"version\": \"3.2.3\",\n              \"resolved\": \"https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz\",\n              \"overridden\": false\n            }\n          }\n        },\n        \"@vue/server-renderer\": {\n          \"version\": \"3.5.44\",\n          \"resolved\": \"https://registry.npmjs.org/@vue/server-renderer/-/server-renderer-3.5.44.tgz\",\n          \"overridden\": false,\n          \"dependencies\": {\n            \"@vue/compiler-ssr\": {\n              \"version\": \"3.5.44\"\n            },\n            \"@vue/runtime-dom\": {\n              \"version\": \"3.5.44\"\n            },\n            \"@vue/shared\": {\n              \"version\": \"3.5.44\"\n            }\n          }\n        },\n        \"@vue/shared\": {\n          \"version\": \"3.5.44\",\n          \"resolved\": \"https://registry.npmjs.org/@vue/shared/-/shared-3.5.44.tgz\",\n          \"overridden\": false\n        },\n        \"typescript\": {\n          \"version\": \"6.0.3\"\n        }\n      }\n    }\n  }\n}\n",
+    "stderr": "",
+    "stdout_sha256": "2cc0f34815d8c61b14a6f18b87323739d8692bd00420706b9a38f9003cdbb90d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:10:40.266617+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 build\n> npm run typecheck && vite build\n\n\n> gt-lifecycle-web@0.1.0 typecheck\n> vue-tsc --noEmit\n\nvite v8.3.5 building client environment for production...\ntransforming...\n✓ 12 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                  0.50 kB │ gzip:  0.34 kB\ndist/assets/index-DGeZILIg.css   2.23 kB │ gzip:  0.96 kB\ndist/assets/index-CsidK-5U.js   66.06 kB │ gzip: 26.33 kB\n\n✓ built in 120ms\n",
+    "stderr": "",
+    "stdout_sha256": "e7250b2c79dce085f0e25101c66806284fda7e05df9a4ffe0cc2c6e0ec1ad184",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "sync",
+      "--locked"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend",
+    "at": "2026-11-03T16:10:41.987472+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using CPython 3.12.3 interpreter at: /usr/bin/python3\nCreating virtual environment at: .venv\nResolved 24 packages in 1ms\n   Building gt-lifecycle-api @ file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend\nDownloading pydantic-core (2.1MiB)\nDownloading pygments (1.2MiB)\n Downloading pygments\n Downloading pydantic-core\n      Built gt-lifecycle-api @ file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend\nPrepared 23 packages in 4.99s\nInstalled 23 packages in 22ms\n + annotated-doc==0.0.5\n + annotated-types==0.8.0\n + anyio==4.16.0\n + certifi==2026.10.23\n + click==8.5.0\n + fastapi==0.162.0\n + gt-lifecycle-api==0.1.0 (from file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend)\n + h11==0.16.0\n + httpcore==1.0.9\n + httpx==0.28.1\n + idna==3.20\n + iniconfig==2.3.1\n + opentelemetry-api==1.45.2\n + packaging==26.3\n + pluggy==1.7.0\n + pydantic==2.14.2\n + pydantic-core==2.50.2\n + pygments==2.21.0\n + pytest==8.4.2\n + starlette==1.10.0\n + typing-extensions==4.16.0\n + typing-inspection==0.4.4\n + uvicorn==0.54.0\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "ea4eaa09f49334ea6837b96c4cb0968b11d41d3fe91e701a56dcbab3cc74bdf9"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "run",
+      "--locked",
+      "pytest",
+      "-q"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend",
+    "at": "2026-11-03T16:10:47.083005+00:00",
+    "exit_code": 0,
+    "stdout": "..........                                                               [100%]\n10 passed in 5.01s\n",
+    "stderr": "",
+    "stdout_sha256": "c3b0fd0417ceb73682c1582c9d1393daf79d9635b56620225616154369f2bda1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "build"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend",
+    "at": "2026-11-03T16:10:52.656101+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Building source distribution...\nBuilding wheel from source distribution...\nSuccessfully built dist/gt_lifecycle_api-0.1.0.tar.gz\nSuccessfully built dist/gt_lifecycle_api-0.1.0-py3-none-any.whl\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "c9feee6ee57d18f04958f26cce86e836df19a9081557271f6bb7d6002b3407f3"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "export",
+      "--locked",
+      "--no-dev",
+      "--no-emit-project",
+      "--format",
+      "requirements-txt"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend",
+    "at": "2026-11-03T16:10:53.164629+00:00",
+    "exit_code": 0,
+    "stdout": "# This file was autogenerated by uv via the following command:\n#    uv export --locked --no-dev --no-emit-project --format requirements-txt\nannotated-doc==0.0.5 \\\n    --hash=sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101 \\\n    --hash=sha256:c7e58ce09192557605d8bbd92836d7e1d520ac9580096042c0bfd197efacf1bb\n    # via fastapi\nannotated-types==0.8.0 \\\n    --hash=sha256:13b2beaad985e05e2d6407ee4c4f35590b11f8d693a258a561055cac8f64cab7 \\\n    --hash=sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0\n    # via pydantic\nanyio==4.16.0 \\\n    --hash=sha256:59bb03251907983d1603d27c3087ddb1e93299ea2163adcdba37899a4fb12ffb \\\n    --hash=sha256:c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026\n    # via starlette\nclick==8.5.0 \\\n    --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360 \\\n    --hash=sha256:ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34\n    # via uvicorn\nfastapi==0.162.0 \\\n    --hash=sha256:3785963de305dd09912426cb81f2d230fce98ab3521cdfe97265c8d14983128c \\\n    --hash=sha256:6a22c1e2e6e32e0633ee7e170f00009a29b8228b16feb219ee42f32fd8d88a8f\n    # via gt-lifecycle-api\nh11==0.16.0 \\\n    --hash=sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1 \\\n    --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86\n    # via uvicorn\nidna==3.20 \\\n    --hash=sha256:a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44 \\\n    --hash=sha256:ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c\n    # via anyio\nopentelemetry-api==1.45.2 \\\n    --hash=sha256:2cbd737377e710ee740d261c94e93fa0f08e6d037c18f17513cc0a2d94479a34 \\\n    --hash=sha256:d7b0008e21e5fd61cbe7a7f34ca3b6905a78ab677d9bc395e299359c75cda6b4\n    # via fastapi\npydantic==2.14.2 \\\n    --hash=sha256:7efbf7507b937931cd32a5755acb00ea1cf5ccb1d4e8067a5850d5069e382118 \\\n    --hash=sha256:fb7b2db6cefe8414dd612edeede49c4c433acb0432b0f92b95024e45f66c505d\n    # via fastapi\npydantic-core==2.50.2 \\\n    --hash=sha256:1b0e8dc3932cf4e9ed5727570325cacc716b9409ffc794a221c0ccc72e8eb775 \\\n    --hash=sha256:36d8b9725684ca3bf658b90a101d335fc8cae405bb22196b7b5ef41344913756 \\\n    --hash=sha256:41ed8abeffda6a880207fdc0cd1343a448cec3cc6b38b53f730c0745f745292d \\\n    --hash=sha256:43a8fd56f3c681f3cda2d5c842ad28e88241df742dfcbe8fd1dd437a3056e1f6 \\\n    --hash=sha256:4eb54c25e3463d73e1e4ed439ffc45d1d7e590df40bc7bb06f11a906afd996c3 \\\n    --hash=sha256:596921489390a002d6a5e303384a0f1f98384f8bb550fbf38a1aafa6093da0f9 \\\n    --hash=sha256:5d3cd8be71c4da3c9b42cc92f17e5e3036bdca98bf18555a0e072c3fe87abbb4 \\\n    --hash=sha256:6a438cb8a3f87f2c49e82e43fb19511d4d5043f53e0787dc4df937ccb904373a \\\n    --hash=sha256:6eb6ff07964f39e33c6f57fefe939514e76b8c0d4a694e5663e2e04e80cc1798 \\\n    --hash=sha256:6f5a432c6c1ef18a1a02a04b3616b8d3f2f88b13faa46caae1ac6559ab202234 \\\n    --hash=sha256:91238117cd296352f54f24117ff5a227bdea428865dba1244aa0cdd1424c0bc2 \\\n    --hash=sha256:9667637665acba166a7dbbc786f14c50512d3a01f7199e0e1a13b929e92d7c7a \\\n    --hash=sha256:98722314e12a8e4fa346e0afd3fff2098b5732875ff45592b450a7b589b43c4f \\\n    --hash=sha256:9e7460abce637f90e37f8c443559fbd687c38884d05cb69ef265e634945f4324 \\\n    --hash=sha256:b381574614245f18fdb2d6d1aa8f149e225869c47b5ee7f81812de8977817314 \\\n    --hash=sha256:b3e681208e2d39fde13fbea449ef2736a85ec1ea2afa41e9193a8c536e71dafe \\\n    --hash=sha256:b7abcfaf66c1dc14c5ed928c349614f223c972a8b021b4be9548dbea6c817371 \\\n    --hash=sha256:d18d56c1ec63b304f4bb3c7db7e0d311e61cca1b1c944590a4b13ac39b2ca92b \\\n    --hash=sha256:e3d824b6152e1c0fd58dc6266f2de470eb7b2286135294f5f7cd26a0f0693738 \\\n    --hash=sha256:f07c965a8aa6d62145f122641f292129984f39a3e3697585b19298a1488287db\n    # via pydantic\nstarlette==1.10.0 \\\n    --hash=sha256:478c0ab3b4ced6e82719849c118fa406f0278a3499c1a898cd15cd31bdc38ce4 \\\n    --hash=sha256:b8399098d4c1e3522734f7235dc79b1fc967f96cf139c81e0fa30479e0685f9b\n    # via fastapi\ntyping-extensions==4.16.0 \\\n    --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8 \\\n    --hash=sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5\n    # via\n    #   anyio\n    #   fastapi\n    #   opentelemetry-api\n    #   pydantic\n    #   pydantic-core\n    #   starlette\n    #   typing-inspection\ntyping-inspection==0.4.4 \\\n    --hash=sha256:547274fa6b0a561ccf549cc9524b999a578e737d015d8709d021f9d0d13bea47 \\\n    --hash=sha256:65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147\n    # via\n    #   fastapi\n    #   pydantic\nuvicorn==0.54.0 \\\n    --hash=sha256:505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf \\\n    --hash=sha256:a2e33cbfaa0306f8e6b0c13e0cb89d7d7a2da3e62b90c66e18c33d9807b28620\n    # via gt-lifecycle-api\n",
+    "stderr": "Resolved 24 packages in 0.94ms\n",
+    "stdout_sha256": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+    "stderr_sha256": "007db4d62604d4f8b7e169dbb96b04c3c86efcfdded0f1176ab6e128672edd6a"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "venv",
+      "--python",
+      "3.12",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/wheel-env"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:53.175667+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using CPython 3.12.3 interpreter at: /usr/bin/python3.12\nCreating virtual environment at: .scratch-runtime/m0-01/clean-run-01/wheel-env\nActivate with: source .scratch-runtime/m0-01/clean-run-01/wheel-env/bin/activate\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "b4bf228e7247e70307c21d82cb5383a7c9a36796b9a53bc6ef66926d6b2af4da"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "pip",
+      "sync",
+      "--python",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/wheel-env/bin/python",
+      "--require-hashes",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/wheel-requirements.txt"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:53.222487+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using Python 3.12.3 environment at: .scratch-runtime/m0-01/clean-run-01/wheel-env\nResolved 14 packages in 2.94s\nInstalled 14 packages in 16ms\n + annotated-doc==0.0.5\n + annotated-types==0.8.0\n + anyio==4.16.0\n + click==8.5.0\n + fastapi==0.162.0\n + h11==0.16.0\n + idna==3.20\n + opentelemetry-api==1.45.2\n + pydantic==2.14.2\n + pydantic-core==2.50.2\n + starlette==1.10.0\n + typing-extensions==4.16.0\n + typing-inspection==0.4.4\n + uvicorn==0.54.0\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "d02b926bc5b48dbf7a86cd324a7f47be57c45e6337337793a0047dc6c08aafec"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+      "pip",
+      "install",
+      "--python",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/wheel-env/bin/python",
+      "--no-deps",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend/dist/gt_lifecycle_api-0.1.0-py3-none-any.whl"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:10:56.230961+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using Python 3.12.3 environment at: .scratch-runtime/m0-01/clean-run-01/wheel-env\nResolved 1 package in 2ms\nPrepared 1 package in 5ms\nInstalled 1 package in 1ms\n + gt-lifecycle-api==0.1.0 (from file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend/dist/gt_lifecycle_api-0.1.0-py3-none-any.whl)\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "44a3bd15614bf884b0d2ca664ad5c985d3c6e6fbdc260468c67242adb37b69ee"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/direct-a.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:10:59.387073+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/direct-a.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "25310966d904550c4cccc417e1b8514381a1859512a25dc9649694697d6ed002",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8202/api/v1/health",
+      "api-b",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/direct-b.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:00.644635+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8202/api/v1/health api-b /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/direct-b.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "f03564ba937477b1a1bf42ded5280af104cf00fd52b3cc6d5e8677e291ad6d58",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:5173/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/dev-proxy.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:02.548822+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:5173/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/dev-proxy.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "08dd15f9a1babdd47c95c61c849b131b84c68d01ffa021be5d7a269a51a586b5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:5173/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/api-stopped.json",
+      "failed"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:05.643701+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:5173/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/api-stopped.json failed\n\n",
+    "stderr": "",
+    "stdout_sha256": "7181ee1570cf1c16572b645b5e20a6bd7db1973ff87c411ede1f37acb746813c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:5173/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/api-recovered.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:06.884306+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:5173/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/api-recovered.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "390cd28a5803fa7e000065a100ca3663a1809fd3d2fe295c59c63c537fedc078",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-0.json",
+      "config"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:08.780313+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-0.json config\n\n",
+    "stderr": "",
+    "stdout_sha256": "f9b394e8f6cd8c8675190e024cdab9aaa7984d70296e006b3e4cc3b328dd6b68",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-1.json",
+      "config"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:10.693520+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-1.json config\n\n",
+    "stderr": "",
+    "stdout_sha256": "dfe600502de9ee098cd54b32798b983a43c73f796a74e7bbf9fab38f01995756",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-2.json",
+      "config"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:11.984815+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-2.json config\n\n",
+    "stderr": "",
+    "stdout_sha256": "64865558cc15fddb219c418c39a22f011e98f313a9c2247c4e09829b2ee8f45a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-3.json",
+      "config"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:13.458203+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-3.json config\n\n",
+    "stderr": "",
+    "stdout_sha256": "f65f30edb80f4bf9b35695d8b9046cbf4cce0101f52802efc8295c4132b75d24",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-4.json",
+      "config"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:15.250625+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/invalid-address-4.json config\n\n",
+    "stderr": "",
+    "stdout_sha256": "f799029493070583994b27a2a70b080e764c4637aea012bda33e5e452d28b6d2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:4175",
+      "http://127.0.0.1:4175/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/built-preview.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:17.140905+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:4175 http://127.0.0.1:4175/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/built-preview.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "2cfd310a4c3b0071473c199cdba44442f30399a6dd2438e7130ea72b70c2ad06",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "config",
+      "--format",
+      "json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:18.428817+00:00",
+    "exit_code": 0,
+    "stdout": "{\n  \"name\": \"gtl-m001-620617\",\n  \"networks\": {\n    \"default\": {\n      \"name\": \"gtl-m001-620617_default\",\n      \"ipam\": {}\n    }\n  },\n  \"services\": {\n    \"api\": {\n      \"build\": {\n        \"context\": \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/backend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"command\": null,\n      \"entrypoint\": null,\n      \"environment\": {\n        \"API_CORS_ORIGINS\": \"[]\",\n        \"API_INSTANCE_ID\": \"api-a\"\n      },\n      \"networks\": {\n        \"default\": null\n      },\n      \"ports\": [\n        {\n          \"mode\": \"ingress\",\n          \"host_ip\": \"127.0.0.1\",\n          \"target\": 8000,\n          \"published\": \"8281\",\n          \"protocol\": \"tcp\"\n        }\n      ]\n    },\n    \"web\": {\n      \"build\": {\n        \"context\": \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"command\": null,\n      \"entrypoint\": null,\n      \"environment\": {\n        \"API_UPSTREAM\": \"http://api:8000\"\n      },\n      \"networks\": {\n        \"default\": null\n      },\n      \"ports\": [\n        {\n          \"mode\": \"ingress\",\n          \"host_ip\": \"127.0.0.1\",\n          \"target\": 8080,\n          \"published\": \"8280\",\n          \"protocol\": \"tcp\"\n        }\n      ]\n    }\n  }\n}",
+    "stderr": "",
+    "stdout_sha256": "e1953d902c8345b963fb9c4de70f8bbefa3595a88874561f147b3f5d04f3a72c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "build"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:18.478796+00:00",
+    "exit_code": 0,
+    "stdout": "#1 [internal] load local bake definitions\n#1 reading from stdin 1.37kB done\n#1 DONE 0.0s\n\n#2 [web internal] load build definition from Dockerfile\n#2 transferring dockerfile: 676B done\n#2 DONE 0.0s\n\n#3 [api internal] load build definition from Dockerfile\n#3 transferring dockerfile: 702B done\n#3 DONE 0.1s\n\n#4 [api internal] load metadata for ghcr.io/astral-sh/uv:0.9.7@sha256:ba4857bf2a068e9bc0e64eed8563b065908a4cd6bfb66b531a9c424c8e25e142\n#4 ...\n\n#5 [web internal] load metadata for docker.io/library/nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284\n#5 DONE 0.2s\n\n#6 [api internal] load metadata for docker.io/library/python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c\n#6 DONE 0.2s\n\n#7 [web internal] load metadata for docker.io/library/node:24.22.2-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c\n#7 DONE 0.2s\n\n#4 [api internal] load metadata for ghcr.io/astral-sh/uv:0.9.7@sha256:ba4857bf2a068e9bc0e64eed8563b065908a4cd6bfb66b531a9c424c8e25e142\n#4 DONE 0.2s\n\n#8 [web internal] load .dockerignore\n#8 transferring context: 75B done\n#8 DONE 0.0s\n\n#9 [api internal] load .dockerignore\n#9 transferring context: 94B done\n#9 DONE 0.1s\n\n#10 [web internal] load build context\n#10 DONE 0.0s\n\n#11 [api internal] load build context\n#11 DONE 0.0s\n\n#12 [api stage-1 1/7] FROM docker.io/library/python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c\n#12 resolve docker.io/library/python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c\n#12 resolve docker.io/library/python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c 0.2s done\n#12 DONE 0.2s\n\n#13 [web build 1/8] FROM docker.io/library/node:24.22.2-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c\n#13 resolve docker.io/library/node:24.22.2-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c 0.2s done\n#13 DONE 0.2s\n\n#14 [web stage-1 1/3] FROM docker.io/library/nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284\n#14 resolve docker.io/library/nginx:1.28.0-alpine@sha256:30f1c0d78e0ad60901648be663a710bdadf19e4c10ac6782c235200619158284 0.2s done\n#14 DONE 0.2s\n\n#15 [api uv 1/1] FROM ghcr.io/astral-sh/uv:0.9.7@sha256:ba4857bf2a068e9bc0e64eed8563b065908a4cd6bfb66b531a9c424c8e25e142\n#15 resolve ghcr.io/astral-sh/uv:0.9.7@sha256:ba4857bf2a068e9bc0e64eed8563b065908a4cd6bfb66b531a9c424c8e25e142 0.2s done\n#15 DONE 0.2s\n\n#10 [web internal] load build context\n#10 transferring context: 52.30kB done\n#10 DONE 0.0s\n\n#16 [web build 4/8] COPY package.json package-lock.json ./\n#16 CACHED\n\n#17 [web build 6/8] COPY index.html tsconfig.json vite.config.ts ./\n#17 CACHED\n\n#18 [web build 8/8] RUN npm run build\n#18 CACHED\n\n#19 [web build 5/8] RUN npm ci\n#19 CACHED\n\n#20 [web build 3/8] RUN mkdir -p /app/.scratch-runtime/tmp\n#20 CACHED\n\n#21 [web stage-1 2/3] COPY nginx.conf.template /etc/nginx/templates/default.conf.template\n#21 CACHED\n\n#22 [web build 2/8] WORKDIR /app\n#22 CACHED\n\n#23 [web build 7/8] COPY src ./src\n#23 CACHED\n\n#24 [web stage-1 3/3] COPY --from=build /app/dist /usr/share/nginx/html\n#24 CACHED\n\n#11 [api internal] load build context\n#11 transferring context: 30.25kB done\n#11 DONE 0.0s\n\n#25 [web] exporting to image\n#25 exporting layers done\n#25 exporting manifest sha256:5a6633e44f50b799b904f00adcab9bd098ea058b9ab16bd66f6b22a3d76c4c7c\n#25 ...\n\n#26 [api stage-1 2/7] COPY --from=uv /uv /usr/local/bin/uv\n#26 CACHED\n\n#27 [api stage-1 3/7] WORKDIR /app\n#27 CACHED\n\n#28 [api stage-1 4/7] RUN mkdir -p /app/.scratch-runtime/tmp\n#28 CACHED\n\n#29 [api stage-1 5/7] COPY pyproject.toml uv.lock ./\n#29 CACHED\n\n#25 [web] exporting to image\n#25 exporting manifest sha256:5a6633e44f50b799b904f00adcab9bd098ea058b9ab16bd66f6b22a3d76c4c7c 0.1s done\n#25 exporting config sha256:19580efe47db93bb02bbef1a26e476dd302eee83aeee01db1b3a8a5dcdc3ba3b 0.1s done\n#25 ...\n\n#30 [api stage-1 6/7] COPY src ./src\n#30 DONE 0.2s\n\n#25 [web] exporting to image\n#25 exporting attestation manifest sha256:48fba318f354196c96883a5dd1b82772cbdd5e740b0781a10a9324017d3a1279 0.0s done\n#25 exporting manifest list sha256:cd913e39c5b7378001b5677f3f3d88fdff7c09a0c998d4d1fcf905b9cb1d6bbd 0.0s done\n#25 naming to docker.io/library/gtl-m001-620617-web:latest\n#25 naming to docker.io/library/gtl-m001-620617-web:latest done\n#25 unpacking to docker.io/library/gtl-m001-620617-web:latest done\n#25 DONE 0.3s\n\n#31 [web] resolving provenance for metadata file\n#31 DONE 0.0s\n\n#32 [api stage-1 7/7] RUN uv build && uv sync --locked --no-dev --no-editable\n#32 0.363 Building source distribution...\n#32 5.206 Building wheel from source distribution...\n#32 5.874 Successfully built dist/gt_lifecycle_api-0.1.0.tar.gz\n#32 5.874 Successfully built dist/gt_lifecycle_api-0.1.0-py3-none-any.whl\n#32 5.883 Using CPython 3.12.12 interpreter at: /usr/local/bin/python3\n#32 5.883 Creating virtual environment at: .venv\n#32 5.888 Resolved 24 packages in 0.71ms\n#32 5.892    Building gt-lifecycle-api @ file:///app\n#32 6.562       Built gt-lifecycle-api @ file:///app\n#32 7.224 Downloading pydantic-core (2.1MiB)\n#32 9.028  Downloading pydantic-core\n#32 9.029 Prepared 15 packages in 3.14s\n#32 9.046 Installed 15 packages in 16ms\n#32 9.046  + annotated-doc==0.0.5\n#32 9.046  + annotated-types==0.8.0\n#32 9.046  + anyio==4.16.0\n#32 9.046  + click==8.5.0\n#32 9.046  + fastapi==0.162.0\n#32 9.046  + gt-lifecycle-api==0.1.0 (from file:///app)\n#32 9.046  + h11==0.16.0\n#32 9.046  + idna==3.20\n#32 9.046  + opentelemetry-api==1.45.2\n#32 9.046  + pydantic==2.14.2\n#32 9.046  + pydantic-core==2.50.2\n#32 9.046  + starlette==1.10.0\n#32 9.046  + typing-extensions==4.16.0\n#32 9.046  + typing-inspection==0.4.4\n#32 9.046  + uvicorn==0.54.0\n#32 DONE 9.1s\n\n#33 [api] exporting to image\n#33 exporting layers\n#33 exporting layers 0.5s done\n#33 exporting manifest sha256:f2c348a932cd99b516206cdca91b4f16c8691e3092aa0c73889f7cddcbc01d28 0.0s done\n#33 exporting config sha256:34eefb086c38260d0aa6d015d7f779f7719918ba475d7d4d7f845380bb64a880 0.0s done\n#33 exporting attestation manifest sha256:20126fdb7fa96177090f247c058b6766790d5491142797e1c9500d77a940adaa 0.0s done\n#33 exporting manifest list sha256:215e69a45911deba7d7db337824a4a0b7c6b290221abdc0bbe7a0647e1339155 0.0s done\n#33 naming to docker.io/library/gtl-m001-620617-api:latest done\n#33 unpacking to docker.io/library/gtl-m001-620617-api:latest\n#33 unpacking to docker.io/library/gtl-m001-620617-api:latest 0.4s done\n#33 DONE 1.0s\n\n#34 [api] resolving provenance for metadata file\n#34 DONE 0.0s\n",
+    "stderr": " Image gtl-m001-620617-api Building \n Image gtl-m001-620617-web Building \n Image gtl-m001-620617-api Built \n Image gtl-m001-620617-web Built \n",
+    "stdout_sha256": "29727ba6c45747f5af9a9d18ca624f941b4f65b414bb799a3d2372c5588c2492",
+    "stderr_sha256": "453020b2dec4a123e41dfe9dc7f64ccba48cb62dc00f1abb6c5d5d1457db4672"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "up",
+      "-d",
+      "web"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:30.038348+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Network gtl-m001-620617_default Creating \n Network gtl-m001-620617_default Created \n Container gtl-m001-620617-web-1 Creating \n Container gtl-m001-620617-web-1 Created \n Container gtl-m001-620617-web-1 Starting \n Container gtl-m001-620617-web-1 Started \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "209626816160db8c140d919e22cee6ae2b2385baebe6611f0784f5095f0adc58"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:8280",
+      "http://127.0.0.1:8280/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-web-alone.json",
+      "failed"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:31.351175+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:8280 http://127.0.0.1:8280/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-web-alone.json failed\n\n",
+    "stderr": "",
+    "stdout_sha256": "5e016a2282751698fbef26f58023392a15a934aa0b980665ebbd42a39d8d2808",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "up",
+      "-d",
+      "api"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:35.800443+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-api-1 Creating \n Container gtl-m001-620617-api-1 Created \n Container gtl-m001-620617-api-1 Starting \n Container gtl-m001-620617-api-1 Started \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "cce1ca2ab03c66d26d40d423fa8add1c87728a16d7e0bd82e96b09fd3a7d7956"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:8280",
+      "http://127.0.0.1:8280/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-healthy.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:38.995695+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:8280 http://127.0.0.1:8280/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-healthy.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "05f9fe2c25faa4a19071644b5025bc24d8e5e8ee7393a7e269ce2fe33c7c0450",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "stop",
+      "web"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:40.042861+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-web-1 Stopping \n Container gtl-m001-620617-web-1 Stopped \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "a79784cd8d42d1c34e8ebc99053533af60bcc4592a742683402b589195906653"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "start",
+      "web"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:40.748222+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-web-1 Starting \n Container gtl-m001-620617-web-1 Started \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "eed7b20ce38e48c8a9d1d53366d87d58622997cc4bba88e814762ddf8dfa0eb4"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "pause",
+      "api"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:41.600099+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-api-1 Paused \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "051dbfcdda7a1e892d05e331e2223befee4318bf9cb52466db4062a24df5c926"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:8280",
+      "http://127.0.0.1:8280/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-api-timeout.json",
+      "timeout"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:41.687565+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:8280 http://127.0.0.1:8280/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-api-timeout.json timeout\n\n",
+    "stderr": "",
+    "stdout_sha256": "512ceb23c03855cfa45028585482d7910a9bf1fff5ea5f44d9dcb2f3484185a5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "unpause",
+      "api"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:53.285116+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-api-1 Unpaused \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "15ab474548f7d77f49afdd2c250d96570c8d7c68bb9c2153acb6d7894073cdc1"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "stop",
+      "api"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:53.356334+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-api-1 Stopping \n Container gtl-m001-620617-api-1 Stopped \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "ec92c2be9cbf6d7801e90912e24a5259443532ea1755f0ef1c147439c59db854"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:8280",
+      "http://127.0.0.1:8280/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-api-stopped.json",
+      "failed"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:54.143113+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:8280 http://127.0.0.1:8280/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-api-stopped.json failed\n\n",
+    "stderr": "",
+    "stdout_sha256": "911f6c88131901316aa234bfbda8a6a7d647e6f55a4ba0529a3d852eb52405cd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "start",
+      "api"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:11:57.699426+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-api-1 Starting \n Container gtl-m001-620617-api-1 Started \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "eec17d7e0484e33c89f4646cd63b2aedcd4176b1e1e67da431ad4acc0f082f5f"
+  },
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:8280",
+      "http://127.0.0.1:8280/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-api-recovered.json",
+      "healthy"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/frontend",
+    "at": "2026-11-03T16:11:59.545786+00:00",
+    "exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:8280 http://127.0.0.1:8280/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/.scratch-runtime/m0-01/clean-run-01/container-api-recovered.json healthy\n\n",
+    "stderr": "",
+    "stdout_sha256": "3d70fe36ae6c62bf5f097d48c80df307f27ac65b2745a721cff5ee4a95c7dd0e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "exec",
+      "-T",
+      "api",
+      ".venv/bin/python",
+      "-c",
+      "from pathlib import Path; assert not Path(\"/app/frontend\").exists(); assert not Path(\"/app/dist/index.html\").exists(); from importlib.metadata import version; print(version(\"gt-lifecycle-api\"))"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:01.097814+00:00",
+    "exit_code": 0,
+    "stdout": "0.1.0\n",
+    "stderr": "",
+    "stdout_sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "ps",
+      "--format",
+      "json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:01.455807+00:00",
+    "exit_code": 0,
+    "stdout": "{\"Command\":\"\\\".venv/bin/uvicorn g…\\\"\",\"CreatedAt\":\"2026-11-04 00:11:37 +0800 CST\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"5fb944f3ec35\",\"Image\":\"gtl-m001-620617-api\",\"Labels\":\"com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.project.config_files=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/compose.yaml,com.docker.compose.service=api,com.docker.compose.version=5.1.4,desktop.docker.io/ports.scheme=v2,desktop.docker.io/wsl-distro=ubuntu,com.docker.compose.config-hash=e71612dda97f35e0c592adda3b6852f33ca62c0346e1d8fb735ce6df3612b4c0,com.docker.compose.image=sha256:215e69a45911deba7d7db337824a4a0b7c6b290221abdc0bbe7a0647e1339155,com.docker.compose.oneoff=False,com.docker.compose.project=gtl-m001-620617,com.docker.compose.project.working_dir=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29,desktop.docker.io/ports/8000/tcp=127.0.0.1:8281\",\"LocalVolumes\":\"0\",\"Mounts\":\"\",\"Name\":\"gtl-m001-620617-api-1\",\"Names\":\"gtl-m001-620617-api-1\",\"Networks\":\"gtl-m001-620617_default\",\"Ports\":\"127.0.0.1:8281-\\u003e8000/tcp\",\"Project\":\"gtl-m001-620617\",\"Publishers\":[{\"URL\":\"127.0.0.1\",\"TargetPort\":8000,\"PublishedPort\":8281,\"Protocol\":\"tcp\"}],\"RunningFor\":\"24 seconds ago\",\"Service\":\"api\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 3 seconds\"}\n{\"Command\":\"\\\"/docker-entrypoint.…\\\"\",\"CreatedAt\":\"2026-11-04 00:11:30 +0800 CST\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"32c2a13f54f5\",\"Image\":\"gtl-m001-620617-web\",\"Labels\":\"com.docker.compose.image=sha256:cd913e39c5b7378001b5677f3f3d88fdff7c09a0c998d4d1fcf905b9cb1d6bbd,com.docker.compose.service=web,com.docker.compose.version=5.1.4,desktop.docker.io/ports/8080/tcp=127.0.0.1:8280,desktop.docker.io/wsl-distro=ubuntu,maintainer=NGINX Docker Maintainers \\u003cdocker-maint@nginx.com\\u003e,com.docker.compose.config-hash=6c39312983f094e11a7c32d1a0165d70ee518e3451dedc0c3c19e3f84ebe241d,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.oneoff=False,com.docker.compose.project=gtl-m001-620617,com.docker.compose.project.config_files=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/compose.yaml,com.docker.compose.project.working_dir=/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29,desktop.docker.io/ports.scheme=v2\",\"LocalVolumes\":\"0\",\"Mounts\":\"\",\"Name\":\"gtl-m001-620617-web-1\",\"Names\":\"gtl-m001-620617-web-1\",\"Networks\":\"gtl-m001-620617_default\",\"Ports\":\"127.0.0.1:8280-\\u003e8080/tcp\",\"Project\":\"gtl-m001-620617\",\"Publishers\":[{\"URL\":\"127.0.0.1\",\"TargetPort\":8080,\"PublishedPort\":8280,\"Protocol\":\"tcp\"}],\"RunningFor\":\"31 seconds ago\",\"Service\":\"web\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 20 seconds\"}\n",
+    "stderr": "",
+    "stdout_sha256": "93a9025c6b0e3a9969a15d541da21a29abdd232f9f8a6159b072719bca9824c4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "images",
+      "--format",
+      "json"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:01.551064+00:00",
+    "exit_code": 0,
+    "stdout": "[{\"ID\":\"sha256:215e69a45911deba7d7db337824a4a0b7c6b290221abdc0bbe7a0647e1339155\",\"ContainerName\":\"gtl-m001-620617-api-1\",\"Repository\":\"gtl-m001-620617-api\",\"Tag\":\"latest\",\"Platform\":\"linux/amd64\",\"Size\":70186144,\"Created\":\"2026-11-03T16:11:28.852210382Z\",\"LastTagTime\":\"2026-11-03T16:11:29.457134428Z\"},{\"ID\":\"sha256:cd913e39c5b7378001b5677f3f3d88fdff7c09a0c998d4d1fcf905b9cb1d6bbd\",\"ContainerName\":\"gtl-m001-620617-web-1\",\"Repository\":\"gtl-m001-620617-web\",\"Tag\":\"latest\",\"Platform\":\"linux/amd64\",\"Size\":21035007,\"Created\":\"2026-11-03T16:09:29.265146114Z\",\"LastTagTime\":\"2026-11-03T16:11:19.809214552Z\"}]\n\n",
+    "stderr": "",
+    "stdout_sha256": "f5b9e2344cf1d8dbd8ec1285260293a92f54646a9b02747945a511d8934ff355",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "logs",
+      "--no-color"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:01.675469+00:00",
+    "exit_code": 0,
+    "stdout": "api-1  | INFO:     Started server process [1]\napi-1  | INFO:     Waiting for application startup.\napi-1  | INFO:     Application startup complete.\napi-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\napi-1  | INFO:     172.19.0.1:53728 - \"GET /api/v1/health HTTP/1.1\" 200 OK\napi-1  | INFO:     172.19.0.2:41324 - \"GET /api/v1/health HTTP/1.0\" 200 OK\napi-1  | INFO:     172.19.0.2:41338 - \"GET /api/v1/health HTTP/1.0\" 200 OK\napi-1  | INFO:     172.19.0.1:53738 - \"GET / HTTP/1.1\" 404 Not Found\napi-1  | INFO:     172.19.0.1:53742 - \"GET /index.html HTTP/1.1\" 404 Not Found\napi-1  | INFO:     172.19.0.1:53752 - \"GET /api/v1/health HTTP/1.1\" 200 OK\napi-1  | INFO:     Shutting down\napi-1  | INFO:     Waiting for application shutdown.\napi-1  | INFO:     Application shutdown complete.\napi-1  | INFO:     Finished server process [1]\napi-1  | INFO:     Started server process [1]\napi-1  | INFO:     Waiting for application startup.\napi-1  | INFO:     Application startup complete.\napi-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\napi-1  | INFO:     172.19.0.1:54902 - \"GET /api/v1/health HTTP/1.1\" 200 OK\napi-1  | INFO:     172.19.0.2:33964 - \"GET /api/v1/health HTTP/1.0\" 200 OK\napi-1  | INFO:     172.19.0.2:33966 - \"GET /api/v1/health HTTP/1.0\" 200 OK\nweb-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration\nweb-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/\nweb-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh\nweb-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf\nweb-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf\nweb-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh\nweb-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh\nweb-1  | 20-envsubst-on-templates.sh: Running envsubst on /etc/nginx/templates/default.conf.template to /etc/nginx/conf.d/default.conf\nweb-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh\nweb-1  | /docker-entrypoint.sh: Configuration complete; ready for start up\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: using the \"epoll\" event method\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: nginx/1.28.0\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) \nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: OS: Linux 6.18.33.1-microsoft-standard-WSL2\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker processes\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 36\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 37\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 38\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 39\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 40\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 41\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 42\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 43\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 44\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 45\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 46\nweb-1  | 2026/11/03 16:11:31 [notice] 1#1: start worker process 47\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:31 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Python-urllib/3.12\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:31 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:31 +0000] \"GET /assets/index-CsidK-5U.js HTTP/1.1\" 200 66060 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:31 +0000] \"GET /assets/index-DGeZILIg.css HTTP/1.1\" 200 2232 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 2026/11/03 16:11:32 [error] 37#37: *2 api could not be resolved (3: Host not found), client: 172.19.0.1, server: _, request: \"GET /api/v1/health HTTP/1.1\", host: \"127.0.0.1:8280\", referrer: \"http://127.0.0.1:8280/\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:32 +0000] \"GET /api/v1/health HTTP/1.1\" 502 559 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 2026/11/03 16:11:34 [error] 39#39: *5 api could not be resolved (3: Host not found), client: 172.19.0.1, server: _, request: \"GET /api/v1/health HTTP/1.1\", host: \"127.0.0.1:8280\", referrer: \"http://127.0.0.1:8280/\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:34 +0000] \"GET /api/v1/health HTTP/1.1\" 502 559 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:39 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:39 +0000] \"GET /assets/index-CsidK-5U.js HTTP/1.1\" 200 66060 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:39 +0000] \"GET /assets/index-DGeZILIg.css HTTP/1.1\" 200 2232 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:39 +0000] \"GET /api/v1/health HTTP/1.1\" 200 105 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:39 +0000] \"GET /api/v1/health HTTP/1.1\" 200 105 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:40 +0000] \"GET /service/connection HTTP/1.1\" 200 506 \"-\" \"Python-urllib/3.12\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:40 +0000] \"GET /assets/missing.js HTTP/1.1\" 404 153 \"-\" \"Python-urllib/3.12\" \"-\"\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 36#36: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 37#37: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 38#38: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 36#36: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 37#37: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 39#39: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 38#38: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 40#40: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 41#41: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 39#39: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 40#40: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 42#42: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 44#44: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 41#41: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 44#44: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 46#46: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 42#42: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 43#43: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 46#46: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 47#47: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 43#43: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 47#47: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 46#46: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 36#36: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 37#37: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 47#47: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 39#39: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 38#38: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 41#41: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 43#43: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 40#40: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 42#42: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 44#44: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 45#45: gracefully shutting down\nweb-1  | 2026/11/03 16:11:40 [notice] 45#45: exiting\nweb-1  | 2026/11/03 16:11:40 [notice] 45#45: exit\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 17 (SIGCHLD) received from 36\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 36 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 37 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 29 (SIGIO) received\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 17 (SIGCHLD) received from 41\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 41 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 29 (SIGIO) received\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 17 (SIGCHLD) received from 44\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 40 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 43 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 44 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 45 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 46 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 29 (SIGIO) received\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 17 (SIGCHLD) received from 42\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 38 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 39 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 42 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 29 (SIGIO) received\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: signal 17 (SIGCHLD) received from 47\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: worker process 47 exited with code 0\nweb-1  | 2026/11/03 16:11:40 [notice] 1#1: exit\nweb-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration\nweb-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/\nweb-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh\nweb-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf\nweb-1  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version\nweb-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh\nweb-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh\nweb-1  | 20-envsubst-on-templates.sh: Running envsubst on /etc/nginx/templates/default.conf.template to /etc/nginx/conf.d/default.conf\nweb-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh\nweb-1  | /docker-entrypoint.sh: Configuration complete; ready for start up\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: using the \"epoll\" event method\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: nginx/1.28.0\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) \nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: OS: Linux 6.18.33.1-microsoft-standard-WSL2\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker processes\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 35\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 36\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 37\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 38\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 39\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 40\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 41\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 42\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 43\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 44\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 45\nweb-1  | 2026/11/03 16:11:41 [notice] 1#1: start worker process 46\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:41 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Python-urllib/3.12\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:42 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:42 +0000] \"GET /assets/index-CsidK-5U.js HTTP/1.1\" 200 66060 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:42 +0000] \"GET /assets/index-DGeZILIg.css HTTP/1.1\" 200 2232 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:47 +0000] \"GET /api/v1/health HTTP/1.1\" 499 0 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:52 +0000] \"GET /api/v1/health HTTP/1.1\" 499 0 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:54 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:54 +0000] \"GET /assets/index-CsidK-5U.js HTTP/1.1\" 200 66060 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:54 +0000] \"GET /assets/index-DGeZILIg.css HTTP/1.1\" 200 2232 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 2026/11/03 16:11:55 [error] 39#39: *9 api could not be resolved (3: Host not found), client: 172.19.0.1, server: _, request: \"GET /api/v1/health HTTP/1.1\", host: \"127.0.0.1:8280\", referrer: \"http://127.0.0.1:8280/\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:55 +0000] \"GET /api/v1/health HTTP/1.1\" 502 559 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 2026/11/03 16:11:57 [error] 41#41: *12 api could not be resolved (3: Host not found), client: 172.19.0.1, server: _, request: \"GET /api/v1/health HTTP/1.1\", host: \"127.0.0.1:8280\", referrer: \"http://127.0.0.1:8280/\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:11:57 +0000] \"GET /api/v1/health HTTP/1.1\" 502 559 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:12:00 +0000] \"GET / HTTP/1.1\" 200 506 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:12:00 +0000] \"GET /assets/index-CsidK-5U.js HTTP/1.1\" 200 66060 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:12:00 +0000] \"GET /assets/index-DGeZILIg.css HTTP/1.1\" 200 2232 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:12:00 +0000] \"GET /api/v1/health HTTP/1.1\" 200 105 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\nweb-1  | 172.19.0.1 - - [03/Nov/2026:16:12:00 +0000] \"GET /api/v1/health HTTP/1.1\" 200 105 \"http://127.0.0.1:8280/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\" \"-\"\n",
+    "stderr": "",
+    "stdout_sha256": "0f541e4df39b4837ac0f35693f10a517fbc2ba8559baf767f645089390bd6be6",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "docker",
+      "compose",
+      "-p",
+      "gtl-m001-620617",
+      "down"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:01.746491+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": " Container gtl-m001-620617-api-1 Stopping \n Container gtl-m001-620617-web-1 Stopping \n Container gtl-m001-620617-web-1 Stopped \n Container gtl-m001-620617-web-1 Removing \n Container gtl-m001-620617-web-1 Removed \n Container gtl-m001-620617-api-1 Stopped \n Container gtl-m001-620617-api-1 Removing \n Container gtl-m001-620617-api-1 Removed \n Network gtl-m001-620617_default Removing \n Network gtl-m001-620617_default Removed \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "a96d94724ba6321f307f04a3b31cac9bd0b6b176fd61f6351d7803282103808b"
+  },
+  {
+    "argv": [
+      "npm",
+      "ci"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/vendor/turbine-explorer",
+    "at": "2026-11-03T16:12:03.181452+00:00",
+    "exit_code": 0,
+    "stdout": "\nadded 25 packages, and audited 26 packages in 2s\n\n5 packages are looking for funding\n  run `npm fund` for details\n\n2 high severity vulnerabilities\n\nTo address all issues, run:\n  npm audit fix\n\nRun `npm audit` for details.\n",
+    "stderr": "npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:\nnpm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\n",
+    "stdout_sha256": "c5f4ec1bb4a47431854ee5dd20e4ecec689deeaaae8b7934539a3a7c04f4c3fa",
+    "stderr_sha256": "960379ab2b6e16c97f4063bcd816d9df4cc6c32cbcc2d926fac49aca2dc92829"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/vendor/turbine-explorer",
+    "at": "2026-11-03T16:12:04.986147+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 test\n> npm run test:quality && npm run test:energy && npm run test:language && npm run test:blade && npm run test:service && npm run test:geometry\n\n\n> turbine-explorer@0.1.0 test:quality\n> node --experimental-strip-types scripts/verify-quality.mjs\n\nPASS: default quality, supersampling, GPU size cap, saved preference and shared change events.\n\n> turbine-explorer@0.1.0 test:energy\n> node --experimental-strip-types scripts/verify-energy.mjs\n\nPASS: MW/kWh/seconds conversion, household assumption, frame integration, attached heat effects and shutdown.\n\n> turbine-explorer@0.1.0 test:language\n> node --experimental-strip-types scripts/verify-language.mjs\n\nPASS: bilingual catalog covers authored static UI text. Runtime state preservation is checked in the live browser.\n\n> turbine-explorer@0.1.0 test:blade\n> node --experimental-strip-types scripts/verify-blade.mjs\n\nPASS: blade volume, finite geometry, default integral cutaway, animated airflow, coating modes, instance isolation. 155404 triangles / 24 meshes.\n\n> turbine-explorer@0.1.0 test:service\n> node --experimental-strip-types scripts/verify-service.mjs\n\nPASS: coastdown, return interlock, casing-first sequence, installed hot-inspection cans, reversible normalized travel.\n\n> turbine-explorer@0.1.0 test:geometry\n> node --experimental-strip-types scripts/verify-case.mjs && node --experimental-strip-types scripts/verify-assembly.mjs\n\nPASS: shell face orientation, complementary half-spaces, full barrel, drilled joints and enclosure bolts.\nPASS: expanding turbine stages, attached lugs, consistent combustor ring, connected transitions, rotating vs stationary hierarchy.\nPASS: lower-casing group separation, stationary core, exact reassembly.\n",
+    "stderr": "",
+    "stdout_sha256": "d821979430c682a633c2bf69069bec9ea81b1fcd570b079eb207fafbad8510b3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/vendor/turbine-explorer",
+    "at": "2026-11-03T16:12:10.147935+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 build\n> tsc && vite build\n\nvite v7.3.6 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                  16.83 kB │ gzip:   5.81 kB\ndist/assets/index-BmpRa__N.css   78.45 kB │ gzip:  16.56 kB\ndist/assets/index-DsxIO6n-.js   999.98 kB │ gzip: 313.44 kB\n✓ built in 1.63s\n",
+    "stderr": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "stdout_sha256": "995c0df24e60f1f1ec69df666c2327496f032e7bdce58fa54da414675d6fc43a",
+    "stderr_sha256": "ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build:labs"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29/vendor/turbine-explorer",
+    "at": "2026-11-03T16:12:13.560716+00:00",
+    "exit_code": 0,
+    "stdout": "\n> turbine-explorer@0.1.0 build:labs\n> tsc && vite build --base=/gas-turbine/ --outDir dist-labs/gas-turbine && node scripts/package-labs.mjs\n\nvite v7.3.6 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist-labs/gas-turbine/index.html                  16.85 kB │ gzip:   5.81 kB\ndist-labs/gas-turbine/assets/index-axLSd0Ng.css   78.47 kB │ gzip:  16.57 kB\ndist-labs/gas-turbine/assets/index-BgZi3nDl.js   999.98 kB │ gzip: 313.44 kB\n✓ built in 1.43s\nLabs landing and /gas-turbine/ are ready in dist-labs/.\n",
+    "stderr": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "stdout_sha256": "379480af2f3ecf57e6bf32972aa86ad99040a74ef349b90e3020e975cf7b7e54",
+    "stderr_sha256": "ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+      "73d7e29cb2e837eceb4767932e116e76e4916d0f"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:16.695699+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/clean-73d7e29",
+    "at": "2026-11-03T16:12:16.702816+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

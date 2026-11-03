@@ -1,0 +1,14 @@
+
+> gt-lifecycle-web@0.1.0 test
+> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/frontend-red.json
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForResponse: Timeout 30000ms exceeded while waiting for event "response"
+    at /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend/tests/browser.mjs:19:31 {
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.2

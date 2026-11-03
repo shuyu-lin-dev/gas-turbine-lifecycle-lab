@@ -1,0 +1,12 @@
+2026-11-04T00:23:26+08:00
+/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review
+/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-review/clean-73d7e29-review/.scratch-runtime/coordinator-m001-review/env-clean-01/tmp
+State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                 
+LISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*                                           
+LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                           
+LISTEN 0      4096       127.0.0.54:53         0.0.0.0:*                                           
+LISTEN 0      128           0.0.0.0:2222       0.0.0.0:*                                           
+LISTEN 0      511         127.0.0.1:46611      0.0.0.0:*    users:(("node",pid=304591,fd=23))      
+LISTEN 0      511         127.0.0.1:30152      0.0.0.0:*    users:(("node",pid=305720,fd=43))      
+LISTEN 0      511         127.0.0.1:3082       0.0.0.0:*    users:(("MainThread",pid=235968,fd=22))
+LISTEN 0      128              [::]:2222          [::]:*                                           

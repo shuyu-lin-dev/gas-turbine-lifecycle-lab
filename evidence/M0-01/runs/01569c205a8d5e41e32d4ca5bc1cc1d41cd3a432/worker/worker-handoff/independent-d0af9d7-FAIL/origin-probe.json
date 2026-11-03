@@ -1,0 +1,686 @@
+[
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://127.0.0.1:5173\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://127.0.0.1:5173']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://localhost:4175\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://localhost:4175']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"https://example.com\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['https://example.com']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"https://sub.example.com:443\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['https://sub.example.com:443']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://[::1]:5173\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://[::1]:5173']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com:1\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://example.com:1']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com:65535\"]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://example.com:65535']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[]"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "[]\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"*\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://*\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"https://*.example.com\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.*\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://%2A\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 37, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"https://%2A.example.com\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 37, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"file:///invalid\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"ftp://example.com\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"example.com\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://user:password@example.com\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com/path\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com/\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com?value=1\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com#fragment\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com:0\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 39, in <module>\n    raise ValueError('API_CORS_ORIGINS端口需要处于1～65535')\nValueError: API_CORS_ORIGINS端口需要处于1～65535\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com:65536\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 35, in <module>\n    validated = TypeAdapter(AnyHttpUrl).validate_python(origin)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/pydantic/type_adapter.py\", line 410, in validate_python\n    return self.validator.validate_python(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 1 validation error for function-wrap[wrap_val()]\n  Input should be a valid URL, invalid port number [type=url_parsing, input_value='http://example.com:65536', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/url_parsing\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com:invalid\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 35, in <module>\n    validated = TypeAdapter(AnyHttpUrl).validate_python(origin)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/pydantic/type_adapter.py\", line 410, in validate_python\n    return self.validator.validate_python(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 1 validation error for function-wrap[wrap_val()]\n  Input should be a valid URL, invalid port number [type=url_parsing, input_value='http://example.com:invalid', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/url_parsing\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://exam ple.com\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[\"http://example.com\\n\"]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 34, in <module>\n    raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')\nValueError: API_CORS_ORIGINS需要明确的HTTP/HTTPS origin\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "null"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 28, in <module>\n    raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')\nValueError: API_CORS_ORIGINS需要JSON字符串数组\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "{}"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 28, in <module>\n    raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')\nValueError: API_CORS_ORIGINS需要JSON字符串数组\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "123"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 28, in <module>\n    raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')\nValueError: API_CORS_ORIGINS需要JSON字符串数组\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "[1]"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 28, in <module>\n    raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')\nValueError: API_CORS_ORIGINS需要JSON字符串数组\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "\"http://127.0.0.1:5173\""
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 28, in <module>\n    raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')\nValueError: API_CORS_ORIGINS需要JSON字符串数组\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_CORS_ORIGINS": "invalid-json"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 25, in <module>\n    origins = json.loads(os.environ.get(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": ""
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 23, in <module>\n    raise ValueError('API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符')\nValueError: API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": "bad instance"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 23, in <module>\n    raise ValueError('API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符')\nValueError: API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 23, in <module>\n    raise ValueError('API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符')\nValueError: API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": "中文"
+    },
+    "accepted": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py\", line 23, in <module>\n    raise ValueError('API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符')\nValueError: API_INSTANCE_ID需要1～64个ASCII字母、数字、下划线或连字符\n"
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": "a"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://127.0.0.1:5173', 'http://127.0.0.1:4175']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": "api-a_1"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://127.0.0.1:5173', 'http://127.0.0.1:4175']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-c",
+      "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+    ],
+    "configuration": {
+      "API_INSTANCE_ID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "accepted": true,
+    "exit_code": 0,
+    "stdout": "['http://127.0.0.1:5173', 'http://127.0.0.1:4175']\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+      "-m",
+      "uvicorn",
+      "gt_lifecycle_api.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "45729"
+    ],
+    "pid": 671597,
+    "port": 45729,
+    "responses": [
+      {
+        "method": "GET",
+        "origin": null,
+        "status": 200,
+        "headers": {
+          "date": "Tue, 03 Nov 2026 16:54:47 GMT",
+          "server": "uvicorn",
+          "content-length": "105",
+          "content-type": "application/json",
+          "vary": "Origin",
+          "Connection": "close"
+        },
+        "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+      },
+      {
+        "method": "GET",
+        "origin": "http://127.0.0.1:5173",
+        "status": 200,
+        "headers": {
+          "date": "Tue, 03 Nov 2026 16:54:47 GMT",
+          "server": "uvicorn",
+          "content-length": "105",
+          "content-type": "application/json",
+          "access-control-allow-origin": "http://127.0.0.1:5173",
+          "vary": "Origin",
+          "Connection": "close"
+        },
+        "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+      },
+      {
+        "method": "OPTIONS",
+        "origin": "http://127.0.0.1:5173",
+        "status": 200,
+        "headers": {
+          "date": "Tue, 03 Nov 2026 16:54:47 GMT",
+          "server": "uvicorn",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "access-control-allow-methods": "GET",
+          "access-control-max-age": "600",
+          "access-control-allow-headers": "Accept, Accept-Language, Content-Language, Content-Type",
+          "access-control-allow-origin": "http://127.0.0.1:5173",
+          "content-length": "2",
+          "content-type": "text/plain; charset=utf-8",
+          "Connection": "close"
+        },
+        "body": "OK"
+      },
+      {
+        "method": "GET",
+        "origin": "http://untrusted.invalid",
+        "status": 200,
+        "headers": {
+          "date": "Tue, 03 Nov 2026 16:54:47 GMT",
+          "server": "uvicorn",
+          "content-length": "105",
+          "content-type": "application/json",
+          "vary": "Origin",
+          "Connection": "close"
+        },
+        "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+      },
+      {
+        "method": "OPTIONS",
+        "origin": "http://untrusted.invalid",
+        "status": 400,
+        "headers": {
+          "date": "Tue, 03 Nov 2026 16:54:47 GMT",
+          "server": "uvicorn",
+          "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network",
+          "access-control-allow-methods": "GET",
+          "access-control-max-age": "600",
+          "access-control-allow-headers": "Accept, Accept-Language, Content-Language, Content-Type",
+          "content-length": "22",
+          "content-type": "text/plain; charset=utf-8",
+          "Connection": "close"
+        },
+        "body": "Disallowed CORS origin"
+      }
+    ],
+    "state": "PASS",
+    "exit_code": -15
+  }
+]

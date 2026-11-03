@@ -1,0 +1,14 @@
+{
+  "candidate": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+  "outer_runs": [
+    {"command": "bash .scratch-runtime/coordinator-m001-rereview/run-frozen.sh <Ticket worktree> main-01", "exit_code": 0, "log": "main-01.log"},
+    {"command": "bash .scratch-runtime/coordinator-m001-rereview/run-frozen.sh <independent clone> clean-01 --clean", "exit_code": 0, "log": "clean-01.log"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/origin-probe.py", "exit_code": 0, "log": "origin-probe.log"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/credentials-probe.py", "exit_code": 1, "log": "credentials-probe.log", "reason": "两个空userinfo的origin拒绝断言失败"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/credentials-probe.py --python <independent clone wheel Python> --name credentials-clean", "exit_code": 1, "log": "credentials-clean.log", "reason": "探针解析Python符号链接后无法读取预期的安装文件；本次不用于产品判断"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/credentials-probe.py --python <independent clone wheel Python> --name credentials-clean-02", "exit_code": 1, "log": "credentials-clean-02.log", "reason": "两个空userinfo的origin拒绝断言失败"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/audit.py", "exit_code": 1, "log": "audit-01.log", "reason": "原协调辅助记录有追加内容，原始完整文件哈希不相同"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/audit.py", "exit_code": 0, "log": "audit-02.log", "reason": "原辅助文件前缀精确匹配原哈希；证据、版本与退出码核查通过"},
+    {"command": "python3 .scratch-runtime/coordinator-m001-rereview/audit.py", "exit_code": 0, "log": "audit-03.log", "reason": "完整核查通过，附当前dsh健康与单worker状态"}
+  ]
+}

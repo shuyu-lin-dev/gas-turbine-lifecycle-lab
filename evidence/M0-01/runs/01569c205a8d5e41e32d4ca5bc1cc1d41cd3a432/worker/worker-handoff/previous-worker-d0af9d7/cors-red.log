@@ -1,0 +1,46 @@
+..FF..                                                                   [100%]
+=================================== FAILURES ===================================
+__ test_invalid_configuration_prevents_startup[API_CORS_ORIGINS-["http://*"]] __
+
+name = 'API_CORS_ORIGINS', value = '["http://*"]'
+
+    @pytest.mark.parametrize('name,value', [
+        ('API_INSTANCE_ID', 'bad instance'),
+        ('API_CORS_ORIGINS', '["*"]'),
+        ('API_CORS_ORIGINS', '["http://*"]'),
+        ('API_CORS_ORIGINS', '["https://*.example.com"]'),
+        ('API_CORS_ORIGINS', '["file:///invalid"]'),
+        ('API_CORS_ORIGINS', '"http://127.0.0.1:5173"'),
+    ])
+    def test_invalid_configuration_prevents_startup(name, value):
+        result = subprocess.run([sys.executable, '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode != 0
+E       AssertionError: assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:68: AssertionError
+_ test_invalid_configuration_prevents_startup[API_CORS_ORIGINS-["https://*.example.com"]] _
+
+name = 'API_CORS_ORIGINS', value = '["https://*.example.com"]'
+
+    @pytest.mark.parametrize('name,value', [
+        ('API_INSTANCE_ID', 'bad instance'),
+        ('API_CORS_ORIGINS', '["*"]'),
+        ('API_CORS_ORIGINS', '["http://*"]'),
+        ('API_CORS_ORIGINS', '["https://*.example.com"]'),
+        ('API_CORS_ORIGINS', '["file:///invalid"]'),
+        ('API_CORS_ORIGINS', '"http://127.0.0.1:5173"'),
+    ])
+    def test_invalid_configuration_prevents_startup(name, value):
+        result = subprocess.run([sys.executable, '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode != 0
+E       AssertionError: assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:68: AssertionError
+=========================== short test summary info ============================
+FAILED backend/tests/test_http.py::test_invalid_configuration_prevents_startup[API_CORS_ORIGINS-["http://*"]]
+FAILED backend/tests/test_http.py::test_invalid_configuration_prevents_startup[API_CORS_ORIGINS-["https://*.example.com"]]
+2 failed, 4 passed, 6 deselected in 1.50s

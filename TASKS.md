@@ -17,7 +17,7 @@
 |---|---|---|---|---|---|---|
 | [x] | M0-00 | 本机、主仓库、dsh 接入与规格冻结 | 无 | LOCKED | M0-00-A01～M0-00-A07 | S=`3980867902a9c102f18894e9acf65b8c72051b19`；C=`b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61`；E=`398b923f01eb97bcf7c22e9e31f344662c2365c5`；[正式报告](evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md)；基线 `baseline/M0-00-b4ae8e35d782` 已远程核实 |
 | [x] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | LOCKED | FE-BASE-A01～FE-BASE-A05 | S=`7704387252b293bee1ec671b440164a12287ca16`；C=`ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f`；E=`a7966085071051d07cb7e80d0843a07ad9687183`；[正式报告](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)；基线 `baseline/FE-BASE-ab07372aa223` 已远程核实 |
-| [ ] | M0-01 | Vue 与 Python 前后端独立运行 | FE-BASE | PLANNED | M0-01-A01～M0-01-A05 | 未执行 |
+| [x] | M0-01 | Vue 与 Python 前后端独立运行 | FE-BASE | LOCKED | M0-01-A01～M0-01-A05 | S=`18a9210947e0114a8bbc6a10c8864701dfb8539e`；C=`01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432`；E=`32558e25e394dda6e1fffee5970ae30bc378e7d7`；[正式报告](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md)；基线 `baseline/M0-01-01569c205a8d` 已远程核实 |
 | [ ] | FE-INTEGRATE | Vue 业务壳与同源 viewer 桥接 | M0-01 | PLANNED | FE-INTEGRATE-A01～FE-INTEGRATE-A06 | 未执行 |
 | [ ] | M0-02 | 事件契约、幂等持久化和范围查询 | FE-INTEGRATE | PLANNED | M0-02-A01～M0-02-A07 | 未执行 |
 | [ ] | M0-03 | 单设备固定 CSV 播放 | M0-02 | PLANNED | M0-03-A01～M0-03-A05 | 未执行 |
@@ -132,3 +132,20 @@ M4-01 是预算与测量方法的前置任务，不表示性能已通过。当�
 - integration_status：PR #4待协调最终核查及用户当前授权合并；本项尚未合并至main，后续任务需实际集成并单独派发。
 - CI：准确C零条check-runs、零条commit statuses，仅记没有上报检查；既有保护保持。
 - failure_and_fix_history：[原独立FAIL、真实red/green诊断及历次失败](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)；冻结S及硬验收语义保持，历史失败与原哈希完整保留。
+
+## M0-01 执行追溯
+
+- task_id / state：M0-01 / LOCKED。
+- dsh_ticket：`810d967dfbff4f0b93ef72c858f5a6b6`；actual_worker：`worker-810d967dfbff4f0b93ef72c858f5a6b6`；branch：`agent/vue-python-runtime-810d967dfbff`。
+- criteria_commit_S：`18a9210947e0114a8bbc6a10c8864701dfb8539e`；[冻结记录](evidence/M0-01/criteria.md)。
+- tested_code_sha_C：`01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432`；comparison_base / merge_base / 前置集成基准：`b8ad3150cf4480f8e205926541aeeccb072f7f80`，完整包含FE-BASE实际集成成果。
+- required_total / passed / failed / blocked / skipped / not_run：5 / 5 / 0 / 0 / 0 / 0；worker主122条、干净124条、协调独立干净124条命令的实际退出码全部等于明确expected_exit_code；每套包含46项必要拒绝退出1。
+- evidence_path：[正式报告](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md)；[来源索引](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/archive-index.json)；[完整SHA256清单](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/SHA256SUMS.json)。
+- independent_review：会话`01a1a274-4921-7f83-85f0-3d056391d87d`，完整base→C的34文件/七提交分别审查，Standards/Spec及五条实际验收均PASS；[独立报告](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/independent-01569c2-PASS/REVIEW.md) SHA256 `7fc6f070a0264039d4a3e2649dca5805ef94df6d7342be0d2739cf154a62cc7c`；通过回执Issue #5评论`6611125566`。
+- failure_and_fix_history：[完整失败、整改及各轮复验](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md)；原两轮独立FAIL、各候选和实际red/green保持原始字节及哈希，S和验收语义保持。
+- CI：准确C的check-runs=0、commit statuses=0，没有上报检查，既有保护保持。
+- evidence_commit_E：`32558e25e394dda6e1fffee5970ae30bc378e7d7`；baseline_tag：`baseline/M0-01-01569c205a8d`，全新标签指向E。
+- remote_verified_E：2026-11-03T18:06:15.870264+00:00；远程分支/tag均为E，完整tree、1114项证据blob及TASKS字节已核实，原两项前置标签保持；[远程核实](evidence/M0-01/remote-E-verification.json)。
+- evidence_manifest_sha256：`63050ec12278fd8f120befe6c61634e5491fc0cca48cd617cb37e08891376381`；[锁定登记](evidence/M0-01/LOCK.md)。
+- lock_record_K_external_receipt：锁定提交推送后的最终SHA在Issue #5外部回执核实；本记录仅引用已存在的S/C/E与远程核实结果。
+- integration_status：PR #6待协调最终head核查、合并与实际main集成；当前只交付M0-01，后续任务需实际集成后单独派发。

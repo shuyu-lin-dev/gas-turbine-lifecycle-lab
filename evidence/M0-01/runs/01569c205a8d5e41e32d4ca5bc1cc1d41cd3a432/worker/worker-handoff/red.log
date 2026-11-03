@@ -1,0 +1,132 @@
+...............FF.......F.F.......F.F...FF................               [100%]
+=================================== FAILURES ===================================
+__ test_configuration_boundaries[API_CORS_ORIGINS-["http://@example.com"]-1] ___
+
+name = 'API_CORS_ORIGINS', value = '["http://@example.com"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://@example.com"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+__ test_configuration_boundaries[API_CORS_ORIGINS-["http://:@example.com"]-1] __
+
+name = 'API_CORS_ORIGINS', value = '["http://:@example.com"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://:@example.com"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+__ test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com?"]-1] ___
+
+name = 'API_CORS_ORIGINS', value = '["http://example.com?"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://example.com?"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+__ test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com#"]-1] ___
+
+name = 'API_CORS_ORIGINS', value = '["http://example.com#"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://example.com#"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+_ test_configuration_boundaries[API_CORS_ORIGINS-["\\u0000http://example.com"]-1] _
+
+name = 'API_CORS_ORIGINS', value = '["\\u0000http://example.com"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["\\u0000http://example.com"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+_ test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com\\\\"]-1] _
+
+name = 'API_CORS_ORIGINS', value = '["http://example.com\\\\"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://example.com\\\\"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+__ test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com:"]-1] ___
+
+name = 'API_CORS_ORIGINS', value = '["http://example.com:"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://example.com:"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+_____ test_configuration_boundaries[API_CORS_ORIGINS-["http://[::1]:"]-1] ______
+
+name = 'API_CORS_ORIGINS', value = '["http://[::1]:"]', expected = 1
+
+    @pytest.mark.parametrize('name,value,expected', json.loads(
+        (Path(__file__).with_name('configuration_cases.json')).read_text()))
+    def test_configuration_boundaries(name, value, expected):
+        result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
+                                env=dict(os.environ, **{name: value}), capture_output=True, text=True, timeout=10)
+>       assert result.returncode == expected, (name, value, result.stdout, result.stderr)
+E       AssertionError: ('API_CORS_ORIGINS', '["http://[::1]:"]', '', '')
+E       assert 0 == 1
+E        +  where 0 = CompletedProcess(args=['/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/backend/.venv/bin/python', '-B', '-c', 'import gt_lifecycle_api.app'], returncode=0, stdout='', stderr='').returncode
+
+backend/tests/test_http.py:82: AssertionError
+=========================== short test summary info ============================
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://@example.com"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://:@example.com"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com?"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com#"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["\\u0000http://example.com"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com\\\\"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://example.com:"]-1]
+FAILED backend/tests/test_http.py::test_configuration_boundaries[API_CORS_ORIGINS-["http://[::1]:"]-1]
+8 failed, 50 passed, 12 deselected in 15.16s

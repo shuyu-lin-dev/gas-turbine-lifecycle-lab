@@ -1,0 +1,65 @@
+{
+  "url": "http://127.0.0.1:5173",
+  "healthUrl": "http://127.0.0.1:8201/api/v1/health",
+  "instance": "api-a",
+  "mode": "healthy",
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET"
+    }
+  ],
+  "requestFailures": [],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "http://127.0.0.1:5173",
+        "content-length": "105",
+        "date": "Tue, 03 Nov 2026 16:26:27 GMT",
+        "content-type": "application/json",
+        "vary": "Origin",
+        "server": "uvicorn"
+      },
+      "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+    },
+    {
+      "url": "http://127.0.0.1:8201/api/v1/health",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "http://127.0.0.1:5173",
+        "content-length": "105",
+        "date": "Tue, 03 Nov 2026 16:26:27 GMT",
+        "content-type": "application/json",
+        "vary": "Origin",
+        "server": "uvicorn"
+      },
+      "body": "{\"schema_version\":\"1\",\"service\":\"gt-lifecycle-api\",\"version\":\"0.1.0\",\"status\":\"ok\",\"instance_id\":\"api-a\"}"
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "steps": [
+    "首次加载：连接正常",
+    "实际点击重新检查：连接正常",
+    "390px页面无横向溢出"
+  ],
+  "text": "GT Lifecycle Lab\n教学实验平台\n\n燃气轮机数字化样机与智能运维实验平台\n\n服务连接\n\n查看平台与后端服务的连接情况，确认当前服务版本。\n\n当前阶段提供服务健康检查。\n\n后端服务\n连接正常\n请求地址\nhttp://127.0.0.1:8201/api/v1/health\n服务名称\ngt-lifecycle-api\n服务版本\n0.1.0\n服务状态\nok\n服务实例\napi-a\n重新检查\n通用燃气轮机教学与工程验证",
+  "state": "PASS"
+}

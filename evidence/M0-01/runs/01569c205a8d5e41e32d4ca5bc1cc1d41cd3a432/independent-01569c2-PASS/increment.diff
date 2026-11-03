@@ -1,0 +1,198 @@
+diff --git a/backend/src/gt_lifecycle_api/app.py b/backend/src/gt_lifecycle_api/app.py
+index 06720c4..848eea6 100644
+--- a/backend/src/gt_lifecycle_api/app.py
++++ b/backend/src/gt_lifecycle_api/app.py
+@@ -28,12 +28,15 @@ if not isinstance(origins, list) or not all(isinstance(origin, str) for origin i
+     raise ValueError('API_CORS_ORIGINS需要JSON字符串数组')
+ for origin in origins:
+     parsed = urlsplit(origin)
+-    if (parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username
+-            or parsed.password or parsed.path or parsed.query or parsed.fragment
+-            or '*' in origin or any(character.isspace() for character in origin)):
++    if (parsed.scheme not in ('http', 'https') or not parsed.hostname
++            or parsed.username is not None or parsed.password is not None
++            or parsed.path or parsed.query or parsed.fragment or parsed.netloc.endswith(':')
++            or '*' in origin or '\\' in origin
++            or any(character.isspace() or ord(character) < 32 or ord(character) == 127 for character in origin)):
+         raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
+     validated = TypeAdapter(AnyHttpUrl).validate_python(origin)
+-    if validated.host and '*' in validated.host:
++    if (validated.query is not None or validated.fragment is not None
++            or (validated.host and '*' in validated.host)):
+         raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
+     if parsed.port is not None and not 1 <= parsed.port <= 65535:
+         raise ValueError('API_CORS_ORIGINS端口需要处于1～65535')
+diff --git a/backend/tests/configuration_cases.json b/backend/tests/configuration_cases.json
+new file mode 100644
+index 0000000..5e9c21c
+--- /dev/null
++++ b/backend/tests/configuration_cases.json
+@@ -0,0 +1,60 @@
++[
++  ["API_CORS_ORIGINS", "[\"http://127.0.0.1:5173\"]", 0],
++  ["API_CORS_ORIGINS", "[\"http://localhost:4175\"]", 0],
++  ["API_CORS_ORIGINS", "[\"https://example.com\"]", 0],
++  ["API_CORS_ORIGINS", "[\"https://sub.example.com:443\"]", 0],
++  ["API_CORS_ORIGINS", "[\"http://[::1]:5173\"]", 0],
++  ["API_CORS_ORIGINS", "[\"http://example.com:1\"]", 0],
++  ["API_CORS_ORIGINS", "[\"http://example.com:65535\"]", 0],
++  ["API_CORS_ORIGINS", "[]", 0],
++  ["API_CORS_ORIGINS", "[\"http://127.0.0.1:5173\",\"https://example.com\"]", 0],
++  ["API_CORS_ORIGINS", "[\"*\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://*\"]", 1],
++  ["API_CORS_ORIGINS", "[\"https://*.example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.*\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://%2A\"]", 1],
++  ["API_CORS_ORIGINS", "[\"https://%2A.example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://@example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://:@example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://user@example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://:password@example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://user:@example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://user:password@example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com/path\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com/\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com?value=1\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com?\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com#fragment\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com#\"]", 1],
++  ["API_CORS_ORIGINS", "[\"file:///invalid\"]", 1],
++  ["API_CORS_ORIGINS", "[\"ftp://example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://\"]", 1],
++  ["API_CORS_ORIGINS", "[\"example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://exam ple.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com\\n\"]", 1],
++  ["API_CORS_ORIGINS", "[\"\\u0000http://example.com\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com\\u007f\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com\\\\\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com:0\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com:65536\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com:invalid\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com:\"]", 1],
++  ["API_CORS_ORIGINS", "[\"http://[::1]:\"]", 1],
++  ["API_CORS_ORIGINS", "null", 1],
++  ["API_CORS_ORIGINS", "{}", 1],
++  ["API_CORS_ORIGINS", "123", 1],
++  ["API_CORS_ORIGINS", "[1]", 1],
++  ["API_CORS_ORIGINS", "[null]", 1],
++  ["API_CORS_ORIGINS", "[true]", 1],
++  ["API_CORS_ORIGINS", "[\"http://example.com\",false]", 1],
++  ["API_CORS_ORIGINS", "\"http://127.0.0.1:5173\"", 1],
++  ["API_CORS_ORIGINS", "invalid-json", 1],
++  ["API_INSTANCE_ID", "", 1],
++  ["API_INSTANCE_ID", "bad instance", 1],
++  ["API_INSTANCE_ID", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1],
++  ["API_INSTANCE_ID", "中文", 1],
++  ["API_INSTANCE_ID", "a", 0],
++  ["API_INSTANCE_ID", "api-a_1", 0],
++  ["API_INSTANCE_ID", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0]
++]
+diff --git a/backend/tests/test_http.py b/backend/tests/test_http.py
+index 5b6ce89..09ea736 100644
+--- a/backend/tests/test_http.py
++++ b/backend/tests/test_http.py
+@@ -53,6 +53,9 @@ def test_cors_allows_declared_origin_and_rejects_other_origin(api):
+     assert preflight.status_code == 200
+     assert preflight.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
+     assert preflight.headers['access-control-allow-methods'] == 'GET'
++    denied_get = httpx.get(api + '/api/v1/health', headers={'Origin': 'http://untrusted.invalid'}, trust_env=False)
++    assert denied_get.status_code == 200
++    assert 'access-control-allow-origin' not in denied_get.headers
+     denied = httpx.options(api + '/api/v1/health', headers={
+         'Origin': 'http://untrusted.invalid', 'Access-Control-Request-Method': 'GET'}, trust_env=False)
+     assert denied.status_code == 400
+@@ -74,6 +77,15 @@ def test_invalid_configuration_prevents_startup(name, value):
+     assert name in result.stderr
+ 
+ 
++@pytest.mark.parametrize('name,value,expected', json.loads(
++    (Path(__file__).with_name('configuration_cases.json')).read_text()))
++def test_configuration_boundaries(name, value, expected):
++    result = subprocess.run([sys.executable, '-B', '-c', 'import gt_lifecycle_api.app'],
++                            env=dict(os.environ) | {'API_INSTANCE_ID': 'api-a', 'API_CORS_ORIGINS': '[]', name: value},
++                            capture_output=True, text=True, timeout=10)
++    assert result.returncode == expected, (name, value, result.stdout, result.stderr)
++
++
+ @pytest.mark.parametrize('path', ['/', '/index.html', '/api/v1/missing'])
+ def test_api_does_not_serve_frontend_or_unknown_routes(api, path):
+     assert httpx.get(api + path, trust_env=False).status_code == 404
+diff --git a/docs/M0_01.md b/docs/M0_01.md
+index 6649fa0..481d1f9 100644
+--- a/docs/M0_01.md
++++ b/docs/M0_01.md
+@@ -77,7 +77,7 @@ web单独启动时仍提供页面；API未运行时健康检查明确失败。Ng
+ python3 scripts/verify_m0_01.py --criteria 18a9210947e0114a8bbc6a10c8864701dfb8539e --candidate <C完整SHA> --output .scratch-runtime/m0-01/run-<唯一编号>
+ ```
+ 
+-入口要求准确HEAD=C、工作树干净、冻结S和基准为祖先；分别安装、构建、运行真实HTTP进程、浏览器和容器，测试实际独立启停、地址切换、开发跨源/反代、部署路由、5秒超时、非法配置及恢复。持续页面测试通过`npm run test:lifecycle`实际启动、终止和恢复API，在同一页面依次验证成功、点击后的失败与旧字段清除、再次点击后的恢复；记录唯一页面导航和全部实际进程。Python wheel在全新环境按导出锁安装后启动，并实际验证合法origin和通配origin启动拒绝。每条命令保存实际退出码与expected_exit_code，必要错误命令预期退出1；实际请求/响应、DOM、控制台、进程生命周期和哈希保存在输出目录。工具只采集数据，不采集图片，不替换网络响应。
++入口要求准确HEAD=C、工作树干净、冻结S和基准为祖先；分别安装、构建、运行真实HTTP进程、浏览器和容器，测试实际独立启停、地址切换、开发跨源/反代、部署路由、5秒超时、非法配置及恢复。持续页面测试通过`npm run test:lifecycle`实际启动、终止和恢复API，在同一页面依次验证成功、点击后的失败与旧字段清除、再次点击后的恢复；记录唯一页面导航和全部实际进程。Python wheel在全新环境按导出锁安装后启动，并按backend/tests/configuration_cases.json的58项独立预期逐项验证：合法HTTP/HTTPS、IPv6、端口和空允许列表；非法userinfo、通配、路径/query/fragment、协议、空白/控制字符、端口及JSON形状/类型；instance边界。每条命令保存实际退出码与expected_exit_code，必要错误命令预期退出1；实际请求/响应、DOM、控制台、进程生命周期和哈希保存在输出目录。工具只采集数据，不采集图片，不替换网络响应。
+ 
+ 干净复现从准确C通过`git clone --no-local --no-checkout`建立当前工作树`.scratch-runtime/m0-01/clean-<C前12位>`，在clone中`git switch --detach <C>`，origin设置为唯一目标仓库，重新准备该clone内的TMPDIR和缓存，使用同一命令并添加`--clean`。不得共享node_modules或venv。正式入口结束时回收所创建的进程、浏览器和该次Compose服务；不会操作其他项目的服务。候选审查需要的常驻入口由外部回执单独管理。
+ 
+diff --git a/frontend/src/App.vue b/frontend/src/App.vue
+index f6264e2..4154a7a 100644
+--- a/frontend/src/App.vue
++++ b/frontend/src/App.vue
+@@ -24,7 +24,8 @@ function endpoint(): string {
+   if ((!apiBaseUrl.startsWith('/') && !/^https?:\/\//.test(apiBaseUrl))
+       || apiBaseUrl.startsWith('//') || (apiBaseUrl.startsWith('/') && url.origin !== window.location.origin)
+       || !['http:', 'https:'].includes(url.protocol)
+-      || url.username || url.password || url.search || url.hash) {
++      || url.username || url.password || url.search || url.hash
++      || url.href !== url.origin + url.pathname) {
+     throw new Error('API地址需要同源路径或完整的HTTP/HTTPS地址。')
+   }
+   return url.href.replace(/\/$/, '') + '/health'
+diff --git a/frontend/tests/browser.mjs b/frontend/tests/browser.mjs
+index dac6996..3cf7a1e 100644
+--- a/frontend/tests/browser.mjs
++++ b/frontend/tests/browser.mjs
+@@ -15,13 +15,13 @@ try {
+   page.on('pageerror', error => record.errors.push(String(error)))
+   page.on('console', message => record.console.push({ type: message.type(), text: message.text() }))
+   page.on('request', request => {
+-    if (new URL(request.url()).pathname.endsWith('/health')) record.requests.push({ url: request.url(), method: request.method() })
++    if (request.resourceType() === 'fetch' || new URL(request.url()).pathname.endsWith('/health')) record.requests.push({ url: request.url(), method: request.method() })
+   })
+   page.on('requestfailed', request => {
+     if (new URL(request.url()).pathname.endsWith('/health')) record.requestFailures.push({ url: request.url(), failure: request.failure() })
+   })
+   page.on('response', response => {
+-    if (response.url() === healthUrl) {
++    if (response.url() === healthUrl || (mode === 'config' && response.request().resourceType() === 'fetch')) {
+       const entry = { url: response.url(), method: response.request().method(), status: response.status(), headers: response.headers() }
+       if (mode === 'healthy') {
+         pending.push(response.text().then(body => record.responses.push({ ...entry, body })))
+diff --git a/scripts/verify_m0_01.py b/scripts/verify_m0_01.py
+index bfafd78..6b250b0 100644
+--- a/scripts/verify_m0_01.py
++++ b/scripts/verify_m0_01.py
+@@ -129,11 +129,10 @@ class Run:
+         wheels = list((back / 'dist').glob('*.whl'))
+         assert len(wheels) == 1
+         self.command([self.uv, 'pip', 'install', '--python', python, '--no-deps', wheels[0]])
+-        for origin in ['http://*', 'https://*.example.com']:
+-            self.command([python, '-c', 'import gt_lifecycle_api.app'],
+-                         env={'API_CORS_ORIGINS': json.dumps([origin])}, expected=1)
+-        self.command([python, '-c', 'import gt_lifecycle_api.app'],
+-                     env={'API_CORS_ORIGINS': '["http://127.0.0.1:5173"]'})
++        configuration_cases = json.loads((back / 'tests/configuration_cases.json').read_text())
++        for name, value, expected in configuration_cases:
++            self.command([python, '-B', '-c', 'import gt_lifecycle_api.app'],
++                         env={'API_INSTANCE_ID': 'api-a', 'API_CORS_ORIGINS': '[]', name: value}, expected=expected)
+         api_a = self.api('api-a', 8201, python)
+         api_b = self.api('api-b', 8202, python)
+         web = self.web('web-direct-a', 'http://127.0.0.1:8201/api/v1')
+@@ -151,7 +150,9 @@ class Run:
+         self.browser('api-recovered', 'http://127.0.0.1:5173', 'http://127.0.0.1:5173/api/v1/health')
+         self.stop(web)
+         for index, value in enumerate(['file:///invalid', 'http://user:password@127.0.0.1:8201/api/v1', '',
+-                                       r'/\127.0.0.1:8202/api/v1', '/api/\nv1']):
++                                       r'/\127.0.0.1:8202/api/v1', '/api/\nv1',
++                                       'http://127.0.0.1:8201/api/v1?', 'http://127.0.0.1:8201/api/v1#',
++                                       '/api/v1?', '/api/v1#']):
+             web = self.web(f'web-invalid-{index}', value)
+             self.browser(f'invalid-address-{index}', 'http://127.0.0.1:5173', 'http://127.0.0.1:8201/api/v1/health', mode='config')
+             self.stop(web)

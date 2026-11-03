@@ -1,0 +1,469 @@
+{
+  "session": "01a1a252-009d-7220-83a1-a4c31b35ab6d",
+  "at": "2026-11-03T16:59:18.835094+00:00",
+  "candidate": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+  "criteria": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+  "base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "efb0a5c6cf5e44eb9297d39ea88201a4610bf15e",
+        "b8ad3150cf4480f8e205926541aeeccb072f7f80"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "b8ad3150cf4480f8e205926541aeeccb072f7f80\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "b8ad3150cf4480f8e205926541aeeccb072f7f80^{tree}"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "3c1a4ac1f0f197c56d0ec0231a80f51f0081666d\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "efb0a5c6cf5e44eb9297d39ea88201a4610bf15e^{tree}"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "3c1a4ac1f0f197c56d0ec0231a80f51f0081666d\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+        "--",
+        "evidence/M0-01"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "b8ad3150cf4480f8e205926541aeeccb072f7f80...d0af9d76a459f838f6f8fb8ee656a7b60fc6c790"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "AGENTS.md\nDEV_SPEC.md\nREADME.md\nTASKS.md\nbackend/.dockerignore\nbackend/Dockerfile\nbackend/pyproject.toml\nbackend/src/gt_lifecycle_api/__init__.py\nbackend/src/gt_lifecycle_api/app.py\nbackend/tests/test_http.py\nbackend/uv.lock\ncompose.yaml\ndocs/M0_01.md\ndocs/agents/dsh.md\ndocs/agents/issue-tracker.md\ndocs/agents/workflow.md\nevidence/M0-01/criteria.md\nevidence/M0-01/health-api-a.json\nevidence/M0-01/health-api-b.json\nfrontend/.dockerignore\nfrontend/Dockerfile\nfrontend/index.html\nfrontend/nginx.conf.template\nfrontend/package-lock.json\nfrontend/package.json\nfrontend/src/App.vue\nfrontend/src/main.ts\nfrontend/src/style.css\nfrontend/tests/browser.mjs\nfrontend/tests/lifecycle.mjs\nfrontend/tsconfig.json\nfrontend/vite.config.ts\nscripts/verify_m0_01.py\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review",
+      "exit_code": 0,
+      "stdout": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--abbrev-ref",
+        "HEAD"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review",
+      "exit_code": 0,
+      "stdout": "HEAD\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--path-format=absolute",
+        "--git-common-dir"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review",
+      "exit_code": 0,
+      "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review/.git\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "ss",
+        "-ltnp"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                 \nLISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*                                           \nLISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                           \nLISTEN 0      4096       127.0.0.54:53         0.0.0.0:*                                           \nLISTEN 0      128           0.0.0.0:2222       0.0.0.0:*                                           \nLISTEN 0      511         127.0.0.1:46611      0.0.0.0:*    users:((\"node\",pid=304591,fd=23))      \nLISTEN 0      511         127.0.0.1:30152      0.0.0.0:*    users:((\"node\",pid=305720,fd=43))      \nLISTEN 0      511         127.0.0.1:3082       0.0.0.0:*    users:((\"MainThread\",pid=235968,fd=22))\nLISTEN 0      128              [::]:2222          [::]:*                                           \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "--format",
+        "{{json .}}"
+      ],
+      "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "manifests": [
+    {
+      "path": ".scratch-runtime/m0-01/worker-handoff/SHA256SUMS.json",
+      "sha256": "cce987562f4541c21d4f7efc57f4a09037a2c5f59cfe1558fe593f136b4535ba",
+      "count": 180,
+      "appended_auxiliary_records": []
+    },
+    {
+      "path": ".scratch-runtime/m0-01-remediation/worker-handoff/SHA256SUMS.json",
+      "sha256": "9f29de27b11dfe65f9f9232d42c5f51b3457751258ae275359e0e310c34863d7",
+      "count": 399,
+      "appended_auxiliary_records": []
+    },
+    {
+      "path": ".scratch-runtime/coordinator-m001-review/SHA256SUMS.json",
+      "sha256": "e486cc16343ef29afa7f974321bc453c94c86729c60cdd725d06bf8fed8805dc",
+      "count": 146,
+      "appended_auxiliary_records": [
+        {
+          "name": "coordination.md",
+          "expected_prefix_sha256": "a7c46190860eb5abf2019f677ef6f21f6f37c3e6983b611e35db6c7c4cd705a1",
+          "prefix_bytes": 1416,
+          "current_sha256": "a9994e7f46b38c03a4ed3207148e445915d3d11f2fdca498c8ca54a15a416ec9",
+          "current_bytes": 2001
+        },
+        {
+          "name": "session.jsonl",
+          "expected_prefix_sha256": "987db3d7934064b720e9c5e838cd905eda00f1785f5792ebfce247db51b55f92",
+          "prefix_bytes": 2169256,
+          "current_sha256": "04aed35acc2baa32c93e0d671f15faf607fb5cd996f5612d668e19d1d487b6de",
+          "current_bytes": 2171085
+        }
+      ]
+    },
+    {
+      "path": "evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/SHA256SUMS.json",
+      "sha256": "8a3461de61ecdf1c4bd658387e087e78cce220f775b895439f476ea81574d0ef",
+      "count": 192,
+      "appended_auxiliary_records": []
+    },
+    {
+      "path": "evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/SHA256SUMS.json",
+      "sha256": "fed3f234403a599e97ad28052d52b1275f186b22ebd9608e25d1d46fbeed77b5",
+      "count": 39,
+      "appended_auxiliary_records": []
+    }
+  ],
+  "files": {
+    "AGENTS.md": "b129bef04e90fd6c761a0f6df1003687319ce32861965d7b0d7c512b713e3cd4",
+    "DEV_SPEC.md": "173333e5ccac0b89ab732d46099901379c318342175ede040c1064fe497d8dc9",
+    "README.md": "d948dacb6242fefc5db9cee88f18f7eccbae0b1eaedb1f3c9fd24c71b8854c72",
+    "TASKS.md": "cd541aac2aacb2c587cea1ea9dc0bb057c0ab7bfee8bf3a60c6edeff5dec8665",
+    "backend/.dockerignore": "34a9c054427005af03006e7cd1a82c998b8ecaea1aea2bd40e561a49b8dba156",
+    "backend/Dockerfile": "9bfee99aea2d1d79e28bded39b749bc4159a75458ddecc3acb87be15b98ec2b8",
+    "backend/pyproject.toml": "55c86dc5a62284f90cd0a31ceed0ba5e990c9af861319f7b8d613438901b43f7",
+    "backend/src/gt_lifecycle_api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/src/gt_lifecycle_api/app.py": "246bd7afadf46cab733ae419be5e8be0fdb6c3cc444335c3be2c309ecf4a29e3",
+    "backend/tests/test_http.py": "16b6372d93ac28a3671093e28a56f974f5cf8bedad6abe6b3bf5e46cc6e432fa",
+    "backend/uv.lock": "0978378c68fea771ecd794f6f7515674a6beb75dcab05705e1ce5e8c778ae4c6",
+    "compose.yaml": "19cf05ec182f2925e746891cf2bc18a565b8debc89f47b5111a70baff1ce1ac5",
+    "docs/M0_01.md": "955de67f349b873c0a887582580a506c7f13d318d87c83cf19419b2693662e37",
+    "docs/agents/dsh.md": "74e0e5722da55e8c2ef21418911ea49874b66a849a60dde5063884ede98c16e5",
+    "docs/agents/issue-tracker.md": "ae1e4432aec5ffa5d3d899c357ed31f7122fb58c1e0fc9a3907fcdbd06deb701",
+    "docs/agents/workflow.md": "9bd81545b602c635a518ada23d6025352943f181071571431cdbd4257838dc94",
+    "evidence/M0-01/criteria.md": "fb0b95eb928b9e76c18d4db5277ac0efe67bc38263cf47d030216304d09e4bd3",
+    "evidence/M0-01/health-api-a.json": "e76127596f4543f6e95cb38dfcf42b342e4d460eb06b96724fbaf7caca918f0a",
+    "evidence/M0-01/health-api-b.json": "f79435d71fd824be8fd4de476d2071ef8fa8b19a076ae42f779d48221fa41125",
+    "frontend/.dockerignore": "8c087cc8922943552df587e99c8113c8dfbba5ecdeaf2978dfa2716eed342490",
+    "frontend/Dockerfile": "cc9b5364662f8d4179442d4f83875a525eb9d0b499c774c11ace4f5d3bfcf9f8",
+    "frontend/index.html": "8a24f6a0fceb64fca0e0b71e4cdaeb1b562c233c96777d20b45d90d72ec055cf",
+    "frontend/nginx.conf.template": "edfecdcd0705a2db377cd20ceb2c3cde8c0739110583946ca5b35020612de108",
+    "frontend/package-lock.json": "b67d14041ff2a143737931fed7b8c4017020cbf6fccad83b8e2ceffae44cae29",
+    "frontend/package.json": "c21fb8ae6233c2ffebcb7a5cf853c8bf881168598f92c4e96c8af1626e8c78e1",
+    "frontend/src/App.vue": "9b1994c83f4929d79b87f86b489940403273a15f027fba07ecc8516d358bc514",
+    "frontend/src/main.ts": "50cb9f18b1c7115799ae456f0d0038840278b49ea520b5549d468ec76c248fb9",
+    "frontend/src/style.css": "aa3c2c3a689ce26ea5f450907b7dbb6450c21c1a68c487305fba1f27c50697d4",
+    "frontend/tests/browser.mjs": "a24818d42ccadff139d2b024c871d531920d80d5dc0ed6f3142fdcd0d99bee91",
+    "frontend/tests/lifecycle.mjs": "6ba0c0a05ebb3b424c1157ca6b4ea95c0732ce6524b883951f7b8cb26c9c92e5",
+    "frontend/tsconfig.json": "4615b62b30ebe1659e11fcccf8b90fd0cdb3113c808c261b5af63dc7acc96483",
+    "frontend/vite.config.ts": "28f11d3deb1337de2d5f3dcf3dcc73f5d8e63c1e0f49b2fc4200cb00a3b57101",
+    "scripts/verify_m0_01.py": "e477fedcbe9a6fb2001f17994e3668a5a94754434023f199fdf2bffdfcd7ae77"
+  },
+  "runs": {
+    "main": {
+      "path": ".scratch-runtime/coordinator-m001-rereview/main-01/SHA256SUMS.json",
+      "sha256": "0c0e8faffc915f1980d5100da9b30a6e332db5ba9614b618691e093c3d25f282",
+      "count": 49,
+      "appended_auxiliary_records": [],
+      "commands": 63,
+      "expected_exit_1": 2,
+      "results": {
+        "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "tested_code_sha": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+        "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "clean": false,
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 63
+      },
+      "lifecycle_sha256": "7bd9ac6b738efffdf8de1ac201b2efe284fb47e13b7202f8af201a6ba4aecf01"
+    },
+    "clean": {
+      "path": ".scratch-runtime/coordinator-m001-rereview/clean-d0af9d7-review/.scratch-runtime/coordinator-m001-rereview/clean-01/SHA256SUMS.json",
+      "sha256": "86a8ae5744d1d8b5812153ad8ad2e11dab3471d05b9eb730dfeb4aa1b5075044",
+      "count": 48,
+      "appended_auxiliary_records": [],
+      "commands": 65,
+      "expected_exit_1": 2,
+      "results": {
+        "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "tested_code_sha": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+        "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "clean": true,
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 65
+      },
+      "lifecycle_sha256": "5853f961c9d4fd3a8f764ea2e72f8e675ee1cb1976625d73584e5a1b98cd5c4d"
+    },
+    "worker-main": {
+      "path": ".scratch-runtime/m0-01-remediation/worker-handoff/main/SHA256SUMS.json",
+      "sha256": "d593e3600baab69d5008cb4dc8755a2d608689fd6a3b15f140dcca3dc6ef2e97",
+      "count": 49,
+      "appended_auxiliary_records": [],
+      "commands": 63,
+      "expected_exit_1": 2,
+      "results": {
+        "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "tested_code_sha": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+        "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "clean": false,
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 63
+      },
+      "lifecycle_sha256": "191ec182ef7fe7b7f1d023bc2d8fb601792c0da490eb5950168efec85e103ef2"
+    },
+    "worker-clean": {
+      "path": ".scratch-runtime/m0-01-remediation/worker-handoff/clean/SHA256SUMS.json",
+      "sha256": "2d043acdf7a347124c0ad7672bed0e4427efada00f80a29b08ea3817cf664112",
+      "count": 48,
+      "appended_auxiliary_records": [],
+      "commands": 65,
+      "expected_exit_1": 2,
+      "results": {
+        "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+        "tested_code_sha": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+        "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+        "clean": true,
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 65
+      },
+      "lifecycle_sha256": "84e97b29106f1b26ef988c03fa4958feb69159ea41f4705d88bf9a8c2415efe7"
+    }
+  },
+  "new_failure": {
+    "criterion": "M0-01-A05",
+    "inputs": [
+      "http://@example.com",
+      "http://:@example.com"
+    ],
+    "expected": "非零退出",
+    "actual": "退出0",
+    "main_and_clean_reproduced": true
+  },
+  "final_required": {
+    "M0-01-A01": "PASS",
+    "M0-01-A02": "PASS",
+    "M0-01-A03": "PASS",
+    "M0-01-A04": "PASS",
+    "M0-01-A05": "FAIL"
+  },
+  "final_environment": {
+    "ports": "State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                 \nLISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*                                           \nLISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                           \nLISTEN 0      4096       127.0.0.54:53         0.0.0.0:*                                           \nLISTEN 0      128           0.0.0.0:2222       0.0.0.0:*                                           \nLISTEN 0      511         127.0.0.1:46611      0.0.0.0:*    users:((\"node\",pid=304591,fd=23))      \nLISTEN 0      511         127.0.0.1:30152      0.0.0.0:*    users:((\"node\",pid=305720,fd=43))      \nLISTEN 0      511         127.0.0.1:3082       0.0.0.0:*    users:((\"MainThread\",pid=235968,fd=22))\nLISTEN 0      128              [::]:2222          [::]:*",
+    "containers": ""
+  },
+  "uv": {
+    "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/discovery/uv-x86_64-unknown-linux-gnu/uv",
+    "sha256": "6583a1d002bf6165be0a38366538268e028bbcbb8802880ca09cce80d5505447"
+  },
+  "chrome": {
+    "path": "/home/lsy/.agent-browser/browsers/chrome-156.0.8078.80/chrome",
+    "sha256": "1bcad71ad1bff85955db13c6d8dd9f32374934d5a5cb079b526c46fb51f9bd97"
+  },
+  "dsh_state_fields": [
+    "health",
+    "load",
+    "masterId",
+    "paused",
+    "setup"
+  ],
+  "dsh_health": {
+    "runtime": {
+      "state": "ready",
+      "detail": "Orchestrator is ready",
+      "at": "2026-11-03T05:15:19.674Z"
+    },
+    "relay": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T16:51:16.741Z"
+    },
+    "notice": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T15:40:50.440Z"
+    },
+    "launch": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T15:46:53.502Z"
+    },
+    "delivery": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T16:51:16.776Z"
+    },
+    "assessment": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T15:46:39.091Z"
+    },
+    "reply": {
+      "state": "ready",
+      "detail": "Nothing waiting",
+      "at": "2026-11-03T16:53:39.584Z"
+    },
+    "evals": {
+      "state": "ready",
+      "detail": "No unavailable Eval in the last hour"
+    },
+    "models": {
+      "state": "ready",
+      "detail": "No managed Session is waiting on a model budget retry"
+    },
+    "github": {
+      "state": "ready",
+      "detail": "0 notifications; next poll ≥ 60s",
+      "at": "2026-11-03T16:57:34.621Z"
+    },
+    "feishu": {
+      "state": "ready",
+      "detail": "Listening for bot events",
+      "at": "2026-11-03T05:15:21.885Z"
+    },
+    "history": {
+      "state": "ready",
+      "detail": "Configured groups and known direct chats recovered",
+      "at": "2026-11-03T16:59:12.678Z"
+    },
+    "sync:feishu": {
+      "state": "ready",
+      "detail": "1 allowed",
+      "at": "2026-11-03T16:06:12.898Z"
+    }
+  },
+  "dsh_load": {
+    "running": 0,
+    "queued": 0,
+    "maxWorkers": 1
+  },
+  "dsh_paused": false
+}

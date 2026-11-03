@@ -1,0 +1,25 @@
+{
+  "task_id": "M0-01",
+  "criteria_commit_S": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+  "tested_code_sha_C": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432",
+  "evidence_commit_E": "32558e25e394dda6e1fffee5970ae30bc378e7d7",
+  "baseline_tag": "baseline/M0-01-01569c205a8d",
+  "verified_at": "2026-11-03T18:06:15.870264+00:00",
+  "remote_branch_sha": "32558e25e394dda6e1fffee5970ae30bc378e7d7",
+  "remote_tag_target_sha": "32558e25e394dda6e1fffee5970ae30bc378e7d7",
+  "remote_commit_tree_sha": "7401a9ebe45d5d1a12056e0d8feacc08a3d0019f",
+  "remote_tree_truncated": false,
+  "verified_evidence_blobs": 1114,
+  "task_ledger_blob_verified": true,
+  "implementation_test_dependency_configuration_and_acceptance_diff": [],
+  "previous_baselines_preserved": true,
+  "raw_response_sha256": {
+    "evidence/M0-01/remote-E/branch.json": "93cae2a233d5015db943425abe42881bd961effdde1f6d83f5e1b6116d8dadd2",
+    "evidence/M0-01/remote-E/commit.json": "ea9dcbf3bb0123a8e94581065bd0154cce3fb6760afea8b35b7ac62a1a06dc29",
+    "evidence/M0-01/remote-E/previous-fe-base.json": "8f19fce63b6dbf5d2704a1a1333434d8f069e1a20577a85028fcf2b897dd1b2a",
+    "evidence/M0-01/remote-E/previous-m0-00.json": "7e1421d87c3f4609842e6d35e058c5c48098e86e5f823d4b1df490fe1c597c81",
+    "evidence/M0-01/remote-E/tag.json": "b913a126c989559f72ba87015b54c65019c6e0c46c361992531402b40bd84db0",
+    "evidence/M0-01/remote-E/tree.json": "7f3e8f83dc4d5cc9c31298e308ae059952b8685260c8667aa9ff4e7c46964146"
+  },
+  "result": "PASS"
+}

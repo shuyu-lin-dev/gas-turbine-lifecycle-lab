@@ -23,9 +23,9 @@
 
 ## 当前执行
 
-Issue #1 已正式派发 M0-00「本机、主仓库、dsh 接入与规格冻结」，由本机 dsh-superagent 在独立 Ticket worktree 核实接入、迁入材料、冻结规格并完成真实验证、提交、推送及 PR 交付。当前进度与版本只查 TASKS.md。历史准备检查保持其原有身份。
+Issue #5 已正式派发 M0-01「Vue 与 Python 前后端独立运行」。Vue页面提供实际后端健康检查，Python API独立构建和运行；本机开发、配置、容器部署与验收命令见 [M0_01.md](docs/M0_01.md)。FE-BASE已通过PR #4实际集成，完整源程序的独立入口见 [FE_BASE.md](docs/FE_BASE.md)。当前进度与准确版本只查 [TASKS.md](TASKS.md)。
 
-依据 Issue #1 评论 6597814032，协调会话在必要验收、独立审查、S/C/E/K、远程标签与最终 head 核查全部通过后执行合并，并核查实际集成。开发 worker 仅执行 M0-00，后续任务单独派发。保留分支保护和必要检查，不执行 approve 或 auto-merge，不调用 gh-owner。
+协调聊天组织准确候选的全新上下文独立 Standards/Spec 审查与实际复验，通过后完成证据、远程基线、锁定登记和最终head核查，由协调聊天合并并核查实际集成。开发worker只执行M0-01，后续任务单独派发；不执行approve、merge或auto-merge，不调用gh-owner。
 
 模型资产保留已有 GLB 与导出源码子集；完整前端与 RAG 上游分别在 FE-BASE、RAG-BASE 取得并通过 Git subtree 导入。原有 LICENSE 与第三方许可分别适用。依赖、构建、运行数据库、模型权重、秘密和中间日志按 .gitignore 管理，公开模型、锁文件及必要脱敏证据进入版本控制。
 

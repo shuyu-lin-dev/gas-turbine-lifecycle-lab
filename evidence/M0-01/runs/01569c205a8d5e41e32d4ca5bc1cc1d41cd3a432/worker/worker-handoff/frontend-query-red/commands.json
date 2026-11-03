@@ -1,0 +1,22 @@
+[
+  {
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:8201/api/v1/health",
+      "api-a",
+      "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/frontend-query-red/empty-query.json",
+      "config"
+    ],
+    "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend",
+    "at": "2026-11-03T17:18:48.529282+00:00",
+    "exit_code": 1,
+    "expected_exit_code": 0,
+    "stdout": "\n> gt-lifecycle-web@0.1.0 test\n> node tests/browser.mjs http://127.0.0.1:5173 http://127.0.0.1:8201/api/v1/health api-a /home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/frontend-query-red/empty-query.json config\n\n",
+    "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2 !== 1\n\n    at file:///home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/frontend/tests/browser.mjs:52:10 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 2,\n  expected: 1,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.22.2\n",
+    "stdout_sha256": "246c2d8eea64f81afae82601744321cded831824ee9106587427bc8138897b44",
+    "stderr_sha256": "4b544d7add80137fedfe3fb98093eea25601edd26ad6969f57377a6c3db2968f"
+  }
+]

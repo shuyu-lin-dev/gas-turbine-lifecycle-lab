@@ -1,0 +1,44 @@
+{
+  "reviewer": "/root/m001_rereview_spec",
+  "time_utc": "2026-11-03T16:56:17Z",
+  "comparison_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+  "merge_base": "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+  "criteria_commit": "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+  "candidate": "d0af9d76a459f838f6f8fb8ee656a7b60fc6c790",
+  "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+  "source_file": "backend/src/gt_lifecycle_api/app.py",
+  "installed_file": ".scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/lib/python3.12/site-packages/gt_lifecycle_api/app.py",
+  "source_sha256": "246bd7afadf46cab733ae419be5e8be0fdb6c3cc444335c3be2c309ecf4a29e3",
+  "installed_sha256": "246bd7afadf46cab733ae419be5e8be0fdb6c3cc444335c3be2c309ecf4a29e3",
+  "argv": [
+    ".scratch-runtime/coordinator-m001-rereview/main-01/wheel-env/bin/python",
+    "-B",
+    "-c",
+    "import gt_lifecycle_api.app; print(gt_lifecycle_api.app.origins)"
+  ],
+  "runs": [
+    {
+      "environment": {"API_CORS_ORIGINS": "[\"http://@example.com\"]"},
+      "expected_exit_code": "nonzero",
+      "exit_code": 0,
+      "stdout": "['http://@example.com']\n",
+      "stderr": ""
+    },
+    {
+      "environment": {"API_CORS_ORIGINS": "[\"http://:@example.com\"]"},
+      "expected_exit_code": "nonzero",
+      "exit_code": 0,
+      "stdout": "['http://:@example.com']\n",
+      "stderr": ""
+    },
+    {
+      "environment": {"API_CORS_ORIGINS": "[\"http://example.com\"]"},
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "['http://example.com']\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "只执行实际独立wheel的import，未启动端口服务、浏览器或容器。",
+  "result": "FAIL"
+}

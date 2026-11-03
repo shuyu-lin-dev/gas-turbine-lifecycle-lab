@@ -1,0 +1,966 @@
+{
+  "candidate": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432",
+  "configuration_fixture_sha256": "55f6b488aac84a531a6aac7c3caaa033aab1c8e7059ba2754828ca44dd79fa34",
+  "runs": {
+    "main": {
+      "commands": 122,
+      "normal_exit_0": 76,
+      "expected_exit_1": 46,
+      "required": {
+        "M0-01-A01": "PASS",
+        "M0-01-A02": "PASS",
+        "M0-01-A03": "PASS",
+        "M0-01-A04": "PASS",
+        "M0-01-A05": "PASS"
+      },
+      "wheel_configurations": [
+        {
+          "command_index": 22,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://127.0.0.1:5173\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 23,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://localhost:4175\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 24,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://example.com\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 25,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://sub.example.com:443\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 26,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://[::1]:5173\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 27,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:1\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 28,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:65535\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 29,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 30,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://127.0.0.1:5173\",\"https://example.com\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 31,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"*\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 32,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://*\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 33,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://*.example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 34,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.*\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 35,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://%2A\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 36,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://%2A.example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 37,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 38,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://:@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 39,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://user@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 40,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://:password@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 41,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://user:@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 42,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://user:password@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 43,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com/path\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 44,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com/\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 45,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com?value=1\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 46,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com?\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 47,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com#fragment\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 48,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com#\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 49,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"file:///invalid\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 50,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"ftp://example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 51,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 52,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 53,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 54,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://exam ple.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 55,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\\n\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 56,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"\\u0000http://example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 57,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\\u007f\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 58,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\\\\\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 59,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:0\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 60,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:65536\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 61,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:invalid\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 62,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 63,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://[::1]:\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 64,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "null"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 65,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "{}"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 66,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "123"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 67,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[1]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 68,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[null]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 69,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[true]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 70,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\",false]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 71,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "\"http://127.0.0.1:5173\""
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 72,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "invalid-json"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 73,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": ""
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 74,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "bad instance"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 75,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 76,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "中文"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 77,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "a"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 78,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "api-a_1"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 79,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        }
+      ],
+      "commands_sha256": "411894c0ba0d896b009a4a976ebf8cb7471ed220ce2ffc30207cb6d02bb099c2",
+      "manifest_sha256": "fe09a5bd5186fc0c399ee57906d5c9c7400d1d07b54fb4f9c33ab1fa72625b57"
+    },
+    "clean": {
+      "commands": 124,
+      "normal_exit_0": 78,
+      "expected_exit_1": 46,
+      "required": {
+        "M0-01-A01": "PASS",
+        "M0-01-A02": "PASS",
+        "M0-01-A03": "PASS",
+        "M0-01-A04": "PASS",
+        "M0-01-A05": "PASS"
+      },
+      "wheel_configurations": [
+        {
+          "command_index": 24,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://127.0.0.1:5173\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 25,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://localhost:4175\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 26,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://example.com\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 27,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://sub.example.com:443\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 28,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://[::1]:5173\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 29,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:1\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 30,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:65535\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 31,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 32,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://127.0.0.1:5173\",\"https://example.com\"]"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 33,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"*\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 34,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://*\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 35,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://*.example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 36,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.*\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 37,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://%2A\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 38,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"https://%2A.example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 39,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 40,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://:@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 41,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://user@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 42,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://:password@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 43,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://user:@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 44,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://user:password@example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 45,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com/path\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 46,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com/\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 47,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com?value=1\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 48,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com?\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 49,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com#fragment\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 50,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com#\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 51,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"file:///invalid\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 52,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"ftp://example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 53,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 54,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 55,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 56,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://exam ple.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 57,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\\n\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 58,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"\\u0000http://example.com\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 59,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\\u007f\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 60,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\\\\\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 61,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:0\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 62,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:65536\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 63,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:invalid\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 64,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com:\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 65,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://[::1]:\"]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 66,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "null"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 67,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "{}"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 68,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "123"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 69,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[1]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 70,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[null]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 71,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[true]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 72,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "[\"http://example.com\",false]"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 73,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "\"http://127.0.0.1:5173\""
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 74,
+          "declared_configuration_from_candidate": {
+            "API_CORS_ORIGINS": "invalid-json"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 75,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": ""
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 76,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "bad instance"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 77,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 78,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "中文"
+          },
+          "expected_exit_code": 1,
+          "actual_exit_code": 1
+        },
+        {
+          "command_index": 79,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "a"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 80,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "api-a_1"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        },
+        {
+          "command_index": 81,
+          "declared_configuration_from_candidate": {
+            "API_INSTANCE_ID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "expected_exit_code": 0,
+          "actual_exit_code": 0
+        }
+      ],
+      "commands_sha256": "ef4c9cbf0a8eb28d428b72a7361d1e4acdfbe79c7e94601639ff5d7e6c536a70",
+      "manifest_sha256": "88e52d7410000980b38d268473514ddc6033f4498016ce6387ded8b72a6a6c59"
+    }
+  }
+}

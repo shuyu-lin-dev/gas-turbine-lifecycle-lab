@@ -1,0 +1,254 @@
+diff --git a/backend/src/gt_lifecycle_api/app.py b/backend/src/gt_lifecycle_api/app.py
+index 86758e3..06720c4 100644
+--- a/backend/src/gt_lifecycle_api/app.py
++++ b/backend/src/gt_lifecycle_api/app.py
+@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
+ 
+ from fastapi import FastAPI
+ from fastapi.middleware.cors import CORSMiddleware
+-from pydantic import BaseModel
++from pydantic import AnyHttpUrl, BaseModel, TypeAdapter
+ 
+ 
+ class Health(BaseModel):
+@@ -30,7 +30,10 @@ for origin in origins:
+     parsed = urlsplit(origin)
+     if (parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username
+             or parsed.password or parsed.path or parsed.query or parsed.fragment
+-            or any(character.isspace() for character in origin)):
++            or '*' in origin or any(character.isspace() for character in origin)):
++        raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
++    validated = TypeAdapter(AnyHttpUrl).validate_python(origin)
++    if validated.host and '*' in validated.host:
+         raise ValueError('API_CORS_ORIGINS需要明确的HTTP/HTTPS origin')
+     if parsed.port is not None and not 1 <= parsed.port <= 65535:
+         raise ValueError('API_CORS_ORIGINS端口需要处于1～65535')
+diff --git a/backend/tests/test_http.py b/backend/tests/test_http.py
+index fb743d4..5b6ce89 100644
+--- a/backend/tests/test_http.py
++++ b/backend/tests/test_http.py
+@@ -48,6 +48,11 @@ def test_health_returns_frozen_service_version_and_instance(api):
+ def test_cors_allows_declared_origin_and_rejects_other_origin(api):
+     allowed = httpx.get(api + '/api/v1/health', headers={'Origin': 'http://127.0.0.1:5173'}, trust_env=False)
+     assert allowed.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
++    preflight = httpx.options(api + '/api/v1/health', headers={
++        'Origin': 'http://127.0.0.1:5173', 'Access-Control-Request-Method': 'GET'}, trust_env=False)
++    assert preflight.status_code == 200
++    assert preflight.headers['access-control-allow-origin'] == 'http://127.0.0.1:5173'
++    assert preflight.headers['access-control-allow-methods'] == 'GET'
+     denied = httpx.options(api + '/api/v1/health', headers={
+         'Origin': 'http://untrusted.invalid', 'Access-Control-Request-Method': 'GET'}, trust_env=False)
+     assert denied.status_code == 400
+@@ -57,6 +62,8 @@ def test_cors_allows_declared_origin_and_rejects_other_origin(api):
+ @pytest.mark.parametrize('name,value', [
+     ('API_INSTANCE_ID', 'bad instance'),
+     ('API_CORS_ORIGINS', '["*"]'),
++    ('API_CORS_ORIGINS', '["http://*"]'),
++    ('API_CORS_ORIGINS', '["https://*.example.com"]'),
+     ('API_CORS_ORIGINS', '["file:///invalid"]'),
+     ('API_CORS_ORIGINS', '"http://127.0.0.1:5173"'),
+ ])
+diff --git a/docs/M0_01.md b/docs/M0_01.md
+index 34e9f5a..6649fa0 100644
+--- a/docs/M0_01.md
++++ b/docs/M0_01.md
+@@ -77,7 +77,7 @@ web单独启动时仍提供页面；API未运行时健康检查明确失败。Ng
+ python3 scripts/verify_m0_01.py --criteria 18a9210947e0114a8bbc6a10c8864701dfb8539e --candidate <C完整SHA> --output .scratch-runtime/m0-01/run-<唯一编号>
+ ```
+ 
+-入口要求准确HEAD=C、工作树干净、冻结S和基准为祖先；分别安装、构建、运行真实HTTP进程、浏览器和容器，测试实际独立启停、地址切换、开发跨源/反代、部署路由、5秒超时、非法配置及恢复。每条命令、实际请求/响应、DOM、控制台、进程生命周期和哈希保存在输出目录。Python wheel在全新环境按导出锁安装后启动。工具只采集数据，不采集图片，不替换网络响应。
++入口要求准确HEAD=C、工作树干净、冻结S和基准为祖先；分别安装、构建、运行真实HTTP进程、浏览器和容器，测试实际独立启停、地址切换、开发跨源/反代、部署路由、5秒超时、非法配置及恢复。持续页面测试通过`npm run test:lifecycle`实际启动、终止和恢复API，在同一页面依次验证成功、点击后的失败与旧字段清除、再次点击后的恢复；记录唯一页面导航和全部实际进程。Python wheel在全新环境按导出锁安装后启动，并实际验证合法origin和通配origin启动拒绝。每条命令保存实际退出码与expected_exit_code，必要错误命令预期退出1；实际请求/响应、DOM、控制台、进程生命周期和哈希保存在输出目录。工具只采集数据，不采集图片，不替换网络响应。
+ 
+ 干净复现从准确C通过`git clone --no-local --no-checkout`建立当前工作树`.scratch-runtime/m0-01/clean-<C前12位>`，在clone中`git switch --detach <C>`，origin设置为唯一目标仓库，重新准备该clone内的TMPDIR和缓存，使用同一命令并添加`--clean`。不得共享node_modules或venv。正式入口结束时回收所创建的进程、浏览器和该次Compose服务；不会操作其他项目的服务。候选审查需要的常驻入口由外部回执单独管理。
+ 
+diff --git a/frontend/package.json b/frontend/package.json
+index 33e42f7..51d5374 100644
+--- a/frontend/package.json
++++ b/frontend/package.json
+@@ -9,7 +9,8 @@
+     "typecheck": "vue-tsc --noEmit",
+     "build": "npm run typecheck && vite build",
+     "preview": "vite preview --host 127.0.0.1 --strictPort",
+-    "test": "node tests/browser.mjs"
++    "test": "node tests/browser.mjs",
++    "test:lifecycle": "node tests/lifecycle.mjs"
+   },
+   "dependencies": { "vue": "3.5.44" },
+   "devDependencies": {
+diff --git a/frontend/tests/lifecycle.mjs b/frontend/tests/lifecycle.mjs
+new file mode 100644
+index 0000000..0956ff3
+--- /dev/null
++++ b/frontend/tests/lifecycle.mjs
+@@ -0,0 +1,122 @@
++import assert from 'node:assert/strict'
++import { spawn } from 'node:child_process'
++import { once } from 'node:events'
++import { readFile, writeFile } from 'node:fs/promises'
++import { setTimeout as delay } from 'node:timers/promises'
++import { chromium } from 'playwright'
++
++const [url, healthUrl, instance, output, python, port] = process.argv.slice(2)
++assert(url && healthUrl && instance && output && python && port, '需要页面、健康地址、实例、输出、Python和API端口')
++assert(process.env.M0_01_CHROME, '需要明确实际Chrome路径')
++assert.equal(new URL(healthUrl).hostname, '127.0.0.1')
++const expected = JSON.parse(await readFile(new URL(`../../evidence/M0-01/health-${instance}.json`, import.meta.url)))
++const apiUrl = `http://127.0.0.1:${port}/api/v1/health`
++const record = { url, healthUrl, instance, processes: [], requests: [], responses: [], failures: [], errors: [], console: [], navigations: [], steps: [] }
++let api
++let browser
++const pending = []
++
++async function startApi() {
++  const argv = [python, '-m', 'uvicorn', 'gt_lifecycle_api.app:app', '--host', '127.0.0.1', '--port', port]
++  const child = spawn(argv[0], argv.slice(1), {
++    env: { ...process.env, API_INSTANCE_ID: instance, API_CORS_ORIGINS: JSON.stringify([new URL(url).origin]) },
++    stdio: ['ignore', 'pipe', 'pipe'],
++  })
++  const entry = { argv, cwd: process.cwd(), pid: child.pid, startedAt: new Date().toISOString(), stdout: '', stderr: '' }
++  record.processes.push(entry)
++  child.stdout.on('data', data => { entry.stdout += data.toString() })
++  child.stderr.on('data', data => { entry.stderr += data.toString() })
++  const exited = once(child, 'exit').then(([exitCode, signal]) => {
++    Object.assign(entry, { exitCode, signal, stoppedAt: new Date().toISOString() })
++  })
++  api = { child, exited }
++  const deadline = Date.now() + 30000
++  while (true) {
++    assert.equal(child.exitCode, null, 'API启动时提前退出')
++    assert.equal(child.signalCode, null, 'API启动时收到终止信号')
++    let response
++    try {
++      response = await fetch(apiUrl, { signal: AbortSignal.timeout(1000) })
++    } catch (error) {
++      assert(Date.now() < deadline, `API启动超时：${error}`)
++      await delay(100)
++      continue
++    }
++    assert.equal(response.status, 200)
++    assert.deepEqual(await response.json(), expected)
++    return
++  }
++}
++
++async function stopApi() {
++  if (!api) return
++  const current = api
++  api = undefined
++  if (current.child.exitCode === null && current.child.signalCode === null) current.child.kill('SIGTERM')
++  const timeout = setTimeout(() => current.child.kill('SIGKILL'), 15000)
++  try {
++    await current.exited
++    assert.notEqual(current.child.signalCode, 'SIGKILL', 'API未在15秒内正常退出')
++  } finally {
++    clearTimeout(timeout)
++  }
++}
++
++try {
++  await startApi()
++  browser = await chromium.launch({ executablePath: process.env.M0_01_CHROME, args: ['--no-sandbox'] })
++  const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } })
++  page.on('pageerror', error => record.errors.push(String(error)))
++  page.on('console', message => record.console.push({ type: message.type(), text: message.text() }))
++  page.on('framenavigated', frame => { if (frame === page.mainFrame()) record.navigations.push(frame.url()) })
++  page.on('request', request => { if (request.url() === healthUrl) record.requests.push({ url: request.url(), method: request.method() }) })
++  page.on('requestfailed', request => { if (request.url() === healthUrl) record.failures.push({ url: request.url(), error: request.failure() }) })
++  page.on('response', response => {
++    if (response.url() === healthUrl) {
++      const entry = { url: response.url(), status: response.status(), method: response.request().method() }
++      if (response.status() === 200) pending.push(response.text().then(body => record.responses.push({ ...entry, body })))
++      else record.responses.push(entry)
++    }
++  })
++  const document = await page.goto(url)
++  assert.equal(document.status(), 200)
++  await page.getByText('连接正常', { exact: true }).waitFor({ timeout: 30000 })
++  assert.equal(await page.getByTestId('version').innerText(), '0.1.0')
++  assert.equal(await page.getByTestId('instance').innerText(), instance)
++  record.steps.push({ action: '同一页面初次连接成功', text: await page.locator('body').innerText() })
++
++  await stopApi()
++  await page.getByRole('button', { name: '重新检查', exact: true }).click()
++  await page.getByText('连接失败', { exact: true }).waitFor({ timeout: 30000 })
++  for (const field of ['version', 'instance', 'service-status']) assert.equal(await page.getByTestId(field).count(), 0)
++  assert.equal(await page.getByText('gt-lifecycle-api', { exact: true }).count(), 0)
++  assert((await page.getByRole('alert').innerText()).length > 0)
++  record.steps.push({ action: '实际停止API，原页面点击后失败且清除旧成功字段', text: await page.locator('body').innerText() })
++
++  await startApi()
++  await page.getByRole('button', { name: '重新检查', exact: true }).click()
++  await page.getByText('连接正常', { exact: true }).waitFor({ timeout: 30000 })
++  assert.equal(await page.getByTestId('version').innerText(), '0.1.0')
++  assert.equal(await page.getByTestId('instance').innerText(), instance)
++  assert.equal(await page.getByTestId('service-status').innerText(), 'ok')
++  assert.equal(await page.getByRole('alert').count(), 0)
++  record.steps.push({ action: '实际恢复API，原页面点击后连接成功', text: await page.locator('body').innerText() })
++  await Promise.all(pending)
++  const healthy = record.responses.filter(response => response.status === 200)
++  assert.equal(healthy.length, 2)
++  for (const response of healthy) assert.deepEqual(JSON.parse(response.body), expected)
++  assert.equal(record.requests.length, 3)
++  assert.equal(record.navigations.length, 1)
++  assert.deepEqual(record.errors, [])
++  record.state = 'PASS'
++} finally {
++  try {
++    if (browser) await browser.close()
++  } finally {
++    try {
++      await stopApi()
++    } finally {
++      await writeFile(output, JSON.stringify(record, null, 2) + '\n')
++    }
++  }
++}
+diff --git a/scripts/verify_m0_01.py b/scripts/verify_m0_01.py
+index 33aaf4e..bfafd78 100644
+--- a/scripts/verify_m0_01.py
++++ b/scripts/verify_m0_01.py
+@@ -35,9 +35,9 @@ class Run:
+     def save(self, name, value):
+         (self.output / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
+ 
+-    def command(self, argv, cwd=None, env=None, timeout=600):
++    def command(self, argv, cwd=None, env=None, timeout=600, expected=0):
+         record = {'argv': [str(value) for value in argv], 'cwd': str(cwd or self.root),
+-                  'at': datetime.now(timezone.utc).isoformat(), 'exit_code': None}
++                  'at': datetime.now(timezone.utc).isoformat(), 'exit_code': None, 'expected_exit_code': expected}
+         self.commands.append(record)
+         self.save('commands.json', self.commands)
+         try:
+@@ -45,7 +45,7 @@ class Run:
+                                     capture_output=True, timeout=timeout)
+             record.update(exit_code=result.returncode, stdout=result.stdout.decode(), stderr=result.stderr.decode(),
+                           stdout_sha256=digest(result.stdout), stderr_sha256=digest(result.stderr))
+-            assert result.returncode == 0, f'命令失败: {argv}; {record["stderr"]}'
++            assert result.returncode == expected, f'命令失败: {argv}; {record["stderr"]}'
+             return result.stdout.decode().strip()
+         finally:
+             self.save('commands.json', self.commands)
+@@ -129,6 +129,11 @@ class Run:
+         wheels = list((back / 'dist').glob('*.whl'))
+         assert len(wheels) == 1
+         self.command([self.uv, 'pip', 'install', '--python', python, '--no-deps', wheels[0]])
++        for origin in ['http://*', 'https://*.example.com']:
++            self.command([python, '-c', 'import gt_lifecycle_api.app'],
++                         env={'API_CORS_ORIGINS': json.dumps([origin])}, expected=1)
++        self.command([python, '-c', 'import gt_lifecycle_api.app'],
++                     env={'API_CORS_ORIGINS': '["http://127.0.0.1:5173"]'})
+         api_a = self.api('api-a', 8201, python)
+         api_b = self.api('api-b', 8202, python)
+         web = self.web('web-direct-a', 'http://127.0.0.1:8201/api/v1')
+@@ -155,6 +160,11 @@ class Run:
+         self.browser('built-preview', 'http://127.0.0.1:4175', 'http://127.0.0.1:4175/api/v1/health')
+         self.stop(preview)
+         self.stop(api_a)
++        web = self.web('web-lifecycle', '/api/v1')
++        self.command(['npm', 'run', 'test:lifecycle', '--', 'http://127.0.0.1:5173',
++                      'http://127.0.0.1:5173/api/v1/health', 'api-a',
++                      self.output / 'same-page-lifecycle.json', python, '8201'], cwd=front, timeout=120)
++        self.stop(web)
+         self.stop(api_b)
+ 
+     def containers(self):

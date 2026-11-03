@@ -1,0 +1,58 @@
+{
+  "name": "gtl-m001-701451",
+  "networks": {
+    "default": {
+      "name": "gtl-m001-701451_default",
+      "ipam": {}
+    }
+  },
+  "services": {
+    "api": {
+      "build": {
+        "context": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/backend",
+        "dockerfile": "Dockerfile"
+      },
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "API_CORS_ORIGINS": "[]",
+        "API_INSTANCE_ID": "api-a"
+      },
+      "networks": {
+        "default": null
+      },
+      "ports": [
+        {
+          "mode": "ingress",
+          "host_ip": "127.0.0.1",
+          "target": 8000,
+          "published": "8281",
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "web": {
+      "build": {
+        "context": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/clean-01569c2/frontend",
+        "dockerfile": "Dockerfile"
+      },
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "API_UPSTREAM": "http://api:8000"
+      },
+      "networks": {
+        "default": null
+      },
+      "ports": [
+        {
+          "mode": "ingress",
+          "host_ip": "127.0.0.1",
+          "target": 8080,
+          "published": "8280",
+          "protocol": "tcp"
+        }
+      ]
+    }
+  }
+}

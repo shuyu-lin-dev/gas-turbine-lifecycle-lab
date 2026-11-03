@@ -1,0 +1,2492 @@
+[
+  {
+    "manifest": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/SHA256SUMS.json",
+    "sha256": "cce987562f4541c21d4f7efc57f4a09037a2c5f59cfe1558fe593f136b4535ba",
+    "count": 180,
+    "all_match": true,
+    "files": [
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/SHA256SUMS.json",
+        "expected": "74b169d0f1fe9f359c7828f223011e6a6acfcd0d350ed2f94947059d151dc425",
+        "actual": "74b169d0f1fe9f359c7828f223011e6a6acfcd0d350ed2f94947059d151dc425",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/api-a-8201-http.json",
+        "expected": "346bc1c4201a7022cef9691e3190c6c904153d65f035ecdccdebd84115bb3fad",
+        "actual": "346bc1c4201a7022cef9691e3190c6c904153d65f035ecdccdebd84115bb3fad",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/api-a.log",
+        "expected": "505c460b584ffdb2b791da5c5c1cd65f8a59afc37af5f81d84d7635933ed9e3a",
+        "actual": "505c460b584ffdb2b791da5c5c1cd65f8a59afc37af5f81d84d7635933ed9e3a",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/api-b-8202-http.json",
+        "expected": "c699da38b76e510c0b38b8e2c8864cdeac65c56e067201c1282a66055918f5e8",
+        "actual": "c699da38b76e510c0b38b8e2c8864cdeac65c56e067201c1282a66055918f5e8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/api-b.log",
+        "expected": "eb3537c907c02e555d1311463bf808fb55776868ddc7675899e44178567c7551",
+        "actual": "eb3537c907c02e555d1311463bf808fb55776868ddc7675899e44178567c7551",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/api-recovered.json",
+        "expected": "42d45064ec1100aac504ec2f61f5b6a6f24299e90cf8cc867e36548e534f20d7",
+        "actual": "42d45064ec1100aac504ec2f61f5b6a6f24299e90cf8cc867e36548e534f20d7",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/api-stopped.json",
+        "expected": "7205bc8540cae8062cdc2ff972fad8b2034de0ea7d4440be53c01aa255959cc4",
+        "actual": "7205bc8540cae8062cdc2ff972fad8b2034de0ea7d4440be53c01aa255959cc4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/built-preview.json",
+        "expected": "e88bfbff729a09bcfdf5a1385631713f3b2336050166c208abc85efc57ba3d2f",
+        "actual": "e88bfbff729a09bcfdf5a1385631713f3b2336050166c208abc85efc57ba3d2f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/commands.json",
+        "expected": "20828f050c9ec3e54ca1183a3cd4ca8c3ea0f1beff314e0c704fa40095b3671b",
+        "actual": "20828f050c9ec3e54ca1183a3cd4ca8c3ea0f1beff314e0c704fa40095b3671b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/compose-config.json",
+        "expected": "0bba95919ff4ed9a1e69d0c79196ab8c27634c09e17cd98103c077d32158b030",
+        "actual": "0bba95919ff4ed9a1e69d0c79196ab8c27634c09e17cd98103c077d32158b030",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/compose-version.json",
+        "expected": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "actual": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-api-http.json",
+        "expected": "1fab2c93c98afc03df363b1ac98b248d69253d7c947e34b3cdb84857c0f793b3",
+        "actual": "1fab2c93c98afc03df363b1ac98b248d69253d7c947e34b3cdb84857c0f793b3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-api-recovered.json",
+        "expected": "b7c9acd53420b3b9fbe35ecdadf73be3e6bb93cdbf5fd3a9a17312a86d0fc1f9",
+        "actual": "b7c9acd53420b3b9fbe35ecdadf73be3e6bb93cdbf5fd3a9a17312a86d0fc1f9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-api-stopped.json",
+        "expected": "7202e30c0a5beb6bc1867245f5a6414abe2bddad419c6eaa427833c94ebfacc6",
+        "actual": "7202e30c0a5beb6bc1867245f5a6414abe2bddad419c6eaa427833c94ebfacc6",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-api-timeout.json",
+        "expected": "45b2f6051cb4f6f3fdbb142a27e2cc8f6cfff46cf466fabf208dcb9019cb8c4d",
+        "actual": "45b2f6051cb4f6f3fdbb142a27e2cc8f6cfff46cf466fabf208dcb9019cb8c4d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-healthy.json",
+        "expected": "46ee325b7852de28b5241b281286d7fe486a136442ff3823ec2add416433a801",
+        "actual": "46ee325b7852de28b5241b281286d7fe486a136442ff3823ec2add416433a801",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-web-alone.json",
+        "expected": "7258c7b10cc70539bb8c46215a694c62c07b8be798e0720b7d311411de9f89fe",
+        "actual": "7258c7b10cc70539bb8c46215a694c62c07b8be798e0720b7d311411de9f89fe",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/container-web-stopped.json",
+        "expected": "1a5210001a12a6a5498eb38c866a8ec7b137755db867a516ea5bbfa7f28b6d8e",
+        "actual": "1a5210001a12a6a5498eb38c866a8ec7b137755db867a516ea5bbfa7f28b6d8e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/containers.json",
+        "expected": "e7fb53325022366666ca5257e5b44f4ea08b8846b83b144c32d17209d1f365e1",
+        "actual": "e7fb53325022366666ca5257e5b44f4ea08b8846b83b144c32d17209d1f365e1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/deployment-routes.json",
+        "expected": "488dd7429b39bb7556b426a9cdb1b9793cc529aa81a85217760b381abf3656e6",
+        "actual": "488dd7429b39bb7556b426a9cdb1b9793cc529aa81a85217760b381abf3656e6",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/dev-proxy.json",
+        "expected": "b5122e24223c38885400654e98ac2316cd3ffc5bc06db283578acecbe981157f",
+        "actual": "b5122e24223c38885400654e98ac2316cd3ffc5bc06db283578acecbe981157f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/direct-a.json",
+        "expected": "26582b7033a84d810682d93cb179c51f5af57bd10b225df8487e70e6b49a441d",
+        "actual": "26582b7033a84d810682d93cb179c51f5af57bd10b225df8487e70e6b49a441d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/direct-b.json",
+        "expected": "ef4c8791802ea7bd523fe3115e2743ff5367d9f730661d366dbc907bd00fd803",
+        "actual": "ef4c8791802ea7bd523fe3115e2743ff5367d9f730661d366dbc907bd00fd803",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/docker-version.json",
+        "expected": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "actual": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/invalid-address-0.json",
+        "expected": "114a4f0533174e1c9962b02a46e12376a5a1303b2da15411e4b2e7555cce5603",
+        "actual": "114a4f0533174e1c9962b02a46e12376a5a1303b2da15411e4b2e7555cce5603",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/invalid-address-1.json",
+        "expected": "1a13bc2add7abaeeb60c297c2bde19f84ca15547eca2c6f0b79dedbd83561e88",
+        "actual": "1a13bc2add7abaeeb60c297c2bde19f84ca15547eca2c6f0b79dedbd83561e88",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/invalid-address-2.json",
+        "expected": "2162161e42dd72849a6bcd1c15623033a1d14320f171eb1dca3b243db34e24cd",
+        "actual": "2162161e42dd72849a6bcd1c15623033a1d14320f171eb1dca3b243db34e24cd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/invalid-address-3.json",
+        "expected": "341b0f9617355610c2f06b9eadb77bb90c4182dc71a98244c8f2b26d0c8d4efd",
+        "actual": "341b0f9617355610c2f06b9eadb77bb90c4182dc71a98244c8f2b26d0c8d4efd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/invalid-address-4.json",
+        "expected": "2cebab7ce312c80d27a54ebbba7650773a3aba7434c92dcb679c1128aeb10ab4",
+        "actual": "2cebab7ce312c80d27a54ebbba7650773a3aba7434c92dcb679c1128aeb10ab4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/node-version.json",
+        "expected": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "actual": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/npm-version.json",
+        "expected": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "actual": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/processes.json",
+        "expected": "c33002c44cd31df963605e8bac1e5928aecaedfa5fceca837b877c51eabdcd0a",
+        "actual": "c33002c44cd31df963605e8bac1e5928aecaedfa5fceca837b877c51eabdcd0a",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/regression-preservation.json",
+        "expected": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "actual": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/results.json",
+        "expected": "2d0185810d3024718ae700373c647b890f4aacbb645bdae3004d6de9358f877d",
+        "actual": "2d0185810d3024718ae700373c647b890f4aacbb645bdae3004d6de9358f877d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/uv-version.json",
+        "expected": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "actual": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-direct-a.log",
+        "expected": "5263d4c7ddd3c5083364c6f98add0b73403b177c12d1d55ddb3862c5ec207d4a",
+        "actual": "5263d4c7ddd3c5083364c6f98add0b73403b177c12d1d55ddb3862c5ec207d4a",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-direct-b.log",
+        "expected": "65969b3f41ef22c5c52a87220bb363e193d09b7451047c7aa64ac9ede63a046f",
+        "actual": "65969b3f41ef22c5c52a87220bb363e193d09b7451047c7aa64ac9ede63a046f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-invalid-0.log",
+        "expected": "f708191dd66872ac38424c67d6a12356e599ebadf539261eea74a72dd4b39685",
+        "actual": "f708191dd66872ac38424c67d6a12356e599ebadf539261eea74a72dd4b39685",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-invalid-1.log",
+        "expected": "97facb6c056f53acb3cd15e85454cb7e914d4bfa34dc47cd1a0d6eecfb0cdb18",
+        "actual": "97facb6c056f53acb3cd15e85454cb7e914d4bfa34dc47cd1a0d6eecfb0cdb18",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-invalid-2.log",
+        "expected": "57d3044d6a1c917edffa2ce59ca3dcc034afdd1bb092b3aba3ad17b2be98fe2c",
+        "actual": "57d3044d6a1c917edffa2ce59ca3dcc034afdd1bb092b3aba3ad17b2be98fe2c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-invalid-3.log",
+        "expected": "e8b4c16654d665e68fc0b0976914aaddadc798cbfcf8b4725d84e1bd8cf0e71c",
+        "actual": "e8b4c16654d665e68fc0b0976914aaddadc798cbfcf8b4725d84e1bd8cf0e71c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-invalid-4.log",
+        "expected": "83a18ccb6de17d0c8bc126648c85a8b0b382c1dfaab325d3f48b373b8062bc18",
+        "actual": "83a18ccb6de17d0c8bc126648c85a8b0b382c1dfaab325d3f48b373b8062bc18",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-preview.log",
+        "expected": "8b3154d261881407a983154779d8ef3b7be2a64158d6afdd2c948de61e0048cf",
+        "actual": "8b3154d261881407a983154779d8ef3b7be2a64158d6afdd2c948de61e0048cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-proxy.log",
+        "expected": "7672dab22d5f5b657c1fa72e485d84c2790a440315ea57fbd90a6fdb5b4fbbb3",
+        "actual": "7672dab22d5f5b657c1fa72e485d84c2790a440315ea57fbd90a6fdb5b4fbbb3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/web-stopped-api-alive.json",
+        "expected": "8745b815bdbc6de55607da93364cf6a04adbcbbec9582d51d3da33fa46ffc0ea",
+        "actual": "8745b815bdbc6de55607da93364cf6a04adbcbbec9582d51d3da33fa46ffc0ea",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean/wheel-requirements.txt",
+        "expected": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "actual": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/clean-run-01.log",
+        "expected": "a8a1b4e17af9a978b786e605b4d98359bd04f7b79607c6fad1b47271960ac498",
+        "actual": "a8a1b4e17af9a978b786e605b4d98359bd04f7b79607c6fad1b47271960ac498",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/agent-browser-network.json",
+        "expected": "00c12df7a9b867790e79daef7685b6984af39613fb414a21c9905137ac397673",
+        "actual": "00c12df7a9b867790e79daef7685b6984af39613fb414a21c9905137ac397673",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/agent-browser-snapshot.json",
+        "expected": "5266b2055d9d3c39afe1f435ec4ad2959f996a9e1777015afb202ec76e87600e",
+        "actual": "5266b2055d9d3c39afe1f435ec4ad2959f996a9e1777015afb202ec76e87600e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-config-green.log",
+        "expected": "3fbc54f30b4afa299814cecc428ca188a2dd28af23535cda236e88c3cd59add3",
+        "actual": "3fbc54f30b4afa299814cecc428ca188a2dd28af23535cda236e88c3cd59add3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-config-red.log",
+        "expected": "0f3a1dd306acfc00d1f8e2f64f146d17ea733c0561337ea50e52e85546d31eb6",
+        "actual": "0f3a1dd306acfc00d1f8e2f64f146d17ea733c0561337ea50e52e85546d31eb6",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-cors-green.log",
+        "expected": "0cfa6b98e7905fe06d924615a1af81e47c1aaa3d41ac210f96af02d886036c9b",
+        "actual": "0cfa6b98e7905fe06d924615a1af81e47c1aaa3d41ac210f96af02d886036c9b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-cors-red.log",
+        "expected": "fbfeace720010cfc4bd9ce28c8fb6041bdb52e535122e6915b1abf3e854930e9",
+        "actual": "fbfeace720010cfc4bd9ce28c8fb6041bdb52e535122e6915b1abf3e854930e9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-health-green.log",
+        "expected": "f9c9506451c8c246d741ba6f531e0c5616255ea5048df68bdc58562afc09939b",
+        "actual": "f9c9506451c8c246d741ba6f531e0c5616255ea5048df68bdc58562afc09939b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-health-red-02.log",
+        "expected": "9d06b7241175db5126668dd4a862446cf8aad42524a08ccfaadbaa2a87f73619",
+        "actual": "9d06b7241175db5126668dd4a862446cf8aad42524a08ccfaadbaa2a87f73619",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/backend-health-red.log",
+        "expected": "45d0ec02e10a5b63a1fb513d3bb9d5ef8613018256ab3346da2035ffbfa4546c",
+        "actual": "45d0ec02e10a5b63a1fb513d3bb9d5ef8613018256ab3346da2035ffbfa4546c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/config-origin-green.json",
+        "expected": "ea97db62657b4268540bdbc67809816e33c49d06b08b75a759bbd32700288e69",
+        "actual": "ea97db62657b4268540bdbc67809816e33c49d06b08b75a759bbd32700288e69",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/config-origin-green.log",
+        "expected": "19de73c10254d4f4a258b3e6ef2af8ba49112c0edef6d8a07c4d2983847e35ba",
+        "actual": "19de73c10254d4f4a258b3e6ef2af8ba49112c0edef6d8a07c4d2983847e35ba",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/config-origin-red.json",
+        "expected": "311728c3938b5bd8b8af2e1fbeab8da0fe5d7d51105e1ec2a837b155734416a9",
+        "actual": "311728c3938b5bd8b8af2e1fbeab8da0fe5d7d51105e1ec2a837b155734416a9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/config-origin-red.log",
+        "expected": "1d57d2ccc3f35e51ce6f2e112acdcb1b3fb119dc0df2550aa4fb8b03bba8107a",
+        "actual": "1d57d2ccc3f35e51ce6f2e112acdcb1b3fb119dc0df2550aa4fb8b03bba8107a",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/container-startup-failure.log",
+        "expected": "9b956f8e42e19553afc00b4028f38c00f89e5485ce780577a4ddc1882cdeb3fb",
+        "actual": "9b956f8e42e19553afc00b4028f38c00f89e5485ce780577a4ddc1882cdeb3fb",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/docker-build.log",
+        "expected": "70fdcfe9d2710c63cf7fb96842bf476b5d39131784166bf22accfc13989be9a2",
+        "actual": "70fdcfe9d2710c63cf7fb96842bf476b5d39131784166bf22accfc13989be9a2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/environment.json",
+        "expected": "c9887588d67373e85618b057fe47e1f57ec0a61b3a6cf54bb26f25967eefedf6",
+        "actual": "c9887588d67373e85618b057fe47e1f57ec0a61b3a6cf54bb26f25967eefedf6",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/frontend-dependencies-green.json",
+        "expected": "2cc0f34815d8c61b14a6f18b87323739d8692bd00420706b9a38f9003cdbb90d",
+        "actual": "2cc0f34815d8c61b14a6f18b87323739d8692bd00420706b9a38f9003cdbb90d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/frontend-dependencies.json",
+        "expected": "231b527ca23d8db6ffed2933fd8932b8823822de1100fef3d2df6776c828cd08",
+        "actual": "231b527ca23d8db6ffed2933fd8932b8823822de1100fef3d2df6776c828cd08",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/frontend-green.json",
+        "expected": "535d9c8420b77d329352ec209b95586575b16cec60d1a359d7a94b4e797ce026",
+        "actual": "535d9c8420b77d329352ec209b95586575b16cec60d1a359d7a94b4e797ce026",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/frontend-green.log",
+        "expected": "639cd0ab577356f61ea93ceac3f5f59c3cd33c58a6c78e08427654155dd3f959",
+        "actual": "639cd0ab577356f61ea93ceac3f5f59c3cd33c58a6c78e08427654155dd3f959",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/frontend-red.json",
+        "expected": "9f9dd99d073cf7f237d0747d587a6be4e6e41f4957d487dce42b0d7dd51120fe",
+        "actual": "9f9dd99d073cf7f237d0747d587a6be4e6e41f4957d487dce42b0d7dd51120fe",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/discovery/frontend-red.log",
+        "expected": "489716358c3d23c849d7aef4dcdd6b00e8abe427ebaf94f4a5754d51490bf523",
+        "actual": "489716358c3d23c849d7aef4dcdd6b00e8abe427ebaf94f4a5754d51490bf523",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/SHA256SUMS.json",
+        "expected": "383cce3adcb154c35da7871c6d9121342c60a5bf5818ee4621ab05f8cd11f933",
+        "actual": "383cce3adcb154c35da7871c6d9121342c60a5bf5818ee4621ab05f8cd11f933",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/api-a-8201-http.json",
+        "expected": "7caa04d1d892d15b864ec9c799e2715838e1e9c494c10cc8e09255903315de53",
+        "actual": "7caa04d1d892d15b864ec9c799e2715838e1e9c494c10cc8e09255903315de53",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/api-a.log",
+        "expected": "8b4e9611f28ad1d65d4ba6f781074b912c640b2c0aa9b0b9d1241f69d5e08612",
+        "actual": "8b4e9611f28ad1d65d4ba6f781074b912c640b2c0aa9b0b9d1241f69d5e08612",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/api-b-8202-http.json",
+        "expected": "c368087451c0b7fe881a9fd4178dc1955bef6dba9ee44e6580a292185e516571",
+        "actual": "c368087451c0b7fe881a9fd4178dc1955bef6dba9ee44e6580a292185e516571",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/api-b.log",
+        "expected": "21a2bcca2c9a3549087410e181ce339398d70eb969e91c46a356ae50b7a49467",
+        "actual": "21a2bcca2c9a3549087410e181ce339398d70eb969e91c46a356ae50b7a49467",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/api-recovered.json",
+        "expected": "d1b1e3d05641f5127eebfbb001fa676adc616afeb7b02154b592ce36e676d196",
+        "actual": "d1b1e3d05641f5127eebfbb001fa676adc616afeb7b02154b592ce36e676d196",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/api-stopped.json",
+        "expected": "f3f8a50da02397e2df9565345bef438529ee057866d3e0994d48e62a6c4a5afd",
+        "actual": "f3f8a50da02397e2df9565345bef438529ee057866d3e0994d48e62a6c4a5afd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/built-preview.json",
+        "expected": "4e72443db6203bcaaf88de17a49257ea570137320ad90490c8b4e6545b414d00",
+        "actual": "4e72443db6203bcaaf88de17a49257ea570137320ad90490c8b4e6545b414d00",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/commands.json",
+        "expected": "3ec6dee76729601039d88a1bdcd238fac38617cec4182c29b22f0e73c40e29de",
+        "actual": "3ec6dee76729601039d88a1bdcd238fac38617cec4182c29b22f0e73c40e29de",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/compose-config.json",
+        "expected": "4c571581b66aa93fe6f7a128206c6137d773d42e694fb4950b743eabf1ba5957",
+        "actual": "4c571581b66aa93fe6f7a128206c6137d773d42e694fb4950b743eabf1ba5957",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/compose-version.json",
+        "expected": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "actual": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/configuration-regression.json",
+        "expected": "ccda1304f26da5a01c2a725639f5068cdc031c6d3e3e85da9194bfce2ac051b2",
+        "actual": "ccda1304f26da5a01c2a725639f5068cdc031c6d3e3e85da9194bfce2ac051b2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-api-http.json",
+        "expected": "dcf6319fac0aa66efdeea806b848429ae1f15557320b1b90476f473e0acb2f34",
+        "actual": "dcf6319fac0aa66efdeea806b848429ae1f15557320b1b90476f473e0acb2f34",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-api-recovered.json",
+        "expected": "35b12cbf4c8981dbe3a706074c8a2bdaf758a2f49b9416db731835b8fe59f9c1",
+        "actual": "35b12cbf4c8981dbe3a706074c8a2bdaf758a2f49b9416db731835b8fe59f9c1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-api-stopped.json",
+        "expected": "ceb46202633b4fd8254f16dc8005cdee4401097b81e1d971dd5f2accde372d4d",
+        "actual": "ceb46202633b4fd8254f16dc8005cdee4401097b81e1d971dd5f2accde372d4d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-api-timeout.json",
+        "expected": "45b2f6051cb4f6f3fdbb142a27e2cc8f6cfff46cf466fabf208dcb9019cb8c4d",
+        "actual": "45b2f6051cb4f6f3fdbb142a27e2cc8f6cfff46cf466fabf208dcb9019cb8c4d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-healthy.json",
+        "expected": "4e0787e506bfadb4e8797e2d9d468d5f0e1e616af2ea97285b16c9c0b156c5d2",
+        "actual": "4e0787e506bfadb4e8797e2d9d468d5f0e1e616af2ea97285b16c9c0b156c5d2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-web-alone.json",
+        "expected": "82515f4a7d96d204804e4c27cbab8eb21150f949c7570495fda0e8de6bdf84fe",
+        "actual": "82515f4a7d96d204804e4c27cbab8eb21150f949c7570495fda0e8de6bdf84fe",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/container-web-stopped.json",
+        "expected": "e22fffe500dcd92fa8a4192169990c49b42dae1464c56b9d6f33479a959260c3",
+        "actual": "e22fffe500dcd92fa8a4192169990c49b42dae1464c56b9d6f33479a959260c3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/containers.json",
+        "expected": "1ed43980819b60832590739d20cec64b9a1e8b62f78828e398766a599509a9d8",
+        "actual": "1ed43980819b60832590739d20cec64b9a1e8b62f78828e398766a599509a9d8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/deployment-routes.json",
+        "expected": "cd47c28cc875d4311a02b9db53de4469f5ec4090d6c1f77e69c84ed00c7808f8",
+        "actual": "cd47c28cc875d4311a02b9db53de4469f5ec4090d6c1f77e69c84ed00c7808f8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/dev-proxy.json",
+        "expected": "0b043870eb50a220e38d7ff056ef6c04169052f13a7b31a46f68b7e19913f0e8",
+        "actual": "0b043870eb50a220e38d7ff056ef6c04169052f13a7b31a46f68b7e19913f0e8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/direct-a.json",
+        "expected": "becf001a8b2d96c8589c51a001a473e4cbd0353cadcc846846e81b40bd5929a0",
+        "actual": "becf001a8b2d96c8589c51a001a473e4cbd0353cadcc846846e81b40bd5929a0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/direct-b.json",
+        "expected": "b1b949d8f2257522d383bf15faefec36a566ce97ac6655fe6c2bcd0fe8bf5ec9",
+        "actual": "b1b949d8f2257522d383bf15faefec36a566ce97ac6655fe6c2bcd0fe8bf5ec9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/docker-version.json",
+        "expected": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "actual": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/invalid-address-0.json",
+        "expected": "114a4f0533174e1c9962b02a46e12376a5a1303b2da15411e4b2e7555cce5603",
+        "actual": "114a4f0533174e1c9962b02a46e12376a5a1303b2da15411e4b2e7555cce5603",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/invalid-address-1.json",
+        "expected": "1a13bc2add7abaeeb60c297c2bde19f84ca15547eca2c6f0b79dedbd83561e88",
+        "actual": "1a13bc2add7abaeeb60c297c2bde19f84ca15547eca2c6f0b79dedbd83561e88",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/invalid-address-2.json",
+        "expected": "2162161e42dd72849a6bcd1c15623033a1d14320f171eb1dca3b243db34e24cd",
+        "actual": "2162161e42dd72849a6bcd1c15623033a1d14320f171eb1dca3b243db34e24cd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/invalid-address-3.json",
+        "expected": "341b0f9617355610c2f06b9eadb77bb90c4182dc71a98244c8f2b26d0c8d4efd",
+        "actual": "341b0f9617355610c2f06b9eadb77bb90c4182dc71a98244c8f2b26d0c8d4efd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/invalid-address-4.json",
+        "expected": "2cebab7ce312c80d27a54ebbba7650773a3aba7434c92dcb679c1128aeb10ab4",
+        "actual": "2cebab7ce312c80d27a54ebbba7650773a3aba7434c92dcb679c1128aeb10ab4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/node-version.json",
+        "expected": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "actual": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/npm-version.json",
+        "expected": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "actual": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/processes.json",
+        "expected": "766f2df73a2724bb7cffe4406436fc077f0746d16a2ecf743828c7c38fa11008",
+        "actual": "766f2df73a2724bb7cffe4406436fc077f0746d16a2ecf743828c7c38fa11008",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/regression-preservation.json",
+        "expected": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "actual": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/results.json",
+        "expected": "d4a9c479b31d2dfe37915a326924eddb28bca7fa97592133709cadbf05f112d2",
+        "actual": "d4a9c479b31d2dfe37915a326924eddb28bca7fa97592133709cadbf05f112d2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/uv-version.json",
+        "expected": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "actual": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-direct-a.log",
+        "expected": "e8b4c16654d665e68fc0b0976914aaddadc798cbfcf8b4725d84e1bd8cf0e71c",
+        "actual": "e8b4c16654d665e68fc0b0976914aaddadc798cbfcf8b4725d84e1bd8cf0e71c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-direct-b.log",
+        "expected": "e7756ad244d320df40d0e1eb79befe537116f44ddfc6bce6a7e9bb861c3ff120",
+        "actual": "e7756ad244d320df40d0e1eb79befe537116f44ddfc6bce6a7e9bb861c3ff120",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-invalid-0.log",
+        "expected": "97facb6c056f53acb3cd15e85454cb7e914d4bfa34dc47cd1a0d6eecfb0cdb18",
+        "actual": "97facb6c056f53acb3cd15e85454cb7e914d4bfa34dc47cd1a0d6eecfb0cdb18",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-invalid-1.log",
+        "expected": "f708191dd66872ac38424c67d6a12356e599ebadf539261eea74a72dd4b39685",
+        "actual": "f708191dd66872ac38424c67d6a12356e599ebadf539261eea74a72dd4b39685",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-invalid-2.log",
+        "expected": "1acfa143fc48ba504439f9427efee3a8a042b94f14790ce22f5d698eaea92997",
+        "actual": "1acfa143fc48ba504439f9427efee3a8a042b94f14790ce22f5d698eaea92997",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-invalid-3.log",
+        "expected": "db158a78f674185858046b09c6055a4a92f9bcd8fcd289fc758b97a70b68c273",
+        "actual": "db158a78f674185858046b09c6055a4a92f9bcd8fcd289fc758b97a70b68c273",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-invalid-4.log",
+        "expected": "776885a65e8a20b0ad19e4cfa319b5997dc744ab8b57d1efae30175349ca56cc",
+        "actual": "776885a65e8a20b0ad19e4cfa319b5997dc744ab8b57d1efae30175349ca56cc",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-preview.log",
+        "expected": "8b3154d261881407a983154779d8ef3b7be2a64158d6afdd2c948de61e0048cf",
+        "actual": "8b3154d261881407a983154779d8ef3b7be2a64158d6afdd2c948de61e0048cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-proxy.log",
+        "expected": "aba3de73452625dcdadfa5e37ede324bce96f0013e11ad901f8f4eaf6af5cd9f",
+        "actual": "aba3de73452625dcdadfa5e37ede324bce96f0013e11ad901f8f4eaf6af5cd9f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/web-stopped-api-alive.json",
+        "expected": "e2e6530257c708baa2f0bd9bcc54a7a4edee93a682e550db94c57f0c1703fdf2",
+        "actual": "e2e6530257c708baa2f0bd9bcc54a7a4edee93a682e550db94c57f0c1703fdf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/main/wheel-requirements.txt",
+        "expected": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "actual": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/SHA256SUMS.json",
+        "expected": "044f54b627f9ce1cfcf2b59b9ff84beb513b29aea002e911580177960f308c5b",
+        "actual": "044f54b627f9ce1cfcf2b59b9ff84beb513b29aea002e911580177960f308c5b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/api-a-8201-http.json",
+        "expected": "5cf9ef91a4e947633721342f6d0147f339478ab667c081c628a988c517f2c7c1",
+        "actual": "5cf9ef91a4e947633721342f6d0147f339478ab667c081c628a988c517f2c7c1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/api-a.log",
+        "expected": "6e426830f61dfa9d2d36957e9a9aad40ad9d3a97d6d1d171ed8b0fc1b36d0c56",
+        "actual": "6e426830f61dfa9d2d36957e9a9aad40ad9d3a97d6d1d171ed8b0fc1b36d0c56",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/api-b-8202-http.json",
+        "expected": "9dc0aa0fc2970718fa350800523ad7a6d88703dc73c2732cb72511ba27cff4d8",
+        "actual": "9dc0aa0fc2970718fa350800523ad7a6d88703dc73c2732cb72511ba27cff4d8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/api-b.log",
+        "expected": "31cd4862855582d7218f26cfc15ca37fa7354a3014a62c1b0cb00234e378ccfe",
+        "actual": "31cd4862855582d7218f26cfc15ca37fa7354a3014a62c1b0cb00234e378ccfe",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/api-recovered.json",
+        "expected": "a5f016ea3e3576e7eca5bcc417e02a32babb6a601d2e5aa487e2b0f3e1548f62",
+        "actual": "a5f016ea3e3576e7eca5bcc417e02a32babb6a601d2e5aa487e2b0f3e1548f62",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/api-stopped.json",
+        "expected": "556c085db2ef8e991e6b9f4a62355c2ae096b363c1f9a34c8772f505259f5ee3",
+        "actual": "556c085db2ef8e991e6b9f4a62355c2ae096b363c1f9a34c8772f505259f5ee3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/built-preview.json",
+        "expected": "718f2db0a4b2fd6fa37e57e2519d13c22538e00c8ba1813c8643596944649f2e",
+        "actual": "718f2db0a4b2fd6fa37e57e2519d13c22538e00c8ba1813c8643596944649f2e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/commands.json",
+        "expected": "25db8982c53ee09c5913807bd8f3a8ba41a28001b94e204c7449d44c2a50b423",
+        "actual": "25db8982c53ee09c5913807bd8f3a8ba41a28001b94e204c7449d44c2a50b423",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/compose-config.json",
+        "expected": "0a79803e99030653175a5fcb57c633fea16733254c7cbb9e67e7c5c6c67b7780",
+        "actual": "0a79803e99030653175a5fcb57c633fea16733254c7cbb9e67e7c5c6c67b7780",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/compose-version.json",
+        "expected": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "actual": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/configuration-regression.json",
+        "expected": "ccda1304f26da5a01c2a725639f5068cdc031c6d3e3e85da9194bfce2ac051b2",
+        "actual": "ccda1304f26da5a01c2a725639f5068cdc031c6d3e3e85da9194bfce2ac051b2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/container-web-alone.json",
+        "expected": "d64900d57e42a0a3348329fce3589c95eaead58f0fcb4fe4e04cff7fac923c48",
+        "actual": "d64900d57e42a0a3348329fce3589c95eaead58f0fcb4fe4e04cff7fac923c48",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/dev-proxy.json",
+        "expected": "1d553bba83c8d56afb9e46198b5d5eee7e7cf6585665445041343ad9404ae6b9",
+        "actual": "1d553bba83c8d56afb9e46198b5d5eee7e7cf6585665445041343ad9404ae6b9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/direct-a.json",
+        "expected": "168838f08ca59586ea5c6c02b18ebc203974769c6d7fe2f8ea46ea9ed3f310ee",
+        "actual": "168838f08ca59586ea5c6c02b18ebc203974769c6d7fe2f8ea46ea9ed3f310ee",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/direct-b.json",
+        "expected": "58092e355247083512aa53bfdd98620eca83175677c7df7e6a1890f2a589ff18",
+        "actual": "58092e355247083512aa53bfdd98620eca83175677c7df7e6a1890f2a589ff18",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/docker-version.json",
+        "expected": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "actual": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/invalid-address-0.json",
+        "expected": "114a4f0533174e1c9962b02a46e12376a5a1303b2da15411e4b2e7555cce5603",
+        "actual": "114a4f0533174e1c9962b02a46e12376a5a1303b2da15411e4b2e7555cce5603",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/invalid-address-1.json",
+        "expected": "1a13bc2add7abaeeb60c297c2bde19f84ca15547eca2c6f0b79dedbd83561e88",
+        "actual": "1a13bc2add7abaeeb60c297c2bde19f84ca15547eca2c6f0b79dedbd83561e88",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/invalid-address-2.json",
+        "expected": "b81e0bb6ae3968691ec6e64c3637d85ef404dc3fe2b3fde3fe12aaec4042c9dd",
+        "actual": "b81e0bb6ae3968691ec6e64c3637d85ef404dc3fe2b3fde3fe12aaec4042c9dd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/node-version.json",
+        "expected": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "actual": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/npm-version.json",
+        "expected": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "actual": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/processes.json",
+        "expected": "464b25d2961980f288b958118b9b730349c1cce7df794ec87cb7e062674d5e32",
+        "actual": "464b25d2961980f288b958118b9b730349c1cce7df794ec87cb7e062674d5e32",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/regression-preservation.json",
+        "expected": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "actual": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/uv-version.json",
+        "expected": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "actual": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-direct-a.log",
+        "expected": "6951cb215f2b48eb95c7d0201170920f39bd331c645b0f6eb721d7f5b4d8ecf9",
+        "actual": "6951cb215f2b48eb95c7d0201170920f39bd331c645b0f6eb721d7f5b4d8ecf9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-direct-b.log",
+        "expected": "e8b4c16654d665e68fc0b0976914aaddadc798cbfcf8b4725d84e1bd8cf0e71c",
+        "actual": "e8b4c16654d665e68fc0b0976914aaddadc798cbfcf8b4725d84e1bd8cf0e71c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-invalid-0.log",
+        "expected": "b8f65c5557bedc73c7ef2c65aabdb38349a4aaac606018ec75a493d9ec314eb4",
+        "actual": "b8f65c5557bedc73c7ef2c65aabdb38349a4aaac606018ec75a493d9ec314eb4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-invalid-1.log",
+        "expected": "823a1649fb277afd7e0d6c637f3a6ce00c60549910522a749cbf8cc0005af1a1",
+        "actual": "823a1649fb277afd7e0d6c637f3a6ce00c60549910522a749cbf8cc0005af1a1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-invalid-2.log",
+        "expected": "f708191dd66872ac38424c67d6a12356e599ebadf539261eea74a72dd4b39685",
+        "actual": "f708191dd66872ac38424c67d6a12356e599ebadf539261eea74a72dd4b39685",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-preview.log",
+        "expected": "8b3154d261881407a983154779d8ef3b7be2a64158d6afdd2c948de61e0048cf",
+        "actual": "8b3154d261881407a983154779d8ef3b7be2a64158d6afdd2c948de61e0048cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-proxy.log",
+        "expected": "8fbd70b2d94602baaa5a97fc5719a7743385ce86955b9403c127289b9d1c0a47",
+        "actual": "8fbd70b2d94602baaa5a97fc5719a7743385ce86955b9403c127289b9d1c0a47",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/web-stopped-api-alive.json",
+        "expected": "ca7f0ce059028824e70608036239dcdf636629f3e7c77590479e8c59d9cf3517",
+        "actual": "ca7f0ce059028824e70608036239dcdf636629f3e7c77590479e8c59d9cf3517",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-290f173-failure/wheel-requirements.txt",
+        "expected": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "actual": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/SHA256SUMS.json",
+        "expected": "62aa4b7b4b79d7e2c1a0743f5f21fd9021f22d147c29b26444a3e1cba508212b",
+        "actual": "62aa4b7b4b79d7e2c1a0743f5f21fd9021f22d147c29b26444a3e1cba508212b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/api-a-8201-http.json",
+        "expected": "9a6f99bd82b8bd3cdd2806115fbcf8ce7583d3201aeec7a75280ef2fe04633e0",
+        "actual": "9a6f99bd82b8bd3cdd2806115fbcf8ce7583d3201aeec7a75280ef2fe04633e0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/api-a.log",
+        "expected": "884e553e3468e794f937f87b07641d12f00762903aaece52d5b09b23cd6a1b8c",
+        "actual": "884e553e3468e794f937f87b07641d12f00762903aaece52d5b09b23cd6a1b8c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/api-b-8202-http.json",
+        "expected": "14cb6b3bba527b6a343425f20fcce90179ca1fd34a5374e93ce6bbdab332a863",
+        "actual": "14cb6b3bba527b6a343425f20fcce90179ca1fd34a5374e93ce6bbdab332a863",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/api-b.log",
+        "expected": "1b10dfedaec55767f052296d2c290c84a0753f066738583329005f4e3d3cd400",
+        "actual": "1b10dfedaec55767f052296d2c290c84a0753f066738583329005f4e3d3cd400",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/commands.json",
+        "expected": "c0f3b589363e05d525f844a72c458351f0ac1ede342d277b515699bc571eec62",
+        "actual": "c0f3b589363e05d525f844a72c458351f0ac1ede342d277b515699bc571eec62",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/compose-version.json",
+        "expected": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "actual": "1abd313c6bc36956ff854d3c6043d81a30c08f22de6a140fbcb374c1d0c92879",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/configuration-regression.json",
+        "expected": "ccda1304f26da5a01c2a725639f5068cdc031c6d3e3e85da9194bfce2ac051b2",
+        "actual": "ccda1304f26da5a01c2a725639f5068cdc031c6d3e3e85da9194bfce2ac051b2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/dev-proxy.json",
+        "expected": "da7389440e1bc80698902bc38de16d01cb064d47d63745b1036336ca8433fbf1",
+        "actual": "da7389440e1bc80698902bc38de16d01cb064d47d63745b1036336ca8433fbf1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/direct-a.json",
+        "expected": "dcabf36eae6a09245497660f12d7ff028cc93912a11a4e604a4195ef210946c3",
+        "actual": "dcabf36eae6a09245497660f12d7ff028cc93912a11a4e604a4195ef210946c3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/direct-b.json",
+        "expected": "7d464e086b4dedf6f107103cc275c39a7088cdfa945491dcad489705f78b2a26",
+        "actual": "7d464e086b4dedf6f107103cc275c39a7088cdfa945491dcad489705f78b2a26",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/docker-version.json",
+        "expected": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "actual": "45ded23fef70e84378e9d4c87d2ee359da000e29de3060f61e27563c2b7a9357",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/node-version.json",
+        "expected": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "actual": "ae762df2e7ec30c35692eac69e72eff3b1c10cab324483272f6b7abfdb5668e4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/npm-version.json",
+        "expected": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "actual": "f77b2ffbd4d2cf80597801e00d29d5a8609bccde5eae7b8a7bcca617e7c9a0cf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/processes.json",
+        "expected": "7d182d08df6b55c1a69ffa6881f8f7167c3017e6a6fb4bda2bb8c26b8f350974",
+        "actual": "7d182d08df6b55c1a69ffa6881f8f7167c3017e6a6fb4bda2bb8c26b8f350974",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/regression-preservation.json",
+        "expected": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "actual": "4a5ac2d2ae7a54ef4dcf1d6dbbe0c43ce4b139f0c4a532862b5a9d330283c084",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/uv-version.json",
+        "expected": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "actual": "dd2eb7be77b4d61e4ba1ff93eb29fa5504a46189b6902042ede96ff4dfd7cf1f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/web-direct-a.log",
+        "expected": "b2d706c25afe8a594feb8577377e40274245793db5aacb956f4313cd6bbc42bc",
+        "actual": "b2d706c25afe8a594feb8577377e40274245793db5aacb956f4313cd6bbc42bc",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/web-direct-b.log",
+        "expected": "83a18ccb6de17d0c8bc126648c85a8b0b382c1dfaab325d3f48b373b8062bc18",
+        "actual": "83a18ccb6de17d0c8bc126648c85a8b0b382c1dfaab325d3f48b373b8062bc18",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/web-proxy.log",
+        "expected": "a2dd78e45ecec0ad929e76e9d1e2427698b8cc417952b02299fda79c46b50568",
+        "actual": "a2dd78e45ecec0ad929e76e9d1e2427698b8cc417952b02299fda79c46b50568",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/web-stopped-api-alive.json",
+        "expected": "13d305df1f7a9bc7df531535ef67f6015dbc5a9617c69a5d25aaec1f8e462298",
+        "actual": "13d305df1f7a9bc7df531535ef67f6015dbc5a9617c69a5d25aaec1f8e462298",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/previous-f80af8b-failure/wheel-requirements.txt",
+        "expected": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "actual": "6fd1eff432533b262263d86dd2e27f09498ea1d15f6f868f0cd4bbbab7bf2908",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/run-290f173-01.log",
+        "expected": "c48477baf3b79fa8b7405b619c9a332a1882fa949af1309d2308ee9c49f39b96",
+        "actual": "c48477baf3b79fa8b7405b619c9a332a1882fa949af1309d2308ee9c49f39b96",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/run-73d7e29-01.log",
+        "expected": "cc2ba18054b74bc1d5a4d14a2a9d8c66ff616d61edaa91118a161acce5a89f90",
+        "actual": "cc2ba18054b74bc1d5a4d14a2a9d8c66ff616d61edaa91118a161acce5a89f90",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/run-f80af8b-01.log",
+        "expected": "0a0d8bd2c7efb58cbaea455a0d31bf696d6ca656098ce25f56f98068c8ca8278",
+        "actual": "0a0d8bd2c7efb58cbaea455a0d31bf696d6ca656098ce25f56f98068c8ca8278",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01/worker-handoff/worker-review.md",
+        "expected": "12a2aa615994b42d2a12cba73c3994c3592d7a5e8b8b30a9423f3d678af570c9",
+        "actual": "12a2aa615994b42d2a12cba73c3994c3592d7a5e8b8b30a9423f3d678af570c9",
+        "match": true
+      }
+    ]
+  },
+  {
+    "manifest": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/SHA256SUMS.json",
+    "sha256": "8a3461de61ecdf1c4bd658387e087e78cce220f775b895439f476ea81574d0ef",
+    "count": 192,
+    "all_match": true,
+    "files": [
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md",
+        "expected": "2d18f2bfe981842a3f07ca7564444442f5567bb97d6dd8799e26a956f4375aba",
+        "actual": "2d18f2bfe981842a3f07ca7564444442f5567bb97d6dd8799e26a956f4375aba",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/SHA256SUMS.json",
+        "expected": "5affaca0c63b56e64112318b7d74007b2f505163bca65cebcdf44b2df8ae5885",
+        "actual": "5affaca0c63b56e64112318b7d74007b2f505163bca65cebcdf44b2df8ae5885",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-browser.json",
+        "expected": "e9a9553e3327acacba05c94503e9c762481293f93252e005d76eb39dc8c0c900",
+        "actual": "e9a9553e3327acacba05c94503e9c762481293f93252e005d76eb39dc8c0c900",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-camera-regression.json",
+        "expected": "c739ea8237e38457c9c904f2d6ba3b99089de9485829772aa42a0cbca47bf344",
+        "actual": "c739ea8237e38457c9c904f2d6ba3b99089de9485829772aa42a0cbca47bf344",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-missing-resource.json",
+        "expected": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "actual": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-server.json",
+        "expected": "eaff40310518695c9383b0b31150a2083a8fa4d41025582c705c6796c282e433",
+        "actual": "eaff40310518695c9383b0b31150a2083a8fa4d41025582c705c6796c282e433",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/candidate-server.log",
+        "expected": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "actual": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/commands.json",
+        "expected": "092e7a72d2fac213edcca47c468c2d50afa0bf23286bfe25b9d335a0cce378ab",
+        "actual": "092e7a72d2fac213edcca47c468c2d50afa0bf23286bfe25b9d335a0cce378ab",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/results.json",
+        "expected": "a6e5e10f6842a767510a5add0c76d03fd71e31e807bbdfd4e20ebbd683f908f0",
+        "actual": "a6e5e10f6842a767510a5add0c76d03fd71e31e807bbdfd4e20ebbd683f908f0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent/version.json",
+        "expected": "88dabf586856c7254861e46660c2300d586c0b304d90f0315f642fd730366705",
+        "actual": "88dabf586856c7254861e46660c2300d586c0b304d90f0315f642fd730366705",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/coordinator-independent-review.json",
+        "expected": "64526dd2f202477658381901aa2da395299fc6e3b9d024c1b2247b6cad5b54fe",
+        "actual": "64526dd2f202477658381901aa2da395299fc6e3b9d024c1b2247b6cad5b54fe",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/verification.json",
+        "expected": "4fbbb524de8c78a3354ae0218a358bebfdabbc7c61e0b0c197badedca24dd6da",
+        "actual": "4fbbb524de8c78a3354ae0218a358bebfdabbc7c61e0b0c197badedca24dd6da",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/SHA256SUMS.json",
+        "expected": "b6b18b3b4a51d390e10f094d7bb2a1d73bbce3d8da1126cc878daf3ce7f06f10",
+        "actual": "b6b18b3b4a51d390e10f094d7bb2a1d73bbce3d8da1126cc878daf3ce7f06f10",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/SHA256SUMS.json",
+        "expected": "bd256f0dda5fa6de300f3ca69a79679fe033a7b9d66b92876ea43d40da3739b4",
+        "actual": "bd256f0dda5fa6de300f3ca69a79679fe033a7b9d66b92876ea43d40da3739b4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-browser.json",
+        "expected": "42073bbd42f715db060b6f867600f1239e42bfa65f1b2d94e04f7f553ec73668",
+        "actual": "42073bbd42f715db060b6f867600f1239e42bfa65f1b2d94e04f7f553ec73668",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-camera-regression.json",
+        "expected": "48aca023d36f87d59c21e431c5bc4cd47a70101d14a070a359f5205adee41a93",
+        "actual": "48aca023d36f87d59c21e431c5bc4cd47a70101d14a070a359f5205adee41a93",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-missing-resource.json",
+        "expected": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "actual": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-server.json",
+        "expected": "668d4786b60451184a857a215e007282342231ba9a706347fe176f39457bb84a",
+        "actual": "668d4786b60451184a857a215e007282342231ba9a706347fe176f39457bb84a",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/candidate-server.log",
+        "expected": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "actual": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/commands.json",
+        "expected": "01fe04c982f313b993223df6ef059c4a380d94f444336bf63780323c4d75b8a0",
+        "actual": "01fe04c982f313b993223df6ef059c4a380d94f444336bf63780323c4d75b8a0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/results.json",
+        "expected": "a6e5e10f6842a767510a5add0c76d03fd71e31e807bbdfd4e20ebbd683f908f0",
+        "actual": "a6e5e10f6842a767510a5add0c76d03fd71e31e807bbdfd4e20ebbd683f908f0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/clean/version.json",
+        "expected": "88dabf586856c7254861e46660c2300d586c0b304d90f0315f642fd730366705",
+        "actual": "88dabf586856c7254861e46660c2300d586c0b304d90f0315f642fd730366705",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/ci-C6-check-runs.json",
+        "expected": "e83cfac35507982a40cfeb776ce85aa0367e7646f81fe857df4a6c841ea8a170",
+        "actual": "e83cfac35507982a40cfeb776ce85aa0367e7646f81fe857df4a6c841ea8a170",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/ci-C6-status.json",
+        "expected": "0d02edce164f10474c9ecd864fe0bf214dddbd94b3a8922441d61c209d538cd2",
+        "actual": "0d02edce164f10474c9ecd864fe0bf214dddbd94b3a8922441d61c209d538cd2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/hypotheses.md",
+        "expected": "bedf85b6f00e20614d1066aaf4a608e825199ae1a9888e6201238ec44fe764fa",
+        "actual": "bedf85b6f00e20614d1066aaf4a608e825199ae1a9888e6201238ec44fe764fa",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/issue3-diagnosis.md",
+        "expected": "7c60bfb896abd71e29d267dbedae9e9e4b32ab2611bb120787e2b8d50126e8f4",
+        "actual": "7c60bfb896abd71e29d267dbedae9e9e4b32ab2611bb120787e2b8d50126e8f4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/legacy-01.json",
+        "expected": "245714e718510c0db582ba25e0d6e093651d145aff2153e3f93b8c935b5d5d65",
+        "actual": "245714e718510c0db582ba25e0d6e093651d145aff2153e3f93b8c935b5d5d65",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/legacy-predicate.mjs",
+        "expected": "8176cb3bfafe3d6cd3563881424706d8020c1a21bf86625eadf65f1d2c02dbf9",
+        "actual": "8176cb3bfafe3d6cd3563881424706d8020c1a21bf86625eadf65f1d2c02dbf9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/legacy-single-drag.json",
+        "expected": "594fee8b442ee72797315f127f93d5dbe8c31e5e1373465217b5b5ea2e0085d2",
+        "actual": "594fee8b442ee72797315f127f93d5dbe8c31e5e1373465217b5b5ea2e0085d2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/main-C6.json",
+        "expected": "007f9f73eedd282d92a279ea6b30e31e0972ef58f106691e76b2baefd9b27a52",
+        "actual": "007f9f73eedd282d92a279ea6b30e31e0972ef58f106691e76b2baefd9b27a52",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/pr4-C6-metadata.json",
+        "expected": "c3fb1cd4b89327f8bff1c4fae6653f3e7b62d8106fbe182424f913a950de7406",
+        "actual": "c3fb1cd4b89327f8bff1c4fae6653f3e7b62d8106fbe182424f913a950de7406",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/regression-green-01.json",
+        "expected": "0bb2487a9a887ac6a566ec5152d5f128d5cf6487cefeb0bc91d389e06df27471",
+        "actual": "0bb2487a9a887ac6a566ec5152d5f128d5cf6487cefeb0bc91d389e06df27471",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/regression-red.json",
+        "expected": "06a9c8e654c03fc166a93589337a90f998dc69ba63bba6d5d4a50b4eb6a3ddf3",
+        "actual": "06a9c8e654c03fc166a93589337a90f998dc69ba63bba6d5d4a50b4eb6a3ddf3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/remote-C6.json",
+        "expected": "43c4aadb0d5ff481f9831f1c2930c52c0b0470dfa77320ed9f1a941c808609c1",
+        "actual": "43c4aadb0d5ff481f9831f1c2930c52c0b0470dfa77320ed9f1a941c808609c1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/repro.mjs",
+        "expected": "4e3ea318c5e2b64d0fa788680154c4fc75f1162b45a96c78925f8e1fea09dab2",
+        "actual": "4e3ea318c5e2b64d0fa788680154c4fc75f1162b45a96c78925f8e1fea09dab2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/rulesets-C6.json",
+        "expected": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "actual": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/diagnosis/worker-review-C6.md",
+        "expected": "765638cb611dbb5c17447eb9709a6e34b58666425b26b3d47bd54969e92a13f5",
+        "actual": "765638cb611dbb5c17447eb9709a6e34b58666425b26b3d47bd54969e92a13f5",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/facts.json",
+        "expected": "0fe8fe6db19191cdd7a715576689e750223ab7f70deb3d8687a6cacf69b11624",
+        "actual": "0fe8fe6db19191cdd7a715576689e750223ab7f70deb3d8687a6cacf69b11624",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/candidate-browser.json",
+        "expected": "11d2dec8c4dca3249dfad07268b5b95ecd9f19478c2525217e2ac2362067b808",
+        "actual": "11d2dec8c4dca3249dfad07268b5b95ecd9f19478c2525217e2ac2362067b808",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/candidate-server.json",
+        "expected": "bca5de994163abb3544aa4ff91bdbd925a67521cfec8b8d0029e439ea21aec7f",
+        "actual": "bca5de994163abb3544aa4ff91bdbd925a67521cfec8b8d0029e439ea21aec7f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/candidate-server.log",
+        "expected": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "actual": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/commands.json",
+        "expected": "0537331563b666e0a3b0fb758f3311c77a5a983fbab1a1baeee563dc2db26991",
+        "actual": "0537331563b666e0a3b0fb758f3311c77a5a983fbab1a1baeee563dc2db26991",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/independent-C5-FAIL/version.json",
+        "expected": "4b4165bb78507562ed1f5d4a31b327e738b550450702e444f1138a9fabf4dd08",
+        "actual": "4b4165bb78507562ed1f5d4a31b327e738b550450702e444f1138a9fabf4dd08",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/SHA256SUMS.json",
+        "expected": "b2739eefc94aa4efea0978de9aac4ce4c67514d3e5fbd7281a89d889ff876d21",
+        "actual": "b2739eefc94aa4efea0978de9aac4ce4c67514d3e5fbd7281a89d889ff876d21",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-browser.json",
+        "expected": "0168e80c98601d8d90e50ebf847111e869bea48dc9d4ec8d73c9d84d21b2e479",
+        "actual": "0168e80c98601d8d90e50ebf847111e869bea48dc9d4ec8d73c9d84d21b2e479",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-camera-regression.json",
+        "expected": "4942a261448aed27911e765f8aa858f9f7d9cb0427142df2b8d21818353ac721",
+        "actual": "4942a261448aed27911e765f8aa858f9f7d9cb0427142df2b8d21818353ac721",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-missing-resource.json",
+        "expected": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "actual": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-server.json",
+        "expected": "16d0ff3f0594619de216c9620ddfebad8421bd5b0853d0ea7c2dea505f3fada8",
+        "actual": "16d0ff3f0594619de216c9620ddfebad8421bd5b0853d0ea7c2dea505f3fada8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/candidate-server.log",
+        "expected": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "actual": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/commands.json",
+        "expected": "c88f84e91ff78d11caba1e88705bdbdc0123d6c15f02771f1a383013842967d2",
+        "actual": "c88f84e91ff78d11caba1e88705bdbdc0123d6c15f02771f1a383013842967d2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/configuration-regression.json",
+        "expected": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "actual": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/original-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/original-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/original.tar",
+        "expected": "8a516f635b1d200746d37701c314de18b1af08582907cf5de57bfc739d507a82",
+        "actual": "8a516f635b1d200746d37701c314de18b1af08582907cf5de57bfc739d507a82",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/results.json",
+        "expected": "ebbc224da3c7fb82f8b63b8a98e5c97bcdc34215c1fa6e6b1b4ee73e708b6b2f",
+        "actual": "ebbc224da3c7fb82f8b63b8a98e5c97bcdc34215c1fa6e6b1b4ee73e708b6b2f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/main/version.json",
+        "expected": "239f2f583c6f88b53f8cb82745a12839a128763c46f164be9a9e2ab4458334fc",
+        "actual": "239f2f583c6f88b53f8cb82745a12839a128763c46f164be9a9e2ab4458334fc",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/SHA256SUMS.json",
+        "expected": "2d659a13edd8ed4dcde57e594da67c6418323b1823812ae0fdc6b7d1c9215d16",
+        "actual": "2d659a13edd8ed4dcde57e594da67c6418323b1823812ae0fdc6b7d1c9215d16",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/SHA256SUMS.json",
+        "expected": "6569505f09915a38e3e154b4aa7448e58808f1d21b3d96943285bba6e42e23fc",
+        "actual": "6569505f09915a38e3e154b4aa7448e58808f1d21b3d96943285bba6e42e23fc",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/candidate-browser.json",
+        "expected": "2f8387f280c84b07a189cbf507f145d3b97c937c1ac09bb889e297b11aac66ce",
+        "actual": "2f8387f280c84b07a189cbf507f145d3b97c937c1ac09bb889e297b11aac66ce",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/candidate-missing-resource.json",
+        "expected": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "actual": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/candidate-server.json",
+        "expected": "0197f73a35df99117060dfd5e477032e5e114fe00f8a8193b8bd89e36184ba1c",
+        "actual": "0197f73a35df99117060dfd5e477032e5e114fe00f8a8193b8bd89e36184ba1c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/candidate-server.log",
+        "expected": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "actual": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/commands.json",
+        "expected": "a9a2b54357056b19e6d9c3f3cc3605127cc03b92227b36b4c45f0bcb35d67f24",
+        "actual": "a9a2b54357056b19e6d9c3f3cc3605127cc03b92227b36b4c45f0bcb35d67f24",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/results.json",
+        "expected": "b3b4fd71de7c46b320b0d16b6ab3bad3c328589820de722734d9cadb01b15e9d",
+        "actual": "b3b4fd71de7c46b320b0d16b6ab3bad3c328589820de722734d9cadb01b15e9d",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/clean/version.json",
+        "expected": "4b4165bb78507562ed1f5d4a31b327e738b550450702e444f1138a9fabf4dd08",
+        "actual": "4b4165bb78507562ed1f5d4a31b327e738b550450702e444f1138a9fabf4dd08",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/browser-install.log",
+        "expected": "dbcbf748a80638eb1969feb80032c078148cc18ede2c9cc44c8d88281c4e2d9f",
+        "actual": "dbcbf748a80638eb1969feb80032c078148cc18ede2c9cc44c8d88281c4e2d9f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/c3-c4-history.md",
+        "expected": "ff0f206cc52e0bee29d96b383ce964632896e61fc14d1bb32c87f2487b282c5c",
+        "actual": "ff0f206cc52e0bee29d96b383ce964632896e61fc14d1bb32c87f2487b282c5c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/c4-c5-history.md",
+        "expected": "6a990da8d7f123f0ac4bf9510ff562e53b3bcbabbf119112b4157fd989bcf4c0",
+        "actual": "6a990da8d7f123f0ac4bf9510ff562e53b3bcbabbf119112b4157fd989bcf4c0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/ci-C5-check-runs.json",
+        "expected": "e83cfac35507982a40cfeb776ce85aa0367e7646f81fe857df4a6c841ea8a170",
+        "actual": "e83cfac35507982a40cfeb776ce85aa0367e7646f81fe857df4a6c841ea8a170",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/ci-C5-status.json",
+        "expected": "fe867657e348c3f1ae04c97d343c9f238f9a805b54ee247e9596cf31ad5c4d1c",
+        "actual": "fe867657e348c3f1ae04c97d343c9f238f9a805b54ee247e9596cf31ad5c4d1c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/dirty-candidate-C5.log",
+        "expected": "fca51fb87a168128d4ef3e56b31d0f7be9c1b832af730f493cb3678a0faa7fc0",
+        "actual": "fca51fb87a168128d4ef3e56b31d0f7be9c1b832af730f493cb3678a0faa7fc0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/equal-criteria-C5.log",
+        "expected": "bd13f042d111f7f778a735c8d8fbd7b2107d5b53484ce61b50a780fadc3a3ce9",
+        "actual": "bd13f042d111f7f778a735c8d8fbd7b2107d5b53484ce61b50a780fadc3a3ce9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/failure-history.md",
+        "expected": "8a94faf7ec41c48ba8c74b0b06e3adb20268ea7c2172e02290964ea8a3a75ed9",
+        "actual": "8a94faf7ec41c48ba8c74b0b06e3adb20268ea7c2172e02290964ea8a3a75ed9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/main-branch-C5.json",
+        "expected": "007f9f73eedd282d92a279ea6b30e31e0972ef58f106691e76b2baefd9b27a52",
+        "actual": "007f9f73eedd282d92a279ea6b30e31e0972ef58f106691e76b2baefd9b27a52",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/missing-resource-browser-C5.json",
+        "expected": "cac4f152bffaf58e7bd66e32f2b779f35218d3176db6a3453a00abcfef98f656",
+        "actual": "cac4f152bffaf58e7bd66e32f2b779f35218d3176db6a3453a00abcfef98f656",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/missing-resource-browser-C5.log",
+        "expected": "ea0c61612f562f9efc6ae87e68adac2bae881125d9906ed35823eafe810b8fb0",
+        "actual": "ea0c61612f562f9efc6ae87e68adac2bae881125d9906ed35823eafe810b8fb0",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/remote-C5.json",
+        "expected": "647f15dafdecb08bb8bd734cc8ddc856a4e3987a1a4ebf47bba7f32b7510f3f6",
+        "actual": "647f15dafdecb08bb8bd734cc8ddc856a4e3987a1a4ebf47bba7f32b7510f3f6",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/rulesets-C5.json",
+        "expected": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "actual": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/worker-review.md",
+        "expected": "4e334a1661018e9b0f6a521006d5f6072675b03d8c2732614bd28ff686146f01",
+        "actual": "4e334a1661018e9b0f6a521006d5f6072675b03d8c2732614bd28ff686146f01",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/discovery/wrong-candidate-C5.log",
+        "expected": "b0dbe6210fb08a2b35e9cfacc874074def7529a5f14509bb1902cc724c59dd58",
+        "actual": "b0dbe6210fb08a2b35e9cfacc874074def7529a5f14509bb1902cc724c59dd58",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/facts.json",
+        "expected": "622053c9b3107162a00420333f30d08ca81f923d40205f589ffc0e790c335ab3",
+        "actual": "622053c9b3107162a00420333f30d08ca81f923d40205f589ffc0e790c335ab3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/SHA256SUMS.json",
+        "expected": "e1649826e9abf766b0f107c7bfd68b6abc0a8520660772599230a939f9e66a03",
+        "actual": "e1649826e9abf766b0f107c7bfd68b6abc0a8520660772599230a939f9e66a03",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/candidate-browser.json",
+        "expected": "5d126537b53f5173a00cf1dc50536eba57e395cf670040a981ea69a785dd67de",
+        "actual": "5d126537b53f5173a00cf1dc50536eba57e395cf670040a981ea69a785dd67de",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/candidate-missing-resource.json",
+        "expected": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "actual": "b84bc2d9e0588d71fe633de77149e91c5da124dcb99a51db37122d96e358e03e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/candidate-server.json",
+        "expected": "7b7357d2a2683ba850ae6384ffdbff3084786f2f2ebb54902e9adfda70d65415",
+        "actual": "7b7357d2a2683ba850ae6384ffdbff3084786f2f2ebb54902e9adfda70d65415",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/candidate-server.log",
+        "expected": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "actual": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/commands.json",
+        "expected": "3cbacc4ec13ef020e48308c50783414dde98962dad54319c18264bcab8fb8364",
+        "actual": "3cbacc4ec13ef020e48308c50783414dde98962dad54319c18264bcab8fb8364",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/configuration-regression.json",
+        "expected": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "actual": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/original-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/original-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/original.tar",
+        "expected": "49e5185df1b34c2e0518adbee4fa2625a09cdecd0b56c6238747bf5ad895d72c",
+        "actual": "49e5185df1b34c2e0518adbee4fa2625a09cdecd0b56c6238747bf5ad895d72c",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/results.json",
+        "expected": "5847094708a9ec3025e9de83e3f43b240ff56104a8a1e3298e29c5c394ba745b",
+        "actual": "5847094708a9ec3025e9de83e3f43b240ff56104a8a1e3298e29c5c394ba745b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/main/version.json",
+        "expected": "9077c3b3de439aff4ebc5575965b0b0393f05c8965e1663e68187021da35e670",
+        "actual": "9077c3b3de439aff4ebc5575965b0b0393f05c8965e1663e68187021da35e670",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/candidate-browser.json",
+        "expected": "e81dc9c866cd244af939942847bce7742a6f6e60a598abce4ced79a3f0c31168",
+        "actual": "e81dc9c866cd244af939942847bce7742a6f6e60a598abce4ced79a3f0c31168",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/candidate-server.json",
+        "expected": "99d5c5871589e65b0129d938292fc12beb6e5fe508c80dca31fc1777a4b06a9b",
+        "actual": "99d5c5871589e65b0129d938292fc12beb6e5fe508c80dca31fc1777a4b06a9b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/candidate-server.log",
+        "expected": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "actual": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/commands.json",
+        "expected": "d485ee73a1127d8734d678c08ae4ca2e10ebe705c1d623f5388806200ffda630",
+        "actual": "d485ee73a1127d8734d678c08ae4ca2e10ebe705c1d623f5388806200ffda630",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/configuration-regression.json",
+        "expected": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "actual": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/original-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/original-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/source.json",
+        "expected": "fa6fa551a327176455351828196cd64ed1b3870f5b0c5ed2093f5a68f5184044",
+        "actual": "fa6fa551a327176455351828196cd64ed1b3870f5b0c5ed2093f5a68f5184044",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/upstream.patch",
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-05bf9bc4e9d0/version.json",
+        "expected": "4b49679624232ae1c075a997f910c04152ab19cb1f980f786cf731fae72728d9",
+        "actual": "4b49679624232ae1c075a997f910c04152ab19cb1f980f786cf731fae72728d9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/candidate-browser.json",
+        "expected": "51420dbf02ca58e7e92b7595ae78b1138465978c493e7292c11723daadb38067",
+        "actual": "51420dbf02ca58e7e92b7595ae78b1138465978c493e7292c11723daadb38067",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/candidate-server.json",
+        "expected": "a93952fe481619fb394a08aceeadd964206175e7b6c9405e229874b6a21a4eaf",
+        "actual": "a93952fe481619fb394a08aceeadd964206175e7b6c9405e229874b6a21a4eaf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/candidate-server.log",
+        "expected": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "actual": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/commands.json",
+        "expected": "19d34b2c544381f1b5a12beda474c577c14cdb25986e6e448ac5ae63a01cb686",
+        "actual": "19d34b2c544381f1b5a12beda474c577c14cdb25986e6e448ac5ae63a01cb686",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/configuration-regression.json",
+        "expected": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "actual": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/original-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/original-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/source.json",
+        "expected": "fa6fa551a327176455351828196cd64ed1b3870f5b0c5ed2093f5a68f5184044",
+        "actual": "fa6fa551a327176455351828196cd64ed1b3870f5b0c5ed2093f5a68f5184044",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/upstream.patch",
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-0cbe3372d083/version.json",
+        "expected": "392c4aeb760b81a18e910be5bc2ac75cfac422c0ef43061fb9d09798d4898d13",
+        "actual": "392c4aeb760b81a18e910be5bc2ac75cfac422c0ef43061fb9d09798d4898d13",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/candidate-browser.json",
+        "expected": "6649c65cec43eac9d613d58866aed00e8bab93194036fe94572e2f84e00221b1",
+        "actual": "6649c65cec43eac9d613d58866aed00e8bab93194036fe94572e2f84e00221b1",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/candidate-server.json",
+        "expected": "4ce52b2ef5ae463af74deef57009a0a1a3689b69fb6471219dce4eb4fa0395ee",
+        "actual": "4ce52b2ef5ae463af74deef57009a0a1a3689b69fb6471219dce4eb4fa0395ee",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/candidate-server.log",
+        "expected": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "actual": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/commands.json",
+        "expected": "2bfde3fea98b47a90270e55fea0b45359eb37c88884b4dbfe6fe02475290bab3",
+        "actual": "2bfde3fea98b47a90270e55fea0b45359eb37c88884b4dbfe6fe02475290bab3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/configuration-regression.json",
+        "expected": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "actual": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/original-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/original-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-86c1c3b5bca4/version.json",
+        "expected": "c49d7a42ec741f0d9b28f1cb1d0ad53bbd1d984c2b75c706e5e43c327bc6c5a9",
+        "actual": "c49d7a42ec741f0d9b28f1cb1d0ad53bbd1d984c2b75c706e5e43c327bc6c5a9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/INTERRUPTED.json",
+        "expected": "92b043543dca1ecd458dfae978d675d850fe3acf4ba9007f874b28584f42eb99",
+        "actual": "92b043543dca1ecd458dfae978d675d850fe3acf4ba9007f874b28584f42eb99",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/candidate-browser.json",
+        "expected": "b360f5ea20d3e49a851e1f90702148da7b515e80016e83910ba75f9cf6d4b5f3",
+        "actual": "b360f5ea20d3e49a851e1f90702148da7b515e80016e83910ba75f9cf6d4b5f3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/candidate-server.json",
+        "expected": "4f1acbd974bab859f456b994d162308916a2741c5d105e836875259958cd81f2",
+        "actual": "4f1acbd974bab859f456b994d162308916a2741c5d105e836875259958cd81f2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/candidate-server.log",
+        "expected": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "actual": "238933f03364ac3fc3ccb92a2f5cc0218aa3b49a3de48a61423e585933d2f9c2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/commands.json",
+        "expected": "1edd1c25089e2d7b1693720cbeae5c37b9d1053adbaf8af793889b3c8deb0f61",
+        "actual": "1edd1c25089e2d7b1693720cbeae5c37b9d1053adbaf8af793889b3c8deb0f61",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/source.json",
+        "expected": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "actual": "aaa8f0d5b3a79f1068ad0996cc47810e5f333967f1d35c22a77338eb89067986",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/upstream.patch",
+        "expected": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "actual": "33181e86c2e4f9d87eac230788cadaf4f3dcfdce67b63497fcd19d814e101558",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-clean-C4-interrupted/version.json",
+        "expected": "8aaf0726ea7396e5b2b859a4d723a13f2cc59b2a48e7d030166ef75c0a110609",
+        "actual": "8aaf0726ea7396e5b2b859a4d723a13f2cc59b2a48e7d030166ef75c0a110609",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/candidate-browser.json",
+        "expected": "a69197512cdc1faaa62955f53b31ffc2dc63d7b07e15db8ac7a7188b71df0f65",
+        "actual": "a69197512cdc1faaa62955f53b31ffc2dc63d7b07e15db8ac7a7188b71df0f65",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/candidate-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/candidate-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/candidate-server.json",
+        "expected": "baf91cde4f046f210e0229b51edf6bc86a683e8a1a06d5e0975262215ee242a6",
+        "actual": "baf91cde4f046f210e0229b51edf6bc86a683e8a1a06d5e0975262215ee242a6",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/candidate-server.log",
+        "expected": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "actual": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/commands.json",
+        "expected": "df3131a241dd870b4bbf46e15154e0567ab81ecb71aabfc7809b64be7172e2ea",
+        "actual": "df3131a241dd870b4bbf46e15154e0567ab81ecb71aabfc7809b64be7172e2ea",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/configuration-regression.json",
+        "expected": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "actual": "aa114438f0fe6ed78febb7779fb0a120016b3972c2779c9a15d3ebc5b9dd8292",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/github.json",
+        "expected": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "actual": "2f3bbfd0983c22cc5ce1a71778fa5c2e6b136d65f4a9eae335cbd65dc7ae2c0b",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/original-dependencies.json",
+        "expected": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "actual": "154a7e4ee6c534353ad8d6877433d7e9b0fd8fb0e25a8825488aab6318f7c430",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/original-licenses.json",
+        "expected": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "actual": "608957a098ce9fdf98c4378257c8aea8de1059bf759303d689cd3a865a9ab0d4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/regression.json",
+        "expected": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "actual": "d7e804ae5ef67e9383ba7a2b67247e13318f7fca03a222ba26c45397bd43daf2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/source.json",
+        "expected": "fa6fa551a327176455351828196cd64ed1b3870f5b0c5ed2093f5a68f5184044",
+        "actual": "fa6fa551a327176455351828196cd64ed1b3870f5b0c5ed2093f5a68f5184044",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/upstream.patch",
+        "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/worker-handoff/previous-worker-C5/previous-d42a280c2be5/version.json",
+        "expected": "95b701ea5ebc853c8fca4700bead269022b7229f9f1d5e81a129431e85a6fa37",
+        "actual": "95b701ea5ebc853c8fca4700bead269022b7229f9f1d5e81a129431e85a6fa37",
+        "match": true
+      }
+    ]
+  },
+  {
+    "manifest": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/SHA256SUMS.json",
+    "sha256": "fed3f234403a599e97ad28052d52b1275f186b22ebd9608e25d1d46fbeed77b5",
+    "count": 39,
+    "all_match": true,
+    "files": [
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md",
+        "expected": "b510d8717e5b0aa1340a88ef61a7fcc1ea295bfd5dc8f3cefb48c13de2564390",
+        "actual": "b510d8717e5b0aa1340a88ef61a7fcc1ea295bfd5dc8f3cefb48c13de2564390",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/ci-check-runs.json",
+        "expected": "e83cfac35507982a40cfeb776ce85aa0367e7646f81fe857df4a6c841ea8a170",
+        "actual": "e83cfac35507982a40cfeb776ce85aa0367e7646f81fe857df4a6c841ea8a170",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/ci-status.json",
+        "expected": "99fc338eb47c41f246aa924ddcb62b0c004149fa9ec4ef22e287ce9684988d9e",
+        "actual": "99fc338eb47c41f246aa924ddcb62b0c004149fa9ec4ef22e287ce9684988d9e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/commands.json",
+        "expected": "c41a39d9927df25454c12fd96075144936a1ce3556b1d5e82d42a3f15f4333bf",
+        "actual": "c41a39d9927df25454c12fd96075144936a1ce3556b1d5e82d42a3f15f4333bf",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/configuration.json",
+        "expected": "ea2dfdd5596b0077b6ac9cd01d222a2e6349389117dde399ff942da4997b47e4",
+        "actual": "ea2dfdd5596b0077b6ac9cd01d222a2e6349389117dde399ff942da4997b47e4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/docker.json",
+        "expected": "617169f0404d36623a12f315e7ce08614e78dbe67eac52b3e922152e33b41ae3",
+        "actual": "617169f0404d36623a12f315e7ce08614e78dbe67eac52b3e922152e33b41ae3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/evidence-hashes.json",
+        "expected": "8716d8a492710b859a81b3b00495602fe2c224b9b2aef47467c466fa90e65432",
+        "actual": "8716d8a492710b859a81b3b00495602fe2c224b9b2aef47467c466fa90e65432",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/failure-probes/commands.json",
+        "expected": "019226815212619258274ab965c6263fc0d60c5591ff6ff4a9f81faa635ce639",
+        "actual": "019226815212619258274ab965c6263fc0d60c5591ff6ff4a9f81faa635ce639",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/failure-probes/invalid-criteria.json",
+        "expected": "ee3a03fa374a23251a3879fa37d8c44118c406188df4f1203aa06e9a31e9dc47",
+        "actual": "ee3a03fa374a23251a3879fa37d8c44118c406188df4f1203aa06e9a31e9dc47",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/failure-probes/results.json",
+        "expected": "e3b8df3439436226f82a206fa26aa36ca271384257a9237409c6a0f8f937d1fd",
+        "actual": "e3b8df3439436226f82a206fa26aa36ca271384257a9237409c6a0f8f937d1fd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/git.json",
+        "expected": "6d2f5d02ad84c75380e83af191dcf681dfe412eeb275613b61182534e3eee3fd",
+        "actual": "6d2f5d02ad84c75380e83af191dcf681dfe412eeb275613b61182534e3eee3fd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/github.json",
+        "expected": "41fc922a8606c2bdea32bdc5ecae1e1c3e173e3b8dd8d03879fc7621cbe51126",
+        "actual": "41fc922a8606c2bdea32bdc5ecae1e1c3e173e3b8dd8d03879fc7621cbe51126",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/REVIEW.md",
+        "expected": "17957b536a354e7eacbe823183565518a5733f2e0101db507b06b0fd0ed4188e",
+        "actual": "17957b536a354e7eacbe823183565518a5733f2e0101db507b06b0fd0ed4188e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/commands.json",
+        "expected": "8bd15bad3fead75260ee9884e8e3a8dcd6a3256ecc56c1b5c36ba439a22959ca",
+        "actual": "8bd15bad3fead75260ee9884e8e3a8dcd6a3256ecc56c1b5c36ba439a22959ca",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/configuration.json",
+        "expected": "ea2dfdd5596b0077b6ac9cd01d222a2e6349389117dde399ff942da4997b47e4",
+        "actual": "ea2dfdd5596b0077b6ac9cd01d222a2e6349389117dde399ff942da4997b47e4",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/docker.json",
+        "expected": "617169f0404d36623a12f315e7ce08614e78dbe67eac52b3e922152e33b41ae3",
+        "actual": "617169f0404d36623a12f315e7ce08614e78dbe67eac52b3e922152e33b41ae3",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/evidence-hashes.json",
+        "expected": "29f1588eb90f480afce6e208d7f78114c3bba3eb9e2e7083cd0fd7f262e857b8",
+        "actual": "29f1588eb90f480afce6e208d7f78114c3bba3eb9e2e7083cd0fd7f262e857b8",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/git.json",
+        "expected": "6d2f5d02ad84c75380e83af191dcf681dfe412eeb275613b61182534e3eee3fd",
+        "actual": "6d2f5d02ad84c75380e83af191dcf681dfe412eeb275613b61182534e3eee3fd",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/github.json",
+        "expected": "41fc922a8606c2bdea32bdc5ecae1e1c3e173e3b8dd8d03879fc7621cbe51126",
+        "actual": "41fc922a8606c2bdea32bdc5ecae1e1c3e173e3b8dd8d03879fc7621cbe51126",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/preservation.json",
+        "expected": "69b0d7ad8523dbc5b86d0f2490a970ba9e9eb396cc633a191662cf2d6a464689",
+        "actual": "69b0d7ad8523dbc5b86d0f2490a970ba9e9eb396cc633a191662cf2d6a464689",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/profile.json",
+        "expected": "08e44f56e691f6cc44a854b34fe4804fa347ee8605fdb6ded522377b33dcc69e",
+        "actual": "08e44f56e691f6cc44a854b34fe4804fa347ee8605fdb6ded522377b33dcc69e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/prompts.json",
+        "expected": "e4db8013e840f68b635a2fe5d074e97efccebf05d0387d55317fedbbb958efc9",
+        "actual": "e4db8013e840f68b635a2fe5d074e97efccebf05d0387d55317fedbbb958efc9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/regression.json",
+        "expected": "b1ea7ff72717fa13c4aca741d3007af85f1a664e57dd1997ca6c80c4dcae9b08",
+        "actual": "b1ea7ff72717fa13c4aca741d3007af85f1a664e57dd1997ca6c80c4dcae9b08",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/remote.json",
+        "expected": "e0df34183e094972e483a4e88ed7936183bc4ac0058471a353dc1cc6f81cca47",
+        "actual": "e0df34183e094972e483a4e88ed7936183bc4ac0058471a353dc1cc6f81cca47",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/runtime.json",
+        "expected": "783b7f3e43f2f7d290fbaec71983216507d4c40e8b88b5f4b649f24239850cad",
+        "actual": "783b7f3e43f2f7d290fbaec71983216507d4c40e8b88b5f4b649f24239850cad",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/independent/version-check.json",
+        "expected": "22466b6f0129cd7ebe6d7f4984f577fb5317b03638c8fa6ce7c5ce767e343d3a",
+        "actual": "22466b6f0129cd7ebe6d7f4984f577fb5317b03638c8fa6ce7c5ce767e343d3a",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/main-protection.json",
+        "expected": "25b1502c63343bad7aebbb90273aa564ded5fc00a0240e6158ede5722b9c381e",
+        "actual": "25b1502c63343bad7aebbb90273aa564ded5fc00a0240e6158ede5722b9c381e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/pre-review-report.md",
+        "expected": "31e72ec70ae51006c49f7ea8f4d6ba7491503e0fd16548443fe5294579567744",
+        "actual": "31e72ec70ae51006c49f7ea8f4d6ba7491503e0fd16548443fe5294579567744",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/preservation.json",
+        "expected": "69b0d7ad8523dbc5b86d0f2490a970ba9e9eb396cc633a191662cf2d6a464689",
+        "actual": "69b0d7ad8523dbc5b86d0f2490a970ba9e9eb396cc633a191662cf2d6a464689",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/previous-failure/commands.json",
+        "expected": "1b60761f0ae6edc970670b1c2f3adc789251297be0c55c30ab9be36a0a3de83f",
+        "actual": "1b60761f0ae6edc970670b1c2f3adc789251297be0c55c30ab9be36a0a3de83f",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/previous-failure/executor-output.txt",
+        "expected": "60766d4c5d7cedc13b0882190872b92f64d4ad6dc29642aaf566f12968348a3e",
+        "actual": "60766d4c5d7cedc13b0882190872b92f64d4ad6dc29642aaf566f12968348a3e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/profile.json",
+        "expected": "08e44f56e691f6cc44a854b34fe4804fa347ee8605fdb6ded522377b33dcc69e",
+        "actual": "08e44f56e691f6cc44a854b34fe4804fa347ee8605fdb6ded522377b33dcc69e",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/prompts.json",
+        "expected": "e4db8013e840f68b635a2fe5d074e97efccebf05d0387d55317fedbbb958efc9",
+        "actual": "e4db8013e840f68b635a2fe5d074e97efccebf05d0387d55317fedbbb958efc9",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/push-C.json",
+        "expected": "2870a2e417b21179ddb41586475592b98a2351d1e2748332501f0b77e39bc630",
+        "actual": "2870a2e417b21179ddb41586475592b98a2351d1e2748332501f0b77e39bc630",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/push-C3.json",
+        "expected": "bdf5cd6d3df796fa2bd67ad99f72d01c9d572863e3f8e20b435077d1f1217fb2",
+        "actual": "bdf5cd6d3df796fa2bd67ad99f72d01c9d572863e3f8e20b435077d1f1217fb2",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/regression.json",
+        "expected": "b1ea7ff72717fa13c4aca741d3007af85f1a664e57dd1997ca6c80c4dcae9b08",
+        "actual": "b1ea7ff72717fa13c4aca741d3007af85f1a664e57dd1997ca6c80c4dcae9b08",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/remote.json",
+        "expected": "e0df34183e094972e483a4e88ed7936183bc4ac0058471a353dc1cc6f81cca47",
+        "actual": "e0df34183e094972e483a4e88ed7936183bc4ac0058471a353dc1cc6f81cca47",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/runtime.json",
+        "expected": "783b7f3e43f2f7d290fbaec71983216507d4c40e8b88b5f4b649f24239850cad",
+        "actual": "783b7f3e43f2f7d290fbaec71983216507d4c40e8b88b5f4b649f24239850cad",
+        "match": true
+      },
+      {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/version-check.json",
+        "expected": "22466b6f0129cd7ebe6d7f4984f577fb5317b03638c8fa6ce7c5ce767e343d3a",
+        "actual": "22466b6f0129cd7ebe6d7f4984f577fb5317b03638c8fa6ce7c5ce767e343d3a",
+        "match": true
+      }
+    ]
+  }
+]

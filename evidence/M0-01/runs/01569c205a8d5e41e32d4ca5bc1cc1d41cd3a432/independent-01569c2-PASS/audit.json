@@ -1,0 +1,865 @@
+{
+  "at": "2026-11-03T17:33:49.467304+00:00",
+  "candidate": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432",
+  "checks": [
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "HEAD",
+      "state": "PASS",
+      "facts": {
+        "expected": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "worktree",
+      "state": "PASS",
+      "facts": {}
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "merge-base",
+          "b8ad3150cf4480f8e205926541aeeccb072f7f80",
+          "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "b8ad3150cf4480f8e205926541aeeccb072f7f80\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "merge-base",
+      "state": "PASS",
+      "facts": {
+        "expected": "b8ad3150cf4480f8e205926541aeeccb072f7f80"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "merge-base",
+          "--is-ancestor",
+          "18a9210947e0114a8bbc6a10c8864701dfb8539e",
+          "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "merge-base",
+          "--is-ancestor",
+          "efb0a5c6cf5e44eb9297d39ea88201a4610bf15e",
+          "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "candidate-checkout",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "candidate-clean",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "remote",
+          "get-url",
+          "origin"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "origin",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2",
+        "exit_code": 0,
+        "stdout": "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "candidate-checkout",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "candidate-clean",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "remote",
+          "get-url",
+          "origin"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2",
+        "exit_code": 0,
+        "stdout": "https://github.com/shuyu-lin-dev/gas-turbine-lifecycle-lab.git\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "origin",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2"
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "--abbrev-ref",
+          "HEAD"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2",
+        "exit_code": 0,
+        "stdout": "HEAD\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "clone-detached",
+      "state": "PASS",
+      "facts": {}
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "--path-format=absolute",
+          "--git-common-dir"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2",
+        "exit_code": 0,
+        "stdout": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2/.git\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "clone-independent-git",
+      "state": "PASS",
+      "facts": {}
+    },
+    {
+      "name": "independent-dependencies",
+      "state": "PASS",
+      "facts": {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2/frontend/node_modules"
+      }
+    },
+    {
+      "name": "independent-dependencies",
+      "state": "PASS",
+      "facts": {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2/backend/.venv"
+      }
+    },
+    {
+      "name": "independent-dependencies",
+      "state": "PASS",
+      "facts": {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2/vendor/turbine-explorer/node_modules"
+      }
+    },
+    {
+      "name": "preserved-assets",
+      "state": "PASS",
+      "facts": {
+        "count": 16,
+        "copies": 2
+      }
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432:vendor/turbine-explorer"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "fc5ac885bdb2bc8272ab77d74473a46e4b5da45c\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "vendor-tree",
+      "state": "PASS",
+      "facts": {}
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "459a359afd4e2e2bdaca05acccc4b65f79b741d8:vendor/turbine-explorer"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "03487ef57f6bc957dfc83b890de1f1e700ed2841\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "subtree-import",
+      "state": "PASS",
+      "facts": {}
+    },
+    {
+      "name": "command",
+      "state": "PASS",
+      "facts": {
+        "argv": [
+          "git",
+          "show",
+          "-s",
+          "--format=%B",
+          "459a359afd4e2e2bdaca05acccc4b65f79b741d8"
+        ],
+        "cwd": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff",
+        "exit_code": 0,
+        "stdout": "FE-BASE: import pinned turbine-explorer subtree [914d2ac32b5d2f130d718138164c8bab]\n\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "manifest",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/worker-handoff",
+        "files": 695,
+        "manifest_sha256": "ed63c94d3d029de44b8ab14459fe1ad2253d9c8d844de155b1d228c1c77207fd",
+        "missing": [],
+        "unlisted": []
+      }
+    },
+    {
+      "name": "configuration-fixture",
+      "state": "PASS",
+      "facts": {
+        "cases": [
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://127.0.0.1:5173\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://localhost:4175\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"https://example.com\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"https://sub.example.com:443\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://[::1]:5173\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com:1\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com:65535\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://127.0.0.1:5173\",\"https://example.com\"]",
+            0
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"*\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://*\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"https://*.example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.*\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://%2A\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"https://%2A.example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://@example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://:@example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://user@example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://:password@example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://user:@example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://user:password@example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com/path\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com/\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com?value=1\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com?\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com#fragment\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com#\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"file:///invalid\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"ftp://example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://exam ple.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com\\n\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"\\u0000http://example.com\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com\\u007f\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com\\\\\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com:0\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com:65536\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com:invalid\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com:\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://[::1]:\"]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "null",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "{}",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "123",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[1]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[null]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[true]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "[\"http://example.com\",false]",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "\"http://127.0.0.1:5173\"",
+            1
+          ],
+          [
+            "API_CORS_ORIGINS",
+            "invalid-json",
+            1
+          ],
+          [
+            "API_INSTANCE_ID",
+            "",
+            1
+          ],
+          [
+            "API_INSTANCE_ID",
+            "bad instance",
+            1
+          ],
+          [
+            "API_INSTANCE_ID",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            1
+          ],
+          [
+            "API_INSTANCE_ID",
+            "中文",
+            1
+          ],
+          [
+            "API_INSTANCE_ID",
+            "a",
+            0
+          ],
+          [
+            "API_INSTANCE_ID",
+            "api-a_1",
+            0
+          ],
+          [
+            "API_INSTANCE_ID",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "run-artifacts",
+      "state": "PASS",
+      "facts": {
+        "label": "worker-main",
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/worker-handoff/main",
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 122,
+        "exits": {
+          "0": 76,
+          "1": 46
+        },
+        "pytest": [
+          "......................................................................   [100%]\n70 passed in 19.70s\n"
+        ],
+        "commands_sha256": "411894c0ba0d896b009a4a976ebf8cb7471ed220ce2ffc30207cb6d02bb099c2",
+        "lifecycle_sha256": "d23730d78a7a50301141833afccbeff8a23a3cee59c4fe3873c4de094cdebdec"
+      }
+    },
+    {
+      "name": "run-artifacts",
+      "state": "PASS",
+      "facts": {
+        "label": "worker-clean",
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/worker-handoff/clean",
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 124,
+        "exits": {
+          "0": 78,
+          "1": 46
+        },
+        "pytest": [
+          "......................................................................   [100%]\n70 passed in 20.23s\n"
+        ],
+        "commands_sha256": "ef4c9cbf0a8eb28d428b72a7361d1e4acdfbe79c7e94601639ff5d7e6c536a70",
+        "lifecycle_sha256": "cdbe5db1f07ecfdc43c563461dd1236f05b58d3c5d1329005324b20afb5f5272"
+      }
+    },
+    {
+      "name": "run-artifacts",
+      "state": "PASS",
+      "facts": {
+        "label": "independent-clean",
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2/.scratch-runtime/coordinator-m001-origin-review/frozen-clean",
+        "required": {
+          "M0-01-A01": "PASS",
+          "M0-01-A02": "PASS",
+          "M0-01-A03": "PASS",
+          "M0-01-A04": "PASS",
+          "M0-01-A05": "PASS"
+        },
+        "commands": 124,
+        "exits": {
+          "0": 78,
+          "1": 46
+        },
+        "pytest": [
+          "......................................................................   [100%]\n70 passed in 36.35s\n"
+        ],
+        "commands_sha256": "a97a9081985a4558a2d80c56ca78afe3517294d61ed8e0bb40d9b345582d0984",
+        "lifecycle_sha256": "10f8cd0699575050e7f6c2441c9cc095db4d7c10150afba85254e229909023d9"
+      }
+    },
+    {
+      "name": "manifest",
+      "state": "PASS",
+      "facts": {
+        "directory": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/coordinator-m001-origin-review/clean-01569c2/.scratch-runtime/coordinator-m001-origin-review/frozen-clean",
+        "files": 56,
+        "manifest_sha256": "e81ab15c0801acc35e52c5aa2a3fb4afb7e89265b0c87c11c014a484b64300b2",
+        "missing": [],
+        "unlisted": []
+      }
+    },
+    {
+      "name": "dsh-settings",
+      "state": "PASS",
+      "facts": {
+        "blocks": {
+          "policy": {
+            "revision": 1,
+            "value_sha256": "19e96a0fb8076bca87b8e359a7ff116f0a0321e705b91c5828b96ab9f90355c5"
+          },
+          "eval": {
+            "revision": 0,
+            "value_sha256": "079d2f4f77afcdad7338e6cf917e309d0960df07e634d69c2e2825e791e32ceb"
+          },
+          "executor": {
+            "revision": 2,
+            "value_sha256": "82949afd9f4736495929db1dd07ecaad8168bc6d040337b64e0ae958ce468891"
+          }
+        },
+        "sources": {
+          "feishu": {
+            "revision": 1,
+            "value_sha256": "104469f55d3a214fdf10f0378f735595d237a53318a085121848880381869bbe"
+          },
+          "github": {
+            "revision": 2,
+            "value_sha256": "bf755da54adb8eb4e9dc22a9807329fd817bb7f905a25bdb867b893cc008334d"
+          }
+        }
+      }
+    },
+    {
+      "name": "dsh-prompts",
+      "state": "PASS",
+      "facts": {
+        "revision": 4
+      }
+    },
+    {
+      "name": "dsh-profile-files",
+      "state": "PASS",
+      "facts": {
+        "count": 6
+      }
+    },
+    {
+      "name": "dsh-ready",
+      "state": "PASS",
+      "facts": {
+        "runtime": {
+          "state": "ready",
+          "detail": "Orchestrator is ready",
+          "at": "2026-11-03T05:15:19.674Z"
+        },
+        "load": {
+          "running": 0,
+          "queued": 0,
+          "maxWorkers": 1
+        }
+      }
+    },
+    {
+      "name": "dsh-single-worker",
+      "state": "PASS",
+      "facts": {}
+    },
+    {
+      "name": "dsh-target",
+      "state": "PASS",
+      "facts": {
+        "repository": "shuyu-lin-dev/gas-turbine-lifecycle-lab",
+        "agent": "lucy-assistant"
+      }
+    },
+    {
+      "name": "preserved-failure",
+      "state": "PASS",
+      "facts": {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/worker-handoff/frontend-query-red/empty-query.json",
+        "sha256": "78be6d0c83cef3d203730cb5b9fb66080bab0733bed65c345d74a99d9887d6d6"
+      }
+    },
+    {
+      "name": "preserved-failure",
+      "state": "PASS",
+      "facts": {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/worker-handoff/old-c-red.log",
+        "sha256": "f3e9e1fa67c0be288bda8191b2019b91ee0c22b433aa076c8ff3889840365ba7"
+      }
+    },
+    {
+      "name": "preserved-failure",
+      "state": "PASS",
+      "facts": {
+        "path": "/home/lsy/workspace/lab/gas-turbine-lifecycle-lab-worktrees/vue-python-runtime-810d967dfbff/.scratch-runtime/m0-01-origin-structure/worker-handoff/red.log",
+        "sha256": "ebca45a48ab3d8e177d605729a48a3c57cfdfc5672ecabea8825e4bd4bc669b5"
+      }
+    },
+    {
+      "name": "original-independent-report",
+      "state": "PASS",
+      "facts": {}
+    }
+  ],
+  "state": "PASS"
+}
