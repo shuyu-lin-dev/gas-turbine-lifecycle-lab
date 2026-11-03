@@ -15,7 +15,7 @@
 
 | 完成 | 任务 ID | 交付结果 | 依赖 | 初始状态 | 验收条款 | 测试提交 / 证据 / 基线 |
 |---|---|---|---|---|---|---|
-| [ ] | M0-00 | 本机、主仓库、dsh 接入与规格冻结 | 无 | READY | M0-00-A01～M0-00-A07 | [冻结记录](evidence/M0-00/criteria.md)，准备材料已核对；S 由后续提交引用 |
+| [ ] | M0-00 | 本机、主仓库、dsh 接入与规格冻结 | 无 | VERIFYING | M0-00-A01～M0-00-A07 | S=`3980867902a9c102f18894e9acf65b8c72051b19`；[冻结记录](evidence/M0-00/criteria.md)；候选实测与独立审查进行中 |
 | [ ] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | PLANNED | FE-BASE-A01～FE-BASE-A05 | 未执行 |
 | [ ] | M0-01 | Vue 与 Python 前后端独立运行 | FE-BASE | PLANNED | M0-01-A01～M0-01-A05 | 未执行 |
 | [ ] | FE-INTEGRATE | Vue 业务壳与同源 viewer 桥接 | M0-01 | PLANNED | FE-INTEGRATE-A01～FE-INTEGRATE-A06 | 未执行 |
