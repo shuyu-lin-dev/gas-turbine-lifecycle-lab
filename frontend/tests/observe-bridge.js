@@ -1,7 +1,7 @@
 // 只观察真实窗口消息、监听器和GPU调用，保持原参数、返回值及浏览器行为。
 (() => {
   const data = { href: location.href, messageListeners: 0, messages: [], frames: 0, deletedResources: 0, lostContexts: 0,
-    draws: 0, emissiveDraws: {}, sends: [] }
+    draws: 0, emissiveDraws: {}, sends: [], resources: { deleteBuffer: 0, deleteTexture: 0, deleteProgram: 0, deleteFramebuffer: 0, deleteRenderbuffer: 0 } }
   window.__feiObserve = data
   if (window === window.top) window.__feiDocuments = [data]
   else if (document.referrer && new URL(document.referrer).origin === location.origin) window.top.__feiDocuments?.push(data)
@@ -79,7 +79,7 @@
     const original = proto[method]
     proto[method] = function(value) {
       const result = original.call(this, value)
-      if (value) data.deletedResources++
+      if (value) { data.deletedResources++; data.resources[method]++ }
       return result
     }
   }

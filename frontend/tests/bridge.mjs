@@ -176,10 +176,50 @@ try {
   assert.equal(wrongOrigin.origin, other.origin)
   assert.notEqual(wrongOrigin.origin, origin)
   assert.deepEqual(await parentState(), beforeSource)
+  const beforeWrongTarget = await childState(frame), parentBeforeWrongTarget = await parentState()
+  const childMessageCount = await frame.evaluate(() => window.__feiObserve.messages.length)
+  const wrongTargetSelect = { ...base, payload: { component_id: 'compressor', request_id: 'wrong-target-to-child' } }
+  await page.evaluate(({ message, target }) => document.querySelector('iframe[title="燃气轮机教学模型"]').contentWindow.postMessage(message, target),
+    { message: wrongTargetSelect, target: other.origin })
+  await toChild(frame, { schema_version: '1', type: 'viewer-ready', viewer_instance_id: instance, context_revision: null, payload: {} })
+  assert.equal(await frame.evaluate(() => window.__feiObserve.messages.length), childMessageCount + 1)
+  assert.deepEqual(await childState(frame), beforeWrongTarget)
+  const parentMessageCount = await page.evaluate(() => window.__feiObserve.messages.length)
+  await frame.evaluate(({ message, target }) => parent.postMessage(message, target),
+    { message: { ...userMessage, payload: { ...userMessage.payload, request_id: 'wrong-target-to-parent' } }, target: other.origin })
+  await toParent(frame, ready.data)
+  assert.equal(await page.evaluate(() => window.__feiObserve.messages.length), parentMessageCount + 1)
+  assert.deepEqual(await parentState(), parentBeforeWrongTarget)
+  record.wrongTarget = { parentMessageCount, childMessageCount, result: 'PASS' }
+
+  await popup.addInitScript({ path: new URL('./observe-bridge.js', import.meta.url).pathname })
+  await popup.addInitScript(() => localStorage.setItem('turbine-quality', 'balanced'))
+  record.foreignParentConsole = []
+  popup.on('console', message => record.foreignParentConsole.push({ type: message.type(), text: message.text() }))
+  await popup.evaluate(childOrigin => {
+    const iframe = document.createElement('iframe')
+    iframe.name = 'foreign-parent-viewer'
+    iframe.style.cssText = 'width:1000px;height:700px;display:block'
+    iframe.src = `${childOrigin}/viewer/?embedded=1&viewer_instance_id=foreign-parent&lang=zh&experience=console&presentation=console&speed=0`
+    document.body.append(iframe)
+  }, origin)
+  const foreignChild = await (await popup.locator('iframe[name="foreign-parent-viewer"]').elementHandle()).contentFrame()
+  await foreignChild.locator('.bridge-status').waitFor()
+  const foreignBefore = await childState(foreignChild)
+  const foreignMessageCount = await foreignChild.evaluate(() => window.__feiObserve.messages.length)
+  await popup.evaluate(({ message, origin }) => document.querySelector('iframe[name="foreign-parent-viewer"]').contentWindow.postMessage(message, origin),
+    { message: { schema_version: '1', type: 'update-component-state', viewer_instance_id: 'foreign-parent', ...fixture.context_a, payload: fixture.snapshot_a }, origin })
+  await foreignChild.waitForFunction(count => window.__feiObserve.messages.length > count, foreignMessageCount)
+  const foreignEvent = await foreignChild.evaluate(() => window.__feiObserve.messages.at(-1))
+  assert.equal(foreignEvent.source, 'parent')
+  assert.equal(foreignEvent.origin, other.origin)
+  assert.equal(foreignEvent.trusted, true)
+  assert.deepEqual(await childState(foreignChild), foreignBefore)
+  record.childWrongOrigin = foreignEvent
   await popup.close()
   await page.evaluate(() => document.querySelector('iframe[name="wrong-source"]').remove())
   record.wrongOrigin = wrongOrigin
-  await step('A02/A04：真实Window拒绝错误source/origin、实例、协议、部件、范围和载荷')
+  await step('A02/A04：父子真实Window拒绝错误source/origin、错误targetOrigin不送达、实例/协议/部件/范围/载荷拒绝')
 
   const hrefBeforeSwitch = frame.url()
   await page.getByLabel('夹具设备', { exact: true }).selectOption('fixture-device-b')
@@ -224,9 +264,18 @@ try {
 
   for (let cycle = 0; cycle < 5; cycle++) {
     const oldHref = frame.url()
-    const oldStats = await frame.evaluate(() => ({ frames: window.__feiObserve.frames, deleted: window.__feiObserve.deletedResources }))
-    await page.getByRole('button', { name: '服务连接', exact: true }).click()
-    assert.equal(await page.locator('iframe[title="燃气轮机教学模型"]').count(), 0)
+    const oldFrame = frame
+    const oldStats = await frame.evaluate(() => ({ frames: window.__feiObserve.frames, deleted: window.__feiObserve.deletedResources,
+      resources: { ...window.__feiObserve.resources }, context: { device_id: document.querySelector('#bridge-context').dataset.device,
+        run_id: document.querySelector('#bridge-context').dataset.run, context_revision: Number(document.querySelector('#bridge-context').dataset.revision) } }))
+    const staleMessage = { schema_version: '1', type: 'component-selected', viewer_instance_id: new URL(oldHref).searchParams.get('viewer_instance_id'),
+      ...oldStats.context, payload: { component_id: 'compressor', request_id: `old-frame-cycle-${cycle}`, trigger: 'user', result: 'selected' } }
+    await frame.evaluate(message => {
+      parent.postMessage(message, location.origin)
+      parent.document.querySelector('.workspace-nav button').click()
+    }, staleMessage)
+    await page.waitForFunction(() => document.querySelectorAll('iframe[title="燃气轮机教学模型"]').length === 0)
+    assert.equal(oldFrame.isDetached(), true)
     assert.equal(await page.evaluate(() => window.__feiObserve.messageListeners), baselineListeners)
     await page.getByRole('button', { name: '模型联动', exact: true }).click()
     frame = await getFrame()
@@ -234,6 +283,15 @@ try {
     assert.equal(await frame.locator('#scene').count(), 1)
     assert.equal(await page.evaluate(() => window.__feiObserve.messageListeners), baselineListeners + 1)
     const detached = await page.evaluate(old => window.__feiDocuments.find(item => item.href === old), oldHref)
+    for (const kind of ['deleteBuffer', 'deleteTexture', 'deleteProgram']) {
+      assert(detached.resources[kind] > oldStats.resources[kind], `第${cycle + 1}次卸载必须新增${kind}实际调用`)
+    }
+    assert.equal(detached.messageListeners, 0)
+    const staleEvent = await page.evaluate(request => window.__feiObserve.messages.find(item => item.data.payload?.request_id === request), staleMessage.payload.request_id)
+    assert(staleEvent && staleEvent.trusted)
+    assert.equal(staleEvent.source, 'other')
+    assert.equal((await parentState()).selected, '无')
+    assert.equal((await parentState()).count, '0')
     const stoppedFrames = detached.frames
     await frame.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
     assert.equal(await page.evaluate(old => window.__feiDocuments.find(item => item.href === old).frames, oldHref), stoppedFrames)
