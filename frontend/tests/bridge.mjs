@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
 import { readFile, writeFile } from 'node:fs/promises'
+import { createHash } from 'node:crypto'
+import { MIMEType } from 'node:util'
 import { chromium } from 'playwright'
 import { pageFailureGuard } from './page-failure-guard.mjs'
 import { invalidProtocolCases } from './invalid-protocol-cases.mjs'
@@ -280,15 +282,112 @@ async function verify() {
   await popup.addInitScript(() => localStorage.setItem('turbine-quality', 'balanced'))
   record.foreignParentConsole = []
   popup.on('console', message => record.foreignParentConsole.push({ type: message.type(), text: redactText(message.text()) }))
-  await popup.evaluate(childOrigin => {
+  const foreignViewerUrl = `${origin}/viewer/?embedded=1&viewer_instance_id=foreign-parent&lang=zh&experience=console&presentation=console&speed=0`
+  const foreignResponses = []
+  const observeForeignResponse = response => {
+    const request = response.request()
+    if (!['document', 'script', 'stylesheet'].includes(request.resourceType())) return
+    const resource = (async () => {
+      const body = await response.body()
+      return { frame: request.frame(), url: response.url(), status: response.status(), type: request.resourceType(),
+        headers: await response.allHeaders(), bytes: body.length, sha256: createHash('sha256').update(body).digest('hex'),
+        finished_elapsed_ms: performance.now() - started }
+    })()
+    resource.catch(guard.fail)
+    foreignResponses.push(resource)
+  }
+  popup.on('response', observeForeignResponse)
+  const foreignInitializationStarted = performance.now()
+  record.foreignChildInitialization = { target_url: foreignViewerUrl, parent_url: popup.url(),
+    started_elapsed_ms: foreignInitializationStarted - started, budget_ms: 120000 }
+  await popup.evaluate(target => {
     const iframe = document.createElement('iframe')
     iframe.name = 'foreign-parent-viewer'
     iframe.style.cssText = 'width:1000px;height:700px;display:block'
-    iframe.src = `${childOrigin}/viewer/?embedded=1&viewer_instance_id=foreign-parent&lang=zh&experience=console&presentation=console&speed=0`
+    iframe.src = target
     document.body.append(iframe)
-  }, origin)
-  const foreignChild = await (await popup.locator('iframe[name="foreign-parent-viewer"]').elementHandle()).contentFrame()
-  await foreignChild.locator('.bridge-status').waitFor()
+  }, foreignViewerUrl)
+  const foreignElement = await popup.locator('iframe[name="foreign-parent-viewer"]').elementHandle()
+  const foreignChild = await foreignElement.contentFrame()
+  record.foreignChildInitialization.initial_frame_url = safeUrl(foreignChild.url())
+  let foreignInitializationError
+  try {
+    const remaining = () => 120000 - (performance.now() - foreignInitializationStarted)
+    assert(remaining() > 0, '异源父viewer准备超过冻结120秒上限')
+    await foreignChild.waitForURL(foreignViewerUrl, { waitUntil: 'domcontentloaded', timeout: remaining() })
+    record.foreignChildInitialization.document_ready_elapsed_ms = performance.now() - started
+    assert(remaining() > 0, '异源父viewer准备超过冻结120秒上限')
+    await foreignChild.locator('.bridge-status').waitFor({ timeout: Math.min(30000, remaining()) })
+  } catch (error) {
+    foreignInitializationError = error
+    record.foreignChildInitialization.failure = { name: error.name, message: redactText(error.message) }
+  }
+  const observations = await Promise.allSettled([
+    foreignChild.evaluate(() => {
+      const panels = document.querySelectorAll('.bridge-status')
+      const panel = panels[0]
+      const style = panel ? getComputedStyle(panel) : null
+      const box = panel?.getBoundingClientRect()
+      const hiddenAncestors = []
+      for (let element = panel?.parentElement; element; element = element.parentElement) {
+        const ancestor = getComputedStyle(element)
+        if (ancestor.display === 'none' || ancestor.visibility !== 'visible' || ancestor.contentVisibility === 'hidden') {
+          hiddenAncestors.push({ tag: element.tagName, id: element.id, classes: element.className,
+            display: ancestor.display, visibility: ancestor.visibility, content_visibility: ancestor.contentVisibility })
+        }
+      }
+      return { url: location.href, origin: location.origin, search: location.search, referrer: document.referrer,
+        time_origin_ms: performance.timeOrigin, elapsed_ms: performance.now(), ready_state: document.readyState,
+        visibility_state: document.visibilityState, quality: localStorage.getItem('turbine-quality'),
+        panel_count: panels.length, panel_connected: panel?.isConnected, panel_display: style?.display,
+        panel_visibility: style?.visibility, panel_box: box ? { x: box.x, y: box.y, width: box.width, height: box.height } : null,
+        hidden_ancestors: hiddenAncestors,
+        scripts: [...document.scripts].filter(script => script.src).map(script => script.src),
+        stylesheets: [...document.querySelectorAll('link[rel="stylesheet"]')].map(link => link.href),
+        observed_messages: window.__feiObserve.messages, observed_sends: window.__feiObserve.sends }
+    }),
+    Promise.all(foreignResponses),
+  ])
+  popup.off('response', observeForeignResponse)
+  observations.forEach((observation, index) => {
+    if (observation.status === 'rejected') record.foreignChildInitialization[`observation_error_${index}`] = String(observation.reason)
+  })
+  if (observations[0].status === 'fulfilled') record.foreignChildInitialization.document = observations[0].value
+  if (observations[1].status === 'fulfilled') {
+    record.foreignChildInitialization.resources = observations[1].value.filter(item => item.frame === foreignChild)
+      .map(({ frame, ...resource }) => resource)
+  }
+  record.foreignChildInitialization.finished_elapsed_ms = performance.now() - started
+  await save()
+  if (foreignInitializationError) throw foreignInitializationError
+  for (const observation of observations) if (observation.status === 'rejected') throw observation.reason
+  assert(performance.now() - foreignInitializationStarted <= 120000, '异源父viewer准备超过冻结120秒上限')
+  const foreignDocument = record.foreignChildInitialization.document
+  assert.equal(foreignDocument.url, foreignViewerUrl)
+  assert.equal(foreignDocument.origin, origin)
+  assert.equal(foreignDocument.search, new URL(foreignViewerUrl).search)
+  assert.equal(new URL(foreignDocument.referrer).origin, other.origin)
+  assert(['interactive', 'complete'].includes(foreignDocument.ready_state))
+  assert.equal(foreignDocument.quality, 'balanced')
+  assert.equal(foreignDocument.panel_count, 1)
+  assert.equal(foreignDocument.panel_connected, true)
+  assert.equal(foreignDocument.panel_visibility, 'visible')
+  assert(foreignDocument.panel_box.width > 0 && foreignDocument.panel_box.height > 0)
+  assert.deepEqual(foreignDocument.hidden_ancestors, [])
+  const foreignResources = record.foreignChildInitialization.resources
+  for (const resource of foreignResources) {
+    assert.equal(resource.status, 200, resource.url)
+    assert.equal(new URL(resource.url).origin, origin)
+    assert(new URL(resource.url).pathname.startsWith('/viewer/'))
+    const mime = new MIMEType(resource.headers['content-type']).essence
+    assert((resource.type === 'document' ? ['text/html'] : resource.type === 'stylesheet' ? ['text/css']
+      : ['application/javascript', 'text/javascript']).includes(mime), resource.url)
+    assert(resource.bytes > 0)
+  }
+  assert(foreignResources.some(resource => resource.type === 'document' && resource.url === foreignViewerUrl))
+  for (const resourceUrl of [...foreignDocument.scripts, ...foreignDocument.stylesheets]) {
+    assert(foreignResources.some(resource => resource.url === resourceUrl), resourceUrl)
+  }
   const foreignBefore = await childState(foreignChild)
   const foreignMessageCount = await foreignChild.evaluate(() => window.__feiObserve.messages.length)
   await popup.evaluate(({ message, origin }) => document.querySelector('iframe[name="foreign-parent-viewer"]').contentWindow.postMessage(message, origin),
