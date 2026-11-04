@@ -1,7 +1,8 @@
 // 只观察真实窗口消息、监听器和GPU调用，保持原参数、返回值及浏览器行为。
 (() => {
   const data = { href: location.href, messageListeners: 0, messageEvents: 0, messages: [], frames: 0, deletedResources: 0, lostContexts: 0,
-    draws: 0, emissiveDraws: {}, sends: [], resources: { deleteBuffer: 0, deleteTexture: 0, deleteProgram: 0, deleteFramebuffer: 0, deleteRenderbuffer: 0 } }
+    draws: 0, emissiveDraws: {}, completedFrames: 0, lastRenderedFrame: null, previousRenderedFrame: null,
+    sends: [], resources: { deleteBuffer: 0, deleteTexture: 0, deleteProgram: 0, deleteFramebuffer: 0, deleteRenderbuffer: 0 } }
   window.__feiObserve = data
   if (window === window.top) window.__feiDocuments = [data]
   else if (document.referrer && new URL(document.referrer).origin === location.origin) window.top.__feiDocuments?.push(data)
@@ -30,7 +31,24 @@
     return post.call(this, value, target, ...rest)
   }
   const animation = window.requestAnimationFrame.bind(window)
-  window.requestAnimationFrame = callback => animation(time => { data.frames++; callback(time) })
+  let activeFrame = null
+  window.requestAnimationFrame = callback => animation(time => {
+    data.frames++
+    const previous = activeFrame
+    const frame = { draws: 0, emissiveDraws: {}, time }
+    activeFrame = frame
+    let completed = false
+    try {
+      callback(time)
+      completed = true
+    } finally {
+      activeFrame = previous
+      if (completed && frame.draws > 0) {
+        data.previousRenderedFrame = data.lastRenderedFrame
+        data.lastRenderedFrame = { ...frame, sequence: ++data.completedFrames }
+      }
+    }
+  })
   const locations = new WeakMap(), states = new WeakMap()
   const state = gl => {
     if (!states.has(gl)) {
@@ -67,10 +85,12 @@
       const result = original.apply(this, args)
       if (args[method.startsWith('drawArrays') ? 2 : 1] > 0) {
         data.draws++
+        if (activeFrame && this.canvas.id === 'scene') activeFrame.draws++
         const current = state(this), color = current.colors.get(current.program)
         if (color) {
           const key = color.map(value => value.toFixed(8)).join(',')
           data.emissiveDraws[key] = (data.emissiveDraws[key] ?? 0) + 1
+          if (activeFrame && this.canvas.id === 'scene') activeFrame.emissiveDraws[key] = (activeFrame.emissiveDraws[key] ?? 0) + 1
         }
       }
       return result

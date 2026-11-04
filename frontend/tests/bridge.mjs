@@ -5,19 +5,24 @@ import { MIMEType } from 'node:util'
 import { chromium } from 'playwright'
 import { pageFailureGuard } from './page-failure-guard.mjs'
 import { invalidProtocolCases } from './invalid-protocol-cases.mjs'
+import { withinDeadline } from './deadline.mjs'
 import { cameraChangedAfterInput } from '../../scripts/fe-base/camera-observation.mjs'
 
 const [url, output] = process.argv.slice(2)
 assert(url && output && process.env.M0_01_CHROME)
 const fixture = JSON.parse(await readFile(new URL('../../evidence/FE-INTEGRATE/bridge-fixture.json', import.meta.url)))
 const started = performance.now()
-const record = { url, started_at: new Date().toISOString(), steps: [], errors: [], console: [], responses: [], messages: [], lifecycle: [], rejections: [], timeline: [], windows: [] }
+const record = { url, started_at: new Date().toISOString(), steps: [], errors: [], console: [], responses: [], messages: [], lifecycle: [], rejections: [], gpuObservations: [], timeline: [], windows: [] }
 const guard = pageFailureGuard(record)
 const save = () => writeFile(output, JSON.stringify(record, null, 2) + '\n')
 const browser = await chromium.launch({ executablePath: process.env.M0_01_CHROME,
   args: ['--no-sandbox', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const origin = new URL(url).origin
 const ids = ['compressor', 'combustor', 'turbine', 'bearing_front', 'exhaust']
+const expectedGpuColors = Object.values(fixture.expected.status_colors).map(hex => {
+  const rgb = [1, 3, 5].map(offset => parseInt(hex.slice(offset, offset + 2), 16) / 255)
+  return rgb.map(value => (value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4) * .45)
+})
 const pageIds = new WeakMap(), frameIds = new WeakMap()
 let pageSequence = 0, frameSequence = 0
 const timeline = (event, details = {}) => record.timeline.push({ event, observed_elapsed_ms: performance.now() - started, ...details })
@@ -80,8 +85,31 @@ async function verify() {
     selected: document.querySelector('[data-testid="selected-component"]').textContent,
     count: document.querySelector('[data-testid="selection-count"]').textContent,
     quality: document.querySelector('[data-testid="quality"]').textContent }))
-  const childState = frame => frame.evaluate(() => ({ context: document.querySelector('#bridge-context').textContent,
-    selected: document.querySelector('#bridge-selection').textContent, values: document.querySelector('#bridge-values').textContent }))
+  const childState = async frame => {
+    const sequence = await frame.evaluate(() => window.__feiObserve.completedFrames)
+    await frame.waitForFunction(({ sequence, colors }) => {
+      const data = window.__feiObserve
+      const current = data.lastRenderedFrame, previous = data.previousRenderedFrame
+      if (!current || !previous || current.sequence <= sequence) return false
+      const counts = snapshot => colors.map(expected => Object.entries(snapshot.emissiveDraws).reduce((total, [key, count]) =>
+        key.split(',').every((value, index) => Math.abs(Number(value) - expected[index]) <= 1e-6) ? total + count : total, 0))
+      const currentCounts = counts(current)
+      return currentCounts.some(count => count > 0) && JSON.stringify(currentCounts) === JSON.stringify(counts(previous))
+    }, { sequence, colors: expectedGpuColors }, { timeout: 120000 })
+    const observation = await frame.evaluate(colors => {
+      const current = window.__feiObserve.lastRenderedFrame
+      const counts = colors.map(expected => Object.entries(current.emissiveDraws).reduce((total, [key, count]) =>
+        key.split(',').every((value, index) => Math.abs(Number(value) - expected[index]) <= 1e-6) ? total + count : total, 0))
+      return { frame_url: location.href, sequence: current.sequence, time: current.time, draws: current.draws,
+        emissive_draws: current.emissiveDraws,
+        state: { context: document.querySelector('#bridge-context').textContent,
+          selected: document.querySelector('#bridge-selection').textContent, values: document.querySelector('#bridge-values').textContent,
+          gpu: counts } }
+    }, expectedGpuColors)
+    assert(observation.draws > 0)
+    record.gpuObservations.push(observation)
+    return observation.state
+  }
   async function toChild(frame, message) {
     const before = await frame.evaluate(() => window.__feiObserve.messageEvents)
     await page.evaluate(({ message, origin }) => document.querySelector('iframe[title="燃气轮机教学模型"]').contentWindow.postMessage(message, origin), { message, origin })
@@ -112,19 +140,19 @@ async function verify() {
   assert.equal(initialChildMessages[0].data.type, 'update-component-state')
   assert.deepEqual(initialChildMessages[0].data.payload, fixture.snapshot_b)
   await step('A01/A03：真实同源完整viewer、null ready与首条完整无数据快照')
+  record.gpuInitialState = await childState(frame)
 
   await page.getByRole('button', { name: '装载状态夹具 A', exact: true }).click()
   await frame.waitForFunction(() => document.querySelector('#bridge-values [data-component="exhaust"]').dataset.status === 'alarm')
-  const colors = Object.values(fixture.expected.status_colors).map(hex => {
-    const rgb = [1, 3, 5].map(offset => parseInt(hex.slice(offset, offset + 2), 16) / 255)
-    return rgb.map(value => (value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4) * .45)
-  })
+  const colors = expectedGpuColors
   record.gpuBeforeCheck = await frame.evaluate(() => ({ draws: window.__feiObserve.draws, emissiveDraws: window.__feiObserve.emissiveDraws }))
   record.expectedColors = colors
   await save()
   await frame.waitForFunction(colors => colors.every(expected => Object.keys(window.__feiObserve.emissiveDraws).some(key =>
     key.split(',').every((value, index) => Math.abs(Number(value) - expected[index]) <= 1e-6))), colors, { timeout: 120000 })
   record.gpuFixture = await frame.evaluate(() => ({ draws: window.__feiObserve.draws, emissiveDraws: window.__feiObserve.emissiveDraws }))
+  record.gpuFixtureState = await childState(frame)
+  assert.notDeepEqual(record.gpuFixtureState.gpu, record.gpuInitialState.gpu)
   assert.match(await frame.locator('#bridge-values').innerText(), /560 °C/)
   assert.match(await frame.locator('#bridge-values').innerText(), /2026-11-03T00:00:00.000Z/)
   for (const id of [...ids, 'aux_pump']) {
@@ -298,57 +326,67 @@ async function verify() {
   }
   popup.on('response', observeForeignResponse)
   const foreignInitializationStarted = performance.now()
+  const foreignDeadline = foreignInitializationStarted + 120000
+  const foreignTimeoutMessage = '异源父viewer准备超过冻结120秒上限'
+  const foreignRemaining = () => foreignDeadline - performance.now()
+  const foreignWithinDeadline = operation => withinDeadline(operation, foreignDeadline, foreignTimeoutMessage)
   record.foreignChildInitialization = { target_url: foreignViewerUrl, parent_url: popup.url(),
     started_elapsed_ms: foreignInitializationStarted - started, budget_ms: 120000 }
-  await popup.evaluate(target => {
+  await foreignWithinDeadline(() => popup.evaluate(target => {
     const iframe = document.createElement('iframe')
     iframe.name = 'foreign-parent-viewer'
     iframe.style.cssText = 'width:1000px;height:700px;display:block'
     iframe.src = target
     document.body.append(iframe)
-  }, foreignViewerUrl)
-  const foreignElement = await popup.locator('iframe[name="foreign-parent-viewer"]').elementHandle()
-  const foreignChild = await foreignElement.contentFrame()
+  }, foreignViewerUrl))
+  const foreignElement = await foreignWithinDeadline(() => popup.locator('iframe[name="foreign-parent-viewer"]').elementHandle())
+  const foreignChild = await foreignWithinDeadline(() => foreignElement.contentFrame())
   record.foreignChildInitialization.initial_frame_url = safeUrl(foreignChild.url())
   let foreignInitializationError
   try {
-    const remaining = () => 120000 - (performance.now() - foreignInitializationStarted)
-    assert(remaining() > 0, '异源父viewer准备超过冻结120秒上限')
-    await foreignChild.waitForURL(foreignViewerUrl, { waitUntil: 'domcontentloaded', timeout: remaining() })
+    await foreignWithinDeadline(() => foreignChild.waitForURL(foreignViewerUrl,
+      { waitUntil: 'domcontentloaded', timeout: foreignRemaining() }))
     record.foreignChildInitialization.document_ready_elapsed_ms = performance.now() - started
-    assert(remaining() > 0, '异源父viewer准备超过冻结120秒上限')
-    await foreignChild.locator('.bridge-status').waitFor({ timeout: Math.min(30000, remaining()) })
+    await foreignWithinDeadline(() => foreignChild.locator('.bridge-status').waitFor({ timeout: Math.min(30000, foreignRemaining()) }))
   } catch (error) {
     foreignInitializationError = error
     record.foreignChildInitialization.failure = { name: error.name, message: redactText(error.message) }
   }
-  const observations = await Promise.allSettled([
-    foreignChild.evaluate(() => {
-      const panels = document.querySelectorAll('.bridge-status')
-      const panel = panels[0]
-      const style = panel ? getComputedStyle(panel) : null
-      const box = panel?.getBoundingClientRect()
-      const hiddenAncestors = []
-      for (let element = panel?.parentElement; element; element = element.parentElement) {
-        const ancestor = getComputedStyle(element)
-        if (ancestor.display === 'none' || ancestor.visibility !== 'visible' || ancestor.contentVisibility === 'hidden') {
-          hiddenAncestors.push({ tag: element.tagName, id: element.id, classes: element.className,
-            display: ancestor.display, visibility: ancestor.visibility, content_visibility: ancestor.contentVisibility })
+  let observations
+  try {
+    observations = await foreignWithinDeadline(() => Promise.allSettled([
+      foreignChild.evaluate(() => {
+        const panels = document.querySelectorAll('.bridge-status')
+        const panel = panels[0]
+        const style = panel ? getComputedStyle(panel) : null
+        const box = panel?.getBoundingClientRect()
+        const hiddenAncestors = []
+        for (let element = panel?.parentElement; element; element = element.parentElement) {
+          const ancestor = getComputedStyle(element)
+          if (ancestor.display === 'none' || ancestor.visibility !== 'visible' || ancestor.contentVisibility === 'hidden') {
+            hiddenAncestors.push({ tag: element.tagName, id: element.id, classes: element.className,
+              display: ancestor.display, visibility: ancestor.visibility, content_visibility: ancestor.contentVisibility })
+          }
         }
-      }
-      return { url: location.href, origin: location.origin, search: location.search, referrer: document.referrer,
-        time_origin_ms: performance.timeOrigin, elapsed_ms: performance.now(), ready_state: document.readyState,
-        visibility_state: document.visibilityState, quality: localStorage.getItem('turbine-quality'),
-        panel_count: panels.length, panel_connected: panel?.isConnected, panel_display: style?.display,
-        panel_visibility: style?.visibility, panel_box: box ? { x: box.x, y: box.y, width: box.width, height: box.height } : null,
-        hidden_ancestors: hiddenAncestors,
-        scripts: [...document.scripts].filter(script => script.src).map(script => script.src),
-        stylesheets: [...document.querySelectorAll('link[rel="stylesheet"]')].map(link => link.href),
-        observed_messages: window.__feiObserve.messages, observed_sends: window.__feiObserve.sends }
-    }),
-    Promise.all(foreignResponses),
-  ])
-  popup.off('response', observeForeignResponse)
+        return { url: location.href, origin: location.origin, search: location.search, referrer: document.referrer,
+          time_origin_ms: performance.timeOrigin, elapsed_ms: performance.now(), ready_state: document.readyState,
+          visibility_state: document.visibilityState, quality: localStorage.getItem('turbine-quality'),
+          panel_count: panels.length, panel_connected: panel?.isConnected, panel_display: style?.display,
+          panel_visibility: style?.visibility, panel_box: box ? { x: box.x, y: box.y, width: box.width, height: box.height } : null,
+          hidden_ancestors: hiddenAncestors,
+          scripts: [...document.scripts].filter(script => script.src).map(script => script.src),
+          stylesheets: [...document.querySelectorAll('link[rel="stylesheet"]')].map(link => link.href),
+          observed_messages: window.__feiObserve.messages, observed_sends: window.__feiObserve.sends }
+      }),
+      Promise.all(foreignResponses),
+    ]))
+  } catch (error) {
+    record.foreignChildInitialization.observation_error = { name: error.name, message: redactText(error.message) }
+    if (foreignInitializationError) throw foreignInitializationError
+    throw error
+  } finally {
+    popup.off('response', observeForeignResponse)
+  }
   observations.forEach((observation, index) => {
     if (observation.status === 'rejected') record.foreignChildInitialization[`observation_error_${index}`] = String(observation.reason)
   })
@@ -358,10 +396,10 @@ async function verify() {
       .map(({ frame, ...resource }) => resource)
   }
   record.foreignChildInitialization.finished_elapsed_ms = performance.now() - started
-  await save()
   if (foreignInitializationError) throw foreignInitializationError
   for (const observation of observations) if (observation.status === 'rejected') throw observation.reason
-  assert(performance.now() - foreignInitializationStarted <= 120000, '异源父viewer准备超过冻结120秒上限')
+  await foreignWithinDeadline(save)
+  assert(performance.now() - foreignInitializationStarted <= 120000, foreignTimeoutMessage)
   const foreignDocument = record.foreignChildInitialization.document
   assert.equal(foreignDocument.url, foreignViewerUrl)
   assert.equal(foreignDocument.origin, origin)
