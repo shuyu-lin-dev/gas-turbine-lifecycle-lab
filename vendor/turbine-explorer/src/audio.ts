@@ -93,6 +93,14 @@ export class TurbineAudio {
     });
   }
 
+  async dispose() {
+    this.enabled = false;
+    this.mutedByUser = true;
+    if (this.context) await this.context.close();
+    this.nodes = null;
+    this.context = null;
+  }
+
   stopPreview() {
     this.previewUntil = 0;
   }

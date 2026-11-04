@@ -4,7 +4,7 @@
 
 本文件规定两个上游项目怎样进入 GT Lifecycle Lab、哪些能力直接保留、哪些接入能力需要新增。完整业务范围见 [DEV_SPEC.md](../DEV_SPEC.md)；任务顺序、硬验收与交付规则分别以 [TASKS.md](../TASKS.md)、[ACCEPTANCE.md](../ACCEPTANCE.md)、[AGENTS.md](../AGENTS.md) 为准。本文件不另设一套完成状态，也不改变这些文件的验收要求。
 
-**当前交付是方案、规则与已准备的模型资产。两个上游的完整源码尚未由本包在用户 WSL 中克隆、导入、运行或验收；下述集成是待执行工作。** “已有源码”仅表示固定上游快照中能读到相应实现，不能替代用户环境中的执行证据。
+完整 turbine-explorer 已在 FE-BASE 中通过 Git subtree 导入并完成独立基线验收，导入提交为 `459a359afd4e2e2bdaca05acccc4b65f79b741d8`，固定上游为 `efc5d2ecd12055f880a41b47215791c22d3656d4`。FE-INTEGRATE 在此完整源程序上增加同源嵌入与四消息桥接，具体执行与验收见 [本项冻结](../evidence/FE-INTEGRATE/criteria.md) 和 [运行说明](FE_INTEGRATE.md)。RAG 的取得、运行与集成仍由其所属后续任务执行；任务状态统一查 [TASKS.md](../TASKS.md)。
 
 ## 1. 已确定的复用方式
 

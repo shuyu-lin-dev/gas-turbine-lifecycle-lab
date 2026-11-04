@@ -1,0 +1,28 @@
+body.embedded-viewer { min-width: 0; }
+body.embedded-viewer .topbar,
+body.embedded-viewer .experience-switch,
+body.embedded-viewer .console-stack,
+body.embedded-viewer .generation-chip,
+body.embedded-viewer .legend,
+body.embedded-viewer .review-strip,
+body.embedded-viewer .service-status,
+body.embedded-viewer .exhibition,
+body.embedded-viewer .global-language,
+body.embedded-viewer .global-quality,
+body.embedded-viewer .hint,
+body.embedded-viewer [data-action="spin"],
+body.embedded-viewer [data-action="flow"],
+body.embedded-viewer [data-action="sound"] { display: none !important; }
+body.embedded-viewer .housing-switch { top: 12px; left: 12px; right: auto; transform: none; flex-wrap: wrap; max-width: calc(100% - 24px); }
+body.embedded-viewer .controls { top: 64px; left: 12px; right: auto; bottom: auto; transform: none; display: flex; flex-wrap: wrap; max-width: calc(100% - 24px); }
+.bridge-status { position: absolute; z-index: 10; bottom: 0; left: 0; width: 100%; padding: 10px 16px; background: #101e32ed; color: #e6edf5; font: 13px/1.5 "Noto Sans CJK SC", sans-serif; max-height: 36%; overflow: auto; }
+.bridge-status p { margin: 0 0 4px; }
+.bridge-status small { color: #a7b5c6; overflow-wrap: anywhere; }
+.bridge-status nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.bridge-status button { border: 1px solid #64748b; background: #172b43; color: #e6edf5; padding: 4px 12px; cursor: pointer; font: inherit; }
+.bridge-status button[aria-pressed="true"] { color: #63d8df; border-color: #63d8df; }
+.bridge-status button:focus-visible { outline: 2px solid #f0bd67; }
+#bridge-values { margin-top: 6px; }
+#bridge-values span { display: inline-block; margin-right: 14px; }
+#bridge-values [data-status="alarm"] { color: #ff9292; }
+#bridge-values [data-status="attention"] { color: #f0bd67; }

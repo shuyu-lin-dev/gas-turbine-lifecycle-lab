@@ -2,6 +2,11 @@ server {
     listen 8080;
     server_name _;
     root /usr/share/nginx/html;
+    include /etc/nginx/mime.types;
+    types {
+        font/ttf ttf;
+        image/vnd.radiance hdr;
+    }
     resolver 127.0.0.11 valid=5s ipv6=off;
     set $api_upstream "${API_UPSTREAM}";
 
@@ -10,6 +15,16 @@ server {
         proxy_set_header Host $host;
         proxy_connect_timeout 3s;
         proxy_read_timeout 5s;
+    }
+
+    location = /viewer {
+        absolute_redirect off;
+        return 308 /viewer/$is_args$args;
+    }
+
+    location /viewer/ {
+        try_files $uri $uri/ =404;
+        add_header Cache-Control "no-cache";
     }
 
     location /assets/ {

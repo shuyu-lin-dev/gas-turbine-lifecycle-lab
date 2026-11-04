@@ -1,6 +1,6 @@
 # Worker 工作流与 Matt skills
 
-本文件适配实际安装的 Matt skills，服从 [根规则](../../AGENTS.md)、[唯一任务清单](../../TASKS.md) 和 [硬验收](../../ACCEPTANCE.md)。当前 Issue #5 已派发 M0-01；前置 FE-BASE 已通过 PR #4 实际集成到 `b8ad3150cf4480f8e205926541aeeccb072f7f80`。开发 worker 完成准确候选和必要实测后，提交 draft PR 并在 Issue #5 回执，由协调聊天 `01a1a186-0661-7540-b368-f70449bdae16` 组织全新上下文独立 Standards/Spec 审查和实际复验。对应候选通过后继续 E、远程基线和 K；最终 head 新增差异仍须独立审查，再由协调聊天最终核查、合并与确认实际集成。当前开发 worker 只执行 M0-01，后续任务单独派发；历史 preparation 记录保留原样。
+本文件适配实际安装的 Matt skills，服从 [根规则](../../AGENTS.md)、[唯一任务清单](../../TASKS.md) 和 [硬验收](../../ACCEPTANCE.md)。当前 Issue #7 已派发 FE-INTEGRATE；前置 M0-01 已通过 PR #6 实际集成到 `d4624599072312f86c65c12e77407b25e3005a3b`。开发 worker 完成准确候选和必要实测后，提交 draft PR 并在 Issue #7 回执，由协调聊天 `01a1a22f-d503-7cf0-bad4-ad8dd9d707a8` 组织全新上下文独立 Standards/Spec 审查和实际复验。对应候选通过后继续 E、远程基线和 K；最终 head 新增差异仍须独立审查，再由协调聊天最终核查、合并与确认实际集成。当前开发 worker 只执行 FE-INTEGRATE，后续任务单独派发；历史 preparation 记录保留原样。
 
 ## 实际版本与加载
 

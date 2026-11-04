@@ -14,6 +14,8 @@ import { installLanguage } from './i18n';
 import { installExhibition } from './exhibition';
 import { RATED_POWER_MW, energyKWh } from './energy';
 import { createOperatingEffects } from './operating-effects';
+import { installEmbeddedScene } from './embedded-scene';
+import { disposeScene } from './dispose-scene';
 import './style.css';
 import './typography.css';
 import { renderPixelRatio, onRenderQuality, getRenderQuality, setRenderQuality, type RenderQuality } from './render-quality';
@@ -22,7 +24,9 @@ import { createBackdrop, appendBackdropControl } from './backdrop';
 const canvas = document.querySelector<HTMLCanvasElement>('#scene');
 if (!canvas) throw new Error('Canvas not found');
 const pageParams = new URLSearchParams(window.location.search);
-const filmPresentation = pageParams.get('presentation') !== 'console';
+const embedded = pageParams.get('embedded') === '1';
+if (embedded) document.body.classList.add('embedded-viewer');
+const filmPresentation = !embedded && pageParams.get('presentation') !== 'console';
 if (filmPresentation) document.body.classList.add('film-presentation');
 // Keep the existing controls and listeners, but lay panels out in one scrollable rail.
 const consoleStack = document.createElement('aside');
@@ -78,7 +82,7 @@ const updateCameraFraming = () => {
     ? 32
     : THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(designFov / 2) * designAspect / aspect));
   const appClasses = document.querySelector('#app')?.classList;
-  const railVisible = !appClasses?.contains('clean-view') && !appClasses?.contains('console-hidden');
+  const railVisible = !embedded && !appClasses?.contains('clean-view') && !appClasses?.contains('console-hidden');
   if (railVisible && surfaceWidth() > 900 && !captureSize) {
     const railSpace = 324;
     camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2)
@@ -1194,12 +1198,22 @@ onRenderQuality(refreshQualityPanel); refreshQualityPanel();
 appendBackdropControl(globalQuality);
 if(pageParams.get('experience')==='exhibition'||(!pageParams.has('experience')&&!pageParams.has('inspect')&&!pageParams.has('compare')&&!pageParams.has('render')&&!captureSize))exhibition.enter(Number(pageParams.get('chapter')??1));
 if (pageParams.get('inspect') === 'blade') componentInspector.open(true);
+const embeddedScene = installEmbeddedScene(model, scene, camera, canvas, center => {
+  targetGoal.copy(center);
+  cameraGoal.copy(center).add(new THREE.Vector3(-3, 5, 13));
+  cameraTransitionActive = true;
+  controls.autoRotate = false;
+});
+
+let animationFrame = 0;
+let disposed = false;
 function animate() {
+  if (disposed) return;
   const delta = Math.min(clock.getDelta(), .05);
   exhibition.update(delta,componentInspector.active);
   if (componentInspector.active) {
     componentInspector.render(delta);
-    requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate);
     return;
   }
   elapsed += delta;
@@ -1347,8 +1361,9 @@ function animate() {
   if(exhibition.active){controls.autoRotate=exhibition.playing&&!cameraTransitionActive&&!detailShot&&!componentInspector.active;controls.autoRotateSpeed=filmPresentation ? .46 : .24;}
   controls.update();
   updateLabels();
+  embeddedScene?.update();
   composer.render();
-  requestAnimationFrame(animate);
+  animationFrame = requestAnimationFrame(animate);
 }
 
 document.addEventListener('visibilitychange', () => turbineAudio.suspend(document.hidden || componentInspector.active));
@@ -1356,6 +1371,28 @@ document.addEventListener('visibilitychange', () => turbineAudio.suspend(documen
 window.addEventListener('resize', () => {
   if (captureSize) return;
   syncSurfaceLayout();
+});
+
+window.addEventListener('pagehide', event => {
+  if (event.persisted || disposed) return;
+  disposed = true;
+  cancelAnimationFrame(animationFrame);
+  embeddedScene?.dispose();
+  componentInspector.dispose();
+  controls.dispose();
+  motionStudyEntries.forEach(entry => {
+    for (const material of Array.isArray(entry.highlighted) ? entry.highlighted : [entry.highlighted]) material.dispose();
+  });
+  exhibitHighlightMaterials.forEach(material => material.dispose());
+  bladeMarkerMaterial.dispose();
+  disposeScene(scene);
+  cardEnvironment.dispose();
+  cleanCardEnvironment.dispose();
+  hdrEnvironmentTexture?.dispose();
+  composer.passes.forEach(pass => pass.dispose());
+  composer.dispose();
+  renderer.dispose();
+  void turbineAudio.dispose();
 });
 
 console.info('9HA procedural model metrics', model.metrics, model.root.userData.sculptRuntime);

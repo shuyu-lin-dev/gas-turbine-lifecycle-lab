@@ -1,0 +1,16 @@
+.git
+**/node_modules
+**/.venv
+**/dist
+**/dist-labs
+**/__pycache__
+.scratch-runtime
+.local-preparation
+runtime
+logs
+assets
+evidence/**
+!evidence/FE-INTEGRATE/
+!evidence/FE-INTEGRATE/bridge-fixture.json
+.env
+.env.*

@@ -18,7 +18,7 @@
 | [x] | M0-00 | 本机、主仓库、dsh 接入与规格冻结 | 无 | LOCKED | M0-00-A01～M0-00-A07 | S=`3980867902a9c102f18894e9acf65b8c72051b19`；C=`b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61`；E=`398b923f01eb97bcf7c22e9e31f344662c2365c5`；[正式报告](evidence/M0-00/runs/b4ae8e35d7823da484d6ab0ec3dad41c55fbdc61/REPORT.md)；基线 `baseline/M0-00-b4ae8e35d782` 已远程核实 |
 | [x] | FE-BASE | 固定前端上游源码与独立基线 | M0-00 | LOCKED | FE-BASE-A01～FE-BASE-A05 | S=`7704387252b293bee1ec671b440164a12287ca16`；C=`ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f`；E=`a7966085071051d07cb7e80d0843a07ad9687183`；[正式报告](evidence/FE-BASE/runs/ab07372aa223b1828a70a4ed37c2ac15b5d3ef2f/REPORT.md)；基线 `baseline/FE-BASE-ab07372aa223` 已远程核实 |
 | [x] | M0-01 | Vue 与 Python 前后端独立运行 | FE-BASE | LOCKED | M0-01-A01～M0-01-A05 | S=`18a9210947e0114a8bbc6a10c8864701dfb8539e`；C=`01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432`；E=`32558e25e394dda6e1fffee5970ae30bc378e7d7`；[正式报告](evidence/M0-01/runs/01569c205a8d5e41e32d4ca5bc1cc1d41cd3a432/REPORT.md)；基线 `baseline/M0-01-01569c205a8d` 已远程核实 |
-| [ ] | FE-INTEGRATE | Vue 业务壳与同源 viewer 桥接 | M0-01 | PLANNED | FE-INTEGRATE-A01～FE-INTEGRATE-A06 | 未执行 |
+| [ ] | FE-INTEGRATE | Vue 业务壳与同源 viewer 桥接 | M0-01 | IN_PROGRESS | FE-INTEGRATE-A01～FE-INTEGRATE-A06 | S=`7bc1cb91d822560b32f804891798babeead68828`；[冻结记录](evidence/FE-INTEGRATE/criteria.md)，准确候选实测待完成 |
 | [ ] | M0-02 | 事件契约、幂等持久化和范围查询 | FE-INTEGRATE | PLANNED | M0-02-A01～M0-02-A07 | 未执行 |
 | [ ] | M0-03 | 单设备固定 CSV 播放 | M0-02 | PLANNED | M0-03-A01～M0-03-A05 | 未执行 |
 | [ ] | M0-04 | 持久 SSE、补读与快照一致性 | M0-03 | PLANNED | M0-04-A01～M0-04-A06 | 未执行 |
